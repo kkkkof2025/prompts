@@ -50,6 +50,8 @@ Folder: / (root)
 - 项目说明、许可证、贡献指南在根目录。
 - 从根目录发布可以保证相对链接更稳定。
 
+站点使用根目录 `_config.yml` 控制标题、语言、主题和顶部导航。为了避免 GitHub Pages 默认主题把所有页面都塞进导航栏，`header_pages` 只保留少量核心入口；完整页面仍通过 [SUMMARY.md](SUMMARY.md) 访问。
+
 ## 发布后的入口
 
 GitHub Pages 构建完成后，访问：

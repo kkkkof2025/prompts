@@ -14,7 +14,7 @@
 - 想组织学习：读 [分角色学习路径](docs/learning-paths.md)、[读书会与教学方案](docs/facilitation-guide.md)、[教学版本材料包](docs/teaching-kit.md)、[团队 AI 落地完整路线图](docs/team-ai-adoption-roadmap.md)、[AI 安全与模型选型工作坊](docs/workshop-safety-model-selection.md)、[行业化工作坊案例集](docs/workshop-industry-cases.md)、[30 天团队试点跟踪表](docs/pilot-tracking-30days.md)、[课堂练习工作纸](docs/classroom-worksheets.md)、[教学示范作业集](docs/teaching-examples.md)、[试读与试跑反馈包](docs/feedback-validation-kit.md)、[团队 AI 落地手册](docs/team-adoption-playbook.md) 和 [团队 AI 落地案例集](docs/team-adoption-cases.md)。
 - 想快速复习：读 [AI 学习与使用速查讲义](docs/quick-reference.md)、[常见误区与纠偏指南](docs/common-pitfalls.md)、[Prompt 调试指南](docs/prompt-debugging-guide.md) 和 [章节复盘题与小测](docs/chapter-review-questions.md)。
 - 想直接落地：读 [团队 AI 落地完整路线图](docs/team-ai-adoption-roadmap.md)、[AI 任务选择决策指南](docs/task-decision-guide.md)、[AI 工作流配方库](docs/workflow-recipes.md)、[团队 AI 落地手册](docs/team-adoption-playbook.md)、[团队 AI 落地案例集](docs/team-adoption-cases.md) 和 [AI 能力评估量表](docs/assessment-rubric.md)。
-- 想发布维护：读 [章节练习与验收映射表](docs/chapter-validation-map.md)、[试读与试跑反馈包](docs/feedback-validation-kit.md)、[前沿资料季度复核执行手册](docs/frontier-review-playbook.md)、[前沿资料季度复核记录表](docs/frontier-review-log.md)、[1.0 发布前总检查清单](docs/release-checklist-1.0.md)、[项目维护指南](docs/maintenance-guide.md)、[GitHub 发布指南](docs/publishing-guide.md) 和 [电子书与离线阅读指南](docs/ebook-guide.md)。
+- 想发布维护：读 [章节练习与验收映射表](docs/chapter-validation-map.md)、[试读与试跑反馈包](docs/feedback-validation-kit.md)、[前沿资料季度复核执行手册](docs/frontier-review-playbook.md)、[前沿资料季度复核记录表](docs/frontier-review-log.md)、[自动化维护与扩写方案](docs/automation-content-workflow.md)、[1.0 发布前总检查清单](docs/release-checklist-1.0.md)、[项目维护指南](docs/maintenance-guide.md)、[GitHub 发布指南](docs/publishing-guide.md) 和 [电子书与离线阅读指南](docs/ebook-guide.md)。
 
 ## 项目结构
 
@@ -102,6 +102,7 @@
 - [AI 能力评估量表](docs/assessment-rubric.md)
 - [前沿资料季度复核执行手册](docs/frontier-review-playbook.md)
 - [前沿资料季度复核记录表](docs/frontier-review-log.md)
+- [自动化维护与扩写方案](docs/automation-content-workflow.md)
 - [电子书与离线阅读指南](docs/ebook-guide.md)
 - [1.0 发布前总检查清单](docs/release-checklist-1.0.md)
 
@@ -113,6 +114,7 @@
 
 - [GitHub 发布指南](docs/publishing-guide.md)
 - [项目维护指南](docs/maintenance-guide.md)
+- [自动化维护与扩写方案](docs/automation-content-workflow.md)
 - [前沿资料季度复核执行手册](docs/frontier-review-playbook.md)
 - [1.0 发布前总检查清单](docs/release-checklist-1.0.md)
 - [变更记录](CHANGELOG.md)
@@ -124,4 +126,4 @@
 
 ## 当前状态
 
-初版书稿已扩展到 0.7 草案。案例已按角色拆分，教学版本材料包、团队 AI 落地完整路线图、AI 安全与模型选型工作坊、行业化工作坊案例集、30 天团队试点跟踪表、课堂练习工作纸、教学示范作业集、试读与试跑反馈包、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核记录表及示例、常见误区纠偏材料、Prompt 调试指南、任务选择指南、安全案例更新指南、安全事故复盘案例集、中外模型特色概览、模型选型实战案例集、前沿与过时技术案例库、团队 AI 落地手册、团队落地案例集和 1.0 发布前总检查清单已补齐，Markdown lint、术语一致性、外部链接定期检查和 GitHub Pages 构建检查已纳入自动化。
+初版书稿已扩展到 0.7 草案。案例已按角色拆分，教学版本材料包、团队 AI 落地完整路线图、AI 安全与模型选型工作坊、行业化工作坊案例集、30 天团队试点跟踪表、课堂练习工作纸、教学示范作业集、试读与试跑反馈包、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核记录表及示例、常见误区纠偏材料、Prompt 调试指南、任务选择指南、安全案例更新指南、安全事故复盘案例集、中外模型特色概览、模型选型实战案例集、前沿与过时技术案例库、自动化维护与扩写方案、团队 AI 落地手册、团队落地案例集和 1.0 发布前总检查清单已补齐。GitHub Pages 顶部导航和首页入口已做简化，Markdown lint、术语一致性、外部链接定期检查和 GitHub Pages 构建检查已纳入自动化。

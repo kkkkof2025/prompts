@@ -62,6 +62,7 @@
 - [电子书与离线阅读指南](ebook-guide.md)
 - [GitHub 发布指南](publishing-guide.md)
 - [项目维护指南](maintenance-guide.md)
+- [自动化维护与扩写方案](automation-content-workflow.md)
 - [1.0 发布前总检查清单](release-checklist-1.0.md)
 - [实践模板：Prompt 模式](../examples/prompt-patterns.md)
 - [实践模板：Skill/Card](../examples/skill-card-template.md)

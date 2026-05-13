@@ -78,10 +78,14 @@
 - 完成 `docs/technology-evolution-cases.md` 前沿与过时技术案例库，覆盖插件式工具接入、早期自主 agent、RAG、长上下文、skills、MCP、A2A、个人助手工作台、开放模型、本地部署、长期记忆和 computer use 等技术演进案例。
 - 更新 `README.md`、`index.md`、`docs/index.md`、`docs/SUMMARY.md`、`docs/appendix-resources.md`、`docs/ebook-guide.md`、`scripts/export-ebook.ps1`、`ROADMAP.md` 和 `CHANGELOG.md`，纳入前沿与过时技术案例库。
 - 更新 `docs/maintenance-guide.md`，新增案例和技术收录原则：案例不以短为目标，重在有效、有特点、可复盘；前沿技术只要概念、来源和边界不写错即可纳入；过时技术也可作为技术演进或历史复盘案例保留。
+- 优化 GitHub Pages 排版：新增 `assets/main.scss`，把顶部导航限制为少量核心入口，并将根目录 `index.md` 和 `docs/index.md` 改为分组入口页，减少线上首页的长链接堆叠。
+- 完成 `docs/automation-content-workflow.md` 自动化维护与扩写方案，说明 GitHub Actions 适合做扫描、提醒、候选稿和 draft PR，不适合无审查地直接替代人工定稿。
+- 更新 `_config.yml` 和 `docs/_config.yml`，设置 `lang: zh-CN` 和 `header_pages`，控制 GitHub Pages 顶部导航。
+- 更新 `docs/SUMMARY.md`、`README.md`、`docs/maintenance-guide.md`、`docs/publishing-guide.md`、`docs/ebook-guide.md`、`docs/release-checklist-1.0.md`、`ROADMAP.md`、`CHANGELOG.md` 和 `scripts/export-ebook.ps1`，纳入自动化维护与扩写方案和新的 Pages 排版说明。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"`。
-- 最新检查结果：本地链接、占位标记、术语一致性和 Markdown lint 均通过（2026-05-13 复查，82 个 Markdown 文件）。
-- 当前 Markdown 规模约 18473 行、32966 个词、265501 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
+- 最新检查结果：本地链接、占位标记、术语一致性和 Markdown lint 均通过（2026-05-13 复查，83 个 Markdown 文件）。本地未安装 `jekyll` 命令，未能在本机执行 Jekyll 构建；GitHub Actions 的 Pages Build workflow 仍会在推送后验证构建。
+- 当前 Markdown 规模约 18730 行、33346 个词、268657 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
   - OpenAI Agents SDK 文档
@@ -126,6 +130,8 @@
 - 案例长度不是主要限制。只要案例有效、有特点、能帮助读者复盘，可以写长，也可以围绕同一技术拆成多个有差异的案例。
 - 前沿技术可以纳入正文、案例库或资源附录，但不能写成永久不变的判断；涉及动态事实时应优先核验官方来源并标注日期。
 - 过时技术不是自动删除对象。只要能解释技术演进、失败经验、治理边界或今天工具的设计原因，就可以作为学习案例保留，并标注为技术演进案例或历史复盘案例。
+- GitHub Pages 入口不应承担完整目录职责。首页只保留分组入口和少量核心路径，完整索引交给 `docs/SUMMARY.md`；顶部导航用 `_config.yml` 的 `header_pages` 显式控制，避免默认主题自动列出所有页面。
+- GitHub Actions 可以辅助维护内容，但定位应是扫描、候选稿、draft PR 和检查，不应无审查地自动改写主分支正文。
 
 ## 并行 agent 使用
 
@@ -138,6 +144,7 @@
 ## 下一步建议
 
 - 下次继续完善前，先按 `docs/maintenance-guide.md` 的 AI 协作交接约定输出“当前状态、本轮方向、修改范围、边界和验证方式”，再开始改文件。
+- 推送到 GitHub 后，先观察 Pages Build workflow 是否通过；如果构建通过，再访问线上首页确认顶部导航是否已从长列表变成少量核心入口。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。

@@ -4,3 +4,11 @@ theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
+lang: zh-CN
+header_pages:
+  - index.md
+  - SUMMARY.md
+  - case-studies.md
+  - technology-evolution-cases.md
+  - quick-reference.md
+  - team-ai-adoption-roadmap.md

@@ -36,6 +36,8 @@ AI 领域变化很快。这本书要长期有用，关键不是一次写完，�
 4. 下次建议优先做的方向。
 ```
 
+如果后续要把 GitHub Actions 接入内容维护，先看 [自动化维护与扩写方案](automation-content-workflow.md)。原则是让 Actions 做扫描、提醒、候选稿和 draft PR，不让它无审查地直接改主分支正文。
+
 ## 案例和技术收录原则
 
 本书的案例不以短为目标，而以有效、有特点、能复盘为目标。案例可以较长，也可以围绕同一类技术拆成多个不同案例，只要每个案例能展示不同的任务、失败方式、治理边界或迁移价值。
@@ -148,6 +150,7 @@ GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链�
 - `docs/feedback-validation-kit.md`：试读、课堂试跑和团队试点反馈收集模板。
 - `docs/frontier-review-playbook.md`：前沿资料季度复核的执行流程、影响判断和收尾检查。
 - `docs/frontier-review-log.md`：前沿模型、协议、工具和安全资料的季度复核记录。
+- `docs/automation-content-workflow.md`：GitHub Actions 自动化维护、候选扩写和人工审查流程建议。
 - `MEMORY.md`：当前状态和维护记忆。
 - `CHANGELOG.md`：面向公开发布的变更记录。
 - `ROADMAP.md`：后续方向和版本规划。

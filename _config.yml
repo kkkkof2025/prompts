@@ -2,3 +2,11 @@ title: AI 学习方法全景书
 description: 从对话、prompt、skills 到 agent、OpenClaw、Hermes、HiMeS 与 AI 前沿发展的中文开源书
 theme: minima
 markdown: kramdown
+lang: zh-CN
+header_pages:
+  - docs/index.md
+  - docs/SUMMARY.md
+  - docs/case-studies.md
+  - docs/technology-evolution-cases.md
+  - docs/quick-reference.md
+  - docs/team-ai-adoption-roadmap.md

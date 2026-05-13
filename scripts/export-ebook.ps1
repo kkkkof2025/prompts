@@ -79,6 +79,7 @@ $files = @(
     "docs/frontier-review-playbook.md",
     "docs/frontier-review-log.md",
     "docs/term-style-guide.md",
+    "docs/automation-content-workflow.md",
     "docs/ebook-guide.md",
     "docs/release-checklist-1.0.md"
 )
