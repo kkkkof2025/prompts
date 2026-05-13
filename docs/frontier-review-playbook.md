@@ -1,6 +1,6 @@
 # 前沿资料季度复核执行手册
 
-最后维护：2026-05-12
+最后维护：2026-05-13
 
 这份手册用于把 0.8“前沿资料季度复核”变成可执行流程。它回答三个问题：
 
@@ -71,7 +71,7 @@ npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
 2. [CHANGELOG.md](../CHANGELOG.md)：确认本次修改应该写入哪个版本段。
 3. [资源与引用](appendix-resources.md)：确认本次要复核的官方来源。
 4. [前沿资料季度复核记录表](frontier-review-log.md)：复制批次记录和单条资料记录模板。
-5. [前沿资料季度复核记录表](frontier-review-log.md#示例记录)：参考一条虚构示范，熟悉填写方式。
+5. [前沿资料季度复核记录表](frontier-review-log.md)：参考一条虚构示范，熟悉填写方式。
 
 ## 证据记录规则
 

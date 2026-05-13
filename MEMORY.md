@@ -82,10 +82,14 @@
 - 完成 `docs/automation-content-workflow.md` 自动化维护与扩写方案，说明 GitHub Actions 适合做扫描、提醒、候选稿和 draft PR，不适合无审查地直接替代人工定稿。
 - 更新 `_config.yml` 和 `docs/_config.yml`，设置 `lang: zh-CN` 和 `header_pages`，控制 GitHub Pages 顶部导航。
 - 更新 `docs/SUMMARY.md`、`README.md`、`docs/maintenance-guide.md`、`docs/publishing-guide.md`、`docs/ebook-guide.md`、`docs/release-checklist-1.0.md`、`ROADMAP.md`、`CHANGELOG.md` 和 `scripts/export-ebook.ps1`，纳入自动化维护与扩写方案和新的 Pages 排版说明。
+- 完成 MkDocs 阅读版基础配置：新增 `mkdocs.yml`、`requirements-docs.txt` 和 `docs/stylesheets/extra.css`，使用 `docs/` 作为 MkDocs 内容目录，适合左侧目录、搜索、章节型阅读和分组入口展示。
+- 新增 `.github/workflows/mkdocs-build.yml`，在 push、pull request 和手动触发时构建 MkDocs 阅读版。
+- 新增 `.github/workflows/pages-dual-site.yml`，作为手动触发的双版本部署草案：Jekyll 根站输出到 `/`，MkDocs 阅读版输出到 `/mkdocs/`。真正启用前需要在 GitHub Pages 设置中把 Source 切到 `GitHub Actions`。
+- 本地执行 `python -m mkdocs build --config-file mkdocs.yml --site-dir site/mkdocs-preview` 成功；严格模式仍会提示 `docs/` 外部的 `examples/` 和根目录维护文件不在 MkDocs 文档目录中，后续如要把 MkDocs 做成正式主阅读版，需要处理这些跨目录链接。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"`。
-- 最新检查结果：本地链接、占位标记、术语一致性和 Markdown lint 均通过（2026-05-13 复查，83 个 Markdown 文件）。本地未安装 `jekyll` 命令，未能在本机执行 Jekyll 构建；GitHub Actions 的 Pages Build workflow 仍会在推送后验证构建。
-- 当前 Markdown 规模约 18730 行、33346 个词、268657 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
+- 最新检查结果：本地链接、占位标记、术语一致性和 Markdown lint 均通过（2026-05-13 复查，83 个 Markdown 文件）。`python -m mkdocs build --config-file mkdocs.yml --site-dir site/mkdocs-preview` 可成功构建 MkDocs 阅读版，但会提示 `docs/` 外部链接和少量锚点警告；本地未安装 `jekyll` 命令，未能在本机执行 Jekyll 构建，GitHub Actions 的 Pages Build workflow 仍会在推送后验证。
+- 当前 Markdown 规模约 18774 行、33655 个词、271817 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
   - OpenAI Agents SDK 文档
@@ -132,6 +136,7 @@
 - 过时技术不是自动删除对象。只要能解释技术演进、失败经验、治理边界或今天工具的设计原因，就可以作为学习案例保留，并标注为技术演进案例或历史复盘案例。
 - GitHub Pages 入口不应承担完整目录职责。首页只保留分组入口和少量核心路径，完整索引交给 `docs/SUMMARY.md`；顶部导航用 `_config.yml` 的 `header_pages` 显式控制，避免默认主题自动列出所有页面。
 - GitHub Actions 可以辅助维护内容，但定位应是扫描、候选稿、draft PR 和检查，不应无审查地自动改写主分支正文。
+- Jekyll 和 MkDocs 不必二选一。短期保留 Jekyll 作为根站和 GitHub Pages 兼容版，同时用 MkDocs 提供更适合书籍阅读的目录型版本；双版本发布建议采用 GitHub Actions 构建同一个 Pages artifact，把 MkDocs 放在 `/mkdocs/` 子路径。
 
 ## 并行 agent 使用
 
@@ -145,6 +150,7 @@
 
 - 下次继续完善前，先按 `docs/maintenance-guide.md` 的 AI 协作交接约定输出“当前状态、本轮方向、修改范围、边界和验证方式”，再开始改文件。
 - 推送到 GitHub 后，先观察 Pages Build workflow 是否通过；如果构建通过，再访问线上首页确认顶部导航是否已从长列表变成少量核心入口。
+- 如果要正式启用 MkDocs 阅读版，下一步先处理 MkDocs 构建警告：决定是把 `examples/` 和根目录维护文件纳入 MkDocs，还是把相关链接改成 GitHub 仓库链接；之后再把 Pages Source 切换为 `GitHub Actions` 并运行 `Pages Dual Site Build`。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。

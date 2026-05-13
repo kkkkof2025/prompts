@@ -1,0 +1,114 @@
+site_name: AI 学习方法全景书
+site_description: 从对话、prompt、skills 到 agent、OpenClaw、Hermes、HiMeS 与 AI 前沿发展的中文开源书
+site_url: https://kkkkof2025.github.io/prompts/mkdocs/
+repo_url: https://github.com/kkkkof2025/prompts
+repo_name: kkkkof2025/prompts
+docs_dir: docs
+site_dir: site/mkdocs
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: blue
+      accent: green
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+  - 首页: index.md
+  - 完整目录: SUMMARY.md
+  - 主体章节:
+      - 第 0 章：学习路线图: chapters/00-learning-map.md
+      - 第 1 章：从最基本的对话开始: chapters/01-dialogue-basics.md
+      - 第 2 章：AI 的基本概念: chapters/02-ai-basics.md
+      - 第 3 章：Prompt 入门: chapters/03-prompt-basics.md
+      - 第 4 章：结构化 Prompt 与工作流: chapters/04-prompt-workflows.md
+      - 第 5 章：模型选择、验证与评估: chapters/05-evaluation.md
+      - 第 6 章：工具调用、RAG 与知识库: chapters/06-tools-rag.md
+      - 第 7 章：Skills，把经验固化成能力: chapters/07-skills.md
+      - 第 8 章：Agent，从聊天到行动: chapters/08-agents.md
+      - 第 9 章：记忆系统与个性化助手: chapters/09-memory.md
+      - 第 10 章：OpenClaw 与个人 AI 助手工作台: chapters/10-openclaw.md
+      - 第 11 章：Hermes、HiMeS 与开源模型路线: chapters/11-hermes-himes-open-models.md
+      - 第 12 章：AI 前沿发展全景: chapters/12-frontier-landscape.md
+      - 第 13 章：安全、伦理与治理: chapters/13-safety-governance.md
+      - 第 14 章：30 天实践计划: chapters/14-practice-plan.md
+  - 案例:
+      - 真实应用案例: case-studies.md
+      - 案例总览与复盘模板: cases/index.md
+      - 学生案例: cases/student.md
+      - 教师案例: cases/teacher.md
+      - 运营案例: cases/operations.md
+      - 产品案例: cases/product.md
+      - 工程案例: cases/engineering.md
+      - 管理者案例: cases/management.md
+      - 团队 AI 落地案例集: team-adoption-cases.md
+      - 前沿与过时技术案例库: technology-evolution-cases.md
+  - 学习与教学:
+      - 分角色学习路径: learning-paths.md
+      - 读书会与教学方案: facilitation-guide.md
+      - 教学版本材料包: teaching-kit.md
+      - 课堂练习工作纸: classroom-worksheets.md
+      - 教学示范作业集: teaching-examples.md
+      - 试读与试跑反馈包: feedback-validation-kit.md
+      - 章节复盘题与小测: chapter-review-questions.md
+      - 章节练习与验收映射表: chapter-validation-map.md
+  - 团队落地:
+      - 团队 AI 落地完整路线图: team-ai-adoption-roadmap.md
+      - AI 安全与模型选型工作坊: workshop-safety-model-selection.md
+      - 行业化工作坊案例集: workshop-industry-cases.md
+      - 30 天团队试点跟踪表: pilot-tracking-30days.md
+      - 团队 AI 落地手册: team-adoption-playbook.md
+      - AI 能力评估量表: assessment-rubric.md
+  - 工具与速查:
+      - 图解：AI 工作系统: diagrams.md
+      - AI 学习与使用速查讲义: quick-reference.md
+      - 常见误区与纠偏指南: common-pitfalls.md
+      - Prompt 调试指南: prompt-debugging-guide.md
+      - AI 任务选择决策指南: task-decision-guide.md
+      - AI 工作流配方库: workflow-recipes.md
+      - 中外 AI 模型特色概览: model-landscape-china-global.md
+      - AI 模型选型实战案例集: model-selection-cases.md
+  - 安全与复核:
+      - AI 安全案例更新指南: safety-case-updates.md
+      - AI 安全事故复盘案例集: safety-incident-retrospectives.md
+      - 前沿资料季度复核执行手册: frontier-review-playbook.md
+      - 前沿资料季度复核记录表: frontier-review-log.md
+  - 附录与维护:
+      - 电子书封面页: ebook-cover.md
+      - 版权与许可: copyright.md
+      - 附录 A：资源与引用: appendix-resources.md
+      - 附录 B：AI 术语表: appendix-glossary.md
+      - 附录 C：练习参考答案: appendix-exercise-answers.md
+      - 附录 D：常用检查清单: appendix-checklists.md
+      - 术语写法规范: term-style-guide.md
+      - 电子书与离线阅读指南: ebook-guide.md
+      - GitHub 发布指南: publishing-guide.md
+      - 项目维护指南: maintenance-guide.md
+      - 自动化维护与扩写方案: automation-content-workflow.md
+      - 1.0 发布前总检查清单: release-checklist-1.0.md

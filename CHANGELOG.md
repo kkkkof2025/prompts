@@ -19,11 +19,13 @@
 - 增加 `docs/model-selection-cases.md` AI 模型选型实战案例集，覆盖中文写作、内部知识库、代码助手、客服分类、长合同、本地部署和多模态文档处理。
 - 增加 `docs/technology-evolution-cases.md` 前沿与过时技术案例库，覆盖插件式工具接入、早期自主 agent、RAG、长上下文、skills、MCP、A2A、个人助手工作台、开放模型、长期记忆和 computer use 等演进案例。
 - 增加 `docs/automation-content-workflow.md` 自动化维护与扩写方案，说明 GitHub Actions 适合做扫描、候选稿和 draft PR，不适合无审查地直接替代人工定稿。
+- 增加 MkDocs 阅读版基础配置、阅读样式、构建检查和双版本部署草案，让 Jekyll 根站与 MkDocs 阅读版可以并行准备。
 - 增加 `docs/team-adoption-playbook.md` 团队 AI 落地手册，覆盖试点选择、数据分级、模板库、知识库、评估机制和治理节奏。
 - 增加 `docs/team-adoption-cases.md` 团队 AI 落地案例集，覆盖会议纪要、用户反馈、内部知识库、工程测试建议和发布前审查试点。
 - 增加 `docs/frontier-review-playbook.md` 前沿资料季度复核执行手册，把 0.8 复核拆成层级选择、范围确认、证据记录、影响判断、修改顺序和发布判断。
 - 为 `docs/frontier-review-log.md` 增加示例记录，帮助维护者照着填写季度复核批次和单条资料记录。
 - 优化 GitHub Pages 排版，新增 `assets/main.scss`，限制顶部导航为少量核心入口，并把根目录首页和书稿首页改成分组入口页。
+- 更新 `docs/publishing-guide.md`，补充 Jekyll 根站与 MkDocs 阅读版的双版本发布方式。
 - 更新 `docs/feedback-validation-kit.md`，补充反馈到改稿闭环、修订任务卡、修改动作对照和改稿后复核模板。
 - 更新 `docs/maintenance-guide.md`，补充 AI 协作交接约定和案例技术收录原则，要求开工前说明当前状态、本轮方向、修改范围和验证方式，并明确案例重在有效、有特点、可复盘，过时技术也可作为学习案例保留。
 - 更新 `docs/release-checklist-1.0.md`，把前沿复核示例记录纳入 1.0 前的检查项。

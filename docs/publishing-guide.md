@@ -52,6 +52,29 @@ Folder: / (root)
 
 站点使用根目录 `_config.yml` 控制标题、语言、主题和顶部导航。为了避免 GitHub Pages 默认主题把所有页面都塞进导航栏，`header_pages` 只保留少量核心入口；完整页面仍通过 [SUMMARY.md](SUMMARY.md) 访问。
 
+## 双版本发布
+
+如果你想同时保留 Jekyll 版和 MkDocs 版，可以采用“一个仓库、两个输出”的方式：
+
+- Jekyll 版继续作为根站点，保留当前页面入口和兼容性。
+- MkDocs 版作为阅读站点，输出到 `/mkdocs/` 子路径。
+
+当前仓库已经准备了：
+
+- `mkdocs.yml`：MkDocs 阅读版配置。
+- `requirements-docs.txt`：MkDocs 依赖。
+- `.github/workflows/mkdocs-build.yml`：MkDocs 构建检查。
+- `.github/workflows/pages-dual-site.yml`：Jekyll + MkDocs 双版本部署草案。
+
+要真正发布双版本，通常需要：
+
+1. 在 GitHub Pages 设置里把 Source 切到 `GitHub Actions`。
+2. 先保留当前 Jekyll 版作为根站点。
+3. 把 MkDocs 作为 `/mkdocs/` 子站点一起部署。
+4. 先在 Actions 里跑 `workflow_dispatch` 验证，再决定是否改成自动推送部署。
+
+如果你暂时不想切换发布方式，也可以先只用 `mkdocs-build.yml` 做检查，把 MkDocs 当作阅读预览版。
+
 ## 发布后的入口
 
 GitHub Pages 构建完成后，访问：

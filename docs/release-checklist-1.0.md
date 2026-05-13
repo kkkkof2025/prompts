@@ -184,6 +184,8 @@ npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
 | Markdown Check workflow 存在 | `.github/workflows/markdown-check.yml` | □ | |
 | Pages Build workflow 存在 | `.github/workflows/pages-build.yml` | □ | |
 | External Links workflow 存在 | `.github/workflows/external-links.yml` | □ | |
+| MkDocs Build workflow 存在 | `.github/workflows/mkdocs-build.yml` | □ | |
+| 双版本部署草案存在 | `.github/workflows/pages-dual-site.yml` 可手动触发，发布前需确认 Pages Source | □ | |
 | 自动化维护方案已记录 | 已说明 Actions 只生成提醒、候选稿或 draft PR，不直接替代人工定稿 | □ | |
 | 最近一次 CI 通过 | 主分支或发布候选分支通过 | □ | |
 | 失败记录已处理 | 无未解释的红色 workflow | □ | |
