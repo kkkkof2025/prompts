@@ -1,0 +1,153 @@
+# MEMORY
+
+最后更新：2026-05-13
+
+## 当前目标
+
+创建一本可发布到 GitHub/GitHub Pages 的中文 AI 学习方法开源书，从基础对话讲到 prompt、skills、agents、OpenClaw、Hermes、HiMeS、MCP/A2A 和前沿发展全景。当前定位为 0.7 草案。
+
+## 已完成
+
+- 确认当前目录 `X:\c\ai\prompts` 初始为空，且不是 git 仓库。
+- 选择 Markdown 作为主格式，原因是 GitHub 原生支持，维护成本低，适合开源协作。
+- 将 GitHub Pages 推荐发布源调整为仓库根目录 `/`，原因是书稿在 `docs/`，实践模板在 `examples/`，从根目录发布可以保证内部链接可访问。
+- 建立根目录说明、进度记忆、GitHub Pages 入口和章节目录。
+- 建立根目录 `index.md` 和 `_config.yml`，便于 GitHub Pages 从根目录构建。
+- 完成 `docs/chapters/00-14` 主体章节初稿。
+- 完成 `docs/appendix-resources.md` 资源与引用附录。
+- 完成 `docs/appendix-glossary.md` AI 术语表。
+- 完成 `docs/appendix-exercise-answers.md` 练习参考答案。
+- 完成 `docs/appendix-checklists.md` 常用检查清单。
+- 完成 `docs/case-studies.md` 真实应用案例入口。
+- 完成 `docs/cases/` 分角色案例拆分，覆盖学生、教师、运营、产品、工程、管理者，每类 2 个案例。
+- 完成 `CONTRIBUTING.md`、Issue 模板和 PR 模板。
+- 完成 `LICENSE.md`，采用 CC BY-SA 4.0。
+- 完成 `CHANGELOG.md` 版本记录。
+- 完成 `.gitignore`。
+- 完成 `docs/publishing-guide.md` GitHub 发布指南。
+- 完成 `docs/maintenance-guide.md` 项目维护指南。
+- 完成 `docs/learning-paths.md` 分角色学习路径。
+- 完成 `docs/facilitation-guide.md` 读书会与教学方案。
+- 完成 `docs/diagrams.md` Mermaid 图解页。
+- 完成 `scripts/check-markdown-links.ps1` 本地 Markdown 链接和占位词检查脚本。
+- 完成 `.github/workflows/markdown-check.yml` GitHub Actions 自动检查。
+- 完成 `docs/chapter-review-questions.md` 章节复盘题与小测。
+- 完成 `docs/quick-reference.md` AI 学习与使用速查讲义。
+- 完成 `docs/workflow-recipes.md` AI 工作流配方库。
+- 完成 `docs/assessment-rubric.md` AI 能力评估量表。
+- 完成 `ROADMAP.md` 项目路线图。
+- 完成 `scripts/export-ebook.ps1` Pandoc 电子书导出脚本。
+- 完成 `docs/ebook-cover.md` 电子书封面页。
+- 完成 `docs/copyright.md` 版权与许可页。
+- 完成 `docs/ebook-guide.md` 电子书与离线阅读指南。
+- 完成 `docs/ebook-style.css` Pandoc HTML/EPUB 基础样式。
+- 完成 `docs/term-style-guide.md` 术语写法规范。
+- 完成 `scripts/check-terminology.ps1` 术语一致性检查脚本。
+- 完成 `scripts/check-external-links.ps1` 外部链接检查脚本。
+- 完成 `.markdownlint.json` Markdown lint 配置。
+- 完成 `.github/workflows/external-links.yml` 定期外部链接检查 workflow。
+- 完成 `.github/workflows/pages-build.yml` GitHub Pages 构建检查 workflow。
+- 更新 `.github/workflows/markdown-check.yml`，加入 Markdown lint 和术语一致性检查。
+- 完成 `docs/teaching-kit.md` 教学版本材料包，覆盖 4 周课件大纲、讲师提示词、课堂练习、作业和结业项目模板。
+- 完成 `docs/team-ai-adoption-roadmap.md` 团队 AI 落地完整路线图，把学习课、专题工作坊、30 天试点和复盘迭代串成四阶段路线，含阶段目标、材料映射、进入下一阶段条件、决策分支和主持人检查清单。
+- 完成 `docs/workshop-safety-model-selection.md` AI 安全与模型选型工作坊，覆盖 90-120 分钟专题培训流程、风险地图、模型路线选择、小型评测集、团队边界和 30 天复盘。
+- 完成 `docs/workshop-industry-cases.md` 行业化工作坊案例集，覆盖教育、医疗、法律、金融、电商、研发六个行业的场景描述、风险地图、模型路线选择和小型评测样例（每行业 5 条）。
+- 完成 `docs/pilot-tracking-30days.md` 30 天团队 AI 试点跟踪表，覆盖 Day 1-3 准备启动、Day 4-7 第一周试跑、Day 8-14 第二周迭代、Day 15-21 第三周扩展、Day 22-30 第四周评估全流程，含每日日志模板、周度汇总、prompt 迭代模板、评估问卷、总结报告模板和复盘会讲稿。
+- 完成 `docs/release-checklist-1.0.md` 1.0 发布前总检查清单，覆盖内容完整性、学习与落地路线、链接与自动化、外部资料复核、版权许可证、GitHub Pages、人工通读和发布决策，并提供 v1.0.0 发布说明模板。
+- 完成 `docs/classroom-worksheets.md` 课堂练习工作纸，提供 10 张可发给学员填写的表单。
+- 完成 `docs/teaching-examples.md` 教学示范作业集，覆盖匿名化 prompt、工作流、skill、agent、安全规范和结业项目样例。
+- 完成 `docs/feedback-validation-kit.md` 试读与试跑反馈包，覆盖个人试读、课堂试跑、团队试点、观察记录、评分量表和匿名化反馈记录。
+- 完成 `docs/chapter-validation-map.md` 章节练习与验收映射表，逐章对应核心能力、练习任务、复盘证据和配套材料。
+- 完成 `docs/frontier-review-log.md` 前沿资料季度复核记录表，覆盖复核批次、核心资料复核表、单条资料记录、正文更新判断标准、影响范围和发布影响记录。
+- 完成 `docs/frontier-review-playbook.md` 前沿资料季度复核执行手册，把 0.8 复核拆成层级选择、范围确认、证据记录、影响判断、修改顺序、发布判断和收尾检查。
+- 为 `docs/frontier-review-log.md` 增加示例记录，演示怎样填写季度复核批次和单条资料记录。
+- 完成 `docs/common-pitfalls.md` 常见误区与纠偏指南，覆盖 12 类高频错误和可复制改写方式。
+- 完成 `docs/task-decision-guide.md` AI 任务选择决策指南，帮助读者在普通对话、prompt、工作流、模板、skill、RAG、工具调用、agent、多 agent 和人工主导之间选择。
+- 完成 `docs/prompt-debugging-guide.md` Prompt 调试指南，覆盖输出失败诊断、调试流程、失败类型和调试记录模板。
+- 完成 `docs/safety-case-updates.md` AI 安全案例更新指南，覆盖间接 prompt 注入、数据泄露、RAG、agent 权限、多模态、长期记忆、评估和权限层防护等新版安全案例。
+- 完成 `docs/safety-incident-retrospectives.md` AI 安全事故复盘案例集，覆盖知识库错误引用、会议纪要泄露、agent 误发邮件、代码依赖风险、多模态隐私和模型升级格式失效等复盘样例。
+- 完成 `docs/model-landscape-china-global.md` 中外 AI 模型特色概览，按模型路线、生态、中文场景、企业云、开放权重、长上下文、多模态和选型模板介绍中国及国际模型。
+- 完成 `docs/model-selection-cases.md` AI 模型选型实战案例集，覆盖个人中文写作、团队知识库、代码助手、客服反馈分类、长合同阅读、本地部署和多模态文档处理。
+- 完成 `docs/team-adoption-playbook.md` 团队 AI 落地手册，覆盖试点选择、数据分级、模板库、知识库、评估机制、角色分工和治理节奏。
+- 完成 `docs/team-adoption-cases.md` 团队 AI 落地案例集，覆盖会议纪要、用户反馈、内部知识库、工程测试建议和发布前审查试点。
+- 更新 `scripts/export-ebook.ps1`，把安全案例、模型选型、团队落地、反馈验证、章节验收、前沿复核执行手册、前沿复核记录和 1.0 发布检查材料纳入电子书导出。
+- 更新 `docs/teaching-kit.md`、`docs/teaching-examples.md`、`docs/facilitation-guide.md`、`docs/classroom-worksheets.md`、`docs/workflow-recipes.md`、`docs/team-adoption-playbook.md`、`docs/case-studies.md`、`docs/SUMMARY.md`、`docs/index.md`、`index.md`、`README.md`、`docs/quick-reference.md`、`docs/common-pitfalls.md`、`docs/task-decision-guide.md`、`docs/assessment-rubric.md`、`docs/chapters/05-evaluation.md`、`docs/chapters/11-hermes-himes-open-models.md`、`docs/chapters/13-safety-governance.md`、`docs/appendix-resources.md`、`CHANGELOG.md` 和 `ROADMAP.md`，纳入教学版本材料包、AI 安全与模型选型工作坊、课堂练习工作纸、教学示范作业集、常见误区纠偏材料、Prompt 调试指南、任务选择指南、安全案例更新指南、安全事故复盘案例集、中外模型特色概览、模型选型实战案例集、团队 AI 落地手册和团队落地案例集。
+- 更新 `README.md`、`index.md`、`docs/index.md`、`docs/SUMMARY.md`、`docs/appendix-resources.md`、`docs/frontier-review-log.md`、`docs/frontier-review-playbook.md`、`docs/maintenance-guide.md`、`docs/ebook-guide.md`、`docs/release-checklist-1.0.md`、`ROADMAP.md`、`CHANGELOG.md` 和 `scripts/export-ebook.ps1`，纳入前沿资料季度复核执行手册及示例记录。
+- 更新 `docs/feedback-validation-kit.md`，把“从反馈到改稿”扩展成修订闭环，新增修订任务卡、反馈到修改动作对照、进入改稿判断和改稿后复核模板。
+- 更新 `docs/maintenance-guide.md`，新增 AI 协作交接约定：后续每轮继续完善前，先说明已确认状态、本轮方向、修改范围、不会触碰的边界和验证方式；收尾时说明本轮完成内容、检查结果和下次建议方向。
+- 完成 `docs/technology-evolution-cases.md` 前沿与过时技术案例库，覆盖插件式工具接入、早期自主 agent、RAG、长上下文、skills、MCP、A2A、个人助手工作台、开放模型、本地部署、长期记忆和 computer use 等技术演进案例。
+- 更新 `README.md`、`index.md`、`docs/index.md`、`docs/SUMMARY.md`、`docs/appendix-resources.md`、`docs/ebook-guide.md`、`scripts/export-ebook.ps1`、`ROADMAP.md` 和 `CHANGELOG.md`，纳入前沿与过时技术案例库。
+- 更新 `docs/maintenance-guide.md`，新增案例和技术收录原则：案例不以短为目标，重在有效、有特点、可复盘；前沿技术只要概念、来源和边界不写错即可纳入；过时技术也可作为技术演进或历史复盘案例保留。
+- 完成本地只读检查：所有本地 Markdown 链接均可解析。
+- 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"`。
+- 最新检查结果：本地链接、占位标记、术语一致性和 Markdown lint 均通过（2026-05-13 复查，82 个 Markdown 文件）。
+- 当前 Markdown 规模约 18473 行、32966 个词、265501 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
+- 联网核验关键动态来源，核验日期为 2026-05-07：
+  - Stanford HAI 2026 AI Index
+  - OpenAI Agents SDK 文档
+  - OpenAI Models 文档
+  - Anthropic Agent Skills 文档
+  - Anthropic Claude model overview
+  - Google Gemini API models
+  - DeepSeek API 文档
+  - Alibaba Cloud Model Studio/Qwen 模型文档
+  - Moonshot AI/Kimi 开放平台文档
+  - 百度智能云千帆文档
+  - 智谱 GLM 模型概览
+  - 腾讯云混元大模型文档
+  - Meta Llama 官方入口
+  - Mistral AI model overview
+  - Cohere models 文档
+  - xAI model documentation
+  - Model Context Protocol 文档
+  - Google A2A/Agent2Agent 相关官方博客
+  - OpenClaw 官方 GitHub 仓库
+  - Nous Research Hermes 4.3 发布页
+  - HiMeS 论文摘要
+  - NIST AI Risk Management Framework
+  - NIST AI 600-1: Generative AI Profile
+  - OWASP Top 10 for LLM Applications
+  - MITRE ATLAS
+  - NCSC/CISA Guidelines for secure AI system development
+  - OpenAI Safety Best Practices
+
+## 内容决策
+
+- 文件名使用英文，正文使用简体中文，便于跨平台和 GitHub Pages 链接稳定。
+- 书稿入口放在 `docs/index.md`，完整目录放在 `docs/SUMMARY.md`。
+- 前沿信息不写成不可变结论，而写成“截至某日期的观察”，并要求后续维护者定期复核。
+- 对用户可能混写 Hermes 和 HiMeS 的处理：本书同时覆盖 Hermes 开源模型路线和 HiMeS 个性化记忆系统。
+- OpenClaw 被放在 agent 实践章节中，定位为“个人 AI 助手和多通道 agent 工作台的案例”，不要求读者必须安装。
+- 许可证选择：采用 CC BY-SA 4.0，适合开源书传播、改编和相同方式共享。若后续要改为更宽松的 CC BY 4.0，需要同步修改 `LICENSE.md`、`README.md` 和 `CONTRIBUTING.md`。
+- 真实应用案例采用分角色拆分：`docs/case-studies.md` 只保留入口，具体案例放入 `docs/cases/`。
+- 当前优先保障 GitHub Pages 在线阅读；Pandoc 导出资料保留，但后续完善书籍内容时不把导出验证作为必需步骤。
+- 自动化检查分为本地链接、术语一致性、Markdown lint、外部链接和 Pages 构建检查；外部链接检查默认定期运行，不放入每次提交的强制路径。
+- 后续 AI 协作维护时，开工前应先告知用户当前已确认状态、本轮将做内容和方向、预计修改范围及验证方式；收尾时再给出已完成内容和下次建议方向。
+- 案例长度不是主要限制。只要案例有效、有特点、能帮助读者复盘，可以写长，也可以围绕同一技术拆成多个有差异的案例。
+- 前沿技术可以纳入正文、案例库或资源附录，但不能写成永久不变的判断；涉及动态事实时应优先核验官方来源并标注日期。
+- 过时技术不是自动删除对象。只要能解释技术演进、失败经验、治理边界或今天工具的设计原因，就可以作为学习案例保留，并标注为技术演进案例或历史复盘案例。
+
+## 并行 agent 使用
+
+- 已启动并完成一个写作 agent，负责 `examples/` 目录下的实践模板：
+  - `examples/prompt-patterns.md`
+  - `examples/skill-card-template.md`
+  - `examples/agent-workflow-checklist.md`
+- 主线程不修改 `examples/`，避免写入冲突。
+
+## 下一步建议
+
+- 下次继续完善前，先按 `docs/maintenance-guide.md` 的 AI 协作交接约定输出“当前状态、本轮方向、修改范围、边界和验证方式”，再开始改文件。
+- 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
+- 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
+- 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。
+- AI 安全与模型选型工作坊、行业化工作坊案例集和 30 天试点跟踪表已完成初稿；下一步应使用 `docs/feedback-validation-kit.md` 收集团队试点反馈，重点收集教育、医疗、法律、金融、电商、研发六个行业的真实试跑数据。
+- 发布前需要人工通读一次全书，重点检查案例是否过长、术语是否对初学者友好、外部事实是否需要重新核验。
+
+## 交接提示
+
+如果后续继续让 AI 协作维护本项目，可直接说：
+
+```text
+请阅读 README.md、MEMORY.md 和 docs/SUMMARY.md，继续扩写这本 AI 学习方法全景书。优先保持章节结构稳定，新增内容请同步更新 MEMORY.md 和 docs/appendix-resources.md。
+```
