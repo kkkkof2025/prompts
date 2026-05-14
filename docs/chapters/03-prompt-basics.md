@@ -2,6 +2,13 @@
 
 Prompt 是你给 AI 的任务说明。它不只是“提问技巧”，更像是给一个聪明但不了解你环境的合作者写工作单。
 
+## 本章导读
+
+- 预计阅读时间：15-22 分钟。
+- 学习目标：写出结构化 prompt；使用示例、反例和分阶段输出；让 AI 对自己的结果做基本自检。
+- 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [Prompt 调试指南](../prompt-debugging-guide.md)。
+- 相关材料：[Prompt 模式实践模板](../../examples/prompt-patterns.md) 和 [教学示范作业集](../teaching-examples.md)。
+
 ## Prompt 的基本结构
 
 一个通用结构：
@@ -156,6 +163,12 @@ Prompt 是你给 AI 的任务说明。它不只是“提问技巧”，更像是
 - 验收标准。
 
 你可以参考 [prompt 模式示例](../../examples/prompt-patterns.md)。
+
+## 本章收尾
+
+- 本章练习：写一个包含示例、反例、输出格式和自检要求的 prompt，并记录第一次输出哪里不稳定。
+- 相关案例：用 [Prompt 调试指南](../prompt-debugging-guide.md) 复盘失败原因，再参考 [教学示范作业集](../teaching-examples.md)。
+- 下一步：进入 [第 4 章](04-prompt-workflows.md)，把单个 prompt 扩展成可复用工作流。
 
 ## 章节导航
 

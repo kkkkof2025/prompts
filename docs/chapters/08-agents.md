@@ -2,6 +2,13 @@
 
 聊天机器人主要回答问题。Agent 不只是回答，它会围绕目标进行计划、调用工具、观察结果、调整策略，并在一定边界内持续执行。
 
+## 本章导读
+
+- 预计阅读时间：15-22 分钟。
+- 学习目标：理解 agent 的目标、计划、行动和观察循环；判断哪些任务适合 agent；写出允许动作、禁止动作和人工确认点。
+- 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [Agent 工作流安全检查清单](../../examples/agent-workflow-checklist.md)。
+- 相关材料：[AI 任务选择决策指南](../task-decision-guide.md) 和 [安全事故复盘案例集](../safety-incident-retrospectives.md)。
+
 ## Agent 的基本循环
 
 一个简化的 agent 循环：
@@ -118,6 +125,12 @@ Agent 的风险来自“行动能力”。
 - 需要人工确认的动作。
 
 你可以参考 [Agent 工作流安全检查清单](../../examples/agent-workflow-checklist.md)。
+
+## 本章收尾
+
+- 本章练习：为一个低风险任务写 agent 工作说明，明确目标、工具、允许动作、禁止动作、回滚方式和人工确认点。
+- 相关案例：使用 [Agent 工作流安全检查清单](../../examples/agent-workflow-checklist.md)，再对照 [AI 任务选择决策指南](../task-decision-guide.md)。
+- 下一步：进入 [第 9 章](09-memory.md)，判断 agent 什么时候需要记忆、什么时候必须禁止保存。
 
 ## 章节导航
 

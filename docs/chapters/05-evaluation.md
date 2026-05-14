@@ -4,6 +4,13 @@ AI 的回答是否“看起来很好”不等于它真的可靠。学习 AI 必�
 
 如果你正在比较 ChatGPT、Claude、Gemini、DeepSeek、Kimi、Qwen 或本地模型，可以配合 [中外 AI 模型特色概览](../model-landscape-china-global.md) 和 [AI 模型选型实战案例集](../model-selection-cases.md) 使用。本章讲评估方法，模型概览讲截至 2026-05-07 的主要路线和选型维度，选型案例集提供更具体的任务样例。
 
+## 本章导读
+
+- 预计阅读时间：15-22 分钟。
+- 学习目标：按任务选择模型；建立小型评测集；用评分表比较模型、prompt 或工作流的可靠性。
+- 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI 能力评估量表](../assessment-rubric.md)。
+- 相关材料：[中外 AI 模型特色概览](../model-landscape-china-global.md) 和 [AI 模型选型实战案例集](../model-selection-cases.md)。
+
 ## 先按任务选模型
 
 不同模型适合不同任务。你不需要永远使用最强或最贵的模型。
@@ -114,6 +121,12 @@ AI 的回答是否“看起来很好”不等于它真的可靠。学习 AI 必�
 ## 练习
 
 找一个你常用的 prompt，准备 5 个真实输入样例。分别用两个模型或两个 prompt 版本测试，记录结果。不要凭感觉比较，要用同一张评分表。
+
+## 本章收尾
+
+- 本章练习：为一个常用 prompt 准备 5-10 条测试样例，用同一张评分表比较两个模型或两个 prompt 版本。
+- 相关案例：结合 [AI 能力评估量表](../assessment-rubric.md) 和 [AI 模型选型实战案例集](../model-selection-cases.md) 做一次小评测。
+- 下一步：进入 [第 6 章](06-tools-rag.md)，把评估思路用于工具调用、RAG 和知识库。
 
 ## 章节导航
 

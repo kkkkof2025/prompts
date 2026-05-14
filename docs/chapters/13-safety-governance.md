@@ -4,6 +4,13 @@ AI 越有用，越需要边界。安全和治理不是阻碍使用，而是让 A
 
 如果你负责把 AI 推广到团队，请配合 [团队 AI 落地手册](../team-adoption-playbook.md)、[团队 AI 落地案例集](../team-adoption-cases.md)、[AI 安全案例更新指南](../safety-case-updates.md) 和 [AI 安全事故复盘案例集](../safety-incident-retrospectives.md) 使用。本章提供底线原则，手册提供试点和运营流程，案例集提供可参考的试点样例，安全案例更新指南帮助你把过时案例改成更接近真实工作流的案例，事故复盘案例集提供更具体的讨论材料。
 
+## 本章导读
+
+- 预计阅读时间：15-22 分钟。
+- 学习目标：写出个人和团队 AI 使用底线；识别数据、版权、偏见和高风险领域边界；为 agent 行动设置治理要求。
+- 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI 安全案例更新指南](../safety-case-updates.md)。
+- 相关材料：[团队 AI 落地手册](../team-adoption-playbook.md) 和 [AI 安全事故复盘案例集](../safety-incident-retrospectives.md)。
+
 ## 个人使用的安全底线
 
 不要上传：
@@ -98,6 +105,12 @@ Agent 需要额外治理，因为它能行动。
 允许自动执行的动作：
 永远不能自动执行的动作：
 ```
+
+## 本章收尾
+
+- 本章练习：写一份个人或团队 AI 使用底线，至少包含禁止上传的数据、必须引用来源的任务、必须人工确认的动作和回滚要求。
+- 相关案例：结合 [团队 AI 落地手册](../team-adoption-playbook.md)、[AI 安全案例更新指南](../safety-case-updates.md) 和 [AI 安全事故复盘案例集](../safety-incident-retrospectives.md) 做一次风险复盘。
+- 下一步：进入 [第 14 章](14-practice-plan.md)，把前面的方法转成 30 天实践计划。
 
 ## 章节导航
 

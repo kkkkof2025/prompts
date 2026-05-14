@@ -2,6 +2,13 @@
 
 Skill 可以理解为“可复用的任务能力包”。它通常包含说明、流程、模板、示例、脚本、资源和边界条件。它比单个 prompt 更稳定，因为它把一类任务的做法沉淀了下来。
 
+## 本章导读
+
+- 预计阅读时间：12-18 分钟。
+- 学习目标：理解 skill 解决的复用问题；写出 skill 的输入、输出、流程和边界；区分 skill、prompt 和 agent。
+- 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI Skill/Card 可复用模板](../../examples/skill-card-template.md)。
+- 相关材料：[教学示范作业集](../teaching-examples.md) 和 [AI 工作流配方库](../workflow-recipes.md)。
+
 ## Skill 解决什么问题
 
 如果你经常这样说：
@@ -107,6 +114,12 @@ Skill = 某类任务的可复用操作说明
 - 分析客户反馈。
 
 用 [Skill/Card 模板](../../examples/skill-card-template.md) 写一个最小 skill。先不要追求完美，只要能复用。
+
+## 本章收尾
+
+- 本章练习：写一个 skill 草稿，至少包含适用任务、输入、输出、步骤、失败样例和禁止事项。
+- 相关案例：使用 [AI Skill/Card 可复用模板](../../examples/skill-card-template.md)，并参考 [教学示范作业集](../teaching-examples.md)。
+- 下一步：进入 [第 8 章](08-agents.md)，理解 skill 如何进入更长的 agent 行动流程。
 
 ## 章节导航
 

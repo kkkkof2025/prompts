@@ -87,11 +87,13 @@
 - 为 `docs/chapters/00-14` 已完成章节增加“章节导航”，每章底部提供上一章和下一章链接，便于像读书一样连续阅读。
 - 增强 MkDocs Material 阅读体验：启用顶部导航标签、搜索分享、即时加载、代码复制、页面编辑入口和源码查看入口；根目录首页和书稿首页新增“全书内容地图”。
 - 更新 `ROADMAP.md`，补充阅读站功能池：学习目标、预计阅读时间、章节练习入口、标签体系、案例索引、术语回链、图解增强、离线包、章节进度清单和自动候选扩写 PR。
+- 为 `docs/chapters/00-14` 统一补充“本章导读”，每章开头包含预计阅读时间、学习目标、练习入口和相关材料入口，方便读者判断本章怎么学、读完做什么。
+- 为 `docs/chapters/00-14` 统一补充“本章收尾”，每章底部在章节导航前提供本章练习、相关案例和下一步入口，把连续阅读和实践动作连接起来。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --config-file mkdocs.yml`。
 - 最新检查结果：本地链接、占位标记、术语一致性、Markdown lint 和 MkDocs strict build 均通过（2026-05-14 复查，83 个 Markdown 文件）。线上站点仅保留 MkDocs Material 单一版式，章节页已具备上一章/下一章导航，站点已启用顶部导航标签和站内搜索。
-- 当前 Markdown 规模约 18908 行、34007 个词、277143 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
+- 当前 Markdown 规模约 19107 行、34599 个词、284976 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节导读、章节收尾、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
   - OpenAI Agents SDK 文档
@@ -153,7 +155,7 @@
 - 下次继续完善前，先按 `docs/maintenance-guide.md` 的 AI 协作交接约定输出“当前状态、本轮方向、修改范围、边界和验证方式”，再开始改文件。
 - 推送到 GitHub 后，先观察 MkDocs Pages workflow 是否通过；如果构建通过，再访问线上首页确认目录、搜索、章节上一页/下一页和移动端阅读是否正常。
 - GitHub Pages 设置中应使用 `GitHub Actions` 作为 Source，由 `.github/workflows/mkdocs-pages.yml` 发布唯一的 MkDocs Material 站点。
-- 下一轮站点体验优化优先做章节级增强：每章开头补学习目标和预计阅读时间，底部补“本章练习 / 相关案例 / 下一步”。
+- 下一轮站点体验优化优先做横向索引：新增案例索引表和主题标签体系，帮助读者按角色、行业、技术、风险和学习目标快速查找材料。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。
