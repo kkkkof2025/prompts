@@ -19,7 +19,7 @@
 <div class="route-card" markdown="1">
 **第一次系统学习**
 
-先读 [第 0 章](chapters/00-learning-map.md) 到 [第 4 章](chapters/04-prompt-workflows.md)，先把对话、prompt 和工作流练熟。
+先读 [第 0 章](chapters/00-learning-map.md) 到 [第 4 章](chapters/04-prompt-workflows.md)，先把对话、prompt 和工作流练熟，再用 [学习进度清单](learning-progress.md) 记录练习证据。
 </div>
 
 <div class="route-card" markdown="1">
@@ -66,6 +66,18 @@
 **[主题索引](topic-index.md)**
 
 按任务类型和主题标签快速找到章节、案例和材料。
+</div>
+
+<div class="resource-card" markdown="1">
+**[术语回链索引](glossary-links.md)**
+
+从术语跳回定义、章节、案例和常见误解。
+</div>
+
+<div class="resource-card" markdown="1">
+**[学习进度清单](learning-progress.md)**
+
+按章节记录阅读、练习、案例复盘和下一步行动。
 </div>
 
 <div class="resource-card" markdown="1">

@@ -103,6 +103,7 @@ nav:
       - 前沿与过时技术案例库: docs/technology-evolution-cases.md
   - 学习与教学:
       - 分角色学习路径: docs/learning-paths.md
+      - 学习进度清单: docs/learning-progress.md
       - 读书会与教学方案: docs/facilitation-guide.md
       - 教学版本材料包: docs/teaching-kit.md
       - 课堂练习工作纸: docs/classroom-worksheets.md
@@ -136,6 +137,7 @@ nav:
       - 版权与许可: docs/copyright.md
       - 附录 A：资源与引用: docs/appendix-resources.md
       - 附录 B：AI 术语表: docs/appendix-glossary.md
+      - 术语回链索引: docs/glossary-links.md
       - 附录 C：练习参考答案: docs/appendix-exercise-answers.md
       - 附录 D：常用检查清单: docs/appendix-checklists.md
       - 术语写法规范: docs/term-style-guide.md

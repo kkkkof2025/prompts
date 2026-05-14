@@ -9,6 +9,7 @@
 [进入书稿](docs/index.md)
 [完整目录](docs/SUMMARY.md)
 [真实案例](docs/case-studies.md)
+[学习进度](docs/learning-progress.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -91,6 +92,12 @@
 </div>
 
 <div class="resource-card" markdown="1">
+**[主题与术语索引](docs/topic-index.md)**
+
+用主题索引找材料，用术语回链回到定义、章节和常见误解。
+</div>
+
+<div class="resource-card" markdown="1">
 **[资源与引用](docs/appendix-resources.md)**
 
 前沿资料、官方文档、协议、模型和安全治理来源。
@@ -121,7 +128,7 @@
 <div class="route-card" markdown="1">
 **工具、附录与维护**
 
-速查讲义、任务选择指南、调试指南、术语表、资源引用、发布指南、维护指南和自动化维护方案。
+速查讲义、任务选择指南、调试指南、学习进度清单、术语表、术语回链、资源引用、发布指南、维护指南和自动化维护方案。
 </div>
 </div>
 
