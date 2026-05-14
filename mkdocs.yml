@@ -90,8 +90,9 @@ nav:
       - 第 13 章：安全、伦理与治理: docs/chapters/13-safety-governance.md
       - 第 14 章：30 天实践计划: docs/chapters/14-practice-plan.md
   - 案例:
+      - 主题索引: docs/topic-index.md
       - 真实应用案例: docs/case-studies.md
-      - 案例总览与复盘模板: docs/cases/index.md
+      - 案例索引表: docs/cases/index.md
       - 学生案例: docs/cases/student.md
       - 教师案例: docs/cases/teacher.md
       - 运营案例: docs/cases/operations.md

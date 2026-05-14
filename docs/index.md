@@ -57,6 +57,18 @@
 </div>
 
 <div class="resource-card" markdown="1">
+**[案例索引表](cases/index.md)**
+
+按角色、主题、风险和章节快速定位案例。
+</div>
+
+<div class="resource-card" markdown="1">
+**[主题索引](topic-index.md)**
+
+按任务类型和主题标签快速找到章节、案例和材料。
+</div>
+
+<div class="resource-card" markdown="1">
 **[章节练习与验收映射表](chapter-validation-map.md)**
 
 把每章练习、复盘和发布证据串起来。
