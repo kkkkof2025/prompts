@@ -22,6 +22,8 @@
 - 将 GitHub Pages 在线阅读版统一为 MkDocs Material，增加 `mkdocs.yml`、阅读样式、依赖文件和 `mkdocs-pages.yml` 发布 workflow。
 - 将章节页补齐上一章/下一章导航，并把 `agents/README.md` 改为 `agents/index.md`，避免与站点首页冲突。
 - 将 MkDocs 构建输出改到仓库外目录，清理了站点构建警告。
+- 增强 MkDocs Material 阅读体验，启用顶部导航标签、搜索分享、即时加载、代码复制、页面编辑入口和源码查看入口。
+- 为根目录首页和书稿首页增加“全书内容地图”，并在路线图中补充阅读站后续功能池。
 - 增加 `docs/team-adoption-playbook.md` 团队 AI 落地手册，覆盖试点选择、数据分级、模板库、知识库、评估机制和治理节奏。
 - 增加 `docs/team-adoption-cases.md` 团队 AI 落地案例集，覆盖会议纪要、用户反馈、内部知识库、工程测试建议和发布前审查试点。
 - 增加 `docs/frontier-review-playbook.md` 前沿资料季度复核执行手册，把 0.8 复核拆成层级选择、范围确认、证据记录、影响判断、修改顺序和发布判断。

@@ -69,6 +69,34 @@
 </div>
 </div>
 
+## 全书内容地图
+
+<div class="route-grid" markdown="1">
+<div class="route-card" markdown="1">
+**主体章节**
+
+第 0-14 章覆盖对话、prompt、工作流、评估、RAG、skills、agent、记忆、OpenClaw、开源模型、前沿发展、安全治理和 30 天实践计划。
+</div>
+
+<div class="route-card" markdown="1">
+**案例与复盘**
+
+角色案例、行业工作坊案例、团队落地案例、模型选型案例、安全事故复盘和技术演进案例。
+</div>
+
+<div class="route-card" markdown="1">
+**教学与组织落地**
+
+读书会方案、教学材料包、课堂工作纸、团队路线图、AI 安全与模型选型工作坊、30 天试点跟踪表和试跑反馈包。
+</div>
+
+<div class="route-card" markdown="1">
+**速查与维护**
+
+速查讲义、常见误区、Prompt 调试、任务选择、资源引用、季度复核、发布检查和自动化维护。
+</div>
+</div>
+
 ## 实践与落地
 
 <div class="route-grid" markdown="1">

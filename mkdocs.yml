@@ -3,6 +3,7 @@ site_description: 从对话、prompt、skills 到 agent、OpenClaw、Hermes、Hi
 site_url: https://kkkkof2025.github.io/prompts/
 repo_url: https://github.com/kkkkof2025/prompts
 repo_name: kkkkof2025/prompts
+edit_uri: edit/main/
 docs_dir: .
 site_dir: ../prompts-site
 exclude_docs: |
@@ -28,14 +29,23 @@ theme:
   name: material
   language: zh
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
+    - navigation.path
     - navigation.top
     - navigation.footer
     - navigation.tracking
+    - navigation.instant
+    - navigation.instant.progress
     - toc.follow
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
     - search.highlight
     - search.suggest
+    - search.share
   palette:
     - scheme: default
       primary: blue

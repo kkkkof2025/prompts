@@ -1,0 +1,32 @@
+name: Markdown Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  markdown-links:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Markdown lint
+        shell: pwsh
+        run: npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"
+
+      - name: Check local Markdown links
+        shell: pwsh
+        run: ./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders
+
+      - name: Check terminology
+        shell: pwsh
+        run: ./scripts/check-terminology.ps1 -Root .
