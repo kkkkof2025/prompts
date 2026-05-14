@@ -60,7 +60,7 @@
 ```powershell
 ./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders
 ./scripts/check-terminology.ps1 -Root .
-npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
+npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"
 ```
 
 如果本地检查已经失败，先修本地结构问题。否则联网复核后很难判断失败来自旧问题还是新修改。
@@ -121,8 +121,8 @@ npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
 1. 先更新 [前沿资料季度复核记录表](frontier-review-log.md)，写清证据和影响范围。
 2. 再更新 [资源与引用](appendix-resources.md)，调整核验日期、来源和维护建议。
 3. 修改受影响的正文、案例、教学材料或检查清单。
-4. 如果新增页面，写入 [SUMMARY.md](SUMMARY.md)、[docs/index.md](index.md)、根目录 [README.md](../README.md) 和根目录 [index.md](../index.md)。
-5. 如果新增页面需要离线阅读，写入 [export-ebook.ps1](../scripts/export-ebook.ps1)。
+4. 如果新增页面，写入 [SUMMARY.md](SUMMARY.md)、[docs/index.md](index.md)、站点首页 [index.md](../index.md) 和根目录 `README.md`。
+5. 如果新增页面需要离线阅读，写入 `scripts/export-ebook.ps1`。
 6. 更新 [CHANGELOG.md](../CHANGELOG.md) 和 [MEMORY.md](../MEMORY.md)。
 7. 重新运行本地链接、术语一致性和 Markdown lint。
 8. 如果新增或修改外部链接，运行外部链接检查或记录未运行原因。
@@ -205,7 +205,7 @@ npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
 ```powershell
 ./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders
 ./scripts/check-terminology.ps1 -Root .
-npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
+npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"
 ```
 
 如果本次新增或修改外部链接，再执行：
@@ -219,7 +219,7 @@ npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
 ## 可复制的季度复核 prompt
 
 ```text
-请阅读 README.md、MEMORY.md、CHANGELOG.md、docs/SUMMARY.md、docs/appendix-resources.md、docs/frontier-review-log.md 和 docs/frontier-review-playbook.md。
+请阅读站点首页、MEMORY.md、CHANGELOG.md、docs/SUMMARY.md、docs/appendix-resources.md、docs/frontier-review-log.md 和 docs/frontier-review-playbook.md。
 
 任务：执行一次【快速巡检 / 标准复核 / 深度复核】。
 

@@ -131,7 +131,7 @@
 
 阅读顺序：
 
-1. [README](../README.md)
+1. [站点首页](../index.md)
 2. [MEMORY](../MEMORY.md)
 3. [CHANGELOG](../CHANGELOG.md)
 4. [贡献指南](../CONTRIBUTING.md)

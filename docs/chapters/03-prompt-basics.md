@@ -156,3 +156,7 @@ Prompt 是你给 AI 的任务说明。它不只是“提问技巧”，更像是
 - 验收标准。
 
 你可以参考 [prompt 模式示例](../../examples/prompt-patterns.md)。
+
+## 章节导航
+
+[上一章：第 2 章：AI 的基本概念](02-ai-basics.md) | [下一章：第 4 章：结构化 Prompt 与工作流](04-prompt-workflows.md)

@@ -1,9 +1,3 @@
----
-layout: default
-title: AI 学习方法全景书
-permalink: /
----
-
 <div class="book-hero" markdown="1">
 <p class="book-kicker">中文 AI 学习方法开源书</p>
 

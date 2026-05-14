@@ -122,3 +122,7 @@ AI 已经能改变的 3 件事：
 最大风险：
 我应该学习的能力：
 ```
+
+## 章节导航
+
+[上一章：第 11 章：Hermes、HiMeS 与开源模型路线](11-hermes-himes-open-models.md) | [下一章：第 13 章：安全、伦理与治理](13-safety-governance.md)

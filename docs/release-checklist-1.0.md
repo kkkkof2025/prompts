@@ -1,6 +1,6 @@
 # 1.0 发布前总检查清单
 
-最后维护：2026-05-12
+最后维护：2026-05-13
 
 本文档用于把《AI 学习方法全景书》从 0.7 草案推进到 1.0 稳定发布版。它不是写作清单，而是发布前的最终验收表：确认内容完整、链接可用、术语统一、外部事实已复核、教学和团队落地材料能闭环、版权与发布设置无明显缺口。
 
@@ -156,7 +156,7 @@
 运行：
 
 ```bash
-npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
+npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"
 ```
 
 验收：
@@ -182,10 +182,9 @@ npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
 | 检查项 | 标准 | 状态 | 证据/备注 |
 | ------ | ------ | ------ | ------ |
 | Markdown Check workflow 存在 | `.github/workflows/markdown-check.yml` | □ | |
-| Pages Build workflow 存在 | `.github/workflows/pages-build.yml` | □ | |
+| MkDocs Pages workflow 存在 | `.github/workflows/mkdocs-pages.yml` | □ | |
 | External Links workflow 存在 | `.github/workflows/external-links.yml` | □ | |
-| MkDocs Build workflow 存在 | `.github/workflows/mkdocs-build.yml` | □ | |
-| 双版本部署草案存在 | `.github/workflows/pages-dual-site.yml` 可手动触发，发布前需确认 Pages Source | □ | |
+| MkDocs 构建通过 | `python -m mkdocs build --config-file mkdocs.yml` 可成功执行 | □ | |
 | 自动化维护方案已记录 | 已说明 Actions 只生成提醒、候选稿或 draft PR，不直接替代人工定稿 | □ | |
 | 最近一次 CI 通过 | 主分支或发布候选分支通过 | □ | |
 | 失败记录已处理 | 无未解释的红色 workflow | □ | |
@@ -270,18 +269,19 @@ npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"
 
 | 检查项 | 标准 | 状态 | 证据/备注 |
 | ------ | ------ | ------ | ------ |
-| Pages Source 设置正确 | Deploy from branch | □ | |
-| 发布目录正确 | 主分支 `/ (root)` | □ | |
-| 根目录 `index.md` 存在 | GitHub Pages 可从根目录入口访问 | □ | |
-| docs 首页存在 | `docs/index.md` 可访问 | □ | |
-| Jekyll 配置存在 | `_config.yml` 和 `docs/_config.yml` 符合预期 | □ | |
+| Pages Source 设置正确 | GitHub Actions | □ | |
+| MkDocs 配置存在 | `mkdocs.yml` 存在，`docs_dir` 覆盖根目录内容 | □ | |
+| MkDocs 依赖存在 | `requirements-docs.txt` 存在 | □ | |
+| 根目录首页存在 | `index.md` 作为 MkDocs 首页 | □ | |
+| 书稿首页存在 | `docs/index.md` 作为书稿入口 | □ | |
 
 ### 2. 在线阅读体验
 
 | 检查项 | 标准 | 状态 | 证据/备注 |
 | ------ | ------ | ------ | ------ |
 | 首页入口清晰 | 根目录和 docs 首页都有主要入口 | □ | |
-| 目录可导航 | SUMMARY 中所有关键页面可点击 | □ | |
+| 目录可导航 | MkDocs 左侧导航和 SUMMARY 中所有关键页面可点击 | □ | |
+| 章节前后跳转可用 | 第 0-14 章底部有上一章 / 下一章或返回目录链接 | □ | |
 | 表格显示可读 | 长表格在 GitHub Pages 上不严重错位 | □ | |
 | 代码块可读 | prompt、命令、模板格式清晰 | □ | |
 | 移动端基本可读 | 手机宽度下目录和表格不完全不可读 | □ | |

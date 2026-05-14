@@ -1,8 +1,3 @@
----
-layout: default
-title: AI 学习方法全景书
----
-
 <div class="book-hero" markdown="1">
 <p class="book-kicker">书稿首页</p>
 

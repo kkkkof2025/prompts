@@ -118,3 +118,7 @@ Agent 的风险来自“行动能力”。
 - 需要人工确认的动作。
 
 你可以参考 [Agent 工作流安全检查清单](../../examples/agent-workflow-checklist.md)。
+
+## 章节导航
+
+[上一章：第 7 章：Skills，把经验固化成能力](07-skills.md) | [下一章：第 9 章：记忆系统与个性化助手](09-memory.md)

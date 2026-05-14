@@ -107,3 +107,7 @@ Skill = 某类任务的可复用操作说明
 - 分析客户反馈。
 
 用 [Skill/Card 模板](../../examples/skill-card-template.md) 写一个最小 skill。先不要追求完美，只要能复用。
+
+## 章节导航
+
+[上一章：第 6 章：工具调用、RAG 与知识库](06-tools-rag.md) | [下一章：第 8 章：Agent，从聊天到行动](08-agents.md)

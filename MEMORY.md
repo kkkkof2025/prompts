@@ -10,9 +10,9 @@
 
 - 确认当前目录 `X:\c\ai\prompts` 初始为空，且不是 git 仓库。
 - 选择 Markdown 作为主格式，原因是 GitHub 原生支持，维护成本低，适合开源协作。
-- 将 GitHub Pages 推荐发布源调整为仓库根目录 `/`，原因是书稿在 `docs/`，实践模板在 `examples/`，从根目录发布可以保证内部链接可访问。
+- 将 GitHub Pages 推荐发布方式调整为 GitHub Actions + MkDocs Material，原因是书稿在 `docs/`，实践模板在 `examples/`，根目录也有维护文档，使用 MkDocs 根目录 `docs_dir: .` 可以保证它们进入同一阅读体系。
 - 建立根目录说明、进度记忆、GitHub Pages 入口和章节目录。
-- 建立根目录 `index.md` 和 `_config.yml`，便于 GitHub Pages 从根目录构建。
+- 建立根目录 `index.md` 和 MkDocs 配置入口，便于 GitHub Pages 以书籍站点方式构建。
 - 完成 `docs/chapters/00-14` 主体章节初稿。
 - 完成 `docs/appendix-resources.md` 资源与引用附录。
 - 完成 `docs/appendix-glossary.md` AI 术语表。
@@ -46,7 +46,7 @@
 - 完成 `scripts/check-external-links.ps1` 外部链接检查脚本。
 - 完成 `.markdownlint.json` Markdown lint 配置。
 - 完成 `.github/workflows/external-links.yml` 定期外部链接检查 workflow。
-- 完成 `.github/workflows/pages-build.yml` GitHub Pages 构建检查 workflow。
+- 完成 `.github/workflows/mkdocs-pages.yml` MkDocs Pages 构建与发布 workflow。
 - 更新 `.github/workflows/markdown-check.yml`，加入 Markdown lint 和术语一致性检查。
 - 完成 `docs/teaching-kit.md` 教学版本材料包，覆盖 4 周课件大纲、讲师提示词、课堂练习、作业和结业项目模板。
 - 完成 `docs/team-ai-adoption-roadmap.md` 团队 AI 落地完整路线图，把学习课、专题工作坊、30 天试点和复盘迭代串成四阶段路线，含阶段目标、材料映射、进入下一阶段条件、决策分支和主持人检查清单。
@@ -76,19 +76,19 @@
 - 更新 `docs/feedback-validation-kit.md`，把“从反馈到改稿”扩展成修订闭环，新增修订任务卡、反馈到修改动作对照、进入改稿判断和改稿后复核模板。
 - 更新 `docs/maintenance-guide.md`，新增 AI 协作交接约定：后续每轮继续完善前，先说明已确认状态、本轮方向、修改范围、不会触碰的边界和验证方式；收尾时说明本轮完成内容、检查结果和下次建议方向。
 - 完成 `docs/technology-evolution-cases.md` 前沿与过时技术案例库，覆盖插件式工具接入、早期自主 agent、RAG、长上下文、skills、MCP、A2A、个人助手工作台、开放模型、本地部署、长期记忆和 computer use 等技术演进案例。
-- 更新 `README.md`、`index.md`、`docs/index.md`、`docs/SUMMARY.md`、`docs/appendix-resources.md`、`docs/ebook-guide.md`、`scripts/export-ebook.ps1`、`ROADMAP.md` 和 `CHANGELOG.md`，纳入前沿与过时技术案例库。
+- 更新 `README.md`、`index.md`、`docs/index.md`、`docs/SUMMARY.md`、`docs/appendix-resources.md`、`docs/ebook-guide.md`、`agents/index.md`、`scripts/export-ebook.ps1`、`ROADMAP.md` 和 `CHANGELOG.md`，纳入前沿与过时技术案例库。
 - 更新 `docs/maintenance-guide.md`，新增案例和技术收录原则：案例不以短为目标，重在有效、有特点、可复盘；前沿技术只要概念、来源和边界不写错即可纳入；过时技术也可作为技术演进或历史复盘案例保留。
-- 优化 GitHub Pages 排版：新增 `assets/main.scss`，把顶部导航限制为少量核心入口，并将根目录 `index.md` 和 `docs/index.md` 改为分组入口页，减少线上首页的长链接堆叠。
+- 优化 GitHub Pages 排版：切换为 MkDocs Material，使用 `docs/stylesheets/extra.css` 做首页和阅读样式补充，并将根目录 `index.md` 和 `docs/index.md` 改为分组入口页，减少线上首页的长链接堆叠。
 - 完成 `docs/automation-content-workflow.md` 自动化维护与扩写方案，说明 GitHub Actions 适合做扫描、提醒、候选稿和 draft PR，不适合无审查地直接替代人工定稿。
-- 更新 `_config.yml` 和 `docs/_config.yml`，设置 `lang: zh-CN` 和 `header_pages`，控制 GitHub Pages 顶部导航。
+- 移除旧版 Pages 主题配置，改用 `mkdocs.yml` 控制站点语言、目录、搜索、主题、样式和 GitHub Pages 发布输出。
 - 更新 `docs/SUMMARY.md`、`README.md`、`docs/maintenance-guide.md`、`docs/publishing-guide.md`、`docs/ebook-guide.md`、`docs/release-checklist-1.0.md`、`ROADMAP.md`、`CHANGELOG.md` 和 `scripts/export-ebook.ps1`，纳入自动化维护与扩写方案和新的 Pages 排版说明。
-- 完成 MkDocs 阅读版基础配置：新增 `mkdocs.yml`、`requirements-docs.txt` 和 `docs/stylesheets/extra.css`，使用 `docs/` 作为 MkDocs 内容目录，适合左侧目录、搜索、章节型阅读和分组入口展示。
-- 新增 `.github/workflows/mkdocs-build.yml`，在 push、pull request 和手动触发时构建 MkDocs 阅读版。
-- 新增 `.github/workflows/pages-dual-site.yml`，作为手动触发的双版本部署草案：Jekyll 根站输出到 `/`，MkDocs 阅读版输出到 `/mkdocs/`。真正启用前需要在 GitHub Pages 设置中把 Source 切到 `GitHub Actions`。
-- 本地执行 `python -m mkdocs build --config-file mkdocs.yml --site-dir site/mkdocs-preview` 成功；严格模式仍会提示 `docs/` 外部的 `examples/` 和根目录维护文件不在 MkDocs 文档目录中，后续如要把 MkDocs 做成正式主阅读版，需要处理这些跨目录链接。
+- 完成 MkDocs-only 阅读版基础配置：新增 `mkdocs.yml`、`requirements-docs.txt` 和 `docs/stylesheets/extra.css`，使用项目根目录作为 MkDocs 内容目录，适合左侧目录、搜索、章节型阅读和分组入口展示。
+- 新增 `.github/workflows/mkdocs-pages.yml`，作为唯一 GitHub Pages 发布 workflow，在 push、pull request 和手动触发时构建 MkDocs 站点，并在非 PR 场景部署 Pages。
+- 为 `docs/chapters/00-14` 已完成章节增加“章节导航”，每章底部提供上一章和下一章链接，便于像读书一样连续阅读。
+- 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
-- 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist"`。
-- 最新检查结果：本地链接、占位标记、术语一致性和 Markdown lint 均通过（2026-05-13 复查，83 个 Markdown 文件）。`python -m mkdocs build --config-file mkdocs.yml --site-dir site/mkdocs-preview` 可成功构建 MkDocs 阅读版，但会提示 `docs/` 外部链接和少量锚点警告；本地未安装 `jekyll` 命令，未能在本机执行 Jekyll 构建，GitHub Actions 的 Pages Build workflow 仍会在推送后验证。
+- 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --config-file mkdocs.yml`。
+- 最新检查结果：本地链接、占位标记、术语一致性、Markdown lint、MkDocs build 和 MkDocs strict build 均通过（2026-05-13 复查，83 个 Markdown 文件）。线上站点仅保留 MkDocs Material 单一版式，章节页已具备上一章/下一章导航。
 - 当前 Markdown 规模约 18774 行、33655 个词、271817 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、章节练习与验收映射表、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
@@ -134,9 +134,9 @@
 - 案例长度不是主要限制。只要案例有效、有特点、能帮助读者复盘，可以写长，也可以围绕同一技术拆成多个有差异的案例。
 - 前沿技术可以纳入正文、案例库或资源附录，但不能写成永久不变的判断；涉及动态事实时应优先核验官方来源并标注日期。
 - 过时技术不是自动删除对象。只要能解释技术演进、失败经验、治理边界或今天工具的设计原因，就可以作为学习案例保留，并标注为技术演进案例或历史复盘案例。
-- GitHub Pages 入口不应承担完整目录职责。首页只保留分组入口和少量核心路径，完整索引交给 `docs/SUMMARY.md`；顶部导航用 `_config.yml` 的 `header_pages` 显式控制，避免默认主题自动列出所有页面。
+- MkDocs 站点首页不应承担完整目录职责。首页只保留分组入口和少量核心路径，完整索引交给 `docs/SUMMARY.md`；站点目录由 `mkdocs.yml` 的 `nav` 显式控制，避免线上首页变成长列表。
 - GitHub Actions 可以辅助维护内容，但定位应是扫描、候选稿、draft PR 和检查，不应无审查地自动改写主分支正文。
-- Jekyll 和 MkDocs 不必二选一。短期保留 Jekyll 作为根站和 GitHub Pages 兼容版，同时用 MkDocs 提供更适合书籍阅读的目录型版本；双版本发布建议采用 GitHub Actions 构建同一个 Pages artifact，把 MkDocs 放在 `/mkdocs/` 子路径。
+- MkDocs Material 作为唯一在线阅读和 GitHub Pages 发布版。后续不再维护多套站点版式，新增内容需要同步进入 `mkdocs.yml` 导航或可从已有目录页稳定到达。
 
 ## 并行 agent 使用
 
@@ -149,8 +149,8 @@
 ## 下一步建议
 
 - 下次继续完善前，先按 `docs/maintenance-guide.md` 的 AI 协作交接约定输出“当前状态、本轮方向、修改范围、边界和验证方式”，再开始改文件。
-- 推送到 GitHub 后，先观察 Pages Build workflow 是否通过；如果构建通过，再访问线上首页确认顶部导航是否已从长列表变成少量核心入口。
-- 如果要正式启用 MkDocs 阅读版，下一步先处理 MkDocs 构建警告：决定是把 `examples/` 和根目录维护文件纳入 MkDocs，还是把相关链接改成 GitHub 仓库链接；之后再把 Pages Source 切换为 `GitHub Actions` 并运行 `Pages Dual Site Build`。
+- 推送到 GitHub 后，先观察 MkDocs Pages workflow 是否通过；如果构建通过，再访问线上首页确认目录、搜索、章节上一页/下一页和移动端阅读是否正常。
+- GitHub Pages 设置中应使用 `GitHub Actions` 作为 Source，由 `.github/workflows/mkdocs-pages.yml` 发布唯一的 MkDocs Material 站点。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。
