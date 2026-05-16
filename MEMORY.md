@@ -161,7 +161,7 @@
 - MkDocs Material 作为唯一在线阅读和 GitHub Pages 发布版。后续不再维护多套站点版式，新增内容需要同步进入 `mkdocs.yml` 导航或可从已有目录页稳定到达。
 - 2026-05-16 读取用户本地笔记 `D:\Document\Documents\ob\Note\000 System\030 Temp\2026\05\20260516 七层 AI 文明架构.md`。该笔记提出执行、记忆、意图、认知经济、世界模型、身份、文明七层结构；后续适合延展为第 12 章和前沿技术案例库中的“从 AI 工具到数字生态”专题，重点强调复杂系统、治理边界、资源预算、记忆压缩、agent 社会和知识演化。
 - 2026-05-16 将新增待办写入 `ROADMAP.md`：连续案例课堂投影短版 30/60/90/120 分钟讲法、行业化匿名试点复盘、OpenClaw 多 agent 联动教程、统一 skill 安装与共享任务同步、七层 AI 文明架构专题。
-- 2026-05-16 为 GitHub 推送授权改用本仓库专用 SSH host alias：`github.com-kkkkof2025-prompts`，生成本地 key `~/.ssh/id_ed25519_github_kkkkof2025_prompts`，remote 已切换为 `git@github.com-kkkkof2025-prompts:kkkkof2025/prompts.git`。当前等待用户把 public key 添加到 GitHub 后，再执行 `ssh -T github.com-kkkkof2025-prompts` 和 `git push --dry-run origin HEAD` 验证。
+- 2026-05-16 为 GitHub 推送授权改用本仓库专用 SSH host alias：`github.com-kkkkof2025-prompts`，生成本地 key `~/.ssh/id_ed25519_github_kkkkof2025_prompts`，remote 已切换为 `git@github.com-kkkkof2025-prompts:kkkkof2025/prompts.git`。用户添加 public key 后已验证通过：`ssh -T github.com-kkkkof2025-prompts` 返回成功认证，`git push --dry-run origin HEAD` 显示可将 `master` 从 `23c5f94` 推到 `84d7ae6`；2026-05-17 已执行真实 `git push origin master`，远端 `HEAD` 更新到 `84d7ae6`。
 
 ## 并行 agent 使用
 
