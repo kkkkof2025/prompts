@@ -159,6 +159,9 @@
 - MkDocs 站点首页不应承担完整目录职责。首页只保留分组入口和少量核心路径，完整索引交给 `docs/SUMMARY.md`；站点目录由 `mkdocs.yml` 的 `nav` 显式控制，避免线上首页变成长列表。
 - GitHub Actions 可以辅助维护内容，但定位应是扫描、候选稿、draft PR 和检查，不应无审查地自动改写主分支正文。
 - MkDocs Material 作为唯一在线阅读和 GitHub Pages 发布版。后续不再维护多套站点版式，新增内容需要同步进入 `mkdocs.yml` 导航或可从已有目录页稳定到达。
+- 2026-05-16 读取用户本地笔记 `D:\Document\Documents\ob\Note\000 System\030 Temp\2026\05\20260516 七层 AI 文明架构.md`。该笔记提出执行、记忆、意图、认知经济、世界模型、身份、文明七层结构；后续适合延展为第 12 章和前沿技术案例库中的“从 AI 工具到数字生态”专题，重点强调复杂系统、治理边界、资源预算、记忆压缩、agent 社会和知识演化。
+- 2026-05-16 将新增待办写入 `ROADMAP.md`：连续案例课堂投影短版 30/60/90/120 分钟讲法、行业化匿名试点复盘、OpenClaw 多 agent 联动教程、统一 skill 安装与共享任务同步、七层 AI 文明架构专题。
+- 2026-05-16 为 GitHub 推送授权改用本仓库专用 SSH host alias：`github.com-kkkkof2025-prompts`，生成本地 key `~/.ssh/id_ed25519_github_kkkkof2025_prompts`，remote 已切换为 `git@github.com-kkkkof2025-prompts:kkkkof2025/prompts.git`。当前等待用户把 public key 添加到 GitHub 后，再执行 `ssh -T github.com-kkkkof2025-prompts` 和 `git push --dry-run origin HEAD` 验证。
 
 ## 并行 agent 使用
 
@@ -174,6 +177,8 @@
 - 推送到 GitHub 后，先观察 MkDocs Pages workflow 是否通过；如果构建通过，再访问线上首页确认目录、搜索、章节上一页/下一页和移动端阅读是否正常。
 - GitHub Pages 设置中应使用 `GitHub Actions` 作为 Source，由 `.github/workflows/mkdocs-pages.yml` 发布唯一的 MkDocs Material 站点。
 - 下一轮建议优先继续为连续案例样例库补充行业化匿名作业样例、课堂观察记录和团队试点复盘样例；也可以继续扩展课堂投影短版的 30、60、90、120 分钟讲法。
+- OpenClaw 多 agent 联动教程可作为新的高优先级扩写：用飞书、Telegram、Webhook、云文档或任务看板作为共享任务层，演示多个 agent 如何接收任务、同步状态、调用统一 skill 包、交接结果和保留人工复核。
+- 七层 AI 文明架构可作为新的前沿思想专题：从执行层和记忆层讲到意图层、认知经济层、世界模型层、身份层和文明层，但正文需要明确这是分析框架，不是已稳定落地的产品形态。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。
