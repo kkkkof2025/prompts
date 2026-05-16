@@ -1,6 +1,6 @@
 # MEMORY
 
-最后更新：2026-05-14
+最后更新：2026-05-16
 
 ## 当前目标
 
@@ -96,11 +96,22 @@
 - 新增 `docs/learning-progress.md` 学习进度清单，提供总进度、章节进度表、30 天推进节奏、卡住时跳转规则和复盘记录模板；同步加入 MkDocs 导航、README、书稿首页、根目录首页、SUMMARY、ROADMAP 和 CHANGELOG。
 - 更新 `docs/appendix-glossary.md`，补充 Hermes、HiMeS、Open Model、OpenClaw 和 Prompt Injection，并增加术语回链入口。
 - 更新 `scripts/export-ebook.ps1`，纳入此前新增的主题索引，并加入术语回链索引和学习进度清单，避免电子书导出遗漏关键阅读工具。
+- 增强 `docs/diagrams.md`，新增 RAG 从一次问答升级到可复用能力、RAG/skill/agent/memory 分工、agent 权限分层和记忆写入决策图。
+- 新增 `scripts/content-health-report.ps1` 内容健康报告脚本，扫描短页面、长页面、缺一级标题页面、章节结构缺口和动态事实复核候选。
+- 新增 `.github/workflows/content-health.yml`，每周或手动生成内容健康报告 artifact；同步更新 `docs/automation-content-workflow.md`、`docs/maintenance-guide.md`、`README.md`、`ROADMAP.md` 和 `CHANGELOG.md`。
+- 新增 `docs/cases/rag-skill-agent-memory.md` 长案例，以客户反馈知识库为主线，把普通 prompt 逐步演进为 RAG、反馈分析 skill、受控 agent 和 memory 边界；同步接入第 6-9 章、MkDocs 导航、案例入口、案例索引、主题索引、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
+- 新增 `docs/cases/teaching-rag-skill-agent-memory.md` 长案例，以教学资料库为主线，把普通 prompt 逐步演进为教学 RAG、feedback skill、受控助教 agent 和 memory 边界；同步接入第 6-9 章、教学版本材料包、分角色学习路径、MkDocs 导航、案例入口、案例索引、主题索引、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
+- 新增 `docs/cases/codebase-rag-skill-agent-memory.md` 长案例，以工程代码库为主线，把普通 prompt 逐步演进为代码库 RAG、bug triage skill、受控修复 agent 和 repo memory 边界；同步接入第 6-9 章、工程案例、分角色学习路径、MkDocs 导航、案例入口、案例索引、主题索引、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
+- 新增 `docs/cases/continuous-case-exercises.md` 连续案例练习与复盘评分表，把三条长案例转成课前阅读、分组讨论、实操改写、rubric 评分和团队试点复盘材料；同步接入案例入口、案例索引、主题索引、学习路径、教学版本材料包、首页、书稿首页、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
+- 新增 `docs/cases/continuous-case-classroom-run.md` 连续案例课堂试跑版，把三条长案例转成 90/120 分钟课堂脚本、分组方式、课堂材料包、示范样例、评分方式和讲师观察记录；同步接入 MkDocs 导航、案例入口、案例索引、主题索引、学习路径、教学材料、反馈验证包、首页、书稿首页、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
+- 新增 `docs/cases/continuous-case-team-pilot.md` 连续案例团队试点版，把三条长案例转成 7 天最小试点、30 天试点衔接、试点任务卡、三类试点方案、日志模板、复盘脚本、决策表和写回规则；同步接入 MkDocs 导航、案例入口、案例索引、主题索引、团队路线图、团队落地手册、30 天试点跟踪表、反馈验证包、首页、书稿首页、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
+- 新增 `docs/cases/continuous-case-samples.md` 连续案例样例库，提供匿名化作业、课堂观察记录和 7 天团队试点复盘样例；后续又为客户反馈、教学资料库和代码库三条主线补充低质量、刚及格、可试点、可示范等质量层级对照，帮助读者比较不同成熟度；同步接入 MkDocs 导航、案例入口、案例索引、主题索引、学习路径、教学材料、团队路线图、反馈验证包、首页、书稿首页、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
+- 新增 `docs/cases/continuous-case-slide-brief.md` 连续案例课堂投影短版，把连续案例压缩成 12 个可投屏页面、讲师提示、互动问题、开场词、收尾词和时间压缩版本；同步接入 MkDocs 导航、案例入口、案例索引、主题索引、学习路径、教学材料、反馈验证包、首页、书稿首页、SUMMARY、README、ROADMAP、CHANGELOG 和电子书导出脚本。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --config-file mkdocs.yml`。
-- 最新检查结果：本地链接、占位标记、术语一致性、Markdown lint 和 MkDocs strict build 均通过（2026-05-14 复查，86 个 Markdown 文件）。线上站点仅保留 MkDocs Material 单一版式，章节页已具备上一章/下一章导航，站点已启用顶部导航标签、站内搜索、主题索引、案例索引表、术语回链索引和学习进度清单；本轮未启动本地预览。
-- 当前 Markdown 规模约 19408 行、36372 个词、300965 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节导读、章节收尾、章节练习与验收映射表、案例索引表、主题索引、术语回链索引、学习进度清单、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
+- 最新检查结果：内容健康报告脚本、本地链接、占位标记、术语一致性、Markdown lint 和 MkDocs strict build 均通过（2026-05-16 复查，94 个 Markdown 文件）。线上站点仅保留 MkDocs Material 单一版式，章节页已具备上一章/下一章导航，站点已启用顶部导航标签、站内搜索、主题索引、案例索引表、术语回链索引、学习进度清单、三条 RAG/skill/agent/memory 连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库（含质量层级对照）和内容健康报告 workflow；本轮未启动本地预览。
+- 当前 Markdown 规模约 23884 行、46592 个词、384200 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节导读、章节收尾、章节练习与验收映射表、案例索引表、主题索引、术语回链索引、学习进度清单、内容健康报告、图解增强、客户反馈连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库（含三条主线质量层级对照）、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
   - OpenAI Agents SDK 文档
@@ -162,7 +173,7 @@
 - 下次继续完善前，先按 `docs/maintenance-guide.md` 的 AI 协作交接约定输出“当前状态、本轮方向、修改范围、边界和验证方式”，再开始改文件。
 - 推送到 GitHub 后，先观察 MkDocs Pages workflow 是否通过；如果构建通过，再访问线上首页确认目录、搜索、章节上一页/下一页和移动端阅读是否正常。
 - GitHub Pages 设置中应使用 `GitHub Actions` 作为 Source，由 `.github/workflows/mkdocs-pages.yml` 发布唯一的 MkDocs Material 站点。
-- 下一轮站点体验优化优先做图解增强、章节内容增厚或自动候选扩写 PR 流程细化；若继续扩写正文，建议从第 6-9 章的 RAG、skill、agent、memory 案例链开始，把同一任务如何从普通 prompt 演进到可治理工作流写得更完整。
+- 下一轮建议优先继续为连续案例样例库补充行业化匿名作业样例、课堂观察记录和团队试点复盘样例；也可以继续扩展课堂投影短版的 30、60、90、120 分钟讲法。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。

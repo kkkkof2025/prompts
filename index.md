@@ -80,6 +80,36 @@
 </div>
 
 <div class="resource-card" markdown="1">
+**[连续案例练习与复盘评分表](docs/cases/continuous-case-exercises.md)**
+
+把客户反馈、教学资料库和代码库三条长案例转成练习、评分和试点复盘。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例课堂试跑版](docs/cases/continuous-case-classroom-run.md)**
+
+给课堂、读书会和企业内训使用的 90/120 分钟脚本。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例课堂投影短版](docs/cases/continuous-case-slide-brief.md)**
+
+给讲师现场投屏使用的 12 页短版摘要。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例团队试点版](docs/cases/continuous-case-team-pilot.md)**
+
+给团队落地使用的 7 天试点和 30 天衔接方案。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例样例库](docs/cases/continuous-case-samples.md)**
+
+可模仿的匿名化作业、课堂观察和团队试点复盘样例。
+</div>
+
+<div class="resource-card" markdown="1">
 **[AI 安全与治理](docs/chapters/13-safety-governance.md)**
 
 数据、权限、评估、审计和人工复核。

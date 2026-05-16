@@ -6,7 +6,7 @@
 - 读书会或课堂试跑：检查讲授节奏、练习难度和作业要求。
 - 团队 AI 试点：检查模板、工作流、安全边界和评估表是否能进入真实流程。
 
-建议配合 [读书会与教学方案](facilitation-guide.md)、[教学版本材料包](teaching-kit.md)、[课堂练习工作纸](classroom-worksheets.md)、[团队 AI 落地完整路线图](team-ai-adoption-roadmap.md)、[30 天团队试点跟踪表](pilot-tracking-30days.md)、[AI 能力评估量表](assessment-rubric.md) 和 [1.0 发布前总检查清单](release-checklist-1.0.md) 使用。
+建议配合 [读书会与教学方案](facilitation-guide.md)、[教学版本材料包](teaching-kit.md)、[课堂练习工作纸](classroom-worksheets.md)、[连续案例课堂试跑版](cases/continuous-case-classroom-run.md)、[连续案例课堂投影短版](cases/continuous-case-slide-brief.md)、[连续案例团队试点版](cases/continuous-case-team-pilot.md)、[连续案例样例库](cases/continuous-case-samples.md)、[团队 AI 落地完整路线图](team-ai-adoption-roadmap.md)、[30 天团队试点跟踪表](pilot-tracking-30days.md)、[AI 能力评估量表](assessment-rubric.md) 和 [1.0 发布前总检查清单](release-checklist-1.0.md) 使用。
 
 ## 使用原则
 

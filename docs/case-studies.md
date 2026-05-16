@@ -17,6 +17,14 @@
 ## 分角色案例
 
 - [案例索引表](cases/index.md)
+- [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)
+- [教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)
+- [代码库问答连续案例](cases/codebase-rag-skill-agent-memory.md)
+- [连续案例练习与复盘评分表](cases/continuous-case-exercises.md)
+- [连续案例课堂试跑版](cases/continuous-case-classroom-run.md)
+- [连续案例团队试点版](cases/continuous-case-team-pilot.md)
+- [连续案例样例库](cases/continuous-case-samples.md)
+- [连续案例课堂投影短版](cases/continuous-case-slide-brief.md)
 - [学生：学习计划、论文阅读](cases/student.md)
 - [教师：备课、作业反馈](cases/teacher.md)
 - [运营：会议纪要、内容排期](cases/operations.md)
@@ -35,3 +43,5 @@
 - prompt 模板：适合单次任务。
 - skill：适合固定领域经验。
 - agent 工作流：适合多步骤、需要工具、需要审计的任务。
+
+三条 RAG/skill/agent/memory 连续案例读完后，建议继续使用 [连续案例练习与复盘评分表](cases/continuous-case-exercises.md)、[连续案例课堂试跑版](cases/continuous-case-classroom-run.md)、[连续案例课堂投影短版](cases/continuous-case-slide-brief.md)、[连续案例团队试点版](cases/continuous-case-team-pilot.md) 和 [连续案例样例库](cases/continuous-case-samples.md)，把案例转成可提交作业、课堂讨论、团队试点和复盘证据，也顺便对照低质量、刚及格、可试点和可示范的差异。

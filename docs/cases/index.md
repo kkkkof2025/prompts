@@ -6,6 +6,10 @@
 
 如果你更习惯按主题标签找入口，可以先看 [主题索引](../topic-index.md)。
 
+三条连续案例读完后，建议继续使用 [连续案例练习与复盘评分表](continuous-case-exercises.md)，把长案例转成可提交作业、课堂讨论、团队试点和复盘证据。
+
+如果你要直接开课或试点，可以继续看 [连续案例课堂试跑版](continuous-case-classroom-run.md)、[连续案例课堂投影短版](continuous-case-slide-brief.md)、[连续案例团队试点版](continuous-case-team-pilot.md) 和 [连续案例样例库](continuous-case-samples.md)。
+
 ## 快速索引
 
 ### 按角色找案例
@@ -14,10 +18,18 @@
 | --- | --- | --- | --- |
 | 学生 | [学生案例](student.md) | 学习计划、资料消化、验收标准 | 把摘要当理解、把结论当答案 |
 | 教师 | [教师案例](teacher.md) | 教学设计、反馈边界、评价量规 | 反馈失真、评分越权、术语过密 |
+| 培训者 | [教学资料库连续案例](teaching-rag-skill-agent-memory.md) | 教学 RAG、反馈 skill、助教 agent、教学记忆 | 学员隐私、越权评分、长期标签 |
+| 工程团队 | [代码库问答连续案例](codebase-rag-skill-agent-memory.md) | 代码库 RAG、修复 skill、受控工程 agent、repo memory | 盲改代码、泄露密钥、自动提交 |
 | 运营 | [运营案例](operations.md) | 信息整理、待办拆解、执行检查 | 把讨论写成决定、忽略待确认项 |
 | 产品 | [产品案例](product.md) | 决策问题、事实与推测分离 | 营销信息当事实、方案跳过问题定义 |
 | 工程 | [工程案例](engineering.md) | 复现、修改范围、验证闭环 | 盲改代码、测试不足、权限过宽 |
 | 管理者 | [管理者案例](management.md) | 风险边界、组织流程、责任分工 | 口号化规范、责任不清、复盘空泛 |
+| 跨角色团队 | [RAG、Skill、Agent 与 Memory 连续案例](rag-skill-agent-memory.md) | 知识库、流程复用、受控行动、记忆边界 | 资料越权、自动发布、保存敏感信息 |
+| 课堂/团队练习 | [连续案例练习与复盘评分表](continuous-case-exercises.md) | 长案例复盘、分组讨论、评分、试点设计 | 只复述案例、没有形成自己的流程 |
+| 课堂试跑 | [连续案例课堂试跑版](continuous-case-classroom-run.md) | 90/120 分钟课堂、讲师脚本、互评、观察记录 | 只讲概念，不落到任务 |
+| 课堂投影 | [连续案例课堂投影短版](continuous-case-slide-brief.md) | 投屏页、讲师提示、互动问题、收尾作业 | 把投影页当完整讲义 |
+| 团队试点 | [连续案例团队试点版](continuous-case-team-pilot.md) | 7 天试点、30 天衔接、写回规则 | 直接上自动化高风险动作 |
+| 样例参考 | [连续案例样例库](continuous-case-samples.md) | 匿名化作业、课堂观察、团队试点复盘、质量层级对照 | 照抄样例、不替换真实边界 |
 
 ### 按主题找案例
 
@@ -25,10 +37,18 @@
 | --- | --- | --- |
 | 学习规划、论文阅读 | [学生案例](student.md) | 第 0-3 章 |
 | 课堂设计、作业反馈 | [教师案例](teacher.md) | 第 3-5 章、第 13 章 |
+| 教学资料库到助教助手 | [教学资料库连续案例](teaching-rag-skill-agent-memory.md) | 第 6-9 章、第 13 章 |
+| 代码库问答到修复助手 | [代码库问答连续案例](codebase-rag-skill-agent-memory.md) | 第 6-9 章、第 13 章 |
 | 会议纪要、内容排期 | [运营案例](operations.md) | 第 3-4 章、第 13 章 |
 | 竞品分析、需求评审 | [产品案例](product.md) | 第 4-6 章、第 5 章 |
 | 修 Bug、补测试 | [工程案例](engineering.md) | 第 4-8 章、第 13 章 |
 | 团队规范、项目复盘 | [管理者案例](management.md) | 第 5-6 章、第 13-14 章 |
+| 客户反馈知识库到行动助手 | [RAG、Skill、Agent 与 Memory 连续案例](rag-skill-agent-memory.md) | 第 6-9 章、第 13 章 |
+| 连续案例练习与评分 | [连续案例练习与复盘评分表](continuous-case-exercises.md) | 第 6-9 章、第 13-14 章 |
+| 连续案例课堂试跑 | [连续案例课堂试跑版](continuous-case-classroom-run.md) | 第 6-9 章、第 13-14 章 |
+| 连续案例课堂投影 | [连续案例课堂投影短版](continuous-case-slide-brief.md) | 第 6-9 章、第 13-14 章 |
+| 连续案例团队试点 | [连续案例团队试点版](continuous-case-team-pilot.md) | 第 6-9 章、第 12-14 章 |
+| 连续案例样例参考 | [连续案例样例库](continuous-case-samples.md) | 第 6-9 章、第 13-14 章，含三条主线的质量层级对照 |
 | 前沿技术演进 | [前沿与过时技术案例库](../technology-evolution-cases.md) | 第 8、10-13 章 |
 | 团队试点与落地 | [团队 AI 落地案例集](../team-adoption-cases.md) | 第 12-14 章 |
 
@@ -37,7 +57,7 @@
 | 风险等级 | 适合案例 | 说明 |
 | --- | --- | --- |
 | 低 | 学生案例、部分教师案例 | 主要练习理解、写作和结构化输出 |
-| 中 | 运营案例、产品案例、工程案例、团队落地案例 | 需要匿名化、复核和边界说明 |
+| 中 | 运营案例、产品案例、工程案例、团队落地案例、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例团队试点版、连续案例样例库 | 需要匿名化、复核、评分标准和边界说明 |
 | 高 | 管理者案例、安全复盘、前沿技术演进案例 | 重点练习人工确认、权限和责任边界 |
 
 ## 案例目录
@@ -46,10 +66,18 @@
 | --- | --- | --- |
 | 学生 | [8 周 AI 学习路线、论文精读](student.md) | 学习计划、资料消化、验收标准 |
 | 教师 | [分层备课、作业反馈](teacher.md) | 教学设计、反馈边界、评价量规 |
+| 培训者 | [教学资料库到受控助教助手](teaching-rag-skill-agent-memory.md) | 教学 RAG、feedback skill、助教 agent、memory 边界 |
 | 运营 | [会议纪要、内容排期](operations.md) | 信息整理、待办拆解、执行检查 |
 | 产品 | [竞品分析、需求评审](product.md) | 决策问题、事实与推测分离 |
 | 工程 | [修 Bug、补测试](engineering.md) | 复现、修改范围、验证闭环 |
 | 管理者 | [AI 使用规范、项目复盘](management.md) | 风险边界、组织流程、责任分工 |
+| 跨角色团队 | [客户反馈知识库到行动助手](rag-skill-agent-memory.md) | RAG、skill、agent、memory、治理 |
+| 工程团队 | [代码库问答到受控修复助手](codebase-rag-skill-agent-memory.md) | 代码库 RAG、修复 skill、工程 agent、repo memory |
+| 课堂/团队练习 | [连续案例练习与复盘评分表](continuous-case-exercises.md) | 分组讨论、作业提交、rubric 评分、试点复盘 |
+| 课堂试跑 | [连续案例课堂试跑版](continuous-case-classroom-run.md) | 讲师脚本、课堂互评、观察记录 |
+| 课堂投影 | [连续案例课堂投影短版](continuous-case-slide-brief.md) | 投影短页、互动问题、讲师提示 |
+| 团队试点 | [连续案例团队试点版](continuous-case-team-pilot.md) | 试点任务卡、7 天试点、30 天衔接 |
+| 样例参考 | [连续案例样例库](continuous-case-samples.md) | 匿名化作业样例、课堂观察样例、团队试点复盘样例、质量层级对照 |
 | 技术演进 | [前沿与过时技术案例库](../technology-evolution-cases.md) | 技术复盘、边界判断、历史经验迁移 |
 
 ## 章节对应
@@ -58,8 +86,8 @@
 | --- | --- |
 | 第 0-4 章 | 学生案例、教师案例、运营案例 |
 | 第 5 章 | 产品案例、模型选型案例 |
-| 第 6-8 章 | 运营案例、工程案例、团队落地案例 |
-| 第 9-10 章 | 学生案例、管理者案例、个人助手工作台案例 |
+| 第 6-8 章 | 运营案例、工程案例、团队落地案例、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版 |
+| 第 9-10 章 | 学生案例、管理者案例、个人助手工作台案例、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例团队试点版 |
 | 第 11-12 章 | 前沿与过时技术案例库、模型选型案例 |
 | 第 13-14 章 | 管理者案例、团队 AI 落地案例集、试读与试跑反馈包 |
 

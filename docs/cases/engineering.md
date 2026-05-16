@@ -108,3 +108,7 @@
 复盘：
 
 测试补完后记录“曾经缺少哪些边界”，把它变成后续需求评审或代码评审清单。
+
+## 延伸阅读
+
+如果你想看一个更完整的工程演进案例，可以读 [从代码库问答到受控修复助手](codebase-rag-skill-agent-memory.md)。它把代码库问答、RAG、bug triage skill、受控工程 agent 和 repo memory 串成一条完整流程。

@@ -88,7 +88,13 @@
 4. [第 8 章：Agent，从聊天到行动](chapters/08-agents.md)
 5. [第 9 章：记忆系统与个性化助手](chapters/09-memory.md)
 6. [第 10 章：OpenClaw 与个人 AI 助手工作台](chapters/10-openclaw.md)
-7. [图解：AI 工作系统](diagrams.md)
+7. [代码库问答连续案例](cases/codebase-rag-skill-agent-memory.md)
+8. [连续案例练习与复盘评分表](cases/continuous-case-exercises.md)
+9. [连续案例课堂试跑版](cases/continuous-case-classroom-run.md)
+10. [连续案例课堂投影短版](cases/continuous-case-slide-brief.md)
+11. [连续案例团队试点版](cases/continuous-case-team-pilot.md)
+12. [连续案例样例库](cases/continuous-case-samples.md)
+13. [图解：AI 工作系统](diagrams.md)
 
 重点练习：
 
@@ -97,6 +103,7 @@
 2. 为 bug 修复任务写 agent 工作说明。
 3. 建立 10 条代码任务评测集。
 4. 设计一个最小 RAG 文档问答流程。
+5. 把代码修复经验沉淀成 bug triage skill。
 ```
 
 ## 路线 5：团队管理者
@@ -145,4 +152,33 @@
 2. 每次事实更新记录来源和日期。
 3. 每季度检查前沿资料。
 4. 每年重新审查学习路径。
+```
+
+## 路线 7：教师、培训者和读书会主持人
+
+目标：
+
+把 AI 学习内容转成可讲、可练、可反馈、可复盘的课程或读书会。
+
+阅读顺序：
+
+1. [教学版本材料包](teaching-kit.md)
+2. [读书会与教学方案](facilitation-guide.md)
+3. [课堂练习工作纸](classroom-worksheets.md)
+4. [教学示范作业集](teaching-examples.md)
+5. [教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)
+6. [连续案例练习与复盘评分表](cases/continuous-case-exercises.md)
+7. [连续案例课堂试跑版](cases/continuous-case-classroom-run.md)
+8. [连续案例课堂投影短版](cases/continuous-case-slide-brief.md)
+9. [连续案例团队试点版](cases/continuous-case-team-pilot.md)
+10. [连续案例样例库](cases/continuous-case-samples.md)
+11. [第 13 章：安全、伦理与治理](chapters/13-safety-governance.md)
+
+重点练习：
+
+```text
+1. 把一节课拆成学习目标、课堂活动和验收标准。
+2. 把匿名化作业反馈沉淀成 teaching-feedback skill。
+3. 为助教 agent 写清只读资料、写草稿和人工确认边界。
+4. 写一份教学 memory 的禁止保存清单。
 ```

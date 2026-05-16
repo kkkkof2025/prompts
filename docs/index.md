@@ -63,6 +63,42 @@
 </div>
 
 <div class="resource-card" markdown="1">
+**[RAG/Skill/Agent/Memory 连续案例](cases/rag-skill-agent-memory.md)**
+
+看客户反馈、[教学资料库](cases/teaching-rag-skill-agent-memory.md) 或 [代码库](cases/codebase-rag-skill-agent-memory.md) 如何从 prompt 演进为可治理工作流。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例练习与复盘评分表](cases/continuous-case-exercises.md)**
+
+把三条长案例转成课堂讨论、作业提交、团队试点和 rubric 评分。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例课堂试跑版](cases/continuous-case-classroom-run.md)**
+
+给教师、培训者和读书会主持人的课堂脚本和示范样例。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例课堂投影短版](cases/continuous-case-slide-brief.md)**
+
+用 12 个投影页讲清长案例升级路径、边界和课堂互评。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例团队试点版](cases/continuous-case-team-pilot.md)**
+
+给产品、运营、教学和工程团队的 7 天试点与 30 天衔接方案。
+</div>
+
+<div class="resource-card" markdown="1">
+**[连续案例样例库](cases/continuous-case-samples.md)**
+
+匿名化作业、课堂观察记录、团队试点复盘样例和质量层级对照。
+</div>
+
+<div class="resource-card" markdown="1">
 **[主题索引](topic-index.md)**
 
 按任务类型和主题标签快速找到章节、案例和材料。

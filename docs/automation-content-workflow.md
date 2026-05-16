@@ -1,6 +1,6 @@
 # 自动化维护与扩写方案
 
-最后维护：2026-05-13
+最后维护：2026-05-14
 
 这份说明回答一个实际问题：能不能用 GitHub Actions 自动完善、扩充和更新本书内容？
 
@@ -54,6 +54,23 @@ GitHub Actions 很适合做这些事：
 - 过长页面提示。
 - 目录入口遗漏。
 - 需要复核的前沿资料。
+
+本项目已经落地了这个最低可行版本：
+
+```text
+scripts/content-health-report.ps1
+.github/workflows/content-health.yml
+```
+
+它每周一自动生成一次内容健康报告，也可以手动触发。报告只读扫描 Markdown 文件，输出这些候选项：
+
+- 可能需要扩写的短页面。
+- 可能需要拆分或增加导航的长页面。
+- 缺少一级标题的页面。
+- 第 0-14 章是否缺少本章导读、本章收尾或章节导航。
+- 含有前沿技术、协议、模型或复核关键词的动态事实复核候选。
+
+这一步不调用模型，也不改正文。它的作用是先让维护者知道“哪里可能需要看”，再决定是否人工扩写或发起候选 PR。
 
 ### 方案 B：生成候选稿
 
@@ -155,11 +172,11 @@ GitHub 官方文档建议对工作流权限做最小授权，并把定时触发�
 6. 合并前再跑一次链接、术语和 lint 检查。
 ```
 
+当前仓库已经完成第 1-2 步，并用 artifact 保存扫描报告。后续如果要继续推进，可以增加一个人工触发 workflow，把报告中的某一条候选项转换成 issue；再往后才考虑接入模型生成 draft PR。
+
 ## 参考
 
 - [GitHub Actions permissions documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-the-github_token-in-a-workflow#about-the-github_token)
 - [GitHub Actions workflow syntax](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions)
 - [GitHub Actions scheduled workflows](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule)
 - [GitHub Actions workflow_dispatch](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch)
-
-如果你要进一步落地，我可以下一步直接给出一个“只做维护扫描 + 自动开 issue”的工作流草案，或者一个“生成 draft PR”的安全版工作流草案。

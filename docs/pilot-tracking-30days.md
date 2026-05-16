@@ -2,7 +2,7 @@
 
 最后核验：2026-05-07
 
-本文档是 [AI 安全与模型选型工作坊](workshop-safety-model-selection.md) 的落地接续工具。它把工作坊产出的风险地图、模型路线、评测集和团队边界，接入一个可操作的 30 天试点周期。每个团队只需选取 1 个试点场景，按下方时间轴推进。
+本文档是 [AI 安全与模型选型工作坊](workshop-safety-model-selection.md) 的落地接续工具，也适合和 [连续案例团队试点版](cases/continuous-case-team-pilot.md) 及 [连续案例样例库](cases/continuous-case-samples.md) 配合使用。它把工作坊产出的风险地图、模型路线、评测集和团队边界，接入一个可操作的 30 天试点周期。每个团队只需选取 1 个试点场景，按下方时间轴推进。
 
 ---
 
@@ -443,3 +443,4 @@ D. 你对团队 AI 落地有什么建议？
 - [AI 安全事故复盘案例集](safety-incident-retrospectives.md)
 - [AI 模型选型实战案例集](model-selection-cases.md)
 - [AI 任务选择决策指南](task-decision-guide.md)
+- [连续案例团队试点版](cases/continuous-case-team-pilot.md)

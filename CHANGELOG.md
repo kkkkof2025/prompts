@@ -30,6 +30,17 @@
 - 增加 `docs/topic-index.md` 主题索引，按 prompt、RAG、agent、安全、教学、团队落地等主题串联章节、案例和材料。
 - 增加 `docs/glossary-links.md` 术语回链索引，把核心术语连接到定义、章节、案例、材料和常见误解。
 - 增加 `docs/learning-progress.md` 学习进度清单，按章节记录阅读、练习、案例复盘和 30 天推进节奏。
+- 增加 `docs/cases/rag-skill-agent-memory.md` 长案例，把客户反馈知识库从普通 prompt 演进到 RAG、skill、受控 agent 和 memory 边界。
+- 增加 `docs/cases/teaching-rag-skill-agent-memory.md` 长案例，把教学资料库从普通 prompt 演进到教学 RAG、feedback skill、受控助教 agent 和 memory 边界。
+- 增加 `docs/cases/codebase-rag-skill-agent-memory.md` 长案例，把工程代码库从普通 prompt 演进到代码库 RAG、bug triage skill、受控修复 agent 和 repo memory 边界。
+- 增加 `docs/cases/continuous-case-exercises.md` 连续案例练习与复盘评分表，把三条长案例转成课前阅读、分组讨论、实操改写、rubric 评分和团队试点复盘材料。
+- 增加 `docs/cases/continuous-case-classroom-run.md` 连续案例课堂试跑版，把长案例转成 90/120 分钟课堂脚本、示范样例、讲师追问清单和观察记录模板。
+- 增加 `docs/cases/continuous-case-slide-brief.md` 连续案例课堂投影短版，提供 12 个投影页、讲师提示、互动问题、开场词和收尾词。
+- 增加 `docs/cases/continuous-case-team-pilot.md` 连续案例团队试点版，把长案例转成 7 天最小试点、30 天衔接、试点任务卡、日志模板和写回规则。
+- 增加 `docs/cases/continuous-case-samples.md` 连续案例样例库，提供匿名化作业、课堂观察记录、7 天团队试点复盘样例，并为客户反馈、教学资料库和代码库三条主线补充质量层级对照。
+- 增强 `docs/diagrams.md`，补充 RAG 到 skill、agent、memory 的升级路径、分工图、agent 权限分层和记忆写入决策图。
+- 增加 `scripts/content-health-report.ps1` 内容健康报告脚本，扫描短页面、长页面、缺一级标题、章节结构缺口和动态事实复核候选。
+- 增加 `.github/workflows/content-health.yml`，每周或手动生成内容健康报告 artifact，作为自动候选扩写 PR 的前置扫描。
 - 增加 `docs/team-adoption-playbook.md` 团队 AI 落地手册，覆盖试点选择、数据分级、模板库、知识库、评估机制和治理节奏。
 - 增加 `docs/team-adoption-cases.md` 团队 AI 落地案例集，覆盖会议纪要、用户反馈、内部知识库、工程测试建议和发布前审查试点。
 - 增加 `docs/frontier-review-playbook.md` 前沿资料季度复核执行手册，把 0.8 复核拆成层级选择、范围确认、证据记录、影响判断、修改顺序和发布判断。
@@ -44,7 +55,7 @@
 - 增加 `docs/workshop-industry-cases.md` 行业化工作坊案例集，覆盖教育、医疗、法律、金融、电商、研发六个行业的场景描述、风险地图、模型路线选择和小型评测样例。
 - 增加 `docs/pilot-tracking-30days.md` 30 天团队 AI 试点跟踪表，覆盖 Day 1-30 的准备、试跑、迭代、扩展和评估全流程，含日志模板、周度汇总、迭代记录、评估问卷和复盘框架。
 - 增加 `docs/release-checklist-1.0.md` 1.0 发布前总检查清单，覆盖内容完整性、学习与落地路线、链接与自动化、外部资料复核、版权许可证、GitHub Pages、人工通读和发布决策。
-- 更新 `scripts/export-ebook.ps1`，把已新增的安全、模型选型、团队落地、反馈验证、章节验收、前沿复核材料、主题索引、术语回链索引和学习进度清单纳入电子书导出。
+- 更新 `scripts/export-ebook.ps1`，把已新增的安全、模型选型、团队落地、反馈验证、章节验收、前沿复核材料、主题索引、术语回链索引、学习进度清单、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版和连续案例样例库纳入电子书导出。
 - 更新 README、目录、维护指南、电子书指南、路线图和 MEMORY。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析，占位标记、术语一致性和 Markdown lint 均通过（79 个 Markdown 文件，2026-05-12 复查）。
 

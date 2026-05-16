@@ -86,6 +86,14 @@ AI 领域变化很快。这本书要长期有用，关键不是一次写完，�
 
 GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链接检查、术语一致性检查和 Pages 构建检查。外部链接检查默认每月运行一次，也可以手动触发。
 
+内容健康报告可用下面的脚本生成：
+
+```powershell
+./scripts/content-health-report.ps1 -Root . -OutputPath content-health-report.md
+```
+
+对应的 `Content Health Report` workflow 每周运行一次，也支持手动触发。它只生成报告 artifact，不直接修改正文；报告中的短页面、长页面、章节结构和动态事实复核候选需要人工判断后再处理。
+
 如果修改涉及事实：
 
 ```text
@@ -157,7 +165,7 @@ GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链�
 - `docs/appendix-resources.md`：前沿来源和核验清单。
 - `docs/term-style-guide.md`：术语写法规范。
 - `docs/ebook-guide.md`：电子书和离线阅读说明。
-- `scripts/`：本地检查、外部链接检查和电子书导出脚本。
+- `scripts/`：本地检查、内容健康报告、外部链接检查和电子书导出脚本。
 
 ## 维护者 prompt
 

@@ -2,7 +2,7 @@
 
 个人会用 AI，不等于团队能用好 AI。团队落地需要把个人经验变成共同流程：哪些任务适合先做，哪些数据不能碰，怎样判断输出质量，谁负责维护模板和知识库，出现问题如何处理。
 
-这份手册面向管理者、团队负责人、培训者和内部 AI 推广者。建议配合 [团队 AI 落地案例集](team-adoption-cases.md)、[AI 安全与模型选型工作坊](workshop-safety-model-selection.md)、[AI 任务选择决策指南](task-decision-guide.md)、[AI 能力评估量表](assessment-rubric.md)、[常见误区与纠偏指南](common-pitfalls.md) 和 [安全、伦理与治理](chapters/13-safety-governance.md) 使用。
+这份手册面向管理者、团队负责人、培训者和内部 AI 推广者。建议配合 [团队 AI 落地案例集](team-adoption-cases.md)、[AI 安全与模型选型工作坊](workshop-safety-model-selection.md)、[AI 任务选择决策指南](task-decision-guide.md)、[AI 能力评估量表](assessment-rubric.md)、[连续案例团队试点版](cases/continuous-case-team-pilot.md)、[连续案例样例库](cases/continuous-case-samples.md)、[常见误区与纠偏指南](common-pitfalls.md) 和 [安全、伦理与治理](chapters/13-safety-governance.md) 使用。
 
 ## 落地原则
 

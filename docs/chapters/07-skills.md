@@ -102,6 +102,23 @@ Skill = 某类任务的可复用操作说明
 
 定期更新。模型能力和工具接口会变，skill 也需要维护。
 
+## 连续案例：反馈分析 Skill
+
+[从客户反馈知识库到可治理行动助手](../cases/rag-skill-agent-memory.md) 的第 3 轮把“每周客户反馈分析”沉淀成 `customer-feedback-triage` skill。这个例子适合观察 skill 和普通 prompt 的区别：
+
+- prompt 只说明本次要输出什么。
+- skill 固定触发场景、输入要求、操作流程、输出格式和禁止事项。
+- skill 把失败复盘写回流程，例如“导出慢”和“导出失败”不能只按模块合并。
+- skill 让后续 agent 可以调用成熟流程，而不是每次重新临场发挥。
+
+你写自己的 skill 时，可以先问：这个任务是否每周、每月或每个项目都会重复出现？如果答案是肯定的，就值得把 prompt 升级为 skill。
+
+教学场景可以读 [从教学资料库到受控助教助手](../cases/teaching-rag-skill-agent-memory.md)。它把匿名化作业反馈沉淀成 `teaching-feedback-draft` skill，重点展示如何避免评价学员人格、如何把反馈指向具体文本，以及如何把正式评分保留给讲师确认。
+
+工程场景可以读 [从代码库问答到受控修复助手](../cases/codebase-rag-skill-agent-memory.md)。它把缺陷定位沉淀成 `codebase-bug-triage` skill，重点展示如何限定读取路径、生成最小修复计划、保留测试命令，并把“不能读取秘密配置、不能自动提交推送”写进边界。
+
+读完三条连续案例后，可以用 [连续案例练习与复盘评分表](../cases/continuous-case-exercises.md) 检查自己的 skill 是否真的可复用，还是只是把一个 prompt 换了名字。
+
 ## 练习
 
 选择你最常让 AI 做的一类任务，例如：

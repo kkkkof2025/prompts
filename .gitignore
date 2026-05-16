@@ -31,3 +31,4 @@ vendor/bundle/
 tmp/
 temp/
 *.tmp
+content-health-report.md

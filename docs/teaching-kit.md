@@ -1,6 +1,6 @@
 # 教学版本材料包
 
-这份材料面向教师、培训者、读书会主持人和团队学习负责人。它把本书整理成可以直接开课的 4 周教学版本，适合配合 [读书会与教学方案](facilitation-guide.md)、[AI 安全与模型选型工作坊](workshop-safety-model-selection.md)、[课堂练习工作纸](classroom-worksheets.md)、[教学示范作业集](teaching-examples.md)、[Prompt 调试指南](prompt-debugging-guide.md)、[章节复盘题与小测](chapter-review-questions.md) 和 [AI 能力评估量表](assessment-rubric.md) 使用。
+这份材料面向教师、培训者、读书会主持人和团队学习负责人。它把本书整理成可以直接开课的 4 周教学版本，适合配合 [读书会与教学方案](facilitation-guide.md)、[教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)、[连续案例练习与复盘评分表](cases/continuous-case-exercises.md)、[连续案例课堂试跑版](cases/continuous-case-classroom-run.md)、[连续案例课堂投影短版](cases/continuous-case-slide-brief.md)、[连续案例团队试点版](cases/continuous-case-team-pilot.md)、[连续案例样例库](cases/continuous-case-samples.md)、[AI 安全与模型选型工作坊](workshop-safety-model-selection.md)、[课堂练习工作纸](classroom-worksheets.md)、[教学示范作业集](teaching-examples.md)、[Prompt 调试指南](prompt-debugging-guide.md)、[章节复盘题与小测](chapter-review-questions.md) 和 [AI 能力评估量表](assessment-rubric.md) 使用。
 
 建议课时：
 

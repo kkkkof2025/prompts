@@ -23,6 +23,7 @@ exclude_docs: |
   assets/
   mkdocs.yml
   requirements-docs.txt
+  content-health-report.md
   .markdownlint.json
   .gitignore
 theme:
@@ -93,6 +94,14 @@ nav:
       - 主题索引: docs/topic-index.md
       - 真实应用案例: docs/case-studies.md
       - 案例索引表: docs/cases/index.md
+      - RAG/Skill/Agent/Memory 连续案例: docs/cases/rag-skill-agent-memory.md
+      - 教学资料库连续案例: docs/cases/teaching-rag-skill-agent-memory.md
+      - 代码库问答连续案例: docs/cases/codebase-rag-skill-agent-memory.md
+      - 连续案例练习与复盘评分表: docs/cases/continuous-case-exercises.md
+      - 连续案例课堂试跑版: docs/cases/continuous-case-classroom-run.md
+      - 连续案例团队试点版: docs/cases/continuous-case-team-pilot.md
+      - 连续案例样例库: docs/cases/continuous-case-samples.md
+      - 连续案例课堂投影短版: docs/cases/continuous-case-slide-brief.md
       - 学生案例: docs/cases/student.md
       - 教师案例: docs/cases/teacher.md
       - 运营案例: docs/cases/operations.md
