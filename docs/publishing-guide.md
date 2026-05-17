@@ -168,7 +168,7 @@ MkDocs Material 支持 Mermaid 代码块的展示方式取决于配置和扩展�
 - `MkDocs Pages` workflow 是否在 `master` 或 `main` 推送后运行。
 - Actions 里最新一次 `MkDocs Pages` 是否成功。
 
-当前配置会生成 MkDocs Material 站点：顶部保留搜索，左侧栏显示 `mkdocs.yml` 中的全书导航树，并默认展开目录层级。
+当前配置会生成 MkDocs Material 站点：顶部保留搜索，左侧栏显示 `mkdocs.yml` 中的全书导航树。导航分组保持可展开和收起，读者可以按章节、案例、教学、团队落地、工具、OpenClaw、附录和维护材料自由跳转。
 
 ## 发布前最终清单
 

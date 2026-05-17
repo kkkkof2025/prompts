@@ -41,8 +41,9 @@
 - 增加 `docs/seven-layer-ai-civilization.md` 七层 AI 文明架构，把执行、记忆、意图、认知经济、世界模型、身份和文明展开成前沿系统框架，并补充七层之外的技术推演。
 - 增加 `docs/openclaw-multi-agent-linkage.md` OpenClaw 多 agent 联动教程，覆盖飞书、Telegram、云文档、任务状态、统一 skill 安装、回写和人工审批。
 - 增加 `docs/openclaw-superbrain-architecture.md` OpenClaw、Node.js 与超级大脑架构分析，比较 Node.js、Python、Go、Rust、Markdown 与流式中间层，并提出更强认知系统设计。
-- 增强 MkDocs 导航，新增 `OpenClaw 与前沿架构` 导航分组，移除顶部 tabs 模式，并启用 `navigation.expand`，让左侧目录显示全书导航树且默认展开。
+- 增强 MkDocs 导航，新增 `OpenClaw 与前沿架构` 导航分组，移除顶部 tabs 模式，并改为左侧全书导航树；导航分组保持可展开和收起，搜索索引由 MkDocs Material 生成。
 - 修复 GitHub Actions 触发分支，`MkDocs Pages` 和 `Markdown Check` 同时监听 `master` 与 `main`，避免本仓库推送到 `master` 后 Pages 不更新。
+- 修正 GitHub Pages 发布源，切换为 GitHub Actions 构建的 MkDocs 产物，避免 Pages 继续用 Jekyll 从 `master` 根目录发布旧版页面。
 - 增强 `docs/diagrams.md`，补充 RAG 到 skill、agent、memory 的升级路径、分工图、agent 权限分层和记忆写入决策图。
 - 增加 `scripts/content-health-report.ps1` 内容健康报告脚本，扫描短页面、长页面、缺一级标题、章节结构缺口和动态事实复核候选。
 - 增加 `.github/workflows/content-health.yml`，每周或手动生成内容健康报告 artifact，作为自动候选扩写 PR 的前置扫描。
