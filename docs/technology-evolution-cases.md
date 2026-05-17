@@ -12,7 +12,7 @@
 - 过时技术也可以写。过时不等于没有价值，它常常能解释今天的工具为什么变成现在这样。
 - 不把技术写成永久结论。模型、接口、协议和产品形态会变，案例应该保留核验日期和适用范围。
 
-建议配合 [AI 前沿发展全景](chapters/12-frontier-landscape.md)、[Agent，从聊天到行动](chapters/08-agents.md)、[工具调用、RAG 与知识库](chapters/06-tools-rag.md)、[Skills，把经验固化成能力](chapters/07-skills.md)、[安全、伦理与治理](chapters/13-safety-governance.md)、[资源与引用](appendix-resources.md) 和 [前沿资料季度复核执行手册](frontier-review-playbook.md) 使用。
+建议配合 [AI 前沿发展全景](chapters/12-frontier-landscape.md)、[Agent，从聊天到行动](chapters/08-agents.md)、[工具调用、RAG 与知识库](chapters/06-tools-rag.md)、[Skills，把经验固化成能力](chapters/07-skills.md)、[七层 AI 文明架构](seven-layer-ai-civilization.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)、[安全、伦理与治理](chapters/13-safety-governance.md)、[资源与引用](appendix-resources.md) 和 [前沿资料季度复核执行手册](frontier-review-playbook.md) 使用。
 
 ## 技术案例收录标准
 

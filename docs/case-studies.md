@@ -34,6 +34,12 @@
 - [团队 AI 落地案例集](team-adoption-cases.md)
 - [前沿与过时技术案例库](technology-evolution-cases.md)
 
+## OpenClaw 与前沿架构
+
+- [七层 AI 文明架构](seven-layer-ai-civilization.md)
+- [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)
+- [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)
+
 ## 使用建议
 
 第一次阅读时，可以先挑和自己角色最接近的一页。真正使用时，不要直接照抄案例里的背景信息，而要替换成自己的目标、资料、限制、验收标准和禁止事项。

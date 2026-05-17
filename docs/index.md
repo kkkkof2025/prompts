@@ -105,6 +105,24 @@
 </div>
 
 <div class="resource-card" markdown="1">
+**[七层 AI 文明架构](seven-layer-ai-civilization.md)**
+
+把执行、记忆、意图、认知经济、世界模型、身份和文明串成一套前沿系统框架。
+</div>
+
+<div class="resource-card" markdown="1">
+**[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)**
+
+用云文档、飞书、Telegram、任务状态和统一 skill 包设计多 agent 协同。
+</div>
+
+<div class="resource-card" markdown="1">
+**[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)**
+
+分析 OpenClaw 技术选型、CLI 协同、流式中间层和更强的认知系统设计。
+</div>
+
+<div class="resource-card" markdown="1">
 **[术语回链索引](glossary-links.md)**
 
 从术语跳回定义、章节、案例和常见误解。

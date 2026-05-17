@@ -11,8 +11,10 @@
 | `评估` / `选型` / `验证` | [第 5 章](chapters/05-evaluation.md)、[模型选型实战案例集](model-selection-cases.md) | 第 5 章 | [中外 AI 模型特色概览](model-landscape-china-global.md)、[AI 能力评估量表](assessment-rubric.md) | 不要只看榜单或宣传 |
 | `工具` / `RAG` / `知识库` | [第 6 章](chapters/06-tools-rag.md) | 第 6 章 | [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)、[教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)、[连续案例练习与复盘评分表](cases/continuous-case-exercises.md)、[团队 AI 落地手册](team-adoption-playbook.md)、[安全案例更新指南](safety-case-updates.md) | 权限、引用和更新流程必须先定 |
 | `skill` / `agent` / `memory` / `OpenClaw` | [第 7-10 章](chapters/07-skills.md)、[第 8 章](chapters/08-agents.md) | 第 7-10 章 | [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)、[教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)、[连续案例练习与复盘评分表](cases/continuous-case-exercises.md)、[AI Skill/Card 可复用模板](../examples/skill-card-template.md)、[Agent 工作流安全检查清单](../examples/agent-workflow-checklist.md)、[图解：AI 工作系统](diagrams.md) | 能行动的系统必须有回滚和人工确认 |
+| `OpenClaw` / `多 agent` / `超级大脑` | [第 10 章](chapters/10-openclaw.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md) | 第 8-10、12 章 | [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)、[七层 AI 文明架构](seven-layer-ai-civilization.md)、[前沿与过时技术案例库](technology-evolution-cases.md) | 多 agent 协作要先定义任务源、状态、权限和人工闸门 |
 | `代码` / `工程` / `测试` | [第 2 章](chapters/02-ai-basics.md)、[第 6-9 章](chapters/06-tools-rag.md) | 第 6-9 章 | [代码库问答连续案例](cases/codebase-rag-skill-agent-memory.md)、[工程案例](cases/engineering.md)、[图解：AI 工作系统](diagrams.md) | 不要读取秘密配置，不要盲改代码 |
 | `开放模型` / `前沿` / `协议` | [第 11-12 章](chapters/11-hermes-himes-open-models.md)、[前沿与过时技术案例库](technology-evolution-cases.md) | 第 11-12 章 | [资源与引用](appendix-resources.md)、[前沿资料季度复核执行手册](frontier-review-playbook.md) | 动态事实要标注核验日期 |
+| `文明架构` / `未来推演` / `认知经济` | [七层 AI 文明架构](seven-layer-ai-civilization.md)、[第 12 章](chapters/12-frontier-landscape.md) | 第 10-13 章 | [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)、[图解：AI 工作系统](diagrams.md) | 越往长期推演，越要区分事实、判断和想象 |
 | `安全` / `治理` / `风险` | [第 13 章](chapters/13-safety-governance.md) | 第 13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[团队 AI 落地手册](team-adoption-playbook.md) | 高风险任务必须保留人工责任 |
 | `教学` / `学习` / `课堂` | [第 0 章](chapters/00-learning-map.md)、[教学版本材料包](teaching-kit.md) | 第 0、1、3、6-9、14 章 | [教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)、[连续案例课堂试跑版](cases/continuous-case-classroom-run.md)、[连续案例课堂投影短版](cases/continuous-case-slide-brief.md)、[连续案例样例库](cases/continuous-case-samples.md)、[分角色学习路径](learning-paths.md)、[课堂练习工作纸](classroom-worksheets.md)、[教学示范作业集](teaching-examples.md) | 学员任务要可执行，不能只讲概念 |
 | `团队落地` / `试点` / `工作坊` | [团队 AI 落地完整路线图](team-ai-adoption-roadmap.md)、[30 天团队试点跟踪表](pilot-tracking-30days.md) | 第 12-14 章 | [团队 AI 落地案例集](team-adoption-cases.md)、[连续案例团队试点版](cases/continuous-case-team-pilot.md)、[连续案例样例库](cases/continuous-case-samples.md)、[AI 安全与模型选型工作坊](workshop-safety-model-selection.md)、[行业化工作坊案例集](workshop-industry-cases.md) | 先做低风险试点，再扩展 |
@@ -32,6 +34,9 @@
 我想课堂投屏讲连续案例 -> 先看 连续案例课堂投影短版
 我想把连续案例做成试点 -> 先看 连续案例团队试点版
 我想看连续案例成品样例 -> 先看 连续案例样例库
+我想看七层 AI 文明架构 -> 先看 七层 AI 文明架构
+我想做 OpenClaw 多 agent 联动 -> 先看 OpenClaw 多 agent 联动教程
+我想评估 Node.js、CLI 和超级大脑系统 -> 先看 OpenClaw、Node.js 与超级大脑架构
 我想把教学资料做成助教助手 -> 先看 教学资料库连续案例、教学版本材料包
 我想做代码库问答和修复助手 -> 先看 代码库问答连续案例、工程案例
 我想做模型选型 -> 先看 第 5 章、模型特色概览、模型选型案例

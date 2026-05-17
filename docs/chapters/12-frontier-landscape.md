@@ -7,7 +7,7 @@
 - 预计阅读时间：15-22 分钟。
 - 学习目标：用任务系统视角理解多模态、agent、协议化、开源和治理趋势；判断趋势是否会改变自己的学习或团队试点重点。
 - 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI 任务选择决策指南](../task-decision-guide.md)。
-- 相关材料：[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
+- 相关材料：[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
 
 ## 总趋势
 
@@ -20,6 +20,8 @@ AI 正从“聊天工具”走向“通用工作系统”。变化主要发生�
 5. 协议化：MCP、A2A 等协议让工具和 agent 更容易互联。
 6. 开源竞争：开源模型在成本、部署、可控性和研究上持续推进。
 7. 治理强化：安全、隐私、版权、合规、评估和审计变得更重要。
+
+如果从系统结构上看，这些方向可以进一步整理成 [七层 AI 文明架构](../seven-layer-ai-civilization.md)：执行、记忆、意图、认知经济、世界模型、身份和文明。它不是把未来写成定论，而是帮助读者区分“今天能落地的 agent 能力”和“长期演化中的复杂生态”。
 
 ## 推理与任务执行
 
@@ -133,7 +135,7 @@ AI 已经能改变的 3 件事：
 ## 本章收尾
 
 - 本章练习：写下你所在行业未来一年最可能落地的 3 个 AI 场景，并标注它们更像聊天、工作流、RAG、工具调用还是 agent。
-- 相关案例：阅读 [行业化工作坊案例集](../workshop-industry-cases.md)，再用 [前沿资料季度复核记录表](../frontier-review-log.md) 记录需要核验的动态事实。
+- 相关案例：阅读 [七层 AI 文明架构](../seven-layer-ai-civilization.md) 和 [行业化工作坊案例集](../workshop-industry-cases.md)，再用 [前沿资料季度复核记录表](../frontier-review-log.md) 记录需要核验的动态事实。
 - 下一步：进入 [第 13 章](13-safety-governance.md)，把前沿能力放进安全、伦理和治理边界里。
 
 ## 章节导航

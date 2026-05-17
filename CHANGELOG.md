@@ -38,6 +38,10 @@
 - 增加 `docs/cases/continuous-case-slide-brief.md` 连续案例课堂投影短版，提供 12 个投影页、讲师提示、互动问题、开场词和收尾词。
 - 增加 `docs/cases/continuous-case-team-pilot.md` 连续案例团队试点版，把长案例转成 7 天最小试点、30 天衔接、试点任务卡、日志模板和写回规则。
 - 增加 `docs/cases/continuous-case-samples.md` 连续案例样例库，提供匿名化作业、课堂观察记录、7 天团队试点复盘样例，并为客户反馈、教学资料库和代码库三条主线补充质量层级对照。
+- 增加 `docs/seven-layer-ai-civilization.md` 七层 AI 文明架构，把执行、记忆、意图、认知经济、世界模型、身份和文明展开成前沿系统框架，并补充七层之外的技术推演。
+- 增加 `docs/openclaw-multi-agent-linkage.md` OpenClaw 多 agent 联动教程，覆盖飞书、Telegram、云文档、任务状态、统一 skill 安装、回写和人工审批。
+- 增加 `docs/openclaw-superbrain-architecture.md` OpenClaw、Node.js 与超级大脑架构分析，比较 Node.js、Python、Go、Rust、Markdown 与流式中间层，并提出更强认知系统设计。
+- 增强 MkDocs 导航，新增 `OpenClaw 与前沿架构` 导航分组，并启用 `navigation.expand` 让左侧目录默认展开。
 - 增强 `docs/diagrams.md`，补充 RAG 到 skill、agent、memory 的升级路径、分工图、agent 权限分层和记忆写入决策图。
 - 增加 `scripts/content-health-report.ps1` 内容健康报告脚本，扫描短页面、长页面、缺一级标题、章节结构缺口和动态事实复核候选。
 - 增加 `.github/workflows/content-health.yml`，每周或手动生成内容健康报告 artifact，作为自动候选扩写 PR 的前置扫描。
@@ -55,7 +59,7 @@
 - 增加 `docs/workshop-industry-cases.md` 行业化工作坊案例集，覆盖教育、医疗、法律、金融、电商、研发六个行业的场景描述、风险地图、模型路线选择和小型评测样例。
 - 增加 `docs/pilot-tracking-30days.md` 30 天团队 AI 试点跟踪表，覆盖 Day 1-30 的准备、试跑、迭代、扩展和评估全流程，含日志模板、周度汇总、迭代记录、评估问卷和复盘框架。
 - 增加 `docs/release-checklist-1.0.md` 1.0 发布前总检查清单，覆盖内容完整性、学习与落地路线、链接与自动化、外部资料复核、版权许可证、GitHub Pages、人工通读和发布决策。
-- 更新 `scripts/export-ebook.ps1`，把已新增的安全、模型选型、团队落地、反馈验证、章节验收、前沿复核材料、主题索引、术语回链索引、学习进度清单、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版和连续案例样例库纳入电子书导出。
+- 更新 `scripts/export-ebook.ps1`，把已新增的安全、模型选型、团队落地、反馈验证、章节验收、前沿复核材料、主题索引、术语回链索引、学习进度清单、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库、七层 AI 文明架构和 OpenClaw 前沿架构专题纳入电子书导出。
 - 更新 README、目录、维护指南、电子书指南、路线图和 MEMORY。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析，占位标记、术语一致性和 Markdown lint 均通过（79 个 Markdown 文件，2026-05-12 复查）。
 

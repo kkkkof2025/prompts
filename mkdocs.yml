@@ -40,6 +40,7 @@ theme:
     - navigation.tracking
     - navigation.instant
     - navigation.instant.progress
+    - navigation.expand
     - toc.follow
     - content.action.edit
     - content.action.view
@@ -136,6 +137,10 @@ nav:
       - AI 工作流配方库: docs/workflow-recipes.md
       - 中外 AI 模型特色概览: docs/model-landscape-china-global.md
       - AI 模型选型实战案例集: docs/model-selection-cases.md
+  - OpenClaw 与前沿架构:
+      - 七层 AI 文明架构: docs/seven-layer-ai-civilization.md
+      - OpenClaw 多 agent 联动教程: docs/openclaw-multi-agent-linkage.md
+      - OpenClaw、Node.js 与超级大脑架构: docs/openclaw-superbrain-architecture.md
   - 安全与复核:
       - AI 安全案例更新指南: docs/safety-case-updates.md
       - AI 安全事故复盘案例集: docs/safety-incident-retrospectives.md
