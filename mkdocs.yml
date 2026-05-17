@@ -20,7 +20,6 @@ exclude_docs: |
   .workbuddy/
   README.md
   scripts/
-  assets/
   mkdocs.yml
   requirements-docs.txt
   content-health-report.md

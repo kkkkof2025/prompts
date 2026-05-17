@@ -113,6 +113,8 @@
 - 更新 `mkdocs.yml`，新增 `OpenClaw 与前沿架构` 导航分组，移除顶部 tabs 模式，左侧目录显示全书导航树，并保留可展开/收起的分组行为；MkDocs search 插件继续启用中文和英文索引。
 - 修复 `.github/workflows/mkdocs-pages.yml` 和 `.github/workflows/markdown-check.yml` 触发分支，让 workflow 同时监听 `master` 和 `main`。此前线上 `https://kkkkof2025.github.io/prompts/` 仍显示旧版页面，是因为仓库实际分支为 `master`，而 Pages workflow 只监听 `main`，推送后没有触发 MkDocs 部署。
 - 修正 GitHub Pages 发布源：仓库 Pages 已切换为 `GitHub Actions` 构建类型，并重新触发 `MkDocs Pages` workflow，线上首页已从旧 Jekyll 输出切换为 MkDocs Material 输出，搜索索引和左侧栏均可访问。
+- 修复线上 CSS/JS 404：`exclude_docs` 不能排除 `assets/`，否则 MkDocs Material 生成的 `assets/stylesheets/` 和 `assets/javascripts/` 会从发布产物中消失；本地 strict build 已确认 `../prompts-site/assets` 正常生成。
+- 继续扩充三篇前沿架构内容：`docs/seven-layer-ai-civilization.md` 新增个人/团队/组织落地视角、十条七层之外能力轴和判断公式；`docs/openclaw-multi-agent-linkage.md` 新增三种部署层级、飞书 + Telegram + 云文档 + OpenClaw 完整案例、状态机和优先级建议；`docs/openclaw-superbrain-architecture.md` 新增全 Markdown 性能瓶颈、v0.1 模块清单、事件格式和自我优化阶段。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --config-file mkdocs.yml`。

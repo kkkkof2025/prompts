@@ -170,6 +170,27 @@ MkDocs Material 支持 Mermaid 代码块的展示方式取决于配置和扩展�
 
 当前配置会生成 MkDocs Material 站点：顶部保留搜索，左侧栏显示 `mkdocs.yml` 中的全书导航树。导航分组保持可展开和收起，读者可以按章节、案例、教学、团队落地、工具、OpenClaw、附录和维护材料自由跳转。
 
+### 线上 CSS 或 JS 404
+
+如果浏览器报类似下面的错误：
+
+```text
+/assets/stylesheets/main.*.min.css 404
+/assets/stylesheets/palette.*.min.css 404
+/assets/javascripts/bundle.*.min.js 404
+```
+
+优先检查 `mkdocs.yml` 的 `exclude_docs`。不要排除 `assets/`，因为 MkDocs Material 的主题 CSS、JS、字体和搜索 worker 都会输出到站点根目录的 `assets/`。如果排除了这个目录，HTML 会正常生成，但页面会像 CSS 加载失败一样裸露显示。
+
+修复后本地用下面的命令确认：
+
+```powershell
+python -m mkdocs build --strict --config-file mkdocs.yml
+Get-ChildItem ..\prompts-site\assets -Recurse -File
+```
+
+能看到 `assets/stylesheets/` 和 `assets/javascripts/` 后，再提交并等待 `MkDocs Pages` workflow 发布。
+
 ## 发布前最终清单
 
 完整 1.0 发布验收见 [1.0 发布前总检查清单](release-checklist-1.0.md)。日常发布可使用下方简版清单。
