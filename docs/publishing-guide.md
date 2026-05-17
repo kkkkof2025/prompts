@@ -24,7 +24,7 @@ git add .
 git commit -m "Initial AI learning book"
 ```
 
-然后在 GitHub 创建新仓库，并按 GitHub 页面提示添加远程地址：
+然后在 GitHub 创建新仓库，并按 GitHub 页面提示添加远程地址。新仓库可以使用 `main`，本项目当前实际发布分支是 `master`：
 
 ```powershell
 git remote add origin https://github.com/你的用户名/你的仓库名.git
@@ -40,7 +40,7 @@ git push -u origin main
 Source: GitHub Actions
 ```
 
-项目使用 `.github/workflows/mkdocs-pages.yml` 构建和部署 Pages。推送到 `main` 后，workflow 会执行：
+项目使用 `.github/workflows/mkdocs-pages.yml` 构建和部署 Pages。workflow 同时监听 `master` 和 `main`；本仓库当前推送到 `master` 后会执行：
 
 1. 安装 Python。
 2. 安装 `requirements-docs.txt` 中的 MkDocs 依赖。
@@ -159,6 +159,16 @@ MkDocs Material 支持 Mermaid 代码块的展示方式取决于配置和扩展�
 ### 新页面没有出现在侧边栏
 
 新增页面后，需要把它加入 `mkdocs.yml` 的 `nav`。如果只是作为隐藏辅助材料，也应该在相关页面中提供链接。
+
+### 线上没有搜索或左侧导航
+
+如果本地 `mkdocs.yml` 已启用 search 和 nav，但线上仍然像普通 GitHub Pages 主题，通常是 Pages 没有使用 MkDocs workflow 发布。检查：
+
+- 仓库 Settings -> Pages 的 Source 是否为 `GitHub Actions`。
+- `MkDocs Pages` workflow 是否在 `master` 或 `main` 推送后运行。
+- Actions 里最新一次 `MkDocs Pages` 是否成功。
+
+当前配置会生成 MkDocs Material 站点：顶部保留搜索，左侧栏显示 `mkdocs.yml` 中的全书导航树，并默认展开目录层级。
 
 ## 发布前最终清单
 

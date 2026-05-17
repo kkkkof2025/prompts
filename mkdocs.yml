@@ -30,8 +30,6 @@ theme:
   name: material
   language: zh
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     - navigation.path

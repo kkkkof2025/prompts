@@ -110,11 +110,12 @@
 - 新增 `docs/seven-layer-ai-civilization.md` 七层 AI 文明架构，把执行、记忆、意图、认知经济、世界模型、身份和文明展开成前沿系统框架，并补充七层之外的技术发展推演；同步接入 MkDocs 导航、书稿首页、SUMMARY、README、主题索引、第 12 章、案例入口、技术演进案例库、ROADMAP、CHANGELOG 和电子书导出脚本。
 - 新增 `docs/openclaw-multi-agent-linkage.md` OpenClaw 多 agent 联动教程，覆盖飞书、Telegram、云文档、任务状态、统一 skill 安装、回写和人工审批；同步接入 MkDocs 导航、书稿首页、SUMMARY、README、主题索引、第 10 章、案例入口、技术演进案例库、ROADMAP、CHANGELOG 和电子书导出脚本。
 - 新增 `docs/openclaw-superbrain-architecture.md` OpenClaw、Node.js 与超级大脑架构分析，比较 Node.js、Python、Go、Rust、Markdown、流式中间层和更强认知系统设计；同步接入 MkDocs 导航、书稿首页、SUMMARY、README、主题索引、第 10 章、案例入口、技术演进案例库、ROADMAP、CHANGELOG 和电子书导出脚本。
-- 更新 `mkdocs.yml`，新增 `OpenClaw 与前沿架构` 导航分组，并启用 `navigation.expand`，让左侧目录默认展开；MkDocs search 插件继续启用中文和英文索引。
+- 更新 `mkdocs.yml`，新增 `OpenClaw 与前沿架构` 导航分组，移除顶部 tabs 模式，并启用 `navigation.expand`，让左侧目录显示全书导航树且默认展开；MkDocs search 插件继续启用中文和英文索引。
+- 修复 `.github/workflows/mkdocs-pages.yml` 和 `.github/workflows/markdown-check.yml` 触发分支，让 workflow 同时监听 `master` 和 `main`。此前线上 `https://kkkkof2025.github.io/prompts/` 仍显示旧版页面，是因为仓库实际分支为 `master`，而 Pages workflow 只监听 `main`，推送后没有触发 MkDocs 部署。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --config-file mkdocs.yml`。
-- 最新检查结果：内容健康报告脚本、本地链接、占位标记、术语一致性、Markdown lint 和 MkDocs strict build 均通过（2026-05-17 复查，97 个 Markdown 文件）。线上站点仅保留 MkDocs Material 单一版式，章节页已具备上一章/下一章导航，站点已启用顶部导航标签、站内搜索、主题索引、案例索引表、术语回链索引、学习进度清单、三条 RAG/skill/agent/memory 连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw 超级大脑架构和内容健康报告 workflow；本轮未启动本地预览。
+- 最新检查结果：内容健康报告脚本、本地链接、占位标记、术语一致性、Markdown lint 和 MkDocs strict build 均通过（2026-05-17 复查，97 个 Markdown 文件）。线上站点仅保留 MkDocs Material 单一版式，章节页已具备上一章/下一章导航，站点已启用全书左侧导航树、站内搜索、主题索引、案例索引表、术语回链索引、学习进度清单、三条 RAG/skill/agent/memory 连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw 超级大脑架构和内容健康报告 workflow；本轮未启动本地预览。
 - 当前 Markdown 规模约 24699 行、48658 个词、400943 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节导读、章节收尾、章节练习与验收映射表、案例索引表、主题索引、术语回链索引、学习进度清单、内容健康报告、图解增强、客户反馈连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库（含三条主线质量层级对照）、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw/Node.js/超级大脑架构、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
