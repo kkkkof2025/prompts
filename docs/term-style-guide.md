@@ -21,6 +21,8 @@
 | MCP | Model Context Protocol |
 | A2A | Agent2Agent 协议简称 |
 | Agent2Agent | Google 推动的 agent 互操作协议名称 |
+| Style Engineering | 风格工程；本书用于描述长期风格、审美、人格和输出约束的系统化实践 |
+| AI Native | 原生围绕 AI 能力、上下文、工具和反馈回路设计的产品或创作方式 |
 
 ## 书内概念
 

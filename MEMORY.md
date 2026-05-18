@@ -115,6 +115,10 @@
 - 修正 GitHub Pages 发布源：仓库 Pages 已切换为 `GitHub Actions` 构建类型，并重新触发 `MkDocs Pages` workflow，线上首页已从旧 Jekyll 输出切换为 MkDocs Material 输出，搜索索引和左侧栏均可访问。
 - 修复线上 CSS/JS 404：`exclude_docs` 不能排除 `assets/`，否则 MkDocs Material 生成的 `assets/stylesheets/` 和 `assets/javascripts/` 会从发布产物中消失；本地 strict build 已确认 `../prompts-site/assets` 正常生成。
 - 继续扩充三篇前沿架构内容：`docs/seven-layer-ai-civilization.md` 新增个人/团队/组织落地视角、十条七层之外能力轴和判断公式；`docs/openclaw-multi-agent-linkage.md` 新增三种部署层级、飞书 + Telegram + 云文档 + OpenClaw 完整案例、状态机和优先级建议；`docs/openclaw-superbrain-architecture.md` 新增全 Markdown 性能瓶颈、v0.1 模块清单、事件格式和自我优化阶段。
+- 2026-05-18 记录新维护要求：后续每次更新默认同时完成“已有内容扩充完善”和“新技术概念添加/评估”两条线；新增概念需要复查是否符合实际，区分事实、来源解释、本书判断和待复核内容，必要时在页面底部列出参考与复核说明。
+- 修复 MkDocs 展示问题：新增 `robots.txt`；`mkdocs.yml` 启用 `md_in_html`，让首页和书稿首页卡片内的链接、加粗正常渲染；`edit_uri` 从 `edit/main/` 改为 `edit/master/`，修复查看源码和编辑链接 404。
+- 新增 `docs/style-engineering-ai-native.md`，吸收 2026-05-16 “AI 的风格设定进化”笔记，把 Prompt Engineering、Style Engineering、Personality Engineering 和 Cognitive System Design 串成 AI Native 创作专题。
+- 新增 `docs/ai-history-community-ecosystem.md`，介绍 AI 发展历史、公益站、注册自动化/注册机概念边界、模型聚合、Prompt 市场和社区生态，明确不提供绕过授权、批量注册或破解类操作方法。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --config-file mkdocs.yml`。

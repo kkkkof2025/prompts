@@ -3,7 +3,7 @@ site_description: 从对话、prompt、skills 到 agent、OpenClaw、Hermes、Hi
 site_url: https://kkkkof2025.github.io/prompts/
 repo_url: https://github.com/kkkkof2025/prompts
 repo_name: kkkkof2025/prompts
-edit_uri: edit/main/
+edit_uri: edit/master/
 docs_dir: .
 site_dir: ../prompts-site
 exclude_docs: |
@@ -60,6 +60,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
+  - md_in_html
   - tables
   - toc:
       permalink: true
@@ -133,7 +134,9 @@ nav:
       - AI 工作流配方库: docs/workflow-recipes.md
       - 中外 AI 模型特色概览: docs/model-landscape-china-global.md
       - AI 模型选型实战案例集: docs/model-selection-cases.md
-  - OpenClaw 与前沿架构:
+  - 前沿架构与生态:
+      - Style Engineering 与 AI Native 创作: docs/style-engineering-ai-native.md
+      - AI 发展历史与社区生态: docs/ai-history-community-ecosystem.md
       - 七层 AI 文明架构: docs/seven-layer-ai-civilization.md
       - OpenClaw 多 agent 联动教程: docs/openclaw-multi-agent-linkage.md
       - OpenClaw、Node.js 与超级大脑架构: docs/openclaw-superbrain-architecture.md

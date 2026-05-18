@@ -66,6 +66,8 @@ Prompt 是你给 AI 的任务说明。它不只是“提问技巧”，更像是
 
 示例比抽象描述更稳定，因为模型可以模仿具体模式。
 
+如果你发现自己反复要求同一种语气、视觉风格、写作节奏或角色人格，就不要只把它写在单次 prompt 里。可以把它沉淀成 `STYLE.md`、`WRITER.md` 或 `DESIGN.md` 这类长期约束文件。这个方向在本书中称为 [Style Engineering 与 AI Native 创作](../style-engineering-ai-native.md)：prompt 负责一次生成，风格工程负责长期一致。
+
 ## 给反例
 
 反例能告诉 AI 不要走哪条路。

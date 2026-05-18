@@ -9,6 +9,7 @@
 [开始阅读](chapters/00-learning-map.md)
 [完整目录](SUMMARY.md)
 [真实案例](case-studies.md)
+[前沿概念](style-engineering-ai-native.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -37,7 +38,7 @@
 <div class="route-card" markdown="1">
 **想跟进前沿**
 
-重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md) 和 [技术演进案例库](technology-evolution-cases.md)。
+重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md) 和 [技术演进案例库](technology-evolution-cases.md)。
 </div>
 </div>
 
@@ -102,6 +103,18 @@
 **[主题索引](topic-index.md)**
 
 按任务类型和主题标签快速找到章节、案例和材料。
+</div>
+
+<div class="resource-card" markdown="1">
+**[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)**
+
+从 prompt、工作流和上下文继续推进到风格工程、人格工程和认知接口设计。
+</div>
+
+<div class="resource-card" markdown="1">
+**[AI 发展历史与社区生态](ai-history-community-ecosystem.md)**
+
+把 AI 历史、公益站、注册自动化、模型聚合、Prompt 市场和社区工具放进价值与风险框架。
 </div>
 
 <div class="resource-card" markdown="1">

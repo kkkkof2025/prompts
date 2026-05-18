@@ -15,6 +15,7 @@
 | --- | --- | --- | --- | --- |
 | Prompt | [Prompt](appendix-glossary.md#prompt) | [第 3 章](chapters/03-prompt-basics.md)、[第 4 章](chapters/04-prompt-workflows.md) | [Prompt 模式实践模板](../examples/prompt-patterns.md)、[Prompt 调试指南](prompt-debugging-guide.md) | 把 prompt 当成“神奇咒语”，忽略目标、背景、约束和验收标准 |
 | System Prompt | [System Prompt](appendix-glossary.md#system-prompt) | [第 3 章](chapters/03-prompt-basics.md)、[第 13 章](chapters/13-safety-governance.md) | [AI 安全案例更新指南](safety-case-updates.md) | 以为系统提示能替代权限控制和人工复核 |
+| Style Engineering | [Style Engineering](appendix-glossary.md#style-engineering) | [Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[第 3 章](chapters/03-prompt-basics.md)、[第 4 章](chapters/04-prompt-workflows.md) | [Prompt 调试指南](prompt-debugging-guide.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 把风格工程当成单次 prompt，而不是长期约束、样例、反例和评估系统 |
 | Context Window | [Context Window](appendix-glossary.md#context-window) | [第 2 章](chapters/02-ai-basics.md)、[第 6 章](chapters/06-tools-rag.md) | [AI 任务选择决策指南](task-decision-guide.md) | 以为上下文越长越可靠，忽略结构化和引用 |
 | Token | [Token](appendix-glossary.md#token) | [第 2 章](chapters/02-ai-basics.md) | [AI 学习与使用速查讲义](quick-reference.md) | 只把 token 理解为字数，忽略成本、截断和上下文预算 |
 | Hallucination | [Hallucination](appendix-glossary.md#hallucination) | [第 2 章](chapters/02-ai-basics.md)、[第 5 章](chapters/05-evaluation.md) | [常见误区与纠偏指南](common-pitfalls.md)、[章节复盘题与小测](chapter-review-questions.md) | 以为模型“自信”就等于事实正确 |
@@ -43,6 +44,7 @@
 输出不可信 -> Hallucination -> Evaluation -> 常见误区与纠偏指南
 资料太长 -> Context Window -> Long Context -> RAG -> 第 6 章
 想固化经验 -> Prompt -> Workflow -> Skill -> 第 7 章
+想保持长期风格 -> Style Engineering -> Prompt 调试指南 -> Style Engineering 与 AI Native 创作
 想让 AI 执行动作 -> Tool Use -> Agent -> Agent 安全检查清单
 想做团队知识库 -> RAG -> Vector Database -> 团队 AI 落地手册
 担心数据和权限 -> Guardrail -> Prompt Injection -> 第 13 章

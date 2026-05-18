@@ -33,6 +33,8 @@
 - 七层 AI 文明架构，把执行、记忆、意图、认知经济、世界模型、身份和文明展开成前沿系统框架，并补充七层之外的技术推演。
 - OpenClaw 多 agent 联动教程，覆盖飞书、Telegram、云文档、任务状态、统一 skill 安装、回写和人工审批。
 - OpenClaw、Node.js 与超级大脑架构分析，比较 Node.js、Python、Go、Rust、Markdown、流式中间层和更强认知系统设计。
+- Style Engineering 与 AI Native 创作专题，解释 prompt 到风格工程、人格工程和认知接口设计的演进。
+- AI 发展历史与社区生态专题，介绍 AI 历史、公益站、注册自动化、模型聚合和社区工具的价值与风险。
 - 前沿资料季度复核执行手册、记录表和示例记录。
 - 常见误区与纠偏指南。
 - Prompt 调试指南。
@@ -110,6 +112,7 @@
 - 使用 `docs/frontier-review-log.md` 记录复核批次、证据、影响范围和处理动作。
 - 在 `CHANGELOG.md` 记录资料更新。
 - 对过时内容标注历史状态或迁移到附录。
+- 每次维护默认同时做已有内容扩充和新概念候选评估；无法新增概念时，在 `MEMORY.md` 记录原因。
 
 ## 0.9：教学版本（初稿已完成，待课堂验证）
 
@@ -181,6 +184,8 @@
 | 统一 skill 安装与共享任务同步 | 已纳入 OpenClaw 多 agent 联动教程 | 继续补 skill manifest 示例、安装命令和回滚脚本 |
 | 七层 AI 文明架构专题 | 已完成初稿：[七层 AI 文明架构](docs/seven-layer-ai-civilization.md) | 继续补图解、教学讲义和案例映射 |
 | OpenClaw 与超级大脑架构 | 已完成初稿：[OpenClaw、Node.js 与超级大脑架构](docs/openclaw-superbrain-architecture.md) | 继续补事件流原型、SQLite 状态表和 CLI adapter 示例 |
+| Style Engineering 与 AI Native 创作 | 已完成初稿：[Style Engineering 与 AI Native 创作](docs/style-engineering-ai-native.md) | 继续补不同媒介的 STYLE.md、BRAND.md、WRITER.md 示例和评分样例 |
+| AI 历史与社区生态 | 已完成初稿：[AI 发展历史与社区生态](docs/ai-history-community-ecosystem.md) | 继续补公益站、模型聚合、Prompt 市场、本地部署和注册自动化的风险复盘案例 |
 
 七层架构的初步延展判断：
 

@@ -10,6 +10,7 @@
 [完整目录](docs/SUMMARY.md)
 [真实案例](docs/case-studies.md)
 [学习进度](docs/learning-progress.md)
+[前沿概念](docs/style-engineering-ai-native.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -27,6 +28,18 @@
 **[完整目录](docs/SUMMARY.md)**
 
 查看全部章节、案例、附录、模板和维护材料。
+</div>
+
+<div class="route-card" markdown="1">
+**[Style Engineering 与 AI Native 创作](docs/style-engineering-ai-native.md)**
+
+从 prompt 进化到风格工程、人格工程和认知接口设计，学习怎样把模糊审美结构化。
+</div>
+
+<div class="route-card" markdown="1">
+**[AI 发展历史与社区生态](docs/ai-history-community-ecosystem.md)**
+
+理解 AI 历史、公益站、注册自动化、模型聚合、Prompt 市场和社区工具的价值与风险。
 </div>
 
 <div class="route-card" markdown="1">
