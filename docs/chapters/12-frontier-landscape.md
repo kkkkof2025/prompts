@@ -1,13 +1,13 @@
 # 第 12 章：AI 前沿发展全景
 
-本章是截至 2026-05-18 的观察。AI 发展很快，模型、产品、价格、接口和法律环境都会变化。阅读本章时，要把它当作“方向地图”，而不是永久不变的清单。
+本章是截至 2026-05-19 的观察。AI 发展很快，模型、产品、价格、接口和法律环境都会变化。阅读本章时，要把它当作“方向地图”，而不是永久不变的清单。
 
 ## 本章导读
 
 - 预计阅读时间：15-22 分钟。
 - 学习目标：用任务系统视角理解多模态、agent、协议化、开源和治理趋势；判断趋势是否会改变自己的学习或团队试点重点。
 - 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI 任务选择决策指南](../task-decision-guide.md)。
-- 相关材料：[Context Engineering：上下文工程](../context-engineering.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
+- 相关材料：[Context Engineering：上下文工程](../context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
 
 ## 总趋势
 
@@ -27,6 +27,8 @@ AI 正从“聊天工具”走向“通用工作系统”。变化主要发生�
 还有一条容易被低估的路线：从 prompt 走向 [Style Engineering 与 AI Native 创作](../style-engineering-ai-native.md)。当模型能力越来越强，稀缺能力会从“能不能生成”转向“能不能长期保持风格、人格、品牌、世界观和行为边界”。这不是单一厂商功能，而是一组正在形成的实践：系统提示、项目规则、输出样式、品牌规范、agent 行为协议和长期记忆会越来越像一个可维护的认知接口。
 
 与之并行的是 [Context Engineering：上下文工程](../context-engineering.md)。它关注模型行动前应该看到哪些资料、按什么优先级看到、哪些资料需要压缩或隔离、哪些结论必须追踪来源。它不是替代 prompt，而是把 prompt、RAG、memory、skill、tool result、style rule 和安全边界放进同一个信息调度系统。
+
+当多个 agent 一起工作时，还需要 [Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md) 这样的共享状态模型。它提醒我们：多 agent 不是群聊，而是多个专门角色围绕任务、证据、假设、上下文、状态和人工决策共同更新一个工作现场。
 
 ## 推理与任务执行
 

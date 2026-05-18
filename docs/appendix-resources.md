@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture 补充资料 2026-05-19
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -41,8 +41,10 @@
 - [The Prompt Report: A Systematic Survey of Prompting Techniques](https://arxiv.org/abs/2406.06608)：用于了解 prompt engineering 技术谱系、术语变化和相关研究分类。
 - [IBM: What is context engineering?](https://www.ibm.com/think/topics/context-engineering)：用于核验 context engineering 作为设计、结构化和优化 LLM 上下文的工程实践描述。
 - [A Survey of Context Engineering for Large Language Models](https://arxiv.org/abs/2507.13334)：用于了解上下文工程作为研究方向的系统化整理。该资料属于较新的研究综述，正文引用时应标注核验日期。
+- [H. Penny Nii: The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures](https://doi.org/10.1609/aimag.v7i2.537)：用于核验黑板架构作为早期 AI 问题求解架构的经典来源。
+- [Exploring Advanced LLM Multi-Agent Systems Based on Blackboard Architecture](https://arxiv.org/abs/2507.01701)：用于了解黑板架构在 LLM 多 agent 系统中的近期研究尝试。该资料为 2025 年预印本，应作为研究线索，不应写成行业标准。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”和“本书推演”。
 
 ## AI 历史与基础论文
 

@@ -51,7 +51,7 @@
 ```text
 云文档 = 任务源
 消息工具 = 通知层
-状态表 = 进度层
+状态表 / 黑板 = 进度层和共享工作台
 OpenClaw / CLI agents = 执行层
 知识库 / Git = 结果层
 人工审批 = 闸门
@@ -61,8 +61,70 @@ OpenClaw / CLI agents = 执行层
 
 - 云文档适合人协作，也适合做任务总表。
 - 消息工具适合推送和提醒，但不适合做唯一真相源。
-- 状态表适合追踪每个任务的 owner、状态和版本。
+- 状态表或黑板适合追踪每个任务的 owner、状态、版本、证据、假设和决策。
 - 结果层需要留痕，便于复盘和回滚。
+
+## 增加一层共享黑板
+
+多 agent 联动真正难的地方，不是让多个 agent 都启动，而是让它们围绕同一个工作现场行动。这里可以借用 [Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md) 的思想：所有 agent 不靠群聊互相猜，而是围绕一个共享黑板读写任务、证据、上下文、假设、状态和决策。
+
+在 OpenClaw 联动里，黑板可以由几种工具共同承担：
+
+| 黑板区域 | 可用载体 | 存什么 | 谁主要写 |
+| --- | --- | --- | --- |
+| 任务区 | 飞书多维表格、GitHub Issue、Markdown task file | 任务目标、owner、状态、优先级、锁 | 人、调度 agent |
+| 证据区 | 云文档、Git、知识库 | 来源、摘要、引用、待核验点 | 资料 agent |
+| 上下文区 | YAML、Markdown front matter、SQLite | 当前 agent 应该看到的规则、资料和限制 | 调度 agent |
+| 草稿区 | Markdown、云文档、分支 PR | 正文、代码、表格、报告草稿 | 写作/执行 agent |
+| 复核区 | 评论、检查日志、CI artifact | 断链、术语、事实边界、安全风险 | 复核 agent |
+| 决策区 | 审批表、commit message、release note | 人工批准、拒绝原因、发布记录 | 人、发布 agent |
+
+黑板不是让每个 agent 看到所有东西。更好的做法是：黑板保存全量状态，[Context Engineering：上下文工程](context-engineering.md) 从黑板里为当前 agent 生成最小可用上下文包。
+
+一个任务在黑板中的结构可以这样写：
+
+```yaml
+blackboard_id: bb-20260519-openclaw-001
+task:
+  id: task-20260519-001
+  title: 扩充第 10 章 OpenClaw 教程
+  status: drafting
+  owner: writer-agent
+  priority: high
+context_package:
+  goal: 增加飞书、Telegram、云文档、OpenClaw 的多 agent 联动案例
+  must_include:
+    - 任务状态机
+    - 人工审批点
+    - 统一 skill 安装
+    - 上下文包和黑板层
+  must_avoid:
+    - 绕过平台授权
+    - 自动注册账号
+    - 未经确认的外部事实
+evidence:
+  accepted:
+    - 云文档适合作为人类可见任务源
+    - Telegram 更适合通知，不适合作为唯一事实源
+  pending:
+    - 真实飞书 API 字段需要后续按官方文档复核
+hypotheses:
+  - Markdown 适合审计，但高频状态流转需要 SQLite 或事件流
+locks:
+  current_owner: writer-agent
+  expires_at: 2026-05-19T18:00:00+08:00
+review:
+  human_gate:
+    - 对外发布
+    - 删除内容
+    - 写入凭据
+    - 触发付费调用
+outputs:
+  files:
+    - docs/openclaw-multi-agent-linkage.md
+```
+
+这比单纯任务卡更强，因为它记录的不只是“谁做什么”，还记录“这次行动应该看什么、不能看什么、依据是什么、谁批准发布”。
 
 ## 一个推荐的数据结构
 

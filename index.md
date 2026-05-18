@@ -12,6 +12,7 @@
 [学习进度](docs/learning-progress.md)
 [前沿概念](docs/style-engineering-ai-native.md)
 [上下文工程](docs/context-engineering.md)
+[黑板架构](docs/blackboard-architecture-multi-agent.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -41,6 +42,12 @@
 **[Context Engineering：上下文工程](docs/context-engineering.md)**
 
 学习如何选择、排序、压缩、隔离和追踪模型下一步应该看到的资料。
+</div>
+
+<div class="route-card" markdown="1">
+**[Blackboard Architecture：黑板架构与多 agent 协作](docs/blackboard-architecture-multi-agent.md)**
+
+用共享黑板解释多 agent 如何围绕任务、证据、状态、上下文和决策协作。
 </div>
 
 <div class="route-card" markdown="1">
