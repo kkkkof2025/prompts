@@ -120,6 +120,109 @@ DESIGN_SYSTEM:
 
 这类文件对 AI 前端生成特别有价值，因为它把“好看一点”变成了可执行的视觉约束。
 
+## 四类可复用风格文件
+
+Style Engineering 不能只停留在概念。下面四类文件可以直接放进一个 AI Native 项目里，分别约束写作、品牌、界面和 agent 行为。
+
+### STYLE.md：项目统一风格
+
+```yaml
+STYLE:
+  purpose: 让所有输出保持同一套表达和审美边界
+  audience:
+    - 普通学习者
+    - 产品经理
+    - 工程师
+  voice:
+    - 清楚
+    - 克制
+    - 具体
+  must_do:
+    - 先解释问题，再给方法
+    - 区分事实、判断和建议
+    - 给出可执行例子
+  must_avoid:
+    - 夸张营销词
+    - 空泛鼓励
+    - 未核验来源
+  evaluation:
+    - 初学者能否复述核心观点
+    - 专业读者能否看到边界和风险
+```
+
+### BRAND.md：品牌与产品表达
+
+```yaml
+BRAND:
+  position: 安静、可靠、可长期维护的 AI 学习系统
+  promise:
+    - 帮读者建立方法
+    - 不制造万能幻觉
+    - 给出边界和复核路径
+  forbidden_claims:
+    - 最强
+    - 一键替代所有工作
+    - 永不过时
+  visual_keywords:
+    - 清晰
+    - 稳定
+    - 有结构
+  content_keywords:
+    - 任务
+    - 证据
+    - 复核
+    - 权限
+    - 迭代
+```
+
+### WRITER.md：写作人格
+
+```yaml
+WRITER:
+  default_structure:
+    - 先给一句结论
+    - 再解释原因
+    - 再给表格或清单
+    - 最后给练习或检查项
+  tone:
+    - senior engineer
+    - teacher
+    - editor
+  sentence_rules:
+    - 不堆术语
+    - 不连续使用抽象名词
+    - 每个新概念至少给一个例子
+  citation_rules:
+    - 动态事实必须标注来源
+    - 推演必须标注为本书判断
+```
+
+### AGENTS.md：行动风格
+
+```yaml
+AGENTS:
+  action_style:
+    - 小步执行
+    - 先读上下文
+    - 修改前说明计划
+    - 修改后跑检查
+  risk_policy:
+    low_risk: 可以自动执行并记录日志
+    medium_risk: 先给计划，再执行
+    high_risk: 必须人工批准
+  memory_policy:
+    remember:
+      - 用户明确偏好
+      - 项目长期规则
+      - 失败复盘
+    do_not_remember:
+      - 临时情绪
+      - 未确认事实
+      - 敏感凭据
+```
+
+这四个文件可以组合使用：`STYLE.md` 管表达，`BRAND.md` 管价值和禁区，`WRITER.md` 管文本结构，`AGENTS.md` 管行动边界。它们共同构成一个最小风格运行时。
+
 ## Style Engineering 和 Agent 的关系
 
 当 agent 能调用工具、改文件、发消息、连接云文档时，风格不再只是表达问题，而是行为问题。

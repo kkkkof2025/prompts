@@ -11,6 +11,7 @@
 [真实案例](docs/case-studies.md)
 [学习进度](docs/learning-progress.md)
 [前沿概念](docs/style-engineering-ai-native.md)
+[上下文工程](docs/context-engineering.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -34,6 +35,12 @@
 **[Style Engineering 与 AI Native 创作](docs/style-engineering-ai-native.md)**
 
 从 prompt 进化到风格工程、人格工程和认知接口设计，学习怎样把模糊审美结构化。
+</div>
+
+<div class="route-card" markdown="1">
+**[Context Engineering：上下文工程](docs/context-engineering.md)**
+
+学习如何选择、排序、压缩、隔离和追踪模型下一步应该看到的资料。
 </div>
 
 <div class="route-card" markdown="1">
@@ -67,7 +74,7 @@
 <div class="route-card" markdown="1">
 **想提高工作效率**
 
-读 [评估](docs/chapters/05-evaluation.md)、[工具与 RAG](docs/chapters/06-tools-rag.md)、[skills](docs/chapters/07-skills.md) 和 [工作流配方](docs/workflow-recipes.md)。
+读 [评估](docs/chapters/05-evaluation.md)、[工具与 RAG](docs/chapters/06-tools-rag.md)、[Context Engineering](docs/context-engineering.md)、[skills](docs/chapters/07-skills.md) 和 [工作流配方](docs/workflow-recipes.md)。
 </div>
 
 <div class="route-card" markdown="1">

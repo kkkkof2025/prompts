@@ -17,6 +17,7 @@
 | System Prompt | [System Prompt](appendix-glossary.md#system-prompt) | [第 3 章](chapters/03-prompt-basics.md)、[第 13 章](chapters/13-safety-governance.md) | [AI 安全案例更新指南](safety-case-updates.md) | 以为系统提示能替代权限控制和人工复核 |
 | Style Engineering | [Style Engineering](appendix-glossary.md#style-engineering) | [Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[第 3 章](chapters/03-prompt-basics.md)、[第 4 章](chapters/04-prompt-workflows.md) | [Prompt 调试指南](prompt-debugging-guide.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 把风格工程当成单次 prompt，而不是长期约束、样例、反例和评估系统 |
 | Context Window | [Context Window](appendix-glossary.md#context-window) | [第 2 章](chapters/02-ai-basics.md)、[第 6 章](chapters/06-tools-rag.md) | [AI 任务选择决策指南](task-decision-guide.md) | 以为上下文越长越可靠，忽略结构化和引用 |
+| Context Engineering | [Context Engineering](appendix-glossary.md#context-engineering) | [Context Engineering：上下文工程](context-engineering.md)、[第 6 章](chapters/06-tools-rag.md)、[第 9 章](chapters/09-memory.md) | [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)、[前沿资料季度复核执行手册](frontier-review-playbook.md) | 把上下文工程当成“把所有资料塞进去”，忽略选择、排序、压缩、隔离和来源追踪 |
 | Token | [Token](appendix-glossary.md#token) | [第 2 章](chapters/02-ai-basics.md) | [AI 学习与使用速查讲义](quick-reference.md) | 只把 token 理解为字数，忽略成本、截断和上下文预算 |
 | Hallucination | [Hallucination](appendix-glossary.md#hallucination) | [第 2 章](chapters/02-ai-basics.md)、[第 5 章](chapters/05-evaluation.md) | [常见误区与纠偏指南](common-pitfalls.md)、[章节复盘题与小测](chapter-review-questions.md) | 以为模型“自信”就等于事实正确 |
 | Evaluation | [Evaluation](appendix-glossary.md#evaluation) | [第 5 章](chapters/05-evaluation.md) | [AI 能力评估量表](assessment-rubric.md)、[章节练习与验收映射表](chapter-validation-map.md) | 只看一次输出好不好，不建立可重复的评估样例 |
@@ -43,6 +44,7 @@
 ```text
 输出不可信 -> Hallucination -> Evaluation -> 常见误区与纠偏指南
 资料太长 -> Context Window -> Long Context -> RAG -> 第 6 章
+资料很多但 AI 总看错 -> Context Engineering -> RAG -> Memory -> 第 6/9 章
 想固化经验 -> Prompt -> Workflow -> Skill -> 第 7 章
 想保持长期风格 -> Style Engineering -> Prompt 调试指南 -> Style Engineering 与 AI Native 创作
 想让 AI 执行动作 -> Tool Use -> Agent -> Agent 安全检查清单

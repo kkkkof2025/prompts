@@ -136,6 +136,7 @@ nav:
       - AI 模型选型实战案例集: docs/model-selection-cases.md
   - 前沿架构与生态:
       - Style Engineering 与 AI Native 创作: docs/style-engineering-ai-native.md
+      - Context Engineering：上下文工程: docs/context-engineering.md
       - AI 发展历史与社区生态: docs/ai-history-community-ecosystem.md
       - 七层 AI 文明架构: docs/seven-layer-ai-civilization.md
       - OpenClaw 多 agent 联动教程: docs/openclaw-multi-agent-linkage.md

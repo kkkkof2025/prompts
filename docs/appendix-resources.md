@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：2026-05-07
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -31,16 +31,18 @@
 
 ## Prompt、工具调用和 Agent
 
-- [OpenAI Prompting Guide](https://platform.openai.com/docs/guides/prompting)：用于核验提示词、复用 prompt、版本管理和评估等官方实践入口。
+- [OpenAI Prompting Guide](https://developers.openai.com/api/docs/guides/prompting)：用于核验提示词、复用 prompt、版本管理和评估等官方实践入口。
 - [OpenAI Prompt engineering best practices for ChatGPT](https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt)：用于核验清晰上下文、迭代、示例和语气控制等基础建议。
 - [Anthropic Help Center: Configuring and Using Styles](https://support.anthropic.com/en/articles/10181068-configuring-and-using-styles)：用于核验 Claude 中“style”作为沟通方式定制能力的官方说明。
 - [Claude Code Output Styles](https://docs.claude.com/en/docs/claude-code/output-styles)：用于核验输出样式可以改变 Claude Code 的系统提示词和项目级行为。
 - [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/)：用于核验 agent loop、tools、handoffs、guardrails、sessions、tracing、MCP 等概念。
 - [OpenAI API Tools Guide](https://developers.openai.com/api/docs/guides/tools)：用于核验工具调用、Web search、file search、computer use、code interpreter、MCP/connectors、skills 等能力入口。
-- [Anthropic Agent Skills Overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)：用于核验 skills 的组成方式、按需加载、资源和脚本打包等概念。
+- [Anthropic Agent Skills Overview](https://docs.claude.com/en/docs/agents-and-tools/agent-skills)：用于核验 skills 的组成方式、按需加载、资源和脚本打包等概念。
 - [The Prompt Report: A Systematic Survey of Prompting Techniques](https://arxiv.org/abs/2406.06608)：用于了解 prompt engineering 技术谱系、术语变化和相关研究分类。
+- [IBM: What is context engineering?](https://www.ibm.com/think/topics/context-engineering)：用于核验 context engineering 作为设计、结构化和优化 LLM 上下文的工程实践描述。
+- [A Survey of Context Engineering for Large Language Models](https://arxiv.org/abs/2507.13334)：用于了解上下文工程作为研究方向的系统化整理。该资料属于较新的研究综述，正文引用时应标注核验日期。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Personality Engineering、Cognitive Interface Design 等本书综合概念时，要明确区分“已有产品能力”“研究来源”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”和“本书推演”。
 
 ## AI 历史与基础论文
 

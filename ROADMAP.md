@@ -34,6 +34,7 @@
 - OpenClaw 多 agent 联动教程，覆盖飞书、Telegram、云文档、任务状态、统一 skill 安装、回写和人工审批。
 - OpenClaw、Node.js 与超级大脑架构分析，比较 Node.js、Python、Go、Rust、Markdown、流式中间层和更强认知系统设计。
 - Style Engineering 与 AI Native 创作专题，解释 prompt 到风格工程、人格工程和认知接口设计的演进。
+- Context Engineering 上下文工程专题，解释如何把 RAG、memory、skill、agent、工具结果、风格和安全规则组织成可审计上下文包。
 - AI 发展历史与社区生态专题，介绍 AI 历史、公益站、注册自动化、模型聚合和社区工具的价值与风险。
 - 前沿资料季度复核执行手册、记录表和示例记录。
 - 常见误区与纠偏指南。
@@ -185,6 +186,7 @@
 | 七层 AI 文明架构专题 | 已完成初稿：[七层 AI 文明架构](docs/seven-layer-ai-civilization.md) | 继续补图解、教学讲义和案例映射 |
 | OpenClaw 与超级大脑架构 | 已完成初稿：[OpenClaw、Node.js 与超级大脑架构](docs/openclaw-superbrain-architecture.md) | 继续补事件流原型、SQLite 状态表和 CLI adapter 示例 |
 | Style Engineering 与 AI Native 创作 | 已完成初稿：[Style Engineering 与 AI Native 创作](docs/style-engineering-ai-native.md) | 继续补不同媒介的 STYLE.md、BRAND.md、WRITER.md 示例和评分样例 |
+| Context Engineering 上下文工程 | 已完成初稿：[Context Engineering：上下文工程](docs/context-engineering.md) | 继续补 RAG、memory、agent 和多工具协作的上下文包样例 |
 | AI 历史与社区生态 | 已完成初稿：[AI 发展历史与社区生态](docs/ai-history-community-ecosystem.md) | 继续补公益站、模型聚合、Prompt 市场、本地部署和注册自动化的风险复盘案例 |
 
 七层架构的初步延展判断：

@@ -15,6 +15,7 @@
 - [第 11 章：Hermes、HiMeS 与开源模型路线](chapters/11-hermes-himes-open-models.md)
 - [第 12 章：AI 前沿发展全景](chapters/12-frontier-landscape.md)
 - [Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)
+- [Context Engineering：上下文工程](context-engineering.md)
 - [AI 发展历史与社区生态](ai-history-community-ecosystem.md)
 - [七层 AI 文明架构](seven-layer-ai-civilization.md)
 - [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)

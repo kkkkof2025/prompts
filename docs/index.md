@@ -10,6 +10,7 @@
 [完整目录](SUMMARY.md)
 [真实案例](case-studies.md)
 [前沿概念](style-engineering-ai-native.md)
+[上下文工程](context-engineering.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -38,7 +39,7 @@
 <div class="route-card" markdown="1">
 **想跟进前沿**
 
-重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md) 和 [技术演进案例库](technology-evolution-cases.md)。
+重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[Context Engineering：上下文工程](context-engineering.md) 和 [技术演进案例库](technology-evolution-cases.md)。
 </div>
 </div>
 
@@ -109,6 +110,12 @@
 **[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)**
 
 从 prompt、工作流和上下文继续推进到风格工程、人格工程和认知接口设计。
+</div>
+
+<div class="resource-card" markdown="1">
+**[Context Engineering：上下文工程](context-engineering.md)**
+
+把 prompt、RAG、memory、skill、agent 和风格约束组织成可检查的上下文包。
 </div>
 
 <div class="resource-card" markdown="1">

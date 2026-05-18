@@ -1,6 +1,6 @@
 # MEMORY
 
-最后更新：2026-05-16
+最后更新：2026-05-18
 
 ## 当前目标
 
@@ -119,6 +119,11 @@
 - 修复 MkDocs 展示问题：新增 `robots.txt`；`mkdocs.yml` 启用 `md_in_html`，让首页和书稿首页卡片内的链接、加粗正常渲染；`edit_uri` 从 `edit/main/` 改为 `edit/master/`，修复查看源码和编辑链接 404。
 - 新增 `docs/style-engineering-ai-native.md`，吸收 2026-05-16 “AI 的风格设定进化”笔记，把 Prompt Engineering、Style Engineering、Personality Engineering 和 Cognitive System Design 串成 AI Native 创作专题。
 - 新增 `docs/ai-history-community-ecosystem.md`，介绍 AI 发展历史、公益站、注册自动化/注册机概念边界、模型聚合、Prompt 市场和社区生态，明确不提供绕过授权、批量注册或破解类操作方法。
+- 扩充 `docs/style-engineering-ai-native.md`，新增 STYLE.md、BRAND.md、WRITER.md 和 AGENTS.md 四类可复用风格文件模板，帮助读者把风格要求从一次性 prompt 固化成项目资产。
+- 扩充 `docs/ai-history-community-ecosystem.md`，新增公益站隐私黑箱、模型聚合声明不透明、本地部署包长期不更新、注册自动化越过授权边界四个风险复盘案例。
+- 新增 `docs/context-engineering.md` Context Engineering 上下文工程专题，把上下文选择、排序、压缩、隔离和来源追踪作为连接 prompt、RAG、memory、skill、agent、工具结果、风格和安全边界的中间层概念，并补充客户反馈上下文包案例。
+- 将 Context Engineering 接入 `mkdocs.yml`、`docs/SUMMARY.md`、根目录首页、书稿首页、README、主题索引、术语表、术语回链、术语写法规范、资源附录、第 6/9/12 章、路线图、变更记录和电子书导出脚本。
+- 2026-05-18 联网复核 Context Engineering 关键来源：IBM “What is context engineering?”、arXiv `2507.13334` 上下文工程综述、OpenAI Prompting Guide 和 Anthropic Agent Skills Overview；正文已标注本书分层框架和六个动作属于综合判断，不等同于单一来源定义。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --config-file mkdocs.yml`。
@@ -192,6 +197,7 @@
 - 下一轮建议优先继续为连续案例样例库补充行业化匿名作业样例、课堂观察记录和团队试点复盘样例；也可以继续扩展课堂投影短版的 30、60、90、120 分钟讲法。
 - OpenClaw 多 agent 联动教程可作为新的高优先级扩写：用飞书、Telegram、Webhook、云文档或任务看板作为共享任务层，演示多个 agent 如何接收任务、同步状态、调用统一 skill 包、交接结果和保留人工复核。
 - 七层 AI 文明架构可作为新的前沿思想专题：从执行层和记忆层讲到意图层、认知经济层、世界模型层、身份层和文明层，但正文需要明确这是分析框架，不是已稳定落地的产品形态。
+- Context Engineering 已完成基础专题，下一轮可继续补多 agent、代码库、教学资料库和个人知识库四类上下文包样例，并把上下文包写入 OpenClaw 多 agent 联动教程。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。

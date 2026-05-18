@@ -1,17 +1,17 @@
 # 第 12 章：AI 前沿发展全景
 
-本章是截至 2026-05-07 的观察。AI 发展很快，模型、产品、价格、接口和法律环境都会变化。阅读本章时，要把它当作“方向地图”，而不是永久不变的清单。
+本章是截至 2026-05-18 的观察。AI 发展很快，模型、产品、价格、接口和法律环境都会变化。阅读本章时，要把它当作“方向地图”，而不是永久不变的清单。
 
 ## 本章导读
 
 - 预计阅读时间：15-22 分钟。
 - 学习目标：用任务系统视角理解多模态、agent、协议化、开源和治理趋势；判断趋势是否会改变自己的学习或团队试点重点。
 - 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI 任务选择决策指南](../task-decision-guide.md)。
-- 相关材料：[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
+- 相关材料：[Context Engineering：上下文工程](../context-engineering.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
 
 ## 总趋势
 
-AI 正从“聊天工具”走向“通用工作系统”。变化主要发生在七个方向：
+AI 正从“聊天工具”走向“通用工作系统”。变化主要发生在八个方向：
 
 1. 更强推理：模型更擅长复杂规划、数学、代码和多步骤任务。
 2. 多模态：文本、图像、音频、视频、屏幕和文件逐步合并到同一工作流。
@@ -20,10 +20,13 @@ AI 正从“聊天工具”走向“通用工作系统”。变化主要发生�
 5. 协议化：MCP、A2A 等协议让工具和 agent 更容易互联。
 6. 开源竞争：开源模型在成本、部署、可控性和研究上持续推进。
 7. 治理强化：安全、隐私、版权、合规、评估和审计变得更重要。
+8. 上下文工程化：系统开始把检索资料、工具结果、记忆、权限、风格和复核标准组织成可审计的上下文包。
 
 如果从系统结构上看，这些方向可以进一步整理成 [七层 AI 文明架构](../seven-layer-ai-civilization.md)：执行、记忆、意图、认知经济、世界模型、身份和文明。它不是把未来写成定论，而是帮助读者区分“今天能落地的 agent 能力”和“长期演化中的复杂生态”。
 
 还有一条容易被低估的路线：从 prompt 走向 [Style Engineering 与 AI Native 创作](../style-engineering-ai-native.md)。当模型能力越来越强，稀缺能力会从“能不能生成”转向“能不能长期保持风格、人格、品牌、世界观和行为边界”。这不是单一厂商功能，而是一组正在形成的实践：系统提示、项目规则、输出样式、品牌规范、agent 行为协议和长期记忆会越来越像一个可维护的认知接口。
+
+与之并行的是 [Context Engineering：上下文工程](../context-engineering.md)。它关注模型行动前应该看到哪些资料、按什么优先级看到、哪些资料需要压缩或隔离、哪些结论必须追踪来源。它不是替代 prompt，而是把 prompt、RAG、memory、skill、tool result、style rule 和安全边界放进同一个信息调度系统。
 
 ## 推理与任务执行
 
@@ -120,6 +123,7 @@ AI 会改变软件工程的节奏，但不会取消工程纪律。
 - 如何审计 agent 行动。
 - 如何判断信息是否过时。
 - 如何把 AI 嵌入真实流程。
+- 如何设计上下文包，让模型看到正确、最小、可信、可追踪的信息。
 - 如何把风格、人格和品牌约束做成可复用系统。
 - 如何判断公益站、注册自动化、模型聚合和社区工具的价值与风险。
 
@@ -139,7 +143,7 @@ AI 已经能改变的 3 件事：
 ## 本章收尾
 
 - 本章练习：写下你所在行业未来一年最可能落地的 3 个 AI 场景，并标注它们更像聊天、工作流、RAG、工具调用还是 agent。
-- 相关案例：阅读 [Style Engineering 与 AI Native 创作](../style-engineering-ai-native.md)、[AI 发展历史与社区生态](../ai-history-community-ecosystem.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md) 和 [行业化工作坊案例集](../workshop-industry-cases.md)，再用 [前沿资料季度复核记录表](../frontier-review-log.md) 记录需要核验的动态事实。
+- 相关案例：阅读 [Style Engineering 与 AI Native 创作](../style-engineering-ai-native.md)、[Context Engineering：上下文工程](../context-engineering.md)、[AI 发展历史与社区生态](../ai-history-community-ecosystem.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md) 和 [行业化工作坊案例集](../workshop-industry-cases.md)，再用 [前沿资料季度复核记录表](../frontier-review-log.md) 记录需要核验的动态事实。
 - 下一步：进入 [第 13 章](13-safety-governance.md)，把前沿能力放进安全、伦理和治理边界里。
 
 ## 章节导航

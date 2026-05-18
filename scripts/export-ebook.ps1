@@ -39,6 +39,7 @@ $files = @(
     "docs/chapters/11-hermes-himes-open-models.md",
     "docs/chapters/12-frontier-landscape.md",
     "docs/style-engineering-ai-native.md",
+    "docs/context-engineering.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",
     "docs/openclaw-multi-agent-linkage.md",

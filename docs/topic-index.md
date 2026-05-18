@@ -15,6 +15,7 @@
 | `代码` / `工程` / `测试` | [第 2 章](chapters/02-ai-basics.md)、[第 6-9 章](chapters/06-tools-rag.md) | 第 6-9 章 | [代码库问答连续案例](cases/codebase-rag-skill-agent-memory.md)、[工程案例](cases/engineering.md)、[图解：AI 工作系统](diagrams.md) | 不要读取秘密配置，不要盲改代码 |
 | `开放模型` / `前沿` / `协议` | [第 11-12 章](chapters/11-hermes-himes-open-models.md)、[前沿与过时技术案例库](technology-evolution-cases.md) | 第 11-12 章 | [资源与引用](appendix-resources.md)、[前沿资料季度复核执行手册](frontier-review-playbook.md) | 动态事实要标注核验日期 |
 | `style engineering` / `风格工程` / `AI Native 创作` | [Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[第 3 章](chapters/03-prompt-basics.md) | 第 3-4、7-9、12 章 | [Prompt 调试指南](prompt-debugging-guide.md)、[AI Skill/Card 可复用模板](../examples/skill-card-template.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 要区分稳定实践、个人风格判断和未经验证的概念 |
+| `context engineering` / `上下文工程` / `上下文包` | [Context Engineering：上下文工程](context-engineering.md)、[第 6 章](chapters/06-tools-rag.md) | 第 6-9、12-13 章 | [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)、[术语回链索引](glossary-links.md)、[前沿资料季度复核执行手册](frontier-review-playbook.md) | 不要把“塞更多资料”误解成上下文工程；要做选择、排序、压缩、隔离和追踪 |
 | `AI 历史` / `公益站` / `社区生态` | [AI 发展历史与社区生态](ai-history-community-ecosystem.md)、[第 12 章](chapters/12-frontier-landscape.md) | 第 5、10-13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[资源与引用](appendix-resources.md) | 公益站可学习，敏感数据和账号绕过不可取 |
 | `文明架构` / `未来推演` / `认知经济` | [七层 AI 文明架构](seven-layer-ai-civilization.md)、[第 12 章](chapters/12-frontier-landscape.md) | 第 10-13 章 | [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)、[图解：AI 工作系统](diagrams.md) | 越往长期推演，越要区分事实、判断和想象 |
 | `安全` / `治理` / `风险` | [第 13 章](chapters/13-safety-governance.md) | 第 13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[团队 AI 落地手册](team-adoption-playbook.md) | 高风险任务必须保留人工责任 |
@@ -37,6 +38,7 @@
 我想把连续案例做成试点 -> 先看 连续案例团队试点版
 我想看连续案例成品样例 -> 先看 连续案例样例库
 我想理解 Style Engineering -> 先看 Style Engineering 与 AI Native 创作
+我想让 AI 看到正确资料 -> 先看 Context Engineering：上下文工程
 我想了解 AI 公益站和注册自动化风险 -> 先看 AI 发展历史与社区生态
 我想看七层 AI 文明架构 -> 先看 七层 AI 文明架构
 我想做 OpenClaw 多 agent 联动 -> 先看 OpenClaw 多 agent 联动教程
