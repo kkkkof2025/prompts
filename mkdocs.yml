@@ -142,6 +142,7 @@ nav:
       - CQRS：读写分离与多 agent 查询视图: docs/cqrs.md
       - Read Model / Projection：读模型与投影: docs/read-model-projections.md
       - Transactional Outbox 与幂等消费: docs/transactional-outbox-idempotency.md
+      - Saga：补偿事务与流程编排: docs/saga-process-manager.md
       - AI 发展历史与社区生态: docs/ai-history-community-ecosystem.md
       - 七层 AI 文明架构: docs/seven-layer-ai-civilization.md
       - OpenClaw 多 agent 联动教程: docs/openclaw-multi-agent-linkage.md

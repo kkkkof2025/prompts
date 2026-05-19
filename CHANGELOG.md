@@ -21,6 +21,7 @@
 - 增加 `docs/automation-content-workflow.md` 自动化维护与扩写方案，说明 GitHub Actions 适合做扫描、候选稿和 draft PR，不适合无审查地直接替代人工定稿。
 - 增加 `docs/read-model-projections.md` Read Model 与 Projection 专题，把 CQRS 的查询侧落到 SQLite 读模型、投影刷新、最终一致和重建策略。
 - 增加 `docs/transactional-outbox-idempotency.md` Transactional Outbox 与幂等消费专题，把多 agent 事件同步的可靠发放、重试和去重纳入前沿架构说明。
+- 增加 `docs/saga-process-manager.md` Saga / Process Manager 专题，把多 agent 长流程的补偿事务与编排模式纳入前沿架构说明。
 - 将 GitHub Pages 在线阅读版统一为 MkDocs Material，增加 `mkdocs.yml`、阅读样式、依赖文件和 `mkdocs-pages.yml` 发布 workflow。
 - 将章节页补齐上一章/下一章导航，并把 `agents/README.md` 改为 `agents/index.md`，避免与站点首页冲突。
 - 将 MkDocs 构建输出改到仓库外目录，清理了站点构建警告。
@@ -57,6 +58,7 @@
 - 新增 `docs/cqrs.md`，用读写分离解释多 agent 系统中 command 写入和 query 查询视图的分工。
 - 扩充 `docs/cqrs.md`，新增 SQLite 读模型示例、投影刷新节奏、最终一致处理和看板查询样例，并接入 Read Model / Projection 专题。
 - 新增 `examples/event-log/` 最小任务事件日志样例和回放脚本 `scripts/replay-task-events.ps1`，展示如何把事件流回放成读模型快照。
+- 扩充 `docs/openclaw-superbrain-architecture.md`、`docs/openclaw-multi-agent-linkage.md`、`docs/chapters/10-openclaw.md` 和 `docs/chapters/12-frontier-landscape.md`，把 Saga / Process Manager 接入 OpenClaw、前沿架构和多 agent 长流程编排说明。
 - 新增 `docs/ai-history-community-ecosystem.md`，介绍 AI 发展历史、公益站、注册自动化、模型聚合和社区生态的价值与风险。
 - 扩充 `docs/style-engineering-ai-native.md` 的 STYLE.md、BRAND.md、WRITER.md 和 AGENTS.md 模板，并扩充 `docs/ai-history-community-ecosystem.md` 的社区生态风险复盘案例。
 - 将 Context Engineering 接入 MkDocs 导航、首页、书稿首页、目录、主题索引、术语表、术语回链、资源附录、README、路线图、章节交叉链接和电子书导出脚本。

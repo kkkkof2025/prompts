@@ -53,8 +53,11 @@
 - [AWS Prescriptive Guidance: Transactional outbox pattern](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html)：用于核验双写问题、Outbox 表、重试和幂等消费的工程说明。
 - [Microsoft Learn: Transactional Outbox pattern with Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/architecture/best-practices/transactional-outbox-cosmos)：用于核验 Outbox、可靠消息和幂等处理的关系。
 - [Microsoft Learn: Implement the Transactional Outbox Pattern by Using Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/architecture/databases/guide/transactional-out-box-cosmos)：用于核验已处理标记、发布成功后更新状态和可靠事件发布流程。
+- [Microsoft Learn: Saga pattern](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)：用于核验 Saga 的本地事务、补偿事务、编排与协作式实现方式。
+- [Microsoft Learn: Cloud-native data patterns](https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/distributed-data)：用于核验分布式数据、一致性、Saga 与 CQRS/Event Sourcing 的关系。
+- [microservices.io: Pattern - Saga](https://microservices.io/patterns/data/saga.html)：用于核验 Saga 在数据库 per service 场景中的经典解释。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Saga、Process Manager、Compensation、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
 
 ## AI 历史与基础论文
 

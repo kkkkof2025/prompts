@@ -143,6 +143,8 @@ write model -> outbox -> relay -> projection worker -> read model
 
 仓库里的 [任务事件日志样例](../examples/event-log/index.md) 故意放了一条重复 `event_id`，就是为了演示幂等消费应该怎样跳过重复投递。
 
+如果你的任务不是单次消息分发，而是多步骤长流程，可以继续看 [Saga：补偿事务与流程编排](saga-process-manager.md)。
+
 ## 什么时候值得用
 
 值得：

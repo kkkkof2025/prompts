@@ -21,6 +21,7 @@
 | `CQRS` / `读写分离` / `查询视图` | [CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md) | 第 8-10、12 章 | [Read Model 与 Projection：读模型与投影](read-model-projections.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)、[Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md) | CQRS 会增加复杂度；只有读写需求明显不同、查询视图复杂时才值得用 |
 | `read model` / `projection` / `物化视图` | [Read Model 与 Projection：读模型与投影](read-model-projections.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md) | 第 8-10、12 章 | [Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md) | 读模型不是事实源；投影失败后必须能重建，并处理最终一致 |
 | `outbox` / `幂等消费` / `重复消息` | [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md) | 第 8-10、12 章 | [Read Model 与 Projection：读模型与投影](read-model-projections.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md) | 双写和重复投递是常态，必须设计重试和去重 |
+| `saga` / `process manager` / `补偿事务` | [Saga：补偿事务与流程编排](saga-process-manager.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md) | 第 8-10、12 章 | [Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 不要把 Saga 当成全局回滚；补偿必须先设计 |
 | `AI 历史` / `公益站` / `社区生态` | [AI 发展历史与社区生态](ai-history-community-ecosystem.md)、[第 12 章](chapters/12-frontier-landscape.md) | 第 5、10-13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[资源与引用](appendix-resources.md) | 公益站可学习，敏感数据和账号绕过不可取 |
 | `文明架构` / `未来推演` / `认知经济` | [七层 AI 文明架构](seven-layer-ai-civilization.md)、[第 12 章](chapters/12-frontier-landscape.md) | 第 10-13 章 | [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)、[图解：AI 工作系统](diagrams.md) | 越往长期推演，越要区分事实、判断和想象 |
 | `安全` / `治理` / `风险` | [第 13 章](chapters/13-safety-governance.md) | 第 13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[团队 AI 落地手册](team-adoption-playbook.md) | 高风险任务必须保留人工责任 |
@@ -49,6 +50,7 @@
 我想让 agent 状态好查 -> 先看 CQRS：读写分离与多 agent 查询视图
 我想把事件流变成 SQLite 看板 -> 先看 Read Model 与 Projection：读模型与投影
 我想可靠发事件并避免重复处理 -> 先看 Transactional Outbox 与幂等消费
+我想编排长任务并准备补偿 -> 先看 Saga：补偿事务与流程编排
 我想了解 AI 公益站和注册自动化风险 -> 先看 AI 发展历史与社区生态
 我想看七层 AI 文明架构 -> 先看 七层 AI 文明架构
 我想做 OpenClaw 多 agent 联动 -> 先看 OpenClaw 多 agent 联动教程

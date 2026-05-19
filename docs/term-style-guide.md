@@ -32,6 +32,9 @@
 | Transactional Outbox | 事务外箱；把业务写入和待发事件放进同一个事务的模式 |
 | Idempotent Consumer | 幂等消费者；重复消息不会重复改变结果的消费端设计 |
 | Inbox | 消费端去重表；记录已处理消息编号的表 |
+| Saga | 补偿事务；把长流程拆成可补偿步骤的模式 |
+| Process Manager | 流程协调器；负责 Saga 下一步命令和补偿的组件 |
+| Compensation | 补偿动作；失败后用来恢复可接受状态的逆向操作 |
 | AI Native | 原生围绕 AI 能力、上下文、工具和反馈回路设计的产品或创作方式 |
 
 ## 书内概念

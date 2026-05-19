@@ -160,6 +160,7 @@ flowchart TB
 | Memory Router | 决定写入什么记忆 | Markdown/SQLite | 分层记忆、证据链、遗忘策略 |
 | Event Log | 保存运行轨迹 | JSONL | Kafka/NATS/Redis Streams 等消息流 |
 | Policy Gate | 权限和风险闸门 | allow/deny 清单 | OPA/Cedar 风格策略、人工审批流 |
+| Saga Orchestrator | 编排跨 agent 和跨服务的长流程 | 简单状态机和补偿表 | 编排式 Saga、Process Manager |
 | Result Writer | 写回结果 | Markdown/Git | 多目标回写、冲突解决、自动摘要 |
 | Observer | 观察系统运行 | 日志文件 | 指标、告警、成本分析、回放调试 |
 
@@ -190,6 +191,7 @@ flowchart TB
 - **OpenClaw** 更像执行工作台和入口层。
 - **Hermes** 更像记忆基础设施。
 - **超级大脑** 则是把执行、记忆、预算、权限、协同和回写放到一个统一认知框架里。
+- **Saga Orchestrator** 则负责把多步骤、多 agent、跨系统的长流程拆成可恢复的状态机。
 
 换句话说：
 
@@ -302,6 +304,7 @@ Codex CLI、Claude CLI 这类工具越来越强，说明未来很可能不是“
 把事件流变成运行层，
 把 CLI 和 agent 变成执行层，
 把记忆和预算变成控制层，
+把 Saga 变成长流程编排层，
 把人保留在最终闸门上。
 ```
 

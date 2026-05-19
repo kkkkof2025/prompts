@@ -134,6 +134,8 @@ outputs:
 
 如果任务还要可靠通知别的系统或避免重复投递，可以再加一层 [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)。
 
+如果任务跨多个审批人、多个发布步骤或多个外部系统，还可以再加一层 [Saga：补偿事务与流程编排](saga-process-manager.md)，把长流程状态机显式写出来，失败时按补偿动作收尾。
+
 常见事件可以是：
 
 - `task_created`

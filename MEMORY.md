@@ -134,6 +134,7 @@
 - 新增 `docs/cqrs.md` CQRS 读写分离专题，解释 command 写入和 query 查询视图的职责分离，以及它和 Event Sourcing、黑板架构、OpenClaw 多 agent 系统的关系。
 - 新增 `docs/read-model-projections.md` Read Model 与 Projection 读模型专题，解释如何用 SQLite、看板查询、投影刷新、最终一致和重建策略把事件流变成可查询视图。
 - 新增 `docs/transactional-outbox-idempotency.md` Transactional Outbox 与幂等消费专题，解释怎样用可靠消息发放和消费端去重避免双写与重复处理。
+- 新增 `docs/saga-process-manager.md` Saga / Process Manager 专题，解释怎样用补偿事务和长流程编排把多步骤、多 agent、多系统任务收尾。
 - 扩充 `docs/openclaw-multi-agent-linkage.md`、`docs/blackboard-architecture-multi-agent.md` 和 `docs/openclaw-superbrain-architecture.md`，补充事件流回放、黑板当前状态与事件历史的分工，以及 `task_created`、`evidence_added`、`approved`、`published`、`rolled_back` 等事件类型。
 - 将 Event Sourcing 接入 `mkdocs.yml`、`docs/SUMMARY.md`、根目录首页、书稿首页、README、主题索引、术语表、术语回链、术语写法规范、资源附录、第 10/12 章、路线图、变更记录和电子书导出脚本。
 - 2026-05-19 联网复核 Event Sourcing 关键来源：Martin Fowler 的 Event Sourcing 文章和 Microsoft Learn 的 Event Sourcing pattern；正文已标注“事件溯源映射到 AI 协作、黑板架构和 OpenClaw”属于本书工程化推演，不是所有 AI 项目的默认数据层。
@@ -142,6 +143,7 @@
 - 扩充 `docs/cqrs.md`，新增 SQLite 读模型、Projection 刷新节奏、最终一致和看板查询样例；将 Read Model / Projection 接入 `mkdocs.yml`、目录、首页、书稿首页、README、主题索引、术语表、术语回链、术语写法规范、资源附录、第 10/12 章、OpenClaw 前沿架构页、路线图、变更记录和电子书导出脚本。
 - 2026-05-19 复核 Read Model / Projection 关键来源：Microsoft Learn CQRS/Event Sourcing 文档、Martin Fowler CQRS、SQLite UPSERT、SQLite CREATE VIEW 和 PostgreSQL Materialized Views；正文已标注“读模型与 OpenClaw 多 agent 任务系统结合”属于本书工程化推演。
 - 2026-05-19 新增 `docs/transactional-outbox-idempotency.md` 后，把多 agent 事件同步的“可靠发放 + 幂等消费”也纳入本书前沿专题；参考来源增加 AWS Prescriptive Guidance Transactional Outbox 和 Microsoft Learn Transactional Outbox。
+- 2026-05-19 新增 `docs/saga-process-manager.md` 后，把多 agent 长流程的“补偿事务 + 流程编排”也纳入本书前沿专题；参考来源增加 Microsoft Learn Saga pattern、Cloud-native data patterns 和 microservices.io Saga。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
 - 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --strict --config-file mkdocs.yml`。
@@ -218,7 +220,7 @@
 - Context Engineering 已完成基础专题，下一轮可继续补多 agent、代码库、教学资料库和个人知识库四类上下文包样例，并把上下文包写入 OpenClaw 多 agent 联动教程。
 - Blackboard Architecture 已完成基础专题，并补充 Markdown 黑板、飞书多维表格黑板、GitHub Issue 黑板和 SQLite 黑板四类原型模板；下一轮可继续补真实运行日志、回放脚本和团队试点样例。
 - Event Sourcing 已完成基础专题，并补充任务事件 schema、事件回放伪代码、快照模板和失败任务复盘样例；下一轮可继续补真实事件日志和回放脚本。
-- CQRS 与 Read Model / Projection、Transactional Outbox 与幂等消费已完成基础专题，下一轮可继续补复杂统计读模型、真实任务日志、跨页面物化视图、relay worker 和消费端去重表样例。
+- CQRS 与 Read Model / Projection、Transactional Outbox 与幂等消费、Saga / Process Manager 已完成基础专题，下一轮可继续补复杂统计读模型、真实任务日志、跨页面物化视图、relay worker、消费端去重表和多步骤补偿样例。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。
