@@ -62,6 +62,134 @@ payload:
 
 这些事件最好是追加写入，而不是覆盖原记录。这样你才能知道一次任务到底经历了什么。
 
+## 任务事件 schema
+
+一个可落地的事件 schema 至少应该包含这些字段：
+
+| 字段 | 用途 | 示例 |
+| --- | --- | --- |
+| `event_id` | 唯一事件编号 | `evt-20260519-0012` |
+| `task_id` | 关联任务 | `task-20260519-001` |
+| `type` | 事件类型 | `draft_written` |
+| `actor` | 触发者 | `writer-agent` |
+| `timestamp` | 发生时间 | `2026-05-19T10:32:18+08:00` |
+| `schema_version` | 事件结构版本 | `1` |
+| `correlation_id` | 同一工作流链路 | `run-20260519-001` |
+| `causation_id` | 导致本事件的上一事件 | `evt-20260519-0011` |
+| `payload` | 事件内容 | 证据、草稿路径、审批结果 |
+| `risk` | 风险等级 | `low` / `medium` / `high` |
+
+JSONL 写法：
+
+```json
+{"event_id":"evt-1","task_id":"task-1","type":"task_created","actor":"human","timestamp":"2026-05-19T10:00:00+08:00","schema_version":1,"payload":{"title":"扩充 OpenClaw 教程"}}
+{"event_id":"evt-2","task_id":"task-1","type":"task_claimed","actor":"writer-agent","timestamp":"2026-05-19T10:05:00+08:00","schema_version":1,"causation_id":"evt-1","payload":{"lock_minutes":30}}
+```
+
+## 事件回放伪代码
+
+事件回放的目标，是从事件序列重建当前任务状态。
+
+```text
+state = empty_task_state()
+
+for event in events.sorted_by_time():
+    if event.type == "task_created":
+        state.task_id = event.task_id
+        state.title = event.payload.title
+        state.status = "open"
+
+    if event.type == "task_claimed":
+        state.owner = event.actor
+        state.status = "claimed"
+
+    if event.type == "evidence_added":
+        state.evidence.append(event.payload)
+
+    if event.type == "draft_written":
+        state.draft = event.payload.path
+        state.status = "drafting"
+
+    if event.type == "review_blocked":
+        state.status = "blocked"
+        state.blockers.append(event.payload.reason)
+
+    if event.type == "approved":
+        state.status = "approved"
+        state.approved_by = event.actor
+
+    if event.type == "published":
+        state.status = "published"
+        state.commit_hash = event.payload.commit_hash
+
+return state
+```
+
+真实系统里还需要处理幂等、重复事件、乱序事件、版本升级和权限检查。伪代码只表达核心思路。
+
+## 快照模板
+
+事件多了以后，每次从头回放会变慢。可以定期生成快照：
+
+```yaml
+snapshot_id: snap-20260519-001
+task_id: task-20260519-001
+up_to_event_id: evt-20260519-0042
+created_at: 2026-05-19T12:00:00+08:00
+state:
+  status: reviewing
+  owner: review-agent
+  evidence_count: 6
+  blockers:
+    - missing official source for one claim
+  draft_files:
+    - docs/openclaw-multi-agent-linkage.md
+  approval: required
+```
+
+恢复状态时，可以先加载最近快照，再回放快照之后的事件。
+
+## 失败任务回放案例
+
+### 现象
+
+发布 agent 没有推送成功，但黑板上任务被标成 `published`。
+
+### 事件流
+
+```text
+10:00 task_created
+10:05 task_claimed by writer-agent
+10:30 draft_written
+10:40 review_passed
+10:45 approved by human
+10:47 publish_started by release-agent
+10:48 push_failed by release-agent
+10:49 status_updated published by release-agent
+```
+
+### 回放发现
+
+问题不在写作 agent，也不在复核 agent，而在发布 agent 的状态更新逻辑：它把 `publish_started` 之后的任务直接写成 `published`，没有等待 `push_succeeded`。
+
+### 修复
+
+状态机应该改成：
+
+```text
+publish_started -> publishing
+push_failed -> failed
+push_succeeded -> published
+```
+
+同时增加规则：
+
+```text
+只有收到 push_succeeded 且包含 commit_hash 时，任务才能进入 published。
+```
+
+这就是事件溯源的价值：它让问题定位从“猜哪里错了”变成“回放事件找断点”。
+
 ## 和黑板架构的关系
 
 [Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md) 更关注“当前共享工作台”。
@@ -78,6 +206,19 @@ payload:
 
 - 黑板负责给 agent 和人看现在。
 - 事件流负责给审计、复盘和恢复看过去。
+
+## 和 CQRS 的关系
+
+[CQRS：读写分离与多 agent 查询视图](cqrs.md) 关注读写职责分离。Event Sourcing 负责保存写入历史，CQRS 负责为不同查询构建读模型。
+
+简单说：
+
+```text
+Event Sourcing = 怎么保存变化
+CQRS = 怎么把写入和查询分开
+```
+
+二者一起用时，事件流是事实来源，读模型是查询视图。
 
 ## 和 OpenClaw 的关系
 

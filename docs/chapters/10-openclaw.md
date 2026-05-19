@@ -7,7 +7,7 @@ OpenClaw 是一个开源个人 AI 助手项目。按照其官方仓库介绍，�
 - 预计阅读时间：12-18 分钟。
 - 学习目标：把个人助手看成多能力组合；理解多通道输入、记忆、工具和协议如何协作；设计个人助手的最小需求和权限边界。
 - 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [Agent 工作流安全检查清单](../../examples/agent-workflow-checklist.md)。
-- 相关材料：[图解：AI 工作系统](../diagrams.md)、[OpenClaw 多 agent 联动教程](../openclaw-multi-agent-linkage.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md) 和 [前沿与过时技术案例库](../technology-evolution-cases.md)。
+- 相关材料：[图解：AI 工作系统](../diagrams.md)、[OpenClaw 多 agent 联动教程](../openclaw-multi-agent-linkage.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../cqrs.md)、[OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md) 和 [前沿与过时技术案例库](../technology-evolution-cases.md)。
 
 ## 为什么关注 OpenClaw
 

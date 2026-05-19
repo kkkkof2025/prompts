@@ -14,6 +14,7 @@
 [上下文工程](docs/context-engineering.md)
 [黑板架构](docs/blackboard-architecture-multi-agent.md)
 [事件溯源](docs/event-sourcing.md)
+[CQRS](docs/cqrs.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -55,6 +56,12 @@
 **[Event Sourcing：事件溯源与任务回放](docs/event-sourcing.md)**
 
 把任务变化写成事件流，帮助 OpenClaw、多 agent 和黑板系统审计与复盘。
+</div>
+
+<div class="route-card" markdown="1">
+**[CQRS：读写分离与多 agent 查询视图](docs/cqrs.md)**
+
+把写入事件和查询视图分开，让多 agent 任务既能回放，也能快速查看当前状态。
 </div>
 
 <div class="route-card" markdown="1">

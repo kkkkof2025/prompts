@@ -52,12 +52,14 @@
 - 新增 `docs/context-engineering.md`，把上下文工程作为连接 prompt、RAG、memory、skill、agent、工具结果、风格和安全边界的前沿专题。
 - 新增 `docs/blackboard-architecture-multi-agent.md`，用黑板架构解释多 agent 如何围绕共享任务、证据、假设、状态和决策协作。
 - 新增 `docs/event-sourcing.md`，用事件溯源解释多 agent 任务如何通过事件流审计、回放和复盘。
+- 新增 `docs/cqrs.md`，用读写分离解释多 agent 系统中 command 写入和 query 查询视图的分工。
 - 新增 `docs/ai-history-community-ecosystem.md`，介绍 AI 发展历史、公益站、注册自动化、模型聚合和社区生态的价值与风险。
 - 扩充 `docs/style-engineering-ai-native.md` 的 STYLE.md、BRAND.md、WRITER.md 和 AGENTS.md 模板，并扩充 `docs/ai-history-community-ecosystem.md` 的社区生态风险复盘案例。
 - 将 Context Engineering 接入 MkDocs 导航、首页、书稿首页、目录、主题索引、术语表、术语回链、资源附录、README、路线图、章节交叉链接和电子书导出脚本。
 - 扩充 `docs/openclaw-multi-agent-linkage.md`，新增共享黑板层、任务黑板结构和上下文包写法，并将 Blackboard Architecture 接入导航、索引、术语、资源附录、README、路线图、第 10/12 章和电子书导出脚本。
 - 扩充 `docs/openclaw-multi-agent-linkage.md` 和 `docs/blackboard-architecture-multi-agent.md`，新增事件流回放说明，并将 Event Sourcing 接入导航、索引、术语、资源附录、README、路线图、第 10/12 章和电子书导出脚本。
 - 扩充 `docs/blackboard-architecture-multi-agent.md`，新增 Markdown、飞书多维表格、GitHub Issue、SQLite 四类黑板原型模板。
+- 扩充 `docs/event-sourcing.md`，新增任务事件 schema、事件回放伪代码、快照模板和失败任务回放案例，并将 CQRS 接入导航、索引、术语、资源附录、README、路线图、第 10/12 章和电子书导出脚本。
 - 修复 MkDocs 首页 HTML 内 Markdown 渲染，启用 `md_in_html`；修复编辑/源码链接分支，`edit_uri` 改为 `master`；新增 `robots.txt`。
 - 更新维护规范：后续每次更新默认同时做已有内容扩充和新技术概念添加，并在发布前复查事实、引用和推演边界。
 - 增强 `docs/diagrams.md`，补充 RAG 到 skill、agent、memory 的升级路径、分工图、agent 权限分层和记忆写入决策图。

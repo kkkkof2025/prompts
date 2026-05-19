@@ -18,6 +18,7 @@
 - [Context Engineering：上下文工程](context-engineering.md)
 - [Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md)
 - [Event Sourcing：事件溯源与任务回放](event-sourcing.md)
+- [CQRS：读写分离与多 agent 查询视图](cqrs.md)
 - [AI 发展历史与社区生态](ai-history-community-ecosystem.md)
 - [七层 AI 文明架构](seven-layer-ai-civilization.md)
 - [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)

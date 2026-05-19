@@ -45,6 +45,10 @@ Agent2Agent 的缩写，指 agent 与 agent 之间互操作和协作的协议方
 
 上下文工程。指为模型下一步行动选择、排序、压缩、隔离和追踪上下文的工程实践。它不只是写 prompt，而是管理模型应该看到什么、不能看到什么、哪些资料需要引用、哪些记忆可以调用。
 
+### CQRS
+
+Command Query Responsibility Segregation，命令查询职责分离。它把改变状态的 command 和读取状态的 query 分开，适合读写需求差异明显、查询视图复杂的系统。
+
 ## E
 
 ### Embedding
