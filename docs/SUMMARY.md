@@ -20,6 +20,7 @@
 - [Event Sourcing：事件溯源与任务回放](event-sourcing.md)
 - [CQRS：读写分离与多 agent 查询视图](cqrs.md)
 - [Read Model 与 Projection：读模型与投影](read-model-projections.md)
+- [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)
 - [AI 发展历史与社区生态](ai-history-community-ecosystem.md)
 - [七层 AI 文明架构](seven-layer-ai-civilization.md)
 - [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)
@@ -88,3 +89,4 @@
 - [实践模板：Prompt 模式](../examples/prompt-patterns.md)
 - [实践模板：Skill/Card](../examples/skill-card-template.md)
 - [实践模板：Agent 安全清单](../examples/agent-workflow-checklist.md)
+- [任务事件日志样例](../examples/event-log/index.md)

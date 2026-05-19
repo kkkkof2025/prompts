@@ -362,6 +362,8 @@ publisher writes to Git
 
 Projection 每处理一条事件，就更新对应读模型。于是人不用翻所有日志，也能看到“当前哪些任务该我处理”。
 
+配套的最小样例在 [任务事件日志样例](../examples/event-log/index.md)，可以直接把 JSONL 事件回放成读模型快照。
+
 ## 什么时候不用它
 
 不要因为概念漂亮就把读模型和投影强行塞进所有系统。
@@ -407,3 +409,5 @@ Projection 由谁触发：
 - [PostgreSQL Materialized Views](https://www.postgresql.org/docs/current/rules-materializedviews.html)：用于核验数据库原生 materialized view 的基本概念。
 
 本页把读模型、Projection、SQLite 和 OpenClaw 多 agent 任务系统连在一起，是本书的工程化推演。Projection 和 materialized view 本身不是 AI 专属概念。
+
+如果读模型更新需要跨系统可靠同步，可以继续看 [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)。

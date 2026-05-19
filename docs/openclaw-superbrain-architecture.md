@@ -91,7 +91,7 @@ SQLite = 状态索引
 Message Bus = 协同通道
 ```
 
-这比“全 Markdown”更快，也比“全事件流”更可审。如果要把事件流变成可回放的事实来源，可以继续看 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)；如果要把写入侧和查询侧分开，可以继续看 [CQRS：读写分离与多 agent 查询视图](cqrs.md)；如果要把事件流变成 SQLite 看板和查询视图，可以继续看 [Read Model 与 Projection：读模型与投影](read-model-projections.md)。
+这比“全 Markdown”更快，也比“全事件流”更可审。如果要把事件流变成可回放的事实来源，可以继续看 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)；如果要把写入侧和查询侧分开，可以继续看 [CQRS：读写分离与多 agent 查询视图](cqrs.md)；如果要把事件流变成 SQLite 看板和查询视图，可以继续看 [Read Model 与 Projection：读模型与投影](read-model-projections.md)；如果还需要可靠通知别的系统，可以继续看 [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)。
 
 ## 为什么全 Markdown 会拖慢系统
 

@@ -16,6 +16,8 @@
 [事件溯源](docs/event-sourcing.md)
 [CQRS](docs/cqrs.md)
 [读模型](docs/read-model-projections.md)
+[Outbox](docs/transactional-outbox-idempotency.md)
+[事件样例](examples/event-log/index.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -69,6 +71,12 @@
 **[Read Model 与 Projection：读模型与投影](docs/read-model-projections.md)**
 
 把事件流、黑板状态和写入模型持续转换成 SQLite 查询视图、看板和物化结果。
+</div>
+
+<div class="route-card" markdown="1">
+**[Transactional Outbox 与幂等消费](docs/transactional-outbox-idempotency.md)**
+
+把写入事务、消息分发和消费端去重连成可靠事件通道。
 </div>
 
 <div class="route-card" markdown="1">

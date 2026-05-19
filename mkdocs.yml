@@ -141,6 +141,7 @@ nav:
       - Event Sourcing：事件溯源与任务回放: docs/event-sourcing.md
       - CQRS：读写分离与多 agent 查询视图: docs/cqrs.md
       - Read Model / Projection：读模型与投影: docs/read-model-projections.md
+      - Transactional Outbox 与幂等消费: docs/transactional-outbox-idempotency.md
       - AI 发展历史与社区生态: docs/ai-history-community-ecosystem.md
       - 七层 AI 文明架构: docs/seven-layer-ai-civilization.md
       - OpenClaw 多 agent 联动教程: docs/openclaw-multi-agent-linkage.md
@@ -164,6 +165,7 @@ nav:
       - Prompt 模式实践模板: examples/prompt-patterns.md
       - AI Skill/Card 可复用模板: examples/skill-card-template.md
       - Agent 工作流安全检查清单: examples/agent-workflow-checklist.md
+      - 任务事件日志样例: examples/event-log/index.md
   - 维护与发布:
       - GitHub 发布指南: docs/publishing-guide.md
       - 项目维护指南: docs/maintenance-guide.md

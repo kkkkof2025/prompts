@@ -28,7 +28,8 @@ node_modules/
 vendor/bundle/
 
 # Temporary files
-tmp/
+tmp/*
+!tmp/.gitkeep
 temp/
 *.tmp
 content-health-report.md

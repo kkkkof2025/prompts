@@ -220,6 +220,8 @@ CQRS = 怎么把写入和查询分开
 
 二者一起用时，事件流是事实来源，读模型是查询视图，Projection 是把事件流持续转换成读模型的过程。
 
+如果事件需要可靠发给下游、避免双写或重复投递，可以继续看 [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)。
+
 ## 和 OpenClaw 的关系
 
 在 OpenClaw 多 agent 联动里，事件溯源可以记录：
@@ -232,6 +234,8 @@ CQRS = 怎么把写入和查询分开
 - 哪次回滚撤销了错误结果。
 
 这样一来，协作不是只剩一份最终稿，而是留下完整的演化链。
+
+如果你想看一个最小的事件流样例和回放脚本，可以打开 [任务事件日志样例](../examples/event-log/index.md)。
 
 ## 什么时候适合用
 

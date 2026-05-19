@@ -44,6 +44,7 @@ $files = @(
     "docs/event-sourcing.md",
     "docs/cqrs.md",
     "docs/read-model-projections.md",
+    "docs/transactional-outbox-idempotency.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",
     "docs/openclaw-multi-agent-linkage.md",

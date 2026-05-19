@@ -50,8 +50,11 @@
 - [SQLite UPSERT](https://sqlite.org/lang_upsert.html)：用于核验读模型示例中的 `ON CONFLICT ... DO UPDATE` 写法。
 - [SQLite CREATE VIEW](https://www.sqlite.org/lang_createview.html)：用于核验 SQLite 普通 view 的语法和边界。
 - [PostgreSQL Materialized Views](https://www.postgresql.org/docs/current/rules-materializedviews.html)：用于核验数据库原生 materialized view 与普通 view 的区别。
+- [AWS Prescriptive Guidance: Transactional outbox pattern](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html)：用于核验双写问题、Outbox 表、重试和幂等消费的工程说明。
+- [Microsoft Learn: Transactional Outbox pattern with Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/architecture/best-practices/transactional-outbox-cosmos)：用于核验 Outbox、可靠消息和幂等处理的关系。
+- [Microsoft Learn: Implement the Transactional Outbox Pattern by Using Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/architecture/databases/guide/transactional-out-box-cosmos)：用于核验已处理标记、发布成功后更新状态和可靠事件发布流程。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
 
 ## AI 历史与基础论文
 

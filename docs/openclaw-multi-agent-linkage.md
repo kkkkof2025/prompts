@@ -132,6 +132,8 @@ outputs:
 
 当事件越来越多时，不要让每个 agent 都从头读取事件流。可以用 [CQRS：读写分离与多 agent 查询视图](cqrs.md) 和 [Read Model 与 Projection：读模型与投影](read-model-projections.md)，把事件流持续转换成 `tasks_current`、`agent_workload`、`risk_queue` 这类读模型，让人和 agent 快速查询当前状态。
 
+如果任务还要可靠通知别的系统或避免重复投递，可以再加一层 [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)。
+
 常见事件可以是：
 
 - `task_created`

@@ -15,6 +15,7 @@
 [事件溯源](event-sourcing.md)
 [CQRS](cqrs.md)
 [读模型](read-model-projections.md)
+[Outbox](transactional-outbox-idempotency.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -43,7 +44,7 @@
 <div class="route-card" markdown="1">
 **想跟进前沿**
 
-重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[Context Engineering：上下文工程](context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Read Model 与 Projection：读模型与投影](read-model-projections.md) 和 [技术演进案例库](technology-evolution-cases.md)。
+重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[Context Engineering：上下文工程](context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Read Model 与 Projection：读模型与投影](read-model-projections.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md) 和 [技术演进案例库](technology-evolution-cases.md)。
 </div>
 </div>
 
@@ -147,9 +148,21 @@
 </div>
 
 <div class="resource-card" markdown="1">
+**[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)**
+
+把写入事务、消息分发和消费端去重连成可靠事件通道。
+</div>
+
+<div class="resource-card" markdown="1">
 **[AI 发展历史与社区生态](ai-history-community-ecosystem.md)**
 
 把 AI 历史、公益站、注册自动化、模型聚合、Prompt 市场和社区工具放进价值与风险框架。
+</div>
+
+<div class="resource-card" markdown="1">
+**[任务事件日志样例](../examples/event-log/index.md)**
+
+把事件流、回放脚本和幂等消费示例连在一起看。
 </div>
 
 <div class="resource-card" markdown="1">
