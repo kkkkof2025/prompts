@@ -13,6 +13,7 @@
 [前沿概念](docs/style-engineering-ai-native.md)
 [上下文工程](docs/context-engineering.md)
 [黑板架构](docs/blackboard-architecture-multi-agent.md)
+[事件溯源](docs/event-sourcing.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -48,6 +49,12 @@
 **[Blackboard Architecture：黑板架构与多 agent 协作](docs/blackboard-architecture-multi-agent.md)**
 
 用共享黑板解释多 agent 如何围绕任务、证据、状态、上下文和决策协作。
+</div>
+
+<div class="route-card" markdown="1">
+**[Event Sourcing：事件溯源与任务回放](docs/event-sourcing.md)**
+
+把任务变化写成事件流，帮助 OpenClaw、多 agent 和黑板系统审计与复盘。
 </div>
 
 <div class="route-card" markdown="1">

@@ -126,6 +126,24 @@ outputs:
 
 这比单纯任务卡更强，因为它记录的不只是“谁做什么”，还记录“这次行动应该看什么、不能看什么、依据是什么、谁批准发布”。
 
+## 用事件流回放协作过程
+
+如果你的任务需要复盘、审计或排错，可以再加一层 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)。做法不是每次覆盖状态，而是把关键变化追加成事件。
+
+常见事件可以是：
+
+- `task_created`
+- `task_claimed`
+- `evidence_added`
+- `context_pack_generated`
+- `draft_written`
+- `review_blocked`
+- `approved`
+- `published`
+- `rolled_back`
+
+这样一来，黑板负责“现在”，事件流负责“过去”。回头看任务时，你既能看到当前状态，也能看到协作路径。
+
 ## 一个推荐的数据结构
 
 可以把每个任务写成一段标准化 front matter：

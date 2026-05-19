@@ -141,6 +141,145 @@ Commit：发布 agent 只处理已批准结果。
 
 对个人或小团队来说，最稳妥的起点通常是“云文档黑板 + Git 留痕 + 本地调度器”。等任务量和自动化需求真的上来，再把状态层迁移到 SQLite 或事件流。
 
+## 四种黑板原型模板
+
+### 1. Markdown 黑板
+
+适合书稿、代码库、研究笔记和个人项目。优点是 Git diff 清楚，缺点是并发和高频状态变化不够强。
+
+```text
+blackboard/
+  tasks/
+    task-20260519-001.md
+  evidence/
+    task-20260519-001.sources.md
+  decisions/
+    task-20260519-001.decisions.md
+  events/
+    task-20260519-001.jsonl
+```
+
+任务文件可以这样写：
+
+```yaml
+---
+task_id: task-20260519-001
+status: drafting
+owner: writer-agent
+priority: high
+context_pack: ../contexts/task-20260519-001.yaml
+event_log: ../events/task-20260519-001.jsonl
+human_gate: required
+---
+
+## Goal
+
+扩充 OpenClaw 多 agent 联动教程。
+
+## Current State
+
+- Evidence collected.
+- Draft in progress.
+- Human approval required before publish.
+```
+
+### 2. 飞书多维表格黑板
+
+适合团队试点、教学项目和需要人工审批的协作。核心不是把所有正文塞进表格，而是把任务状态、责任人、证据链接和审批状态放在表格里。
+
+| 字段 | 类型 | 示例 |
+| --- | --- | --- |
+| `task_id` | 文本 | `task-20260519-001` |
+| `title` | 文本 | 扩充 OpenClaw 教程 |
+| `status` | 单选 | `drafting` |
+| `owner` | 人员/文本 | `writer-agent` |
+| `priority` | 单选 | `high` |
+| `context_pack` | 链接 | 云文档上下文包 |
+| `evidence_doc` | 链接 | 资料摘要 |
+| `draft_doc` | 链接 | 草稿 |
+| `review_status` | 单选 | `blocked` / `passed` |
+| `approval` | 单选 | `required` / `approved` |
+| `commit_hash` | 文本 | `d337ffd` |
+
+飞书适合做人类可见黑板，但不适合承担高频事件流。事件日志可以另存 JSONL 或 SQLite。
+
+### 3. GitHub Issue 黑板
+
+适合工程团队和开源项目。Issue 本身就是一个可讨论、可打标签、可关联 commit 的黑板。
+
+```markdown
+## Task
+
+- task_id: task-20260519-001
+- status: drafting
+- owner: @writer-agent
+- human_gate: required
+
+## Context Pack
+
+- Goal:
+- Must include:
+- Must avoid:
+
+## Evidence
+
+- [ ] Source 1
+- [ ] Source 2
+
+## Decisions
+
+- [ ] Human approval
+
+## Output
+
+- PR:
+- Commit:
+```
+
+推荐标签：
+
+- `ai-task`
+- `needs-evidence`
+- `drafting`
+- `needs-review`
+- `human-approval`
+- `published`
+
+### 4. SQLite 黑板
+
+适合本地编排器、小团队服务和需要查询的自动化系统。它不如 Markdown 直观，但更适合锁、状态查询和事件回放。
+
+```sql
+CREATE TABLE tasks (
+  task_id TEXT PRIMARY KEY,
+  title TEXT NOT NULL,
+  status TEXT NOT NULL,
+  owner TEXT,
+  priority TEXT,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
+CREATE TABLE events (
+  event_id TEXT PRIMARY KEY,
+  task_id TEXT NOT NULL,
+  event_type TEXT NOT NULL,
+  actor TEXT NOT NULL,
+  payload TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+
+CREATE TABLE artifacts (
+  artifact_id TEXT PRIMARY KEY,
+  task_id TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  uri TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+```
+
+SQLite 黑板最适合和 Markdown 快照配合：机器写 SQLite，人看 Markdown。这样既能查询，又能审阅。
+
 ## 和 Context Engineering 的关系
 
 [Context Engineering：上下文工程](context-engineering.md) 关注“模型下一步应该看到什么”。黑板架构关注“多个 agent 如何共享和更新问题状态”。两者结合起来，会形成更稳定的多 agent 协作：
@@ -151,6 +290,18 @@ Commit：发布 agent 只处理已批准结果。
 - 控制器根据黑板状态决定下一步。
 
 一个常见错误是把黑板整个塞给每个 agent。正确做法是：黑板是共享事实源，上下文包是本轮行动视图。不同 agent 看到的上下文应该不同。
+
+## 和 Event Sourcing 的关系
+
+黑板保存当前共享状态，[Event Sourcing：事件溯源与任务回放](event-sourcing.md) 保存状态变化历史。前者适合回答“现在是什么情况”，后者适合回答“这个状态是怎么来的”。
+
+在多 agent 协作里，常见的组合是：
+
+- 黑板保存任务、证据、假设、上下文和决策。
+- 事件流记录认领、写入、复核、批准、发布和回滚。
+- 快照从事件流重建当前黑板。
+
+这样做的好处是，协作系统不只看得到现在，还能回放过去。对审计、复盘和故障排查都更友好。
 
 ## 和 OpenClaw 的关系
 

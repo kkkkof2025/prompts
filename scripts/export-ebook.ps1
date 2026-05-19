@@ -41,6 +41,7 @@ $files = @(
     "docs/style-engineering-ai-native.md",
     "docs/context-engineering.md",
     "docs/blackboard-architecture-multi-agent.md",
+    "docs/event-sourcing.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",
     "docs/openclaw-multi-agent-linkage.md",

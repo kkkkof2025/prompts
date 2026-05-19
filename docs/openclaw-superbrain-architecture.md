@@ -91,7 +91,7 @@ SQLite = 状态索引
 Message Bus = 协同通道
 ```
 
-这比“全 Markdown”更快，也比“全事件流”更可审。
+这比“全 Markdown”更快，也比“全事件流”更可审。如果要把事件流变成可回放的事实来源，可以继续看 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)。
 
 ## 为什么全 Markdown 会拖慢系统
 
