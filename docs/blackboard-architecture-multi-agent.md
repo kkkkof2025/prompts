@@ -295,6 +295,8 @@ SQLite 黑板最适合和 Markdown 快照配合：机器写 SQLite，人看 Mark
 
 黑板保存当前共享状态，[Event Sourcing：事件溯源与任务回放](event-sourcing.md) 保存状态变化历史。前者适合回答“现在是什么情况”，后者适合回答“这个状态是怎么来的”。
 
+如果你还要把黑板里的当前状态做成查询页、审批队列或统计表，可以继续看 [CQRS：读写分离与多 agent 查询视图](cqrs.md) 和 [Read Model 与 Projection：读模型与投影](read-model-projections.md)。
+
 在多 agent 协作里，常见的组合是：
 
 - 黑板保存任务、证据、假设、上下文和决策。

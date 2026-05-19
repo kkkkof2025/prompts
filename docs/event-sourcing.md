@@ -209,7 +209,7 @@ push_succeeded -> published
 
 ## 和 CQRS 的关系
 
-[CQRS：读写分离与多 agent 查询视图](cqrs.md) 关注读写职责分离。Event Sourcing 负责保存写入历史，CQRS 负责为不同查询构建读模型。
+[CQRS：读写分离与多 agent 查询视图](cqrs.md) 关注读写职责分离。Event Sourcing 负责保存写入历史，CQRS 负责为不同查询构建读模型；更具体的落地方式可以继续看 [Read Model 与 Projection：读模型与投影](read-model-projections.md)。
 
 简单说：
 
@@ -218,7 +218,7 @@ Event Sourcing = 怎么保存变化
 CQRS = 怎么把写入和查询分开
 ```
 
-二者一起用时，事件流是事实来源，读模型是查询视图。
+二者一起用时，事件流是事实来源，读模型是查询视图，Projection 是把事件流持续转换成读模型的过程。
 
 ## 和 OpenClaw 的关系
 

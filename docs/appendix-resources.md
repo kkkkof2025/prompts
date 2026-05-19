@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS 补充资料 2026-05-19
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection 补充资料 2026-05-19
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -47,8 +47,11 @@
 - [Microsoft Learn: Event Sourcing pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)：用于核验事件溯源的优势、权衡、快照和读模型等工程注意事项。
 - [Martin Fowler: CQRS](https://martinfowler.com/bliki/CQRS.html)：用于核验 CQRS 的基本定义、适用边界和复杂度提醒。
 - [Microsoft Learn: CQRS pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)：用于核验 CQRS 作为读写分离架构模式的工程说明、优点、问题和适用场景。
+- [SQLite UPSERT](https://sqlite.org/lang_upsert.html)：用于核验读模型示例中的 `ON CONFLICT ... DO UPDATE` 写法。
+- [SQLite CREATE VIEW](https://www.sqlite.org/lang_createview.html)：用于核验 SQLite 普通 view 的语法和边界。
+- [PostgreSQL Materialized Views](https://www.postgresql.org/docs/current/rules-materializedviews.html)：用于核验数据库原生 materialized view 与普通 view 的区别。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
 
 ## AI 历史与基础论文
 

@@ -38,6 +38,7 @@
 - Blackboard Architecture 黑板架构专题，用早期 AI 黑板系统解释多 agent 如何围绕共享任务、证据、假设、状态和决策协作。
 - Event Sourcing 事件溯源专题，用任务事件流解释多 agent 协作如何审计、回放和复盘。
 - CQRS 读写分离专题，用 command/query 分离解释多 agent 系统如何同时支持严格写入和快速查询。
+- Read Model / Projection 读模型专题，用 SQLite、看板查询、投影刷新和最终一致解释 CQRS 怎样落地。
 - AI 发展历史与社区生态专题，介绍 AI 历史、公益站、注册自动化、模型聚合和社区工具的价值与风险。
 - 前沿资料季度复核执行手册、记录表和示例记录。
 - 常见误区与纠偏指南。
@@ -193,6 +194,7 @@
 | Blackboard Architecture 黑板架构 | 已完成初稿并补充 Markdown、飞书多维表格、GitHub Issue、SQLite 四类黑板原型：[Blackboard Architecture：黑板架构与多 agent 协作](docs/blackboard-architecture-multi-agent.md) | 继续补真实运行日志、回放脚本和团队试点样例 |
 | Event Sourcing 事件溯源 | 已完成初稿并补充任务事件 schema、回放伪代码、快照模板和失败任务复盘案例：[Event Sourcing：事件溯源与任务回放](docs/event-sourcing.md) | 继续补真实事件日志和回放脚本 |
 | CQRS 读写分离 | 已完成初稿：[CQRS：读写分离与多 agent 查询视图](docs/cqrs.md) | 继续补 SQLite 读模型示例和看板查询样例 |
+| Read Model / Projection 读模型与投影 | 已完成初稿：[Read Model 与 Projection：读模型与投影](docs/read-model-projections.md) | 继续补真实任务日志、复杂统计读模型和跨页面物化视图案例 |
 | AI 历史与社区生态 | 已完成初稿：[AI 发展历史与社区生态](docs/ai-history-community-ecosystem.md) | 继续补公益站、模型聚合、Prompt 市场、本地部署和注册自动化的风险复盘案例 |
 
 七层架构的初步延展判断：

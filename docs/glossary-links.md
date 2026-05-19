@@ -20,6 +20,8 @@
 | Context Window | [Context Window](appendix-glossary.md#context-window) | [第 2 章](chapters/02-ai-basics.md)、[第 6 章](chapters/06-tools-rag.md) | [AI 任务选择决策指南](task-decision-guide.md) | 以为上下文越长越可靠，忽略结构化和引用 |
 | Context Engineering | [Context Engineering](appendix-glossary.md#context-engineering) | [Context Engineering：上下文工程](context-engineering.md)、[第 6 章](chapters/06-tools-rag.md)、[第 9 章](chapters/09-memory.md) | [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)、[前沿资料季度复核执行手册](frontier-review-playbook.md) | 把上下文工程当成“把所有资料塞进去”，忽略选择、排序、压缩、隔离和来源追踪 |
 | CQRS | [CQRS](appendix-glossary.md#cqrs) | [CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md) | [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 把 CQRS 当成所有系统默认架构，忽略它带来的复杂度和最终一致问题 |
+| Read Model / Projection | [Read Model](appendix-glossary.md#read-model)、[Projection](appendix-glossary.md#projection) | [Read Model 与 Projection：读模型与投影](read-model-projections.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md) | [Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md) | 把读模型当成事实源，或忘记投影失败、延迟和重建机制 |
+| Materialized View | [Materialized View](appendix-glossary.md#materialized-view) | [Read Model 与 Projection：读模型与投影](read-model-projections.md) | [CQRS：读写分离与多 agent 查询视图](cqrs.md) | 误以为所有数据库都原生支持同名机制，或把物化视图当成事实源 |
 | Token | [Token](appendix-glossary.md#token) | [第 2 章](chapters/02-ai-basics.md) | [AI 学习与使用速查讲义](quick-reference.md) | 只把 token 理解为字数，忽略成本、截断和上下文预算 |
 | Hallucination | [Hallucination](appendix-glossary.md#hallucination) | [第 2 章](chapters/02-ai-basics.md)、[第 5 章](chapters/05-evaluation.md) | [常见误区与纠偏指南](common-pitfalls.md)、[章节复盘题与小测](chapter-review-questions.md) | 以为模型“自信”就等于事实正确 |
 | Evaluation | [Evaluation](appendix-glossary.md#evaluation) | [第 5 章](chapters/05-evaluation.md) | [AI 能力评估量表](assessment-rubric.md)、[章节练习与验收映射表](chapter-validation-map.md) | 只看一次输出好不好，不建立可重复的评估样例 |
@@ -54,6 +56,7 @@
 想让多个 agent 协作但不混乱 -> Blackboard Architecture -> OpenClaw 多 agent 联动教程
 想回放和审计 agent 过程 -> Event Sourcing -> Blackboard Architecture -> OpenClaw 多 agent 联动教程
 想让事件流变成好查的视图 -> CQRS -> Event Sourcing -> OpenClaw 超级大脑架构
+想把任务事件做成看板 -> Read Model / Projection -> CQRS -> Event Sourcing
 想做团队知识库 -> RAG -> Vector Database -> 团队 AI 落地手册
 担心数据和权限 -> Guardrail -> Prompt Injection -> 第 13 章
 想理解前沿术语 -> MCP / A2A / OpenClaw / Hermes / HiMeS -> 前沿资料复核

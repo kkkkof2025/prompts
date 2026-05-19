@@ -130,6 +130,8 @@ outputs:
 
 如果你的任务需要复盘、审计或排错，可以再加一层 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)。做法不是每次覆盖状态，而是把关键变化追加成事件。
 
+当事件越来越多时，不要让每个 agent 都从头读取事件流。可以用 [CQRS：读写分离与多 agent 查询视图](cqrs.md) 和 [Read Model 与 Projection：读模型与投影](read-model-projections.md)，把事件流持续转换成 `tasks_current`、`agent_workload`、`risk_queue` 这类读模型，让人和 agent 快速查询当前状态。
+
 常见事件可以是：
 
 - `task_created`

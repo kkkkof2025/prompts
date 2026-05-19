@@ -15,6 +15,7 @@
 [黑板架构](docs/blackboard-architecture-multi-agent.md)
 [事件溯源](docs/event-sourcing.md)
 [CQRS](docs/cqrs.md)
+[读模型](docs/read-model-projections.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -62,6 +63,12 @@
 **[CQRS：读写分离与多 agent 查询视图](docs/cqrs.md)**
 
 把写入事件和查询视图分开，让多 agent 任务既能回放，也能快速查看当前状态。
+</div>
+
+<div class="route-card" markdown="1">
+**[Read Model 与 Projection：读模型与投影](docs/read-model-projections.md)**
+
+把事件流、黑板状态和写入模型持续转换成 SQLite 查询视图、看板和物化结果。
 </div>
 
 <div class="route-card" markdown="1">
