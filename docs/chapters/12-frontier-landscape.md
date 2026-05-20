@@ -1,17 +1,17 @@
 # 第 12 章：AI 前沿发展全景
 
-本章是截至 2026-05-19 的观察。AI 发展很快，模型、产品、价格、接口和法律环境都会变化。阅读本章时，要把它当作“方向地图”，而不是永久不变的清单。
+本章是截至 2026-05-20 的观察。AI 发展很快，模型、产品、价格、接口和法律环境都会变化。阅读本章时，要把它当作“方向地图”，而不是永久不变的清单。
 
 ## 本章导读
 
 - 预计阅读时间：15-22 分钟。
 - 学习目标：用任务系统视角理解多模态、agent、协议化、开源和治理趋势；判断趋势是否会改变自己的学习或团队试点重点。
 - 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI 任务选择决策指南](../task-decision-guide.md)。
-- 相关材料：[Context Engineering：上下文工程](../context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../cqrs.md)、[Read Model 与 Projection：读模型与投影](../read-model-projections.md)、[Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](../saga-process-manager.md)、[Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
+- 相关材料：[Context Engineering：上下文工程](../context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../cqrs.md)、[Read Model 与 Projection：读模型与投影](../read-model-projections.md)、[Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](../saga-process-manager.md)、[Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)、[Observability / Tracing：智能体可观测性](../observability-tracing-agent-workflows.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
 
 ## 总趋势
 
-AI 正从“聊天工具”走向“通用工作系统”。变化主要发生在八个方向：
+AI 正从“聊天工具”走向“通用工作系统”。变化主要发生在九个方向：
 
 1. 更强推理：模型更擅长复杂规划、数学、代码和多步骤任务。
 2. 多模态：文本、图像、音频、视频、屏幕和文件逐步合并到同一工作流。
@@ -21,6 +21,7 @@ AI 正从“聊天工具”走向“通用工作系统”。变化主要发生�
 6. 开源竞争：开源模型在成本、部署、可控性和研究上持续推进。
 7. 治理强化：安全、隐私、版权、合规、评估和审计变得更重要。
 8. 上下文工程化：系统开始把检索资料、工具结果、记忆、权限、风格和复核标准组织成可审计的上下文包。
+9. 可观测性工程化：agent 平台开始把模型调用、工具调用、人工审批、重试、成本和质量信号纳入 trace。
 
 如果从系统结构上看，这些方向可以进一步整理成 [七层 AI 文明架构](../seven-layer-ai-civilization.md)：执行、记忆、意图、认知经济、世界模型、身份和文明。它不是把未来写成定论，而是帮助读者区分“今天能落地的 agent 能力”和“长期演化中的复杂生态”。
 
@@ -30,7 +31,9 @@ AI 正从“聊天工具”走向“通用工作系统”。变化主要发生�
 
 当多个 agent 一起工作时，还需要 [Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md) 这样的共享状态模型。它提醒我们：多 agent 不是群聊，而是多个专门角色围绕任务、证据、假设、上下文、状态和人工决策共同更新一个工作现场。
 
-如果任务需要审计和回放，还可以引入 [Event Sourcing：事件溯源与任务回放](../event-sourcing.md)。它不是 AI 专属概念，而是软件架构里的经典模式；放到多 agent 中，可以帮助团队还原任务从创建、认领、写入证据、复核、批准到发布的完整路径。进一步看，[CQRS：读写分离与多 agent 查询视图](../cqrs.md) 可以把写入事件和查询视图拆开，[Read Model 与 Projection：读模型与投影](../read-model-projections.md) 则负责把事件流变成调度器、人类看板和复核 agent 各自需要的状态视图。若还需要可靠发事件到别的系统，可以再看 [Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)；若还需要把多步任务串成可补偿流程，再看 [Saga：补偿事务与流程编排](../saga-process-manager.md)；若长流程需要跨重启、等待和回调继续执行，再看 [Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)。
+如果任务需要审计和回放，还可以引入 [Event Sourcing：事件溯源与任务回放](../event-sourcing.md)。它不是 AI 专属概念，而是软件架构里的经典模式；放到多 agent 中，可以帮助团队还原任务从创建、认领、写入证据、复核、批准到发布的完整路径。进一步看，[CQRS：读写分离与多 agent 查询视图](../cqrs.md) 可以把写入事件和查询视图拆开，[Read Model 与 Projection：读模型与投影](../read-model-projections.md) 则负责把事件流变成调度器、人类看板和复核 agent 各自需要的状态视图。若还需要可靠发事件到别的系统，可以再看 [Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)；若还需要把多步任务串成可补偿流程，再看 [Saga：补偿事务与流程编排](../saga-process-manager.md)；若长流程需要跨重启、等待和回调继续执行，再看 [Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)；若需要排查一次任务为什么慢、贵、失败或误判，再看 [Observability / Tracing：智能体可观测性](../observability-tracing-agent-workflows.md)。
+
+可观测性会成为 agent 平台的重要分界线。一个只会执行的 agent 很容易制造黑箱；一个能输出 trace、span、日志、指标、成本和证据链接的 agent，才更适合进入团队流程。这里要区分事实和推演：OpenTelemetry、Trace Context 和部分 agent SDK 的 tracing 能力已经存在；把它们统一扩展成“跨模型、跨工具、跨人工审批的智能体运行记录”，是本书对未来 agent 平台的工程化判断。
 
 ## 推理与任务执行
 
@@ -125,6 +128,7 @@ AI 会改变软件工程的节奏，但不会取消工程纪律。
 - 如何组织知识。
 - 如何设置权限。
 - 如何审计 agent 行动。
+- 如何追踪 agent 运行路径、成本和失败原因。
 - 如何判断信息是否过时。
 - 如何把 AI 嵌入真实流程。
 - 如何设计上下文包，让模型看到正确、最小、可信、可追踪的信息。
@@ -147,7 +151,7 @@ AI 已经能改变的 3 件事：
 ## 本章收尾
 
 - 本章练习：写下你所在行业未来一年最可能落地的 3 个 AI 场景，并标注它们更像聊天、工作流、RAG、工具调用还是 agent。
-- 相关案例：阅读 [Style Engineering 与 AI Native 创作](../style-engineering-ai-native.md)、[Context Engineering：上下文工程](../context-engineering.md)、[AI 发展历史与社区生态](../ai-history-community-ecosystem.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md) 和 [行业化工作坊案例集](../workshop-industry-cases.md)，再用 [前沿资料季度复核记录表](../frontier-review-log.md) 记录需要核验的动态事实。
+- 相关案例：阅读 [Style Engineering 与 AI Native 创作](../style-engineering-ai-native.md)、[Context Engineering：上下文工程](../context-engineering.md)、[Observability / Tracing：智能体可观测性](../observability-tracing-agent-workflows.md)、[AI 发展历史与社区生态](../ai-history-community-ecosystem.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md) 和 [行业化工作坊案例集](../workshop-industry-cases.md)，再用 [前沿资料季度复核记录表](../frontier-review-log.md) 记录需要核验的动态事实。
 - 下一步：进入 [第 13 章](13-safety-governance.md)，把前沿能力放进安全、伦理和治理边界里。
 
 ## 章节导航

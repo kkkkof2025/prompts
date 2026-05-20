@@ -23,6 +23,7 @@
 | `outbox` / `幂等消费` / `重复消息` | [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md) | 第 8-10、12 章 | [Read Model 与 Projection：读模型与投影](read-model-projections.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md) | 双写和重复投递是常态，必须设计重试和去重 |
 | `saga` / `process manager` / `补偿事务` | [Saga：补偿事务与流程编排](saga-process-manager.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md) | 第 8-10、12 章 | [Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 不要把 Saga 当成全局回滚；补偿必须先设计 |
 | `durable execution` / `持久化执行` / `长任务` | [Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md)、[Saga：补偿事务与流程编排](saga-process-manager.md) | 第 8-10、12 章 | [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md) | 持久化执行解决流程恢复，不保证内容正确；模型输出仍要复核 |
+| `observability` / `tracing` / `trace` | [Observability / Tracing：智能体可观测性](observability-tracing-agent-workflows.md)、[Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md) | 第 8-10、12 章 | [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | Trace 不是事实源，不能替代 Event Sourcing；同时要做脱敏和留存策略 |
 | `AI 历史` / `公益站` / `社区生态` | [AI 发展历史与社区生态](ai-history-community-ecosystem.md)、[第 12 章](chapters/12-frontier-landscape.md) | 第 5、10-13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[资源与引用](appendix-resources.md) | 公益站可学习，敏感数据和账号绕过不可取 |
 | `文明架构` / `未来推演` / `认知经济` | [七层 AI 文明架构](seven-layer-ai-civilization.md)、[第 12 章](chapters/12-frontier-landscape.md) | 第 10-13 章 | [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)、[图解：AI 工作系统](diagrams.md) | 越往长期推演，越要区分事实、判断和想象 |
 | `安全` / `治理` / `风险` | [第 13 章](chapters/13-safety-governance.md) | 第 13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[团队 AI 落地手册](team-adoption-playbook.md) | 高风险任务必须保留人工责任 |
@@ -53,6 +54,7 @@
 我想可靠发事件并避免重复处理 -> 先看 Transactional Outbox 与幂等消费
 我想编排长任务并准备补偿 -> 先看 Saga：补偿事务与流程编排
 我想让 agent 长任务跨重启继续 -> 先看 Durable Execution：持久化执行与 agent 长任务
+我想排查 agent 为什么慢、贵、失败或误判 -> 先看 Observability / Tracing：智能体可观测性
 我想了解 AI 公益站和注册自动化风险 -> 先看 AI 发展历史与社区生态
 我想看七层 AI 文明架构 -> 先看 七层 AI 文明架构
 我想做 OpenClaw 多 agent 联动 -> 先看 OpenClaw 多 agent 联动教程

@@ -26,6 +26,7 @@
 | Inbox | [Inbox](appendix-glossary.md#inbox) | [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md) | [Read Model 与 Projection：读模型与投影](read-model-projections.md) | 把消费端去重表误解成另一个事实源 |
 | Saga / Process Manager | [Saga](appendix-glossary.md#saga)、[Process Manager](appendix-glossary.md#process-manager)、[Compensation](appendix-glossary.md#compensation) | [Saga：补偿事务与流程编排](saga-process-manager.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md) | [Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 把 Saga 当成自动回滚，忽略补偿设计和流程状态 |
 | Durable Execution | [Durable Execution](appendix-glossary.md#durable-execution)、[Durable Timer](appendix-glossary.md#durable-timer) | [Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md)、[Saga：补偿事务与流程编排](saga-process-manager.md) | [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md) | 以为持久化执行能保证模型内容正确，忽略评估、复核和人工闸门 |
+| Observability / Tracing | [Observability](appendix-glossary.md#observability)、[OpenTelemetry](appendix-glossary.md#opentelemetry)、[Metric](appendix-glossary.md#metric)、[Span](appendix-glossary.md#span)、[Trace](appendix-glossary.md#trace) | [Observability / Tracing：智能体可观测性](observability-tracing-agent-workflows.md)、[Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md) | [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)、[OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 把 trace 当成事实源，或把敏感输入、密钥和个人资料直接写进日志 |
 | Token | [Token](appendix-glossary.md#token) | [第 2 章](chapters/02-ai-basics.md) | [AI 学习与使用速查讲义](quick-reference.md) | 只把 token 理解为字数，忽略成本、截断和上下文预算 |
 | Hallucination | [Hallucination](appendix-glossary.md#hallucination) | [第 2 章](chapters/02-ai-basics.md)、[第 5 章](chapters/05-evaluation.md) | [常见误区与纠偏指南](common-pitfalls.md)、[章节复盘题与小测](chapter-review-questions.md) | 以为模型“自信”就等于事实正确 |
 | Evaluation | [Evaluation](appendix-glossary.md#evaluation) | [第 5 章](chapters/05-evaluation.md) | [AI 能力评估量表](assessment-rubric.md)、[章节练习与验收映射表](chapter-validation-map.md) | 只看一次输出好不好，不建立可重复的评估样例 |
@@ -61,6 +62,7 @@
 想回放和审计 agent 过程 -> Event Sourcing -> Blackboard Architecture -> OpenClaw 多 agent 联动教程
 想让事件流变成好查的视图 -> CQRS -> Event Sourcing -> OpenClaw 超级大脑架构
 想把任务事件做成看板 -> Read Model / Projection -> CQRS -> Event Sourcing
+想排查 agent 为什么慢、贵、失败或误判 -> Observability / Tracing -> Durable Execution -> Event Sourcing
 想做团队知识库 -> RAG -> Vector Database -> 团队 AI 落地手册
 担心数据和权限 -> Guardrail -> Prompt Injection -> 第 13 章
 想理解前沿术语 -> MCP / A2A / OpenClaw / Hermes / HiMeS -> 前沿资料复核

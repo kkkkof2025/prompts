@@ -144,6 +144,7 @@ nav:
       - Transactional Outbox 与幂等消费: docs/transactional-outbox-idempotency.md
       - Saga：补偿事务与流程编排: docs/saga-process-manager.md
       - Durable Execution：持久化执行与 agent 长任务: docs/durable-execution-agent-workflows.md
+      - Observability / Tracing：智能体可观测性: docs/observability-tracing-agent-workflows.md
       - AI 发展历史与社区生态: docs/ai-history-community-ecosystem.md
       - 七层 AI 文明架构: docs/seven-layer-ai-civilization.md
       - OpenClaw 多 agent 联动教程: docs/openclaw-multi-agent-linkage.md

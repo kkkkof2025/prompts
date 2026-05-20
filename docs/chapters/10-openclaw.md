@@ -7,7 +7,7 @@ OpenClaw 是一个开源个人 AI 助手项目。按照其官方仓库介绍，�
 - 预计阅读时间：12-18 分钟。
 - 学习目标：把个人助手看成多能力组合；理解多通道输入、记忆、工具和协议如何协作；设计个人助手的最小需求和权限边界。
 - 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [Agent 工作流安全检查清单](../../examples/agent-workflow-checklist.md)。
-- 相关材料：[图解：AI 工作系统](../diagrams.md)、[OpenClaw 多 agent 联动教程](../openclaw-multi-agent-linkage.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../cqrs.md)、[Read Model 与 Projection：读模型与投影](../read-model-projections.md)、[Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](../saga-process-manager.md)、[Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)、[OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md) 和 [前沿与过时技术案例库](../technology-evolution-cases.md)。
+- 相关材料：[图解：AI 工作系统](../diagrams.md)、[OpenClaw 多 agent 联动教程](../openclaw-multi-agent-linkage.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../cqrs.md)、[Read Model 与 Projection：读模型与投影](../read-model-projections.md)、[Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](../saga-process-manager.md)、[Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)、[Observability / Tracing：智能体可观测性](../observability-tracing-agent-workflows.md)、[OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md) 和 [前沿与过时技术案例库](../technology-evolution-cases.md)。
 
 ## 为什么关注 OpenClaw
 
@@ -44,7 +44,7 @@ MCP 集成：通过标准化协议连接外部工具和数据源，降低每个�
 
 如果你已经不满足于单个个人助手，可以继续看 [OpenClaw 多 agent 联动教程](../openclaw-multi-agent-linkage.md)。它把飞书、Telegram、云文档、统一 skill 包和任务状态表串成一个多 agent 协同案例。如果你想理解这种协同背后的共享工作台模型，可以继续读 [Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)。
 
-如果你想判断 OpenClaw 的技术选型，例如为什么会用 Node.js、Markdown 中间层是否够快、怎样和 Codex CLI 或 Claude CLI 协同，可以继续看 [OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md)。如果你想把任务状态做成可查询看板，再继续看 [Read Model 与 Projection：读模型与投影](../read-model-projections.md)；如果你想把发布、审批和回滚变成长流程状态机，再继续看 [Saga：补偿事务与流程编排](../saga-process-manager.md)；如果你想让长任务跨重启继续，继续看 [Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)。
+如果你想判断 OpenClaw 的技术选型，例如为什么会用 Node.js、Markdown 中间层是否够快、怎样和 Codex CLI 或 Claude CLI 协同，可以继续看 [OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md)。如果你想把任务状态做成可查询看板，再继续看 [Read Model 与 Projection：读模型与投影](../read-model-projections.md)；如果你想把发布、审批和回滚变成长流程状态机，再继续看 [Saga：补偿事务与流程编排](../saga-process-manager.md)；如果你想让长任务跨重启继续，继续看 [Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)；如果你想排查一次任务为什么慢、贵、失败或误判，继续看 [Observability / Tracing：智能体可观测性](../observability-tracing-agent-workflows.md)。
 
 ## 一个个人助手最小需求
 
@@ -115,7 +115,7 @@ MCP 集成：通过标准化协议连接外部工具和数据源，降低每个�
 ## 本章收尾
 
 - 本章练习：设计一个个人 AI 助手的最小需求清单，写清输入入口、记忆范围、可用工具、权限边界和人工确认点。
-- 相关案例：结合 [图解：AI 工作系统](../diagrams.md)、[OpenClaw 多 agent 联动教程](../openclaw-multi-agent-linkage.md)、[OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md) 和 [前沿与过时技术案例库](../technology-evolution-cases.md) 理解助手工作台的演进。
+- 相关案例：结合 [图解：AI 工作系统](../diagrams.md)、[OpenClaw 多 agent 联动教程](../openclaw-multi-agent-linkage.md)、[Observability / Tracing：智能体可观测性](../observability-tracing-agent-workflows.md)、[OpenClaw、Node.js 与超级大脑架构](../openclaw-superbrain-architecture.md) 和 [前沿与过时技术案例库](../technology-evolution-cases.md) 理解助手工作台的演进。
 - 下一步：进入 [第 11 章](11-hermes-himes-open-models.md)，把个人助手背后的模型路线和记忆研究分开看。
 
 ## 章节导航

@@ -23,6 +23,7 @@
 - 增加 `docs/transactional-outbox-idempotency.md` Transactional Outbox 与幂等消费专题，把多 agent 事件同步的可靠发放、重试和去重纳入前沿架构说明。
 - 增加 `docs/saga-process-manager.md` Saga / Process Manager 专题，把多 agent 长流程的补偿事务与编排模式纳入前沿架构说明。
 - 增加 `docs/durable-execution-agent-workflows.md` Durable Execution 专题，把 agent 长任务的持久化执行、恢复、定时器和人工等待纳入前沿架构说明。
+- 增加 `docs/observability-tracing-agent-workflows.md` Observability / Tracing 专题，把 agent 运行追踪、trace、span、日志、指标、成本和证据链纳入前沿架构说明。
 - 将 GitHub Pages 在线阅读版统一为 MkDocs Material，增加 `mkdocs.yml`、阅读样式、依赖文件和 `mkdocs-pages.yml` 发布 workflow。
 - 将章节页补齐上一章/下一章导航，并把 `agents/README.md` 改为 `agents/index.md`，避免与站点首页冲突。
 - 将 MkDocs 构建输出改到仓库外目录，清理了站点构建警告。

@@ -138,6 +138,8 @@ outputs:
 
 如果任务会运行很久、等待人工批准或跨重启继续，则可以继续引入 [Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md)，让长流程状态不依赖某个一次性脚本进程。
 
+如果任务开始变慢、变贵、难排错，还需要再加一层 [Observability / Tracing：智能体可观测性](observability-tracing-agent-workflows.md)。它记录的不是“业务状态”，而是一次任务实际经过的模型调用、工具调用、agent 交接、人工审批、重试、成本和错误路径。
+
 常见事件可以是：
 
 - `task_created`
@@ -151,6 +153,34 @@ outputs:
 - `rolled_back`
 
 这样一来，黑板负责“现在”，事件流负责“过去”。回头看任务时，你既能看到当前状态，也能看到协作路径。
+
+### Trace 负责解释“为什么”
+
+事件流能告诉你任务已经 `published` 或 `failed`，但不一定能告诉你为什么慢、为什么贵、为什么复核失败。Trace 则把一次运行拆成多个 span：
+
+```text
+trace: task-20260520-book-update
+  span: load_task_from_feishu
+  span: build_context_pack
+  span: call_research_agent
+  span: call_writer_agent
+  span: run_markdown_checks
+  span: wait_human_approval
+  span: git_push
+```
+
+建议最小记录：
+
+| 字段 | 用途 |
+| --- | --- |
+| `trace_id` | 串起一次完整运行 |
+| `span_id` | 定位具体步骤 |
+| `task_id` | 对回云文档、看板或 GitHub Issue |
+| `actor` | 知道是哪一个 agent、CLI 或人工节点 |
+| `cost` | 统计 token、时间、工具调用和重试 |
+| `evidence_ref` | 指向日志、构建产物、commit 或审批记录 |
+
+不要把 trace 当成任务事实源。事实源仍然应该是任务表、事件流或 Git 记录；trace 更像运行显微镜，用来排障、复盘和优化。
 
 ## 一个推荐的数据结构
 

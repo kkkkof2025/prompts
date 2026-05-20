@@ -37,6 +37,11 @@
 | Compensation | 补偿动作；失败后用来恢复可接受状态的逆向操作 |
 | Durable Execution | 持久化执行；长流程跨崩溃、重启、等待和回调继续运行的能力 |
 | Durable Timer | 可持久化定时器；重启后仍能继续等待的定时机制 |
+| Observability | 可观测性；通过 logs、metrics、traces 理解系统运行、成本、质量和风险 |
+| Tracing | 追踪；记录一次任务或请求的运行路径 |
+| Trace | 一次任务或请求的完整运行路径 |
+| Span | Trace 中的一个步骤 |
+| OpenTelemetry | 可观测性框架和规范生态，正文首次出现可写作 OpenTelemetry |
 | AI Native | 原生围绕 AI 能力、上下文、工具和反馈回路设计的产品或创作方式 |
 
 ## 书内概念

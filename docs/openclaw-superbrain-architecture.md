@@ -91,7 +91,7 @@ SQLite = 状态索引
 Message Bus = 协同通道
 ```
 
-这比“全 Markdown”更快，也比“全事件流”更可审。如果要把事件流变成可回放的事实来源，可以继续看 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)；如果要把写入侧和查询侧分开，可以继续看 [CQRS：读写分离与多 agent 查询视图](cqrs.md)；如果要把事件流变成 SQLite 看板和查询视图，可以继续看 [Read Model 与 Projection：读模型与投影](read-model-projections.md)；如果还需要可靠通知别的系统，可以继续看 [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)。
+这比“全 Markdown”更快，也比“全事件流”更可审。如果要把事件流变成可回放的事实来源，可以继续看 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)；如果要把写入侧和查询侧分开，可以继续看 [CQRS：读写分离与多 agent 查询视图](cqrs.md)；如果要把事件流变成 SQLite 看板和查询视图，可以继续看 [Read Model 与 Projection：读模型与投影](read-model-projections.md)；如果还需要可靠通知别的系统，可以继续看 [Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)；如果要排查运行路径、成本和失败原因，可以继续看 [Observability / Tracing：智能体可观测性](observability-tracing-agent-workflows.md)。
 
 ## 为什么全 Markdown 会拖慢系统
 
@@ -165,6 +165,19 @@ flowchart TB
 | Result Writer | 写回结果 | Markdown/Git | 多目标回写、冲突解决、自动摘要 |
 | Observer | 观察系统运行 | 日志文件 | 指标、告警、成本分析、回放调试 |
 
+### Observer 不只是日志
+
+超级大脑里的 Observer 模块应该同时看四类信号：
+
+| 信号 | 最小实现 | 进阶实现 |
+| --- | --- | --- |
+| Logs | 工具调用日志、检查输出 | 集中日志、脱敏、采样和保留策略 |
+| Metrics | 成功率、延迟、token、重试 | 成本看板、质量趋势、SLO 和告警 |
+| Traces | `trace_id` + `span_id` 的 JSONL | OpenTelemetry、跨 agent trace、可视化链路 |
+| Evidence | commit、审批、构建产物链接 | 证据图谱、审计包、自动复盘摘要 |
+
+没有 Observer，超级大脑会变成黑箱：它也许能跑很多任务，但很难解释为什么做错、为什么变贵、为什么卡住。Observer 的目标不是让日志更多，而是让系统能回答“哪一步出了问题、证据在哪里、是否需要人接管”。
+
 ### 一个事件格式
 
 ```json
@@ -194,6 +207,7 @@ flowchart TB
 - **超级大脑** 则是把执行、记忆、预算、权限、协同和回写放到一个统一认知框架里。
 - **Saga Orchestrator** 则负责把多步骤、多 agent、跨系统的长流程拆成可恢复的状态机。
 - **Durable Workflow Runtime** 则负责让长流程跨崩溃、等待和重启继续执行。
+- **Observer / Tracing** 则负责把一次运行拆成可检查的 span，记录成本、失败、重试、证据和人工节点。
 
 换句话说：
 
@@ -308,6 +322,7 @@ Codex CLI、Claude CLI 这类工具越来越强，说明未来很可能不是“
 把记忆和预算变成控制层，
 把 Saga 变成长流程编排层，
 把 Durable Execution 变成恢复层，
+把 Observability / Tracing 变成诊断层，
 把人保留在最终闸门上。
 ```
 
