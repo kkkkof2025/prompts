@@ -48,6 +48,8 @@ $files = @(
     "docs/saga-process-manager.md",
     "docs/durable-execution-agent-workflows.md",
     "docs/observability-tracing-agent-workflows.md",
+    "examples/event-log/index.md",
+    "examples/trace-observability/index.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",
     "docs/openclaw-multi-agent-linkage.md",

@@ -169,6 +169,7 @@ nav:
       - AI Skill/Card 可复用模板: examples/skill-card-template.md
       - Agent 工作流安全检查清单: examples/agent-workflow-checklist.md
       - 任务事件日志样例: examples/event-log/index.md
+      - Agent Trace 可观测性样例: examples/trace-observability/index.md
   - 维护与发布:
       - GitHub 发布指南: docs/publishing-guide.md
       - 项目维护指南: docs/maintenance-guide.md

@@ -93,3 +93,4 @@
 - [实践模板：Skill/Card](../examples/skill-card-template.md)
 - [实践模板：Agent 安全清单](../examples/agent-workflow-checklist.md)
 - [任务事件日志样例](../examples/event-log/index.md)
+- [Agent Trace 可观测性样例](../examples/trace-observability/index.md)

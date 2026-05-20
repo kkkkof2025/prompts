@@ -1,6 +1,6 @@
 # 任务事件日志样例
 
-这个目录提供一个最小任务事件流，用来配合 [Event Sourcing：事件溯源与任务回放](../../docs/event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../../docs/cqrs.md) 和 [Read Model 与 Projection：读模型与投影](../../docs/read-model-projections.md) 阅读。
+这个目录提供一个最小任务事件流，用来配合 [Event Sourcing：事件溯源与任务回放](../../docs/event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../../docs/cqrs.md) 和 [Read Model 与 Projection：读模型与投影](../../docs/read-model-projections.md) 阅读。如果你想看一次运行路径怎样被 trace 记录，可以继续看 [Agent Trace 可观测性样例](../trace-observability/index.md)。
 
 ## 文件
 

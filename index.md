@@ -21,6 +21,7 @@
 [持久化执行](docs/durable-execution-agent-workflows.md)
 [可观测性](docs/observability-tracing-agent-workflows.md)
 [事件样例](examples/event-log/index.md)
+[Trace 样例](examples/trace-observability/index.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>

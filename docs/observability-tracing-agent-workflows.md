@@ -300,6 +300,22 @@ Trace 可视化
 
 这时要认真处理采样、脱敏、留存时间、权限隔离和跨系统 trace 传播。
 
+## 可运行样例
+
+如果你想直接看一个最小可运行版本，可以去看 [Agent Trace 可观测性样例](../examples/trace-observability/index.md)。那里给出了：
+
+- `trace-spans.jsonl`：两条 trace、十二个 span。
+- `trace-dashboard-schema.sql`：可投影到 SQLite 的最小表和视图。
+- `replay-agent-traces.ps1`：把 JSONL 回放成看板 JSON。
+
+这个样例的目标不是“模拟一个巨大平台”，而是把最关键的关系讲清楚：
+
+```text
+span -> trace summary -> actor cost -> failure queue
+```
+
+如果你已经有事件溯源页，可以把这个样例看成“运行视角的投影”；如果你还没有事件溯源页，可以先把它当成日志可视化和排障模板。
+
 ## 一个排障清单
 
 当多 agent 任务失败时，不要先问“是不是模型不行”。先按 trace 追：

@@ -19,6 +19,7 @@
 [Saga](saga-process-manager.md)
 [持久化执行](durable-execution-agent-workflows.md)
 [可观测性](observability-tracing-agent-workflows.md)
+[Trace 样例](../examples/trace-observability/index.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -184,6 +185,12 @@
 **[任务事件日志样例](../examples/event-log/index.md)**
 
 把事件流、回放脚本和幂等消费示例连在一起看。
+</div>
+
+<div class="resource-card" markdown="1">
+**[Agent Trace 可观测性样例](../examples/trace-observability/index.md)**
+
+把 agent span、trace summary、actor cost 和 failure queue 转成可查看的运行看板。
 </div>
 
 <div class="resource-card" markdown="1">
