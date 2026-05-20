@@ -26,6 +26,8 @@ Agent trace = 一次运行怎样发生
 - `trace_context_bridge_node.js`：无外部依赖的 Node.js `traceparent` 传播演示脚本。
 - `trace_runtime_log_bridge.py`：把 Python 和 Node.js bridge 输出合并成一条运行日志的演示脚本。
 - `trace-runtime-log-replay.md`：讲解怎样阅读和过滤 runtime log 的实践页。
+- `trace_runtime_log_projection.py`：把 runtime log 投影成 summary、搜索索引和失败队列的脚本。
+- `trace-runtime-log-projection.md`：讲解 runtime log 投影、日志平台映射和 broken handoff 失败回放。
 
 ## 回放
 
@@ -91,6 +93,7 @@ ORDER BY started_at ASC;
 - 如何用 [跨 Agent Trace Context 传播样例](trace-context-propagation.md) 避免多 agent 运行链路断裂。
 - 如何用 [多语言 Trace Context 传播样例](trace-context-multilang.md) 验证 Python agent 与 Node.js adapter 仍在同一条 trace 上。
 - 如何用 [多语言运行日志回放样例](trace-runtime-log-replay.md) 把跨语言输出合并成一条更容易阅读的运行日志。
+- 如何用 [多语言运行日志投影与失败回放样例](trace-runtime-log-projection.md) 把运行日志变成可搜索索引和失败队列。
 - 为什么 trace 适合排障，不能替代 Event Sourcing 里的业务事实事件。
 
 ## 看板字段
@@ -120,3 +123,5 @@ ORDER BY started_at ASC;
 如果你要让多个 agent 共享同一条运行链路，再继续看 [跨 Agent Trace Context 传播样例](trace-context-propagation.md)，重点理解 `traceparent`、任务元数据和 handoff carrier。
 
 如果你的 agent 已经跨 Python、Node.js 或 CLI adapter，再继续看 [多语言 Trace Context 传播样例](trace-context-multilang.md)，重点验证不同运行时之间的 `trace_id` 和父子 span 关系是否连续。
+
+如果你已经能生成 runtime log，再继续看 [多语言运行日志投影与失败回放样例](trace-runtime-log-projection.md)，重点把正常运行、broken handoff 和失败队列投影成可复盘视图。

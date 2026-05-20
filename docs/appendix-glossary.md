@@ -187,6 +187,10 @@ Retrieval-Augmented Generation，检索增强生成。先从知识库检索相�
 
 运行日志。把一次任务运行中的 span、handoff、校验结果、artifact 引用和人工节点整理成易读记录的视图。它比 trace 更适合教学和截图，但比业务事件更偏诊断。
 
+### Runtime Log Projection
+
+运行日志投影。把 runtime log 转换成 summary、可搜索索引、失败队列或看板字段的过程。它不是新的事实源，而是给日志平台、复盘和告警使用的读模型。
+
 ### Idempotent Consumer
 
 幂等消费者。重复收到同一条消息时，执行结果保持一致的消费端设计。它通常依赖已处理消息表、唯一消息编号或状态检查。

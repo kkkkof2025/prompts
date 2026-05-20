@@ -42,6 +42,7 @@
 | Trace | 一次任务或请求的完整运行路径 |
 | Span | Trace 中的一个步骤 |
 | Runtime Log | 运行日志；把一次运行中的 span、handoff、校验结果和证据引用整理成可读记录 |
+| Runtime Log Projection | 运行日志投影；把运行日志转换成 summary、搜索索引、失败队列或看板字段 |
 | OpenTelemetry | 可观测性框架和规范生态，正文首次出现可写作 OpenTelemetry |
 | AI Native | 原生围绕 AI 能力、上下文、工具和反馈回路设计的产品或创作方式 |
 

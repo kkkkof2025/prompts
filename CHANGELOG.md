@@ -32,6 +32,7 @@
 - 增加 `examples/trace-observability/trace-context-propagation.md` 和 `trace_context_bridge.py`，演示跨 agent handoff 时如何传播 W3C `traceparent`。
 - 增加 `examples/trace-observability/trace-context-multilang.md` 和 `trace_context_bridge_node.js`，演示 Python agent 到 Node.js / CLI adapter 的多语言 trace context 传播和父子 span 校验。
 - 增加 `examples/trace-observability/trace-runtime-log-replay.md` 和 `trace_runtime_log_bridge.py`，把 Python 与 Node.js bridge 输出合并成可读 runtime log，用于教学、排障和复盘。
+- 增加 `examples/trace-observability/trace-runtime-log-projection.md` 和 `trace_runtime_log_projection.py`，把 runtime log 投影成 summary、可搜索索引和失败队列，并补充 broken handoff 失败回放。
 - 增加 `docs/cases/agent-trace-incident-retrospective.md` Agent Trace 生产事故复盘长案例，把 trace 断裂、安全复核失败、事件日志、补偿动作和人工审批串成复盘流程。
 - 将 GitHub Pages 在线阅读版统一为 MkDocs Material，增加 `mkdocs.yml`、阅读样式、依赖文件和 `mkdocs-pages.yml` 发布 workflow。
 - 将章节页补齐上一章/下一章导航，并把 `agents/README.md` 改为 `agents/index.md`，避免与站点首页冲突。

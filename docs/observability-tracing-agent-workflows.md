@@ -179,6 +179,8 @@ Trace 已经足够诊断，但课堂、试点和复盘时，读者往往还需�
 
 如果你想看一个把 Python + Node.js bridge 合并成运行日志的例子，继续看 [多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)。
 
+如果你想把运行日志继续变成可搜索索引和失败队列，继续看 [多语言运行日志投影与失败回放样例](../examples/trace-observability/trace-runtime-log-projection.md)。
+
 ## OpenClaw 任务 Trace 示例
 
 假设 OpenClaw 执行“扩充七层 AI 文明架构并发布”的任务，一个可观测版本应该像这样：
@@ -378,7 +380,7 @@ trace-spans.jsonl
 
 如果你已经能发出 span，但还不知道 Collector 后面接 JSONL、SQLite、Jaeger、Grafana Tempo 还是托管平台，继续看 [Trace Backend 选型与查询策略](../examples/trace-observability/trace-backend-selection.md)。那一页把后端选择、查询字段、留存和隐私边界拆开讲。
 
-如果你已经能串起 trace，但还想要一层更容易截图、讲课和快速复盘的文本视图，继续看 [多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)。那一页会把 Python 和 Node.js bridge 的输出合并成一条 runtime log。
+如果你已经能串起 trace，但还想要一层更容易截图、讲课和快速复盘的文本视图，继续看 [多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)。那一页会把 Python 和 Node.js bridge 的输出合并成一条 runtime log。若要继续接日志平台、看板或失败队列，再看 [多语言运行日志投影与失败回放样例](../examples/trace-observability/trace-runtime-log-projection.md)。
 
 如果你的问题是“多个 agent 各自执行后 trace 断了”，继续看 [跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md)、[多语言 Trace Context 传播样例](../examples/trace-observability/trace-context-multilang.md) 和 [Agent Trace 生产事故复盘长案例](cases/agent-trace-incident-retrospective.md)。前者讲 `traceparent` 怎样传，多语言样例讲 Python 到 Node.js / CLI adapter 怎样不断链，事故案例讲一次 trace 断裂如何拖慢复盘。
 

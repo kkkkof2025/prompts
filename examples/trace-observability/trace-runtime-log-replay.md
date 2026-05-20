@@ -162,6 +162,8 @@ $result.runtime_log | Where-Object status -ne 'ok' | Format-List
 
 如果你想把 runtime log 放进更标准的日志生态，可以继续看 OpenTelemetry Logs 的官方文档，再决定是否把这里的 runtime log 作为日志平台的一层受控投影。
 
+如果你已经能生成 runtime log，下一步可以继续看 [多语言运行日志投影与失败回放样例](trace-runtime-log-projection.md)，把它变成 summary、搜索索引和失败队列。
+
 ## 事实、判断和推演边界
 
 事实和来源：

@@ -36,6 +36,11 @@ def parse_args() -> argparse.Namespace:
         default="",
         help="Optional JSON output path. Defaults to stdout.",
     )
+    parser.add_argument(
+        "--simulate-broken-handoff",
+        action="store_true",
+        help="Force Node.js to start a fresh trace so the handoff check fails.",
+    )
     return parser.parse_args()
 
 
@@ -49,6 +54,7 @@ def build_runtime_log(
     task_id: str,
     python_result: dict[str, Any],
     node_result: dict[str, Any],
+    handoff_mode: str,
 ) -> dict[str, Any]:
     start = datetime.now(timezone.utc).astimezone()
     current = start
@@ -86,12 +92,15 @@ def build_runtime_log(
     append_record(
         "bridge",
         "handoff",
-        "python -> nodejs via traceparent",
+        "python -> nodejs via traceparent"
+        if handoff_mode == "normal"
+        else "python -> nodejs via fresh root (broken handoff)",
         trace_id=python_result["trace_id"],
         status="ok",
         outgoing_traceparent=python_result["events"][-1]["outgoing_carrier"]["traceparent"],
         artifact_ref=runtime_log_artifact,
         source_script="trace_context_bridge.py",
+        handoff_mode=handoff_mode,
     )
 
     for event in node_result["events"]:
@@ -129,6 +138,7 @@ def build_runtime_log(
     return {
         "task_id": task_id,
         "artifact_ref": runtime_log_artifact,
+        "handoff_mode": handoff_mode,
         "python_trace_id": python_result["trace_id"],
         "node_trace_id": node_result["trace_id"],
         "same_trace": same_trace,
@@ -139,6 +149,7 @@ def build_runtime_log(
 
 def main() -> None:
     args = parse_args()
+    handoff_mode = "broken" if args.simulate_broken_handoff else "normal"
     python_result = run_json_command(
         [
             sys.executable,
@@ -159,11 +170,16 @@ def main() -> None:
             "--task-id",
             args.task_id,
             "--input-traceparent",
-            python_result["events"][-1]["outgoing_carrier"]["traceparent"],
+            ""
+            if args.simulate_broken_handoff
+            else python_result["events"][-1]["outgoing_carrier"]["traceparent"],
         ]
     )
     merged = build_runtime_log(
-        task_id=args.task_id, python_result=python_result, node_result=node_result
+        task_id=args.task_id,
+        python_result=python_result,
+        node_result=node_result,
+        handoff_mode=handoff_mode,
     )
     output = json.dumps(merged, ensure_ascii=False, indent=2)
 

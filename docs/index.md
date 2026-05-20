@@ -26,6 +26,7 @@
 [Trace Context](../examples/trace-observability/trace-context-propagation.md)
 [多语言 Trace](../examples/trace-observability/trace-context-multilang.md)
 [运行日志回放](../examples/trace-observability/trace-runtime-log-replay.md)
+[日志投影](../examples/trace-observability/trace-runtime-log-projection.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -233,6 +234,12 @@
 **[多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)**
 
 把跨语言 handoff 生成一条人能读、能保存、能截图复盘的 runtime log。
+</div>
+
+<div class="resource-card" markdown="1">
+**[多语言运行日志投影与失败回放样例](../examples/trace-observability/trace-runtime-log-projection.md)**
+
+把 runtime log 变成可搜索索引和失败队列，帮助日志平台、看板和人工复盘使用。
 </div>
 
 <div class="resource-card" markdown="1">
