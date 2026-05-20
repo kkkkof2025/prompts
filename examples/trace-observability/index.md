@@ -13,6 +13,7 @@ Agent trace = 一次运行怎样发生
 
 - `trace-spans.jsonl`：按 JSONL 保存的 agent span，每行一条 span。
 - `trace-dashboard-schema.sql`：把 span 投影到 SQLite 看板时可参考的表和视图结构。
+- `load-agent-traces-sqlite.py`：把 JSONL 导入 SQLite，并读取看板视图输出 JSON。
 - `replay-agent-traces.ps1`：把 trace span 回放成 JSON 看板快照。
 
 ## 回放
@@ -31,11 +32,48 @@ Agent trace = 一次运行怎样发生
 
 如果你想先看控制台输出，也可以不传 `-OutputPath`。
 
+### SQLite 导入
+
+```powershell
+python scripts/load-agent-traces-sqlite.py --input examples/trace-observability/trace-spans.jsonl --database tmp/trace-dashboard.sqlite --reset
+```
+
+这个脚本会：
+
+- 按 `trace-dashboard-schema.sql` 建表和建视图。
+- 把每个 span 写进 `agent_trace_spans`。
+- 更新 `projection_checkpoints`。
+- 再从 SQLite 视图里读回 `trace_summary`、`actor_cost`、`failure_queue` 和 `longest_spans`。
+
+### 常用查询
+
+```sql
+SELECT trace_id, task_id, workflow, trace_status, critical_path_seconds, span_count
+FROM trace_summary
+ORDER BY started_at DESC;
+
+SELECT actor, span_count, error_count, span_seconds
+FROM actor_cost
+ORDER BY span_seconds DESC;
+```
+
+```sql
+SELECT trace_id, span_id, task_id, name, actor, status, duration_seconds
+FROM longest_spans
+ORDER BY duration_seconds DESC
+LIMIT 5;
+
+SELECT trace_id, span_id, task_id, name, actor, status
+FROM failure_queue
+ORDER BY started_at ASC;
+```
+
 ## 这个样例演示什么
 
 - 一个成功但带 warning 的书稿发布 trace。
 - 一个被安全复核拦截的高风险 trace。
 - 如何从 span 聚合出 trace summary、actor cost、failure queue 和 longest spans。
+- 如何把相同的数据落到 SQLite，再把 SQLite 视图当成可查询看板。
 - 为什么 trace 适合排障，不能替代 Event Sourcing 里的业务事实事件。
 
 ## 看板字段
@@ -46,9 +84,10 @@ Agent trace = 一次运行怎样发生
 | `actor_cost` | 看每个 agent、CLI 或人工节点消耗了多少成本 |
 | `failure_queue` | 看哪些 span 是 error 或 warn，适合排障 |
 | `longest_spans` | 看耗时最高的步骤，适合优化 |
+| `projection_checkpoints` | 看 SQLite 看板处理到哪个 span，适合复核和恢复 |
 
 ## 和 SQLite 的关系
 
-`trace-dashboard-schema.sql` 给出的是最小 schema。真正落地时可以让 loader 把 JSONL 写入 `agent_trace_spans`，再用 `trace_summary`、`actor_cost`、`failure_queue` 三个 view 给人类看板、调度器和复核 agent 查询。
+`trace-dashboard-schema.sql` 给出的是最小 schema。真正落地时可以让 loader 把 JSONL 写入 `agent_trace_spans`，再用 `trace_summary`、`actor_cost`、`failure_queue`、`longest_spans` 和 `projection_checkpoints` 给人类看板、调度器和复核 agent 查询。
 
 这个样例先用 PowerShell 回放成 JSON，是为了不要求读者本地安装 SQLite 或额外依赖。等流程稳定后，再把同样的数据写入 SQLite、DuckDB、PostgreSQL 或可观测性平台。

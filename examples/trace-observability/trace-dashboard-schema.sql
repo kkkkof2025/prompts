@@ -1,5 +1,6 @@
 -- Minimal SQLite schema for projecting agent trace JSONL into dashboards.
--- This file is a teaching artifact. It assumes a loader writes one span per row.
+-- This file is a teaching artifact. It assumes a loader writes one span per row
+-- and stores a projection checkpoint for the latest import.
 
 CREATE TABLE IF NOT EXISTS agent_trace_spans (
   trace_id TEXT NOT NULL,
@@ -27,6 +28,15 @@ CREATE INDEX IF NOT EXISTS idx_agent_trace_spans_task
 CREATE INDEX IF NOT EXISTS idx_agent_trace_spans_actor
   ON agent_trace_spans (actor, started_at);
 
+CREATE TABLE IF NOT EXISTS projection_checkpoints (
+  projection_name TEXT PRIMARY KEY,
+  source_path TEXT NOT NULL,
+  last_span_id TEXT NOT NULL,
+  processed_spans INTEGER NOT NULL DEFAULT 0,
+  processed_traces INTEGER NOT NULL DEFAULT 0,
+  updated_at TEXT NOT NULL
+);
+
 CREATE VIEW IF NOT EXISTS trace_summary AS
 SELECT
   trace_id,
@@ -34,6 +44,10 @@ SELECT
   workflow,
   MIN(started_at) AS started_at,
   MAX(ended_at) AS ended_at,
+  CAST(
+    ROUND((julianday(MAX(ended_at)) - julianday(MIN(started_at))) * 86400)
+    AS INTEGER
+  ) AS critical_path_seconds,
   COUNT(*) AS span_count,
   SUM(CASE WHEN status = 'error' THEN 1 ELSE 0 END) AS error_count,
   SUM(CASE WHEN status = 'warn' THEN 1 ELSE 0 END) AS warning_count,
@@ -54,6 +68,7 @@ SELECT
   actor,
   COUNT(*) AS span_count,
   SUM(CASE WHEN status = 'error' THEN 1 ELSE 0 END) AS error_count,
+  SUM(CASE WHEN status = 'warn' THEN 1 ELSE 0 END) AS warning_count,
   SUM(tokens_input) AS tokens_input,
   SUM(tokens_output) AS tokens_output,
   SUM(tool_calls) AS tool_calls,
@@ -75,3 +90,21 @@ SELECT
 FROM agent_trace_spans
 WHERE status IN ('error', 'warn')
 ORDER BY started_at;
+
+CREATE VIEW IF NOT EXISTS longest_spans AS
+SELECT
+  trace_id,
+  span_id,
+  task_id,
+  workflow,
+  name,
+  kind,
+  actor,
+  status,
+  started_at,
+  ended_at,
+  CAST(
+    ROUND((julianday(ended_at) - julianday(started_at)) * 86400)
+    AS INTEGER
+  ) AS duration_seconds
+FROM agent_trace_spans;

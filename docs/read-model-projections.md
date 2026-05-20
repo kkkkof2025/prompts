@@ -362,7 +362,7 @@ publisher writes to Git
 
 Projection 每处理一条事件，就更新对应读模型。于是人不用翻所有日志，也能看到“当前哪些任务该我处理”。
 
-配套的最小样例在 [任务事件日志样例](../examples/event-log/index.md)，可以直接把 JSONL 事件回放成读模型快照。
+配套的最小样例在 [任务事件日志样例](../examples/event-log/index.md)，可以直接把 JSONL 事件回放成读模型快照。如果你想看“运行追踪”而不是“业务事实”，可以继续看 [Agent Trace 可观测性样例](../examples/trace-observability/index.md)，它把 trace span 导入 SQLite，并生成 `trace_summary`、`actor_cost`、`failure_queue` 等查询视图。
 
 ## 什么时候不用它
 

@@ -307,6 +307,7 @@ Trace 可视化
 - `trace-spans.jsonl`：两条 trace、十二个 span。
 - `trace-dashboard-schema.sql`：可投影到 SQLite 的最小表和视图。
 - `replay-agent-traces.ps1`：把 JSONL 回放成看板 JSON。
+- `load-agent-traces-sqlite.py`：把 JSONL 导入 SQLite，再从 SQLite 视图读回看板。
 
 这个样例的目标不是“模拟一个巨大平台”，而是把最关键的关系讲清楚：
 
@@ -315,6 +316,21 @@ span -> trace summary -> actor cost -> failure queue
 ```
 
 如果你已经有事件溯源页，可以把这个样例看成“运行视角的投影”；如果你还没有事件溯源页，可以先把它当成日志可视化和排障模板。
+
+### SQLite 版的意义
+
+JSONL 适合追加记录，SQLite 适合查询。两者放在一起，可以得到一个很小但完整的本地可观测性闭环：
+
+```text
+trace-spans.jsonl
+  -> load-agent-traces-sqlite.py
+  -> agent_trace_spans
+  -> trace_summary / actor_cost / failure_queue / longest_spans
+```
+
+其中 `projection_checkpoints` 记录导入处理到哪个 span。这个表看起来不起眼，但很关键：一旦 loader 中断、schema 升级或样例变大，维护者就知道当前看板处理到了哪里，是否需要重建。
+
+这也是 Read Model / Projection 思想在 trace 场景里的落地：原始 span 是运行证据，SQLite view 是给人和 agent 查询的视图。
 
 ## 一个排障清单
 

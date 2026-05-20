@@ -202,7 +202,7 @@
 | Transactional Outbox 与幂等消费 | 已完成初稿：[Transactional Outbox 与幂等消费](docs/transactional-outbox-idempotency.md) | 继续补 relay worker、消费端去重表和失败重试样例 |
 | Saga / Process Manager 长流程编排 | 已完成初稿：[Saga：补偿事务与流程编排](docs/saga-process-manager.md) | 继续补更多补偿动作样例和多步骤审批编排案例 |
 | Durable Execution 持久化执行 | 已完成初稿：[Durable Execution：持久化执行与 agent 长任务](docs/durable-execution-agent-workflows.md) | 继续补 workflow history、durable timer、signal 和 activity 样例 |
-| Observability / Tracing 可观测性 | 已完成初稿并补充 trace JSONL、SQLite schema 和回放脚本：[Observability / Tracing：智能体可观测性](docs/observability-tracing-agent-workflows.md)、[Agent Trace 可观测性样例](examples/trace-observability/index.md) | 继续补 OpenTelemetry SDK 最小接入和真实失败排障样例 |
+| Observability / Tracing 可观测性 | 已完成初稿并补充 trace JSONL、SQLite schema、SQLite 导入脚本和回放脚本：[Observability / Tracing：智能体可观测性](docs/observability-tracing-agent-workflows.md)、[Agent Trace 可观测性样例](examples/trace-observability/index.md) | 继续补 OpenTelemetry SDK 最小接入和真实失败排障样例 |
 | AI 历史与社区生态 | 已完成初稿：[AI 发展历史与社区生态](docs/ai-history-community-ecosystem.md) | 继续补公益站、模型聚合、Prompt 市场、本地部署和注册自动化的风险复盘案例 |
 
 七层架构的初步延展判断：
