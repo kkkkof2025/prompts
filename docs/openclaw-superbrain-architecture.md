@@ -161,6 +161,7 @@ flowchart TB
 | Event Log | 保存运行轨迹 | JSONL | Kafka/NATS/Redis Streams 等消息流 |
 | Policy Gate | 权限和风险闸门 | allow/deny 清单 | OPA/Cedar 风格策略、人工审批流 |
 | Saga Orchestrator | 编排跨 agent 和跨服务的长流程 | 简单状态机和补偿表 | 编排式 Saga、Process Manager |
+| Durable Workflow Runtime | 让长流程跨失败继续 | 文件/SQLite 进度记录 | Temporal、Durable Functions、Restate、DBOS 等 |
 | Result Writer | 写回结果 | Markdown/Git | 多目标回写、冲突解决、自动摘要 |
 | Observer | 观察系统运行 | 日志文件 | 指标、告警、成本分析、回放调试 |
 
@@ -192,6 +193,7 @@ flowchart TB
 - **Hermes** 更像记忆基础设施。
 - **超级大脑** 则是把执行、记忆、预算、权限、协同和回写放到一个统一认知框架里。
 - **Saga Orchestrator** 则负责把多步骤、多 agent、跨系统的长流程拆成可恢复的状态机。
+- **Durable Workflow Runtime** 则负责让长流程跨崩溃、等待和重启继续执行。
 
 换句话说：
 
@@ -305,6 +307,7 @@ Codex CLI、Claude CLI 这类工具越来越强，说明未来很可能不是“
 把 CLI 和 agent 变成执行层，
 把记忆和预算变成控制层，
 把 Saga 变成长流程编排层，
+把 Durable Execution 变成恢复层，
 把人保留在最终闸门上。
 ```
 

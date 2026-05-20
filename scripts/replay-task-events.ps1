@@ -244,7 +244,12 @@ if ($OutputPath) {
     if ($parent) {
         New-Item -ItemType Directory -Force -Path $parent | Out-Null
     }
-    Set-Content -LiteralPath $OutputPath -Value $json -Encoding UTF8
+    try {
+        Set-Content -LiteralPath $OutputPath -Value $json -Encoding UTF8
+    }
+    catch {
+        throw "Failed to write output to '$OutputPath'. If you are running in a restricted sandbox, omit -OutputPath and use console output instead. $($_.Exception.Message)"
+    }
     Write-Host "Wrote read models to $OutputPath"
 }
 else {

@@ -18,6 +18,7 @@
 [读模型](docs/read-model-projections.md)
 [Outbox](docs/transactional-outbox-idempotency.md)
 [Saga](docs/saga-process-manager.md)
+[持久化执行](docs/durable-execution-agent-workflows.md)
 [事件样例](examples/event-log/index.md)
 [速查讲义](docs/quick-reference.md)
 </div>
@@ -84,6 +85,12 @@
 **[Saga：补偿事务与流程编排](docs/saga-process-manager.md)**
 
 把多步骤长任务串成可补偿、可审计、可恢复的流程。
+</div>
+
+<div class="route-card" markdown="1">
+**[Durable Execution：持久化执行与 agent 长任务](docs/durable-execution-agent-workflows.md)**
+
+让长时间运行的 agent 任务能跨崩溃、重启、人工等待和回调继续执行。
 </div>
 
 <div class="route-card" markdown="1">

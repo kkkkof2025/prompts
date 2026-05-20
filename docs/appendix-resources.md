@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection 补充资料 2026-05-19
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution 补充资料 2026-05-20
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -56,8 +56,12 @@
 - [Microsoft Learn: Saga pattern](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)：用于核验 Saga 的本地事务、补偿事务、编排与协作式实现方式。
 - [Microsoft Learn: Cloud-native data patterns](https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/distributed-data)：用于核验分布式数据、一致性、Saga 与 CQRS/Event Sourcing 的关系。
 - [microservices.io: Pattern - Saga](https://microservices.io/patterns/data/saga.html)：用于核验 Saga 在数据库 per service 场景中的经典解释。
+- [Temporal Docs](https://docs.temporal.io/)：用于核验 durable execution、workflow、activity、事件历史和失败后恢复的基本描述。
+- [Microsoft Learn: Durable Functions](https://learn.microsoft.com/en-us/azure/azure-functions/durable-functions/)：用于核验 Durable Functions 作为 Azure Functions 的有状态编排扩展。
+- [Restate Docs: Durable Execution](https://docs.restate.dev/concepts/durable_execution/)：用于核验 durable execution 作为持久化步骤、恢复和跳过已完成步骤的运行时能力。
+- [DBOS Docs](https://docs.dbos.dev/)：用于核验 DBOS 的 durable workflow / durable execution 工具路线。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Saga、Process Manager、Compensation、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Saga、Process Manager、Compensation、Durable Execution、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
 
 ## AI 历史与基础论文
 

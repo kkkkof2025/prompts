@@ -7,7 +7,7 @@
 - 预计阅读时间：15-22 分钟。
 - 学习目标：用任务系统视角理解多模态、agent、协议化、开源和治理趋势；判断趋势是否会改变自己的学习或团队试点重点。
 - 练习入口：[章节练习与验收映射表](../chapter-validation-map.md) 和 [AI 任务选择决策指南](../task-decision-guide.md)。
-- 相关材料：[Context Engineering：上下文工程](../context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../cqrs.md)、[Read Model 与 Projection：读模型与投影](../read-model-projections.md)、[Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](../saga-process-manager.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
+- 相关材料：[Context Engineering：上下文工程](../context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](../event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](../cqrs.md)、[Read Model 与 Projection：读模型与投影](../read-model-projections.md)、[Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](../saga-process-manager.md)、[Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)、[七层 AI 文明架构](../seven-layer-ai-civilization.md)、[行业化工作坊案例集](../workshop-industry-cases.md) 和 [前沿资料季度复核记录表](../frontier-review-log.md)。
 
 ## 总趋势
 
@@ -30,7 +30,7 @@ AI 正从“聊天工具”走向“通用工作系统”。变化主要发生�
 
 当多个 agent 一起工作时，还需要 [Blackboard Architecture：黑板架构与多 agent 协作](../blackboard-architecture-multi-agent.md) 这样的共享状态模型。它提醒我们：多 agent 不是群聊，而是多个专门角色围绕任务、证据、假设、上下文、状态和人工决策共同更新一个工作现场。
 
-如果任务需要审计和回放，还可以引入 [Event Sourcing：事件溯源与任务回放](../event-sourcing.md)。它不是 AI 专属概念，而是软件架构里的经典模式；放到多 agent 中，可以帮助团队还原任务从创建、认领、写入证据、复核、批准到发布的完整路径。进一步看，[CQRS：读写分离与多 agent 查询视图](../cqrs.md) 可以把写入事件和查询视图拆开，[Read Model 与 Projection：读模型与投影](../read-model-projections.md) 则负责把事件流变成调度器、人类看板和复核 agent 各自需要的状态视图。若还需要可靠发事件到别的系统，可以再看 [Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)；若还需要把多步任务串成可补偿流程，再看 [Saga：补偿事务与流程编排](../saga-process-manager.md)。
+如果任务需要审计和回放，还可以引入 [Event Sourcing：事件溯源与任务回放](../event-sourcing.md)。它不是 AI 专属概念，而是软件架构里的经典模式；放到多 agent 中，可以帮助团队还原任务从创建、认领、写入证据、复核、批准到发布的完整路径。进一步看，[CQRS：读写分离与多 agent 查询视图](../cqrs.md) 可以把写入事件和查询视图拆开，[Read Model 与 Projection：读模型与投影](../read-model-projections.md) 则负责把事件流变成调度器、人类看板和复核 agent 各自需要的状态视图。若还需要可靠发事件到别的系统，可以再看 [Transactional Outbox 与幂等消费](../transactional-outbox-idempotency.md)；若还需要把多步任务串成可补偿流程，再看 [Saga：补偿事务与流程编排](../saga-process-manager.md)；若长流程需要跨重启、等待和回调继续执行，再看 [Durable Execution：持久化执行与 agent 长任务](../durable-execution-agent-workflows.md)。
 
 ## 推理与任务执行
 

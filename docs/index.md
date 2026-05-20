@@ -17,6 +17,7 @@
 [读模型](read-model-projections.md)
 [Outbox](transactional-outbox-idempotency.md)
 [Saga](saga-process-manager.md)
+[持久化执行](durable-execution-agent-workflows.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -45,7 +46,7 @@
 <div class="route-card" markdown="1">
 **想跟进前沿**
 
-重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[Context Engineering：上下文工程](context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Read Model 与 Projection：读模型与投影](read-model-projections.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](saga-process-manager.md) 和 [技术演进案例库](technology-evolution-cases.md)。
+重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[Context Engineering：上下文工程](context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Read Model 与 Projection：读模型与投影](read-model-projections.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](saga-process-manager.md)、[Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md) 和 [技术演进案例库](technology-evolution-cases.md)。
 </div>
 </div>
 
@@ -158,6 +159,12 @@
 **[Saga：补偿事务与流程编排](saga-process-manager.md)**
 
 把长流程拆成可补偿的本地动作，给 OpenClaw 和多 agent 协作用。
+</div>
+
+<div class="resource-card" markdown="1">
+**[Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md)**
+
+让长时间运行的 agent 任务能跨崩溃、重启、人工等待和回调继续执行。
 </div>
 
 <div class="resource-card" markdown="1">

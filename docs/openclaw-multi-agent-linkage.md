@@ -136,6 +136,8 @@ outputs:
 
 如果任务跨多个审批人、多个发布步骤或多个外部系统，还可以再加一层 [Saga：补偿事务与流程编排](saga-process-manager.md)，把长流程状态机显式写出来，失败时按补偿动作收尾。
 
+如果任务会运行很久、等待人工批准或跨重启继续，则可以继续引入 [Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md)，让长流程状态不依赖某个一次性脚本进程。
+
 常见事件可以是：
 
 - `task_created`

@@ -41,6 +41,7 @@
 - Read Model / Projection 读模型专题，用 SQLite、看板查询、投影刷新和最终一致解释 CQRS 怎样落地。
 - Transactional Outbox 与幂等消费专题，用可靠消息发放和消费端去重解释多 agent 事件同步怎样避免双写与重复处理。
 - Saga / Process Manager 专题，用补偿事务和长流程编排解释多 agent 和跨系统任务怎样收尾。
+- Durable Execution 专题，用持久化执行解释 agent 长任务怎样跨重启、等待人工和外部回调继续。
 - AI 发展历史与社区生态专题，介绍 AI 历史、公益站、注册自动化、模型聚合和社区工具的价值与风险。
 - 前沿资料季度复核执行手册、记录表和示例记录。
 - 常见误区与纠偏指南。
@@ -199,6 +200,7 @@
 | Read Model / Projection 读模型与投影 | 已完成初稿：[Read Model 与 Projection：读模型与投影](docs/read-model-projections.md) | 继续补真实任务日志、复杂统计读模型和跨页面物化视图案例 |
 | Transactional Outbox 与幂等消费 | 已完成初稿：[Transactional Outbox 与幂等消费](docs/transactional-outbox-idempotency.md) | 继续补 relay worker、消费端去重表和失败重试样例 |
 | Saga / Process Manager 长流程编排 | 已完成初稿：[Saga：补偿事务与流程编排](docs/saga-process-manager.md) | 继续补更多补偿动作样例和多步骤审批编排案例 |
+| Durable Execution 持久化执行 | 已完成初稿：[Durable Execution：持久化执行与 agent 长任务](docs/durable-execution-agent-workflows.md) | 继续补 workflow history、durable timer、signal 和 activity 样例 |
 | AI 历史与社区生态 | 已完成初稿：[AI 发展历史与社区生态](docs/ai-history-community-ecosystem.md) | 继续补公益站、模型聚合、Prompt 市场、本地部署和注册自动化的风险复盘案例 |
 
 七层架构的初步延展判断：

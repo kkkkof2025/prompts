@@ -191,6 +191,14 @@ Saga。把跨多个服务、多个 agent 或多个本地事务的长流程拆成
 
 补偿动作。Saga 失败后执行的逆向或修正操作，用来把系统拉回可接受状态。补偿不等于完美回滚。
 
+### Durable Execution
+
+持久化执行。让长时间运行的流程在进程崩溃、重启、等待人工或外部回调后，能根据历史继续执行的运行时能力。它常见于 workflow engine、durable workflow 和 serverless orchestration。
+
+### Durable Timer
+
+可持久化定时器。定时等待状态会被保存下来，系统重启后仍能在约定时间继续流程。
+
 ## S
 
 ### Skill

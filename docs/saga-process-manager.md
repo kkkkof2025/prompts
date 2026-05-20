@@ -12,6 +12,8 @@ Saga 解决的是跨多个服务、多个 agent 或多个本地事务的长流�
 
 这页和 [Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md) 是一组。事件溯源负责记录过程，Outbox 负责可靠分发，Saga 负责把分布式长任务编排起来。
 
+如果流程需要跨崩溃、重启、人工等待和外部回调继续执行，可以继续看 [Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md)。
+
 ## 这个模式解决什么
 
 在多 agent 或多服务系统里，常见的任务不是一次性 CRUD，而是这种链路：

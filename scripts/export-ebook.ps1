@@ -46,6 +46,7 @@ $files = @(
     "docs/read-model-projections.md",
     "docs/transactional-outbox-idempotency.md",
     "docs/saga-process-manager.md",
+    "docs/durable-execution-agent-workflows.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",
     "docs/openclaw-multi-agent-linkage.md",
