@@ -195,6 +195,8 @@ blocked: safety_review_failed
 系统规则要不要改？
 ```
 
+如果事故里还出现“每个 agent 都有自己的 trace，看不出上下游”的问题，继续看 [跨 Agent Trace Context 传播样例](trace-context-propagation.md)。生产化加固解决“哪些 trace 被保留、怎样脱敏、怎样进入后端”；trace context 传播解决“多个 agent 是否仍然属于同一条链路”。
+
 ## 事实、判断和推演边界
 
 事实和来源：

@@ -20,6 +20,7 @@
 - [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)
 - [教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)
 - [代码库问答连续案例](cases/codebase-rag-skill-agent-memory.md)
+- [Agent Trace 生产事故复盘长案例](cases/agent-trace-incident-retrospective.md)
 - [连续案例练习与复盘评分表](cases/continuous-case-exercises.md)
 - [连续案例课堂试跑版](cases/continuous-case-classroom-run.md)
 - [连续案例团队试点版](cases/continuous-case-team-pilot.md)
@@ -39,6 +40,7 @@
 - [七层 AI 文明架构](seven-layer-ai-civilization.md)
 - [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)
 - [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)
+- [Agent Trace 生产事故复盘长案例](cases/agent-trace-incident-retrospective.md)
 
 ## 使用建议
 

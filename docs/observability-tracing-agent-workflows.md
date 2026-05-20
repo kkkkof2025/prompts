@@ -350,6 +350,8 @@ trace-spans.jsonl
 
 如果要进入团队或生产场景，还要继续看 [OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)。那里补充了采样、脱敏、Collector 管道顺序、redaction、tail sampling 和事故复盘模板。
 
+如果你的问题是“多个 agent 各自执行后 trace 断了”，继续看 [跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md) 和 [Agent Trace 生产事故复盘长案例](cases/agent-trace-incident-retrospective.md)。前者讲 `traceparent` 怎样传，后者讲一次 trace 断裂如何拖慢事故复盘。
+
 ## 一个排障清单
 
 当多 agent 任务失败时，不要先问“是不是模型不行”。先按 trace 追：

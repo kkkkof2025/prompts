@@ -22,6 +22,7 @@
 [Trace 样例](../examples/trace-observability/index.md)
 [OTel 样例](../examples/trace-observability/otel-minimal-instrumentation.md)
 [OTel 加固](../examples/trace-observability/otel-production-hardening.md)
+[Trace Context](../examples/trace-observability/trace-context-propagation.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -205,6 +206,18 @@
 **[OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)**
 
 把 agent trace 的采样、脱敏、Collector 管道和事故复盘整理成可落地模板。
+</div>
+
+<div class="resource-card" markdown="1">
+**[跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md)**
+
+用 `traceparent` 解释多 agent handoff 怎样保留同一条 trace。
+</div>
+
+<div class="resource-card" markdown="1">
+**[Agent Trace 生产事故复盘长案例](cases/agent-trace-incident-retrospective.md)**
+
+用长案例复盘 trace 断裂、安全复核失败、补偿动作和人工审批。
 </div>
 
 <div class="resource-card" markdown="1">

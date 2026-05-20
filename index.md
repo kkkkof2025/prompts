@@ -24,6 +24,7 @@
 [Trace 样例](examples/trace-observability/index.md)
 [OTel 样例](examples/trace-observability/otel-minimal-instrumentation.md)
 [OTel 加固](examples/trace-observability/otel-production-hardening.md)
+[Trace Context](examples/trace-observability/trace-context-propagation.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -113,6 +114,18 @@
 **[OpenTelemetry 生产化加固样例](examples/trace-observability/otel-production-hardening.md)**
 
 把采样、脱敏、Collector 管道和事故复盘放进 agent trace 的生产化边界。
+</div>
+
+<div class="route-card" markdown="1">
+**[跨 Agent Trace Context 传播样例](examples/trace-observability/trace-context-propagation.md)**
+
+用 `traceparent` 演示多个 agent 如何保持同一条运行链路。
+</div>
+
+<div class="route-card" markdown="1">
+**[Agent Trace 生产事故复盘长案例](docs/cases/agent-trace-incident-retrospective.md)**
+
+把 trace、事件日志、审批记录和补偿动作串成一次完整事故复盘。
 </div>
 
 <div class="route-card" markdown="1">

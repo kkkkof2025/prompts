@@ -20,6 +20,7 @@
 | 教师 | [教师案例](teacher.md) | 教学设计、反馈边界、评价量规 | 反馈失真、评分越权、术语过密 |
 | 培训者 | [教学资料库连续案例](teaching-rag-skill-agent-memory.md) | 教学 RAG、反馈 skill、助教 agent、教学记忆 | 学员隐私、越权评分、长期标签 |
 | 工程团队 | [代码库问答连续案例](codebase-rag-skill-agent-memory.md) | 代码库 RAG、修复 skill、受控工程 agent、repo memory | 盲改代码、泄露密钥、自动提交 |
+| 可观测性维护者 | [Agent Trace 生产事故复盘长案例](agent-trace-incident-retrospective.md) | Trace 复盘、事件日志核对、补偿动作、人工审批 | trace 断裂、敏感信息进入日志、盲目重试 |
 | 运营 | [运营案例](operations.md) | 信息整理、待办拆解、执行检查 | 把讨论写成决定、忽略待确认项 |
 | 产品 | [产品案例](product.md) | 决策问题、事实与推测分离 | 营销信息当事实、方案跳过问题定义 |
 | 工程 | [工程案例](engineering.md) | 复现、修改范围、验证闭环 | 盲改代码、测试不足、权限过宽 |
@@ -39,6 +40,7 @@
 | 课堂设计、作业反馈 | [教师案例](teacher.md) | 第 3-5 章、第 13 章 |
 | 教学资料库到助教助手 | [教学资料库连续案例](teaching-rag-skill-agent-memory.md) | 第 6-9 章、第 13 章 |
 | 代码库问答到修复助手 | [代码库问答连续案例](codebase-rag-skill-agent-memory.md) | 第 6-9 章、第 13 章 |
+| Agent trace 事故复盘 | [Agent Trace 生产事故复盘长案例](agent-trace-incident-retrospective.md) | 第 8-10 章、第 12-13 章 |
 | 会议纪要、内容排期 | [运营案例](operations.md) | 第 3-4 章、第 13 章 |
 | 竞品分析、需求评审 | [产品案例](product.md) | 第 4-6 章、第 5 章 |
 | 修 Bug、补测试 | [工程案例](engineering.md) | 第 4-8 章、第 13 章 |
@@ -58,7 +60,7 @@
 | --- | --- | --- |
 | 低 | 学生案例、部分教师案例 | 主要练习理解、写作和结构化输出 |
 | 中 | 运营案例、产品案例、工程案例、团队落地案例、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例团队试点版、连续案例样例库 | 需要匿名化、复核、评分标准和边界说明 |
-| 高 | 管理者案例、安全复盘、前沿技术演进案例 | 重点练习人工确认、权限和责任边界 |
+| 高 | 管理者案例、安全复盘、前沿技术演进案例、Agent Trace 生产事故复盘长案例 | 重点练习人工确认、权限和责任边界 |
 
 ## 案例目录
 
@@ -73,6 +75,7 @@
 | 管理者 | [AI 使用规范、项目复盘](management.md) | 风险边界、组织流程、责任分工 |
 | 跨角色团队 | [客户反馈知识库到行动助手](rag-skill-agent-memory.md) | RAG、skill、agent、memory、治理 |
 | 工程团队 | [代码库问答到受控修复助手](codebase-rag-skill-agent-memory.md) | 代码库 RAG、修复 skill、工程 agent、repo memory |
+| 可观测性维护者 | [Agent Trace 生产事故复盘长案例](agent-trace-incident-retrospective.md) | Trace 复盘、事件事实源、补偿、审批、脱敏 |
 | 课堂/团队练习 | [连续案例练习与复盘评分表](continuous-case-exercises.md) | 分组讨论、作业提交、rubric 评分、试点复盘 |
 | 课堂试跑 | [连续案例课堂试跑版](continuous-case-classroom-run.md) | 讲师脚本、课堂互评、观察记录 |
 | 课堂投影 | [连续案例课堂投影短版](continuous-case-slide-brief.md) | 投影短页、互动问题、讲师提示 |
@@ -88,8 +91,8 @@
 | 第 5 章 | 产品案例、模型选型案例 |
 | 第 6-8 章 | 运营案例、工程案例、团队落地案例、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版 |
 | 第 9-10 章 | 学生案例、管理者案例、个人助手工作台案例、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例团队试点版 |
-| 第 11-12 章 | 前沿与过时技术案例库、模型选型案例 |
-| 第 13-14 章 | 管理者案例、团队 AI 落地案例集、试读与试跑反馈包 |
+| 第 11-12 章 | 前沿与过时技术案例库、模型选型案例、Agent Trace 生产事故复盘长案例 |
+| 第 13-14 章 | 管理者案例、团队 AI 落地案例集、试读与试跑反馈包、Agent Trace 生产事故复盘长案例 |
 
 ## 通用复盘模板
 
