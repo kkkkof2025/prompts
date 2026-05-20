@@ -52,6 +52,7 @@ $files = @(
     "examples/trace-observability/index.md",
     "examples/trace-observability/otel-minimal-instrumentation.md",
     "examples/trace-observability/otel-production-hardening.md",
+    "examples/trace-observability/trace-backend-selection.md",
     "examples/trace-observability/trace-context-propagation.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",

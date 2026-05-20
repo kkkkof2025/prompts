@@ -31,7 +31,7 @@
 
 示例配置在 [otel-collector-agent-traces.yaml](otel-collector-agent-traces.yaml)。
 
-这个配置默认只输出到 `debug` exporter，便于本地验证。真实接入后端时，再把注释里的 `otlphttp/trace_backend` 改成你的后端地址，并补齐认证、TLS、队列、重试和留存策略。
+这个配置默认只输出到 `debug` exporter，便于本地验证。真实接入后端时，再把注释里的 `otlphttp/trace_backend` 改成你的后端地址，并补齐认证、TLS、队列、重试和留存策略。后端还没确定时，先用 [Trace Backend 选型与查询策略](trace-backend-selection.md) 比较 JSONL/SQLite、Jaeger、Tempo 和托管平台的边界。
 
 运行时需要使用包含 `redaction` 和 `tail_sampling` 的 Collector Contrib 发行版，而不是只包含核心组件的最小 Collector。
 
@@ -196,6 +196,8 @@ blocked: safety_review_failed
 ```
 
 如果事故里还出现“每个 agent 都有自己的 trace，看不出上下游”的问题，继续看 [跨 Agent Trace Context 传播样例](trace-context-propagation.md)。生产化加固解决“哪些 trace 被保留、怎样脱敏、怎样进入后端”；trace context 传播解决“多个 agent 是否仍然属于同一条链路”。
+
+如果事故里出现“trace 已经采到了，但后端查不出任务、agent、成本或风险等级”的问题，继续看 [Trace Backend 选型与查询策略](trace-backend-selection.md)。那一页会把后端选择和查询字段一起处理，而不是只比较产品名称。
 
 ## 事实、判断和推演边界
 

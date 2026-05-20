@@ -97,4 +97,5 @@
 - [Agent Trace 可观测性样例](../examples/trace-observability/index.md)
 - [OpenTelemetry 最小接入样例](../examples/trace-observability/otel-minimal-instrumentation.md)
 - [OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)
+- [Trace Backend 选型与查询策略](../examples/trace-observability/trace-backend-selection.md)
 - [跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md)

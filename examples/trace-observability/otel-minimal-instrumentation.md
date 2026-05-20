@@ -84,7 +84,7 @@ service:
       exporters: [debug]
 ```
 
-这个配置的价值是先验证“应用确实发出了 span”。等字段、采样和脱敏策略稳定后，再接 Jaeger、Grafana Tempo、Datadog、Honeycomb、SigNoz 或其他后端。
+这个配置的价值是先验证“应用确实发出了 span”。等字段、采样和脱敏策略稳定后，再接 Jaeger、Grafana Tempo、Datadog、Honeycomb、SigNoz 或其他后端。如果你还没确定后端路线，先看 [Trace Backend 选型与查询策略](trace-backend-selection.md)。
 
 ## 字段映射
 

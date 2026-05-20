@@ -1,6 +1,6 @@
 # 前沿资料季度复核记录表
 
-最后维护：2026-05-12
+最后维护：2026-05-20
 
 这份记录表用于执行 0.8“前沿资料季度复核”。它不是资料清单本身，资料清单在 [资源与引用](appendix-resources.md)；也不是执行说明，执行流程在 [前沿资料季度复核执行手册](frontier-review-playbook.md)。它的作用是让维护者在每次复核时记录证据、判断影响范围，并决定是否更新正文、附录、路线图或发布说明。
 
@@ -225,6 +225,70 @@ OpenTelemetry 文档把 trace、span、context propagation、exporter、sampling
 
 备注：
 正文采用“官方字段方向 + 自定义 agent.* 字段”的双层写法，并把采样、脱敏、Collector 管道和事故复盘写成可调整模板，避免把仍在演进的 GenAI 字段和 Collector 组件配置写成永远不变的业务事实。
+```
+
+## 2026-05-20 Trace Backend 选型复核记录
+
+```text
+资料名称：OpenTelemetry Collector Exporters / Jaeger Architecture / Grafana Tempo Docs / Grafana Tempo TraceQL
+链接：
+https://opentelemetry.io/docs/collector/components/exporter/
+https://www.jaegertracing.io/docs/latest/architecture/
+https://grafana.com/docs/tempo/latest/
+https://grafana.com/docs/tempo/latest/operations/architecture/
+https://grafana.com/docs/tempo/latest/traceql/
+来源类型：官方文档
+
+复核日期：2026-05-20
+复核人：AI 协作维护
+资料日期或版本：页面当日版本
+
+原书相关位置：
+docs/observability-tracing-agent-workflows.md
+examples/trace-observability/index.md
+examples/trace-observability/otel-minimal-instrumentation.md
+examples/trace-observability/otel-production-hardening.md
+examples/trace-observability/trace-backend-selection.md
+docs/appendix-resources.md
+docs/appendix-glossary.md
+docs/glossary-links.md
+docs/topic-index.md
+
+发现变化：
+本次不是发现破坏性变化，而是补充核验 trace backend 选型所需的官方入口：OpenTelemetry Collector exporter 定位、Jaeger 的 collector/query/ingester/all-in-one 部署角色和 OpenTelemetry 接入方向、Grafana Tempo 作为分布式 tracing backend 的入口、架构和 TraceQL 查询方向。
+
+影响判断：
+□ 不影响正文
+□ 影响资源附录
+□ 影响章节正文
+□ 影响案例或练习
+□ 影响安全边界
+□ 影响 1.0 发布判断
+
+处理动作：
+□ 不修改
+□ 更新附录
+□ 更新正文
+□ 增加限制条件
+□ 移到历史说明
+□ 标注需要人工复核
+
+修改文件：
+docs/observability-tracing-agent-workflows.md
+examples/trace-observability/index.md
+examples/trace-observability/otel-minimal-instrumentation.md
+examples/trace-observability/otel-production-hardening.md
+examples/trace-observability/trace-backend-selection.md
+docs/appendix-resources.md
+docs/appendix-glossary.md
+docs/glossary-links.md
+docs/topic-index.md
+
+证据摘录：
+OpenTelemetry Collector exporter 负责把遥测数据发送到后端或其他系统；Jaeger 文档描述了 trace 接收和查询相关组件；Tempo 文档描述了分布式 tracing backend、架构组件和 TraceQL 查询方向。
+
+备注：
+正文采用“先字段和 Collector，再后端”的写法，避免把后端选型写成产品排名。JSONL/SQLite、Jaeger、Tempo 和托管平台在本书里分别对应学习、团队自托管、Grafana 生态和企业托管四类路径。
 ```
 
 ## 更新正文的判断标准

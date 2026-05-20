@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing / OpenTelemetry Python exporter / Collector 采样与脱敏 / Trace Context 传播补充资料 2026-05-20
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing / OpenTelemetry Python exporter / Collector 采样与脱敏 / Trace Context 传播 / Trace Backend 选型补充资料 2026-05-20
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -65,6 +65,7 @@
 - [OpenTelemetry Context propagation](https://opentelemetry.io/docs/concepts/context-propagation/)：用于核验上下文传播在跨服务追踪中的定位。
 - [OpenTelemetry Sampling](https://opentelemetry.io/docs/concepts/sampling/)：用于核验 head sampling、tail sampling 和采样位置。
 - [OpenTelemetry Collector Processors](https://opentelemetry.io/docs/collector/components/processor/)：用于核验 Collector processors 在 receivers 和 exporters 之间处理遥测数据的定位。
+- [OpenTelemetry Collector Exporters](https://opentelemetry.io/docs/collector/components/exporter/)：用于核验 exporter 将遥测数据发送到后端或其他系统的定位。
 - [OpenTelemetry Python Exporters](https://opentelemetry.io/docs/languages/python/exporters/)：用于核验 Python 控制台 exporter、OTLP exporter 和 Collector 调试路径。
 - [OpenTelemetry Python Propagation](https://opentelemetry.io/docs/languages/python/propagation/)：用于核验 Python SDK 中上下文传播的入口。
 - [OpenTelemetry Collector configuration best practices](https://opentelemetry.io/docs/security/config-best-practices/)：用于核验 Collector 配置、安全、组件最小化、认证、加密和资源保护建议。
@@ -74,8 +75,12 @@
 - [OpenTelemetry Collector Contrib Redaction Processor](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/processor/redactionprocessor/README.md)：用于核验 attribute allow list、blocked keys 和 blocked values 等脱敏配置方向。
 - [OpenAI Agents SDK Tracing](https://openai.github.io/openai-agents-python/tracing/)：用于核验 OpenAI Agents SDK 中 tracing 作为 agent workflow 观察能力的官方说明。
 - [W3C Trace Context](https://www.w3.org/TR/trace-context/)：用于核验跨系统 trace 上下文传播标准。
+- [Jaeger Architecture](https://www.jaegertracing.io/docs/latest/architecture/)：用于核验 Jaeger collector、query、ingester、all-in-one 和 OpenTelemetry 数据接入方向。
+- [Grafana Tempo Docs](https://grafana.com/docs/tempo/latest/)：用于核验 Grafana Tempo 作为分布式 tracing backend 的官方入口。
+- [Grafana Tempo Architecture](https://grafana.com/docs/tempo/latest/operations/architecture/)：用于核验 Tempo 组件、存储和查询链路。
+- [Grafana Tempo TraceQL](https://grafana.com/docs/tempo/latest/traceql/)：用于核验 Tempo 的 trace 查询语言方向。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Saga、Process Manager、Compensation、Durable Execution、Observability、Tracing、OpenTelemetry、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Saga、Process Manager、Compensation、Durable Execution、Observability、Tracing、OpenTelemetry、Trace Backend、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
 
 ## AI 历史与基础论文
 

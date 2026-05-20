@@ -24,6 +24,7 @@
 [Trace 样例](examples/trace-observability/index.md)
 [OTel 样例](examples/trace-observability/otel-minimal-instrumentation.md)
 [OTel 加固](examples/trace-observability/otel-production-hardening.md)
+[Backend 选型](examples/trace-observability/trace-backend-selection.md)
 [Trace Context](examples/trace-observability/trace-context-propagation.md)
 [速查讲义](docs/quick-reference.md)
 </div>
@@ -114,6 +115,12 @@
 **[OpenTelemetry 生产化加固样例](examples/trace-observability/otel-production-hardening.md)**
 
 把采样、脱敏、Collector 管道和事故复盘放进 agent trace 的生产化边界。
+</div>
+
+<div class="route-card" markdown="1">
+**[Trace Backend 选型与查询策略](examples/trace-observability/trace-backend-selection.md)**
+
+比较 JSONL/SQLite、Jaeger、Grafana Tempo 和托管平台怎样承接 agent trace。
 </div>
 
 <div class="route-card" markdown="1">

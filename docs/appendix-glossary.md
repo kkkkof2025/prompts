@@ -243,6 +243,14 @@ Trace 里的一个步骤。一个 agent 任务 trace 可以包含读取任务卡
 
 追踪。Trace 是一次任务或请求的完整运行路径，Tracing 是记录和分析这些路径的做法。它适合排查 agent 为什么慢、贵、失败或误判，但不应替代业务事实事件流。
 
+### Trace Backend
+
+Trace 后端。用于存储、查询、可视化和管理 trace 的系统，例如 Jaeger、Grafana Tempo 或托管可观测性平台。它和 OpenTelemetry SDK、Collector 不是一回事：SDK 负责产生 span，Collector 负责处理和转发，后端负责保存和查询。
+
+### Trace Context
+
+Trace 上下文。跨进程、跨服务或跨 agent 传播 trace 关系的上下文信息。常见形式是 W3C `traceparent`，它让下游 agent 知道自己属于哪条 trace、上游 span 是谁。
+
 ## V
 
 ### Vector Database

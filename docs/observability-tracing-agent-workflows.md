@@ -350,6 +350,8 @@ trace-spans.jsonl
 
 如果要进入团队或生产场景，还要继续看 [OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)。那里补充了采样、脱敏、Collector 管道顺序、redaction、tail sampling 和事故复盘模板。
 
+如果你已经能发出 span，但还不知道 Collector 后面接 JSONL、SQLite、Jaeger、Grafana Tempo 还是托管平台，继续看 [Trace Backend 选型与查询策略](../examples/trace-observability/trace-backend-selection.md)。那一页把后端选择、查询字段、留存和隐私边界拆开讲。
+
 如果你的问题是“多个 agent 各自执行后 trace 断了”，继续看 [跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md) 和 [Agent Trace 生产事故复盘长案例](cases/agent-trace-incident-retrospective.md)。前者讲 `traceparent` 怎样传，后者讲一次 trace 断裂如何拖慢事故复盘。
 
 ## 一个排障清单
