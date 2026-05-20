@@ -50,6 +50,7 @@ $files = @(
     "docs/observability-tracing-agent-workflows.md",
     "examples/event-log/index.md",
     "examples/trace-observability/index.md",
+    "examples/trace-observability/otel-minimal-instrumentation.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",
     "docs/openclaw-multi-agent-linkage.md",

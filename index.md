@@ -22,6 +22,7 @@
 [可观测性](docs/observability-tracing-agent-workflows.md)
 [事件样例](examples/event-log/index.md)
 [Trace 样例](examples/trace-observability/index.md)
+[OTel 样例](examples/trace-observability/otel-minimal-instrumentation.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -99,6 +100,12 @@
 **[Observability / Tracing：智能体可观测性](docs/observability-tracing-agent-workflows.md)**
 
 把日志、指标、trace、span、成本和人工审批证据连成可排障的运行链路。
+</div>
+
+<div class="route-card" markdown="1">
+**[OpenTelemetry 最小接入样例](examples/trace-observability/otel-minimal-instrumentation.md)**
+
+从 JSONL 和 SQLite 样例继续前进，把 agent 运行路径接入 OpenTelemetry span。
 </div>
 
 <div class="route-card" markdown="1">

@@ -159,6 +159,60 @@ docs/model-landscape-china-global.md
 这是一个示范条目，真实复核时应补充实际日期和更具体的页面变化。
 ```
 
+## 2026-05-20 OpenTelemetry 复核记录
+
+```text
+资料名称：OpenTelemetry Traces / Python Exporters / GenAI semantic conventions
+链接：
+https://opentelemetry.io/docs/concepts/signals/traces/
+https://opentelemetry.io/docs/languages/python/exporters/
+https://opentelemetry.io/docs/specs/semconv/gen-ai/
+https://www.w3.org/TR/trace-context/
+来源类型：官方文档 / 标准组织
+
+复核日期：2026-05-20
+复核人：AI 协作维护
+资料日期或版本：页面当日版本
+
+原书相关位置：
+docs/observability-tracing-agent-workflows.md
+examples/trace-observability/index.md
+examples/trace-observability/otel-minimal-instrumentation.md
+docs/appendix-resources.md
+
+发现变化：
+本次不是发现破坏性变化，而是补充核验 OpenTelemetry traces、Python exporter、OTLP/Collector 调试路径、W3C Trace Context 和 GenAI semantic conventions 的当前官方入口。
+
+影响判断：
+□ 不影响正文
+□ 影响资源附录
+□ 影响章节正文
+□ 影响案例或练习
+□ 影响安全边界
+□ 影响 1.0 发布判断
+
+处理动作：
+□ 不修改
+□ 更新附录
+□ 更新正文
+□ 增加限制条件
+□ 移到历史说明
+□ 标注需要人工复核
+
+修改文件：
+docs/observability-tracing-agent-workflows.md
+examples/trace-observability/index.md
+examples/trace-observability/otel-minimal-instrumentation.md
+examples/trace-observability/otel_agent_trace_minimal.py
+docs/appendix-resources.md
+
+证据摘录：
+OpenTelemetry 文档把 trace、span、context propagation、exporter 和 Collector 作为可观测性链路中的核心概念；GenAI semantic conventions 正在演进，正文需提醒读者以当前官方字段为准。
+
+备注：
+正文采用“官方字段方向 + 自定义 agent.* 字段”的双层写法，避免把仍在演进的 GenAI 字段写成永远不变的业务事实。
+```
+
 ## 更新正文的判断标准
 
 | 变化类型 | 是否更新正文 | 处理方式 |

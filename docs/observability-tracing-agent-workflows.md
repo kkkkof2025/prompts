@@ -332,6 +332,22 @@ trace-spans.jsonl
 
 这也是 Read Model / Projection 思想在 trace 场景里的落地：原始 span 是运行证据，SQLite view 是给人和 agent 查询的视图。
 
+### OpenTelemetry 版的意义
+
+当任务还停留在个人脚本阶段，JSONL 和 SQLite 足够清楚；当任务开始跨 agent、跨 CLI、跨机器、跨服务时，就应该考虑 OpenTelemetry。
+
+可以把三层关系写成：
+
+```text
+本地样例：trace-spans.jsonl -> replay script -> JSON 看板
+查询样例：trace-spans.jsonl -> SQLite -> dashboard views
+平台接入：OpenTelemetry SDK -> Collector -> trace backend
+```
+
+这三层不是互相替代。JSONL 适合教学、离线回放和轻量审计；SQLite 适合本地查询和物化视图；OpenTelemetry 适合跨进程传播、接入 Collector、对接现有可观测性平台。
+
+配套的最小实践页在 [OpenTelemetry 最小接入样例](../examples/trace-observability/otel-minimal-instrumentation.md)。那一页演示怎样用 Python SDK 产生 span，怎样把 `task_id`、`actor`、模型名、token 和证据链接映射到 trace 字段，也说明哪些内容不能直接写进 trace。
+
 ## 一个排障清单
 
 当多 agent 任务失败时，不要先问“是不是模型不行”。先按 trace 追：

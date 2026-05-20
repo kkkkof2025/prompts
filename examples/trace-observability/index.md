@@ -15,6 +15,8 @@ Agent trace = 一次运行怎样发生
 - `trace-dashboard-schema.sql`：把 span 投影到 SQLite 看板时可参考的表和视图结构。
 - `load-agent-traces-sqlite.py`：把 JSONL 导入 SQLite，并读取看板视图输出 JSON。
 - `replay-agent-traces.ps1`：把 trace span 回放成 JSON 看板快照。
+- `otel-minimal-instrumentation.md`：把同样的思路接到 OpenTelemetry 的最小实践页。
+- `otel_agent_trace_minimal.py`：OpenTelemetry Python 最小 span 示例。
 
 ## 回放
 
@@ -74,6 +76,7 @@ ORDER BY started_at ASC;
 - 一个被安全复核拦截的高风险 trace。
 - 如何从 span 聚合出 trace summary、actor cost、failure queue 和 longest spans。
 - 如何把相同的数据落到 SQLite，再把 SQLite 视图当成可查询看板。
+- 如何继续过渡到 [OpenTelemetry 最小接入样例](otel-minimal-instrumentation.md)。
 - 为什么 trace 适合排障，不能替代 Event Sourcing 里的业务事实事件。
 
 ## 看板字段
@@ -91,3 +94,7 @@ ORDER BY started_at ASC;
 `trace-dashboard-schema.sql` 给出的是最小 schema。真正落地时可以让 loader 把 JSONL 写入 `agent_trace_spans`，再用 `trace_summary`、`actor_cost`、`failure_queue`、`longest_spans` 和 `projection_checkpoints` 给人类看板、调度器和复核 agent 查询。
 
 这个样例先用 PowerShell 回放成 JSON，是为了不要求读者本地安装 SQLite 或额外依赖。等流程稳定后，再把同样的数据写入 SQLite、DuckDB、PostgreSQL 或可观测性平台。
+
+## 下一步：接入 OpenTelemetry
+
+如果你已经理解 JSONL 和 SQLite 的关系，可以继续看 [OpenTelemetry 最小接入样例](otel-minimal-instrumentation.md)。那一页会把 `task_id`、`workflow`、`actor`、模型调用、token、人工审批和证据链接映射到 OpenTelemetry span，并给出一个可运行的 Python 示例。

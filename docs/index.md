@@ -20,6 +20,7 @@
 [持久化执行](durable-execution-agent-workflows.md)
 [可观测性](observability-tracing-agent-workflows.md)
 [Trace 样例](../examples/trace-observability/index.md)
+[OTel 样例](../examples/trace-observability/otel-minimal-instrumentation.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -191,6 +192,12 @@
 **[Agent Trace 可观测性样例](../examples/trace-observability/index.md)**
 
 把 agent span、trace summary、actor cost 和 failure queue 转成可查看的运行看板。
+</div>
+
+<div class="resource-card" markdown="1">
+**[OpenTelemetry 最小接入样例](../examples/trace-observability/otel-minimal-instrumentation.md)**
+
+把本地 trace 思路接到 OpenTelemetry SDK、Collector 和跨 agent 排障流程。
 </div>
 
 <div class="resource-card" markdown="1">

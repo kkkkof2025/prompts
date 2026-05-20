@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing 补充资料 2026-05-20
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing / OpenTelemetry Python exporter 补充资料 2026-05-20
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -62,6 +62,7 @@
 - [DBOS Docs](https://docs.dbos.dev/)：用于核验 DBOS 的 durable workflow / durable execution 工具路线。
 - [OpenTelemetry Docs](https://opentelemetry.io/docs/)：用于核验 traces、metrics、logs 等可观测性信号和工具链总入口。
 - [OpenTelemetry Traces](https://opentelemetry.io/docs/concepts/signals/traces/)：用于核验 trace、span 和分布式追踪的基本概念。
+- [OpenTelemetry Python Exporters](https://opentelemetry.io/docs/languages/python/exporters/)：用于核验 Python 控制台 exporter、OTLP exporter 和 Collector 调试路径。
 - [OpenTelemetry Semantic Conventions for Generative AI Systems](https://opentelemetry.io/docs/specs/semconv/gen-ai/)：用于核验生成式 AI、模型调用和 agent 相关遥测字段的官方语义约定方向；具体字段和稳定等级以后续官方文档为准。
 - [OpenAI Agents SDK Tracing](https://openai.github.io/openai-agents-python/tracing/)：用于核验 OpenAI Agents SDK 中 tracing 作为 agent workflow 观察能力的官方说明。
 - [W3C Trace Context](https://www.w3.org/TR/trace-context/)：用于核验跨系统 trace 上下文传播标准。

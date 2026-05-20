@@ -138,6 +138,7 @@
 - 新增 `docs/durable-execution-agent-workflows.md` Durable Execution 持久化执行专题，解释 agent 长任务怎样跨崩溃、重启、人工等待和外部回调继续执行。
 - 新增 `docs/observability-tracing-agent-workflows.md` Observability / Tracing 智能体可观测性专题，解释 trace、span、logs、metrics、成本、证据链接和人工审批怎样帮助 agent 任务排障和复盘。
 - 新增 `examples/trace-observability/` Agent Trace 可观测性样例，提供 `trace-spans.jsonl`、`trace-dashboard-schema.sql`、`scripts/replay-agent-traces.ps1` 和 `scripts/load-agent-traces-sqlite.py`，把 span 回放成 JSON 看板，也可以导入 SQLite 后从 `trace_summary`、`actor_cost`、`failure_queue` 和 `longest_spans` 视图读回看板。
+- 新增 `examples/trace-observability/otel-minimal-instrumentation.md` 和 `examples/trace-observability/otel_agent_trace_minimal.py`，把 Agent Trace 样例继续延伸到 OpenTelemetry Python SDK、Console exporter、OTLP exporter 和 Collector 调试路径。
 - 更新 `examples/event-log/index.md`，把任务事件日志样例和 Agent Trace 可观测性样例互相链接，帮助读者区分“业务事实事件”和“运行追踪 span”。
 - 扩充 `docs/openclaw-multi-agent-linkage.md`、`docs/blackboard-architecture-multi-agent.md` 和 `docs/openclaw-superbrain-architecture.md`，补充事件流回放、黑板当前状态与事件历史的分工，以及 `task_created`、`evidence_added`、`approved`、`published`、`rolled_back` 等事件类型。
 - 扩充 `docs/openclaw-multi-agent-linkage.md`、`docs/openclaw-superbrain-architecture.md`、`docs/chapters/10-openclaw.md` 和 `docs/chapters/12-frontier-landscape.md`，把 Observability / Tracing 接入 OpenClaw、多 agent、CLI、超级大脑和前沿趋势说明。
@@ -150,12 +151,12 @@
 - 2026-05-19 新增 `docs/transactional-outbox-idempotency.md` 后，把多 agent 事件同步的“可靠发放 + 幂等消费”也纳入本书前沿专题；参考来源增加 AWS Prescriptive Guidance Transactional Outbox 和 Microsoft Learn Transactional Outbox。
 - 2026-05-19 新增 `docs/saga-process-manager.md` 后，把多 agent 长流程的“补偿事务 + 流程编排”也纳入本书前沿专题；参考来源增加 Microsoft Learn Saga pattern、Cloud-native data patterns 和 microservices.io Saga。
 - 2026-05-20 新增 `docs/durable-execution-agent-workflows.md` 后，把 agent 长任务的“持久化执行 + workflow history + durable timer + signal”纳入本书前沿专题；参考来源增加 Temporal Docs、Microsoft Learn Durable Functions、Restate Docs 和 DBOS Docs。
-- 2026-05-20 新增 `docs/observability-tracing-agent-workflows.md` 后，把 agent 任务的“可观测性 + trace + span + logs + metrics + 成本 + 证据链”纳入本书前沿专题；参考来源增加 OpenTelemetry Docs、OpenTelemetry GenAI semantic conventions、OpenAI Agents SDK Tracing 和 W3C Trace Context。
+- 2026-05-20 新增 `docs/observability-tracing-agent-workflows.md` 后，把 agent 任务的“可观测性 + trace + span + logs + metrics + 成本 + 证据链”纳入本书前沿专题；参考来源增加 OpenTelemetry Docs、OpenTelemetry Python Exporters、OpenTelemetry GenAI semantic conventions、OpenAI Agents SDK Tracing 和 W3C Trace Context。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
-- 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`./scripts/replay-task-events.ps1 -InputPath examples/event-log/task-events.jsonl`、`./scripts/replay-agent-traces.ps1 -InputPath examples/trace-observability/trace-spans.jsonl`、`python scripts/load-agent-traces-sqlite.py --input examples/trace-observability/trace-spans.jsonl --database tmp/trace-dashboard.sqlite --reset`、`python -m mkdocs build --strict --config-file mkdocs.yml`。
-- 最新检查结果：本地链接、占位标记、术语一致性、Markdown lint、事件回放脚本控制台输出、Agent trace 回放脚本控制台输出和 MkDocs strict build 均通过（2026-05-20 复查，110 个 Markdown 文件）。MkDocs strict build 仅输出 Material for MkDocs 关于未来 MkDocs 2.0 的官方提示，不影响本次构建；本轮未启动本地预览。
-- 当前 Markdown 规模约 28875 行、61136 个词、526833 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节导读、章节收尾、章节练习与验收映射表、案例索引表、主题索引、术语回链索引、学习进度清单、内容健康报告、图解增强、客户反馈连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库（含三条主线质量层级对照）、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw/Node.js/超级大脑架构、Read Model / Projection、Transactional Outbox、Saga、Durable Execution、Observability / Tracing、Agent Trace 可观测性样例、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
+- 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --strict --config-file mkdocs.yml`、`python -c "... compile(...) ..."`、`./scripts/replay-task-events.ps1 -InputPath examples/event-log/task-events.jsonl`、`./scripts/replay-agent-traces.ps1 -InputPath examples/trace-observability/trace-spans.jsonl`、`python scripts/load-agent-traces-sqlite.py --input examples/trace-observability/trace-spans.jsonl --database tmp/trace-dashboard.sqlite --reset`。
+- 最新检查结果：本地链接、占位标记、术语一致性、Markdown lint、Python 示例语法检查、事件回放脚本控制台输出、Agent trace 回放脚本控制台输出、SQLite trace 导入和 MkDocs strict build 均通过（2026-05-20 复查，111 个 Markdown 文件）。MkDocs strict build 仅输出 Material for MkDocs 关于未来 MkDocs 2.0 的官方提示，不影响本次构建；本轮未启动本地预览。
+- 当前 Markdown 规模约 29174 行、61992 个词、536409 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节导读、章节收尾、章节练习与验收映射表、案例索引表、主题索引、术语回链索引、学习进度清单、内容健康报告、图解增强、客户反馈连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库（含三条主线质量层级对照）、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw/Node.js/超级大脑架构、Read Model / Projection、Transactional Outbox、Saga、Durable Execution、Observability / Tracing、Agent Trace 可观测性样例、OpenTelemetry 最小接入样例、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
   - OpenAI Agents SDK 文档
@@ -227,7 +228,7 @@
 - Context Engineering 已完成基础专题，下一轮可继续补多 agent、代码库、教学资料库和个人知识库四类上下文包样例，并把上下文包写入 OpenClaw 多 agent 联动教程。
 - Blackboard Architecture 已完成基础专题，并补充 Markdown 黑板、飞书多维表格黑板、GitHub Issue 黑板和 SQLite 黑板四类原型模板；下一轮可继续补真实运行日志、回放脚本和团队试点样例。
 - Event Sourcing 已完成基础专题，并补充任务事件 schema、事件回放伪代码、快照模板和失败任务复盘样例；下一轮可继续补真实事件日志和回放脚本。
-- CQRS 与 Read Model / Projection、Transactional Outbox 与幂等消费、Saga / Process Manager、Durable Execution、Observability / Tracing 已完成基础专题，下一轮可继续补复杂统计读模型、真实任务日志、跨页面物化视图、relay worker、消费端去重表、多步骤补偿、workflow history、durable timer 和 trace 排障样例。
+- CQRS 与 Read Model / Projection、Transactional Outbox 与幂等消费、Saga / Process Manager、Durable Execution、Observability / Tracing 已完成基础专题，下一轮可继续补复杂统计读模型、真实任务日志、跨页面物化视图、relay worker、消费端去重表、多步骤补偿、workflow history、durable timer、trace 采样、脱敏和 Collector 部署样例。
 - 按季度更新 `docs/appendix-resources.md` 中的模型、协议和工具状态；执行时先使用 `docs/frontier-review-playbook.md` 确认复核层级、范围和修改顺序，再用 `docs/frontier-review-log.md` 记录证据、影响范围和处理动作。
 - 继续补充 `docs/technology-evolution-cases.md`，尤其是从真实工具迁移、失败复盘、协议演进和企业落地中抽出的长案例；不要因为案例长就删掉关键过程。
 - 教学版本材料包、课堂练习工作纸、教学示范作业集、试读与试跑反馈包和章节练习与验收映射表已经有初稿；下一步应通过真实读书会或团队培训验证练习难度，并用匿名化真实课堂作业替换或扩展示范样例。

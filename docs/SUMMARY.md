@@ -94,3 +94,4 @@
 - [实践模板：Agent 安全清单](../examples/agent-workflow-checklist.md)
 - [任务事件日志样例](../examples/event-log/index.md)
 - [Agent Trace 可观测性样例](../examples/trace-observability/index.md)
+- [OpenTelemetry 最小接入样例](../examples/trace-observability/otel-minimal-instrumentation.md)
