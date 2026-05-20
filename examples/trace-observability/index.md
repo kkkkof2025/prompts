@@ -22,6 +22,8 @@ Agent trace = 一次运行怎样发生
 - `trace-backend-selection.md`：Trace backend 选型与查询策略实践页。
 - `trace-context-propagation.md`：跨 agent 传播 trace context 的实践页。
 - `trace_context_bridge.py`：无外部依赖的 `traceparent` 传播演示脚本。
+- `trace-context-multilang.md`：Python + Node.js 多语言 trace context 传播实践页。
+- `trace_context_bridge_node.js`：无外部依赖的 Node.js `traceparent` 传播演示脚本。
 
 ## 回放
 
@@ -85,6 +87,7 @@ ORDER BY started_at ASC;
 - 如何继续过渡到 [OpenTelemetry 生产化加固样例](otel-production-hardening.md)。
 - 如何用 [Trace Backend 选型与查询策略](trace-backend-selection.md) 判断 JSONL、SQLite、Jaeger、Tempo 或托管平台的边界。
 - 如何用 [跨 Agent Trace Context 传播样例](trace-context-propagation.md) 避免多 agent 运行链路断裂。
+- 如何用 [多语言 Trace Context 传播样例](trace-context-multilang.md) 验证 Python agent 与 Node.js adapter 仍在同一条 trace 上。
 - 为什么 trace 适合排障，不能替代 Event Sourcing 里的业务事实事件。
 
 ## 看板字段
@@ -112,3 +115,5 @@ ORDER BY started_at ASC;
 如果你已经能把 span 发进 Collector，但还不知道后端接什么，再继续看 [Trace Backend 选型与查询策略](trace-backend-selection.md)，重点比较 JSONL/SQLite、Jaeger、Grafana Tempo 和托管平台的取舍。
 
 如果你要让多个 agent 共享同一条运行链路，再继续看 [跨 Agent Trace Context 传播样例](trace-context-propagation.md)，重点理解 `traceparent`、任务元数据和 handoff carrier。
+
+如果你的 agent 已经跨 Python、Node.js 或 CLI adapter，再继续看 [多语言 Trace Context 传播样例](trace-context-multilang.md)，重点验证不同运行时之间的 `trace_id` 和父子 span 关系是否连续。

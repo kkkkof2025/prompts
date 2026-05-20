@@ -99,3 +99,4 @@
 - [OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)
 - [Trace Backend 选型与查询策略](../examples/trace-observability/trace-backend-selection.md)
 - [跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md)
+- [多语言 Trace Context 传播样例](../examples/trace-observability/trace-context-multilang.md)

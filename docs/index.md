@@ -24,6 +24,7 @@
 [OTel 加固](../examples/trace-observability/otel-production-hardening.md)
 [Backend 选型](../examples/trace-observability/trace-backend-selection.md)
 [Trace Context](../examples/trace-observability/trace-context-propagation.md)
+[多语言 Trace](../examples/trace-observability/trace-context-multilang.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -219,6 +220,12 @@
 **[跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md)**
 
 用 `traceparent` 解释多 agent handoff 怎样保留同一条 trace。
+</div>
+
+<div class="resource-card" markdown="1">
+**[多语言 Trace Context 传播样例](../examples/trace-observability/trace-context-multilang.md)**
+
+用 Python 和 Node.js 验证跨运行时 handoff 仍然属于同一条 trace。
 </div>
 
 <div class="resource-card" markdown="1">

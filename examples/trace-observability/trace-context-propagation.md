@@ -123,6 +123,8 @@ python examples/trace-observability/trace_context_bridge.py --output tmp/trace-c
 
 学会这个结构后，再回到 SDK 的 inject / extract，会更容易理解。
 
+如果你要把 Python agent、Node.js adapter 和 CLI 工具串在同一条链路里，继续看 [多语言 Trace Context 传播样例](trace-context-multilang.md)。那一页会用 PowerShell 把 Python 输出的 `outgoing_carrier.traceparent` 传给 Node.js，并验证父子 span 关系。
+
 ## 常见失败
 
 | 失败方式 | 表现 | 修复 |

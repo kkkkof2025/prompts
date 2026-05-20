@@ -176,6 +176,8 @@ human approval = 责任边界
 
 下一步可以继续看 [OpenTelemetry 生产化加固样例](otel-production-hardening.md)。它会补采样、脱敏、Collector 管道和事故复盘模板，避免最小接入样例被误用成生产方案。
 
+如果你的链路已经跨 Python、Node.js 或 CLI adapter，请继续看 [多语言 Trace Context 传播样例](trace-context-multilang.md)，先验证不同运行时之间的父子 span 关系。
+
 ## 事实、判断和推演边界
 
 事实和来源：

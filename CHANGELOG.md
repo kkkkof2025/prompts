@@ -30,6 +30,7 @@
 - 增加 `examples/trace-observability/otel-production-hardening.md` 和 `otel-collector-agent-traces.yaml`，补充 agent trace 的采样、脱敏、Collector 管道、tail sampling、redaction 和事故复盘模板。
 - 增加 `examples/trace-observability/trace-backend-selection.md`，补充 JSONL/SQLite、Jaeger、Grafana Tempo 和托管平台之间的 trace backend 选型与查询策略。
 - 增加 `examples/trace-observability/trace-context-propagation.md` 和 `trace_context_bridge.py`，演示跨 agent handoff 时如何传播 W3C `traceparent`。
+- 增加 `examples/trace-observability/trace-context-multilang.md` 和 `trace_context_bridge_node.js`，演示 Python agent 到 Node.js / CLI adapter 的多语言 trace context 传播和父子 span 校验。
 - 增加 `docs/cases/agent-trace-incident-retrospective.md` Agent Trace 生产事故复盘长案例，把 trace 断裂、安全复核失败、事件日志、补偿动作和人工审批串成复盘流程。
 - 将 GitHub Pages 在线阅读版统一为 MkDocs Material，增加 `mkdocs.yml`、阅读样式、依赖文件和 `mkdocs-pages.yml` 发布 workflow。
 - 将章节页补齐上一章/下一章导航，并把 `agents/README.md` 改为 `agents/index.md`，避免与站点首页冲突。

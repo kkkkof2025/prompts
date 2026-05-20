@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing / OpenTelemetry Python exporter / Collector 采样与脱敏 / Trace Context 传播 / Trace Backend 选型补充资料 2026-05-20
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing / OpenTelemetry Python exporter / JavaScript propagation / Collector 采样与脱敏 / Trace Context 传播 / Trace Backend 选型补充资料 2026-05-20
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -68,6 +68,7 @@
 - [OpenTelemetry Collector Exporters](https://opentelemetry.io/docs/collector/components/exporter/)：用于核验 exporter 将遥测数据发送到后端或其他系统的定位。
 - [OpenTelemetry Python Exporters](https://opentelemetry.io/docs/languages/python/exporters/)：用于核验 Python 控制台 exporter、OTLP exporter 和 Collector 调试路径。
 - [OpenTelemetry Python Propagation](https://opentelemetry.io/docs/languages/python/propagation/)：用于核验 Python SDK 中上下文传播的入口。
+- [OpenTelemetry JavaScript Propagation](https://opentelemetry.io/docs/languages/js/propagation/)：用于核验 JavaScript SDK 中自动传播和自定义协议手动 inject / extract 的入口。
 - [OpenTelemetry Collector configuration best practices](https://opentelemetry.io/docs/security/config-best-practices/)：用于核验 Collector 配置、安全、组件最小化、认证、加密和资源保护建议。
 - [OpenTelemetry Handling sensitive data](https://opentelemetry.io/docs/security/handling-sensitive-data/)：用于核验敏感数据处理责任和数据最小化原则。
 - [OpenTelemetry Semantic Conventions for Generative AI Systems](https://opentelemetry.io/docs/specs/semconv/gen-ai/)：用于核验生成式 AI、模型调用和 agent 相关遥测字段的官方语义约定方向；具体字段和稳定等级以后续官方文档为准。

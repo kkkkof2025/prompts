@@ -199,6 +199,8 @@ blocked: safety_review_failed
 
 如果事故里出现“trace 已经采到了，但后端查不出任务、agent、成本或风险等级”的问题，继续看 [Trace Backend 选型与查询策略](trace-backend-selection.md)。那一页会把后端选择和查询字段一起处理，而不是只比较产品名称。
 
+如果事故里涉及 Python agent、Node.js adapter、Codex CLI 或 Claude CLI 之间的交接，再继续看 [多语言 Trace Context 传播样例](trace-context-multilang.md)，重点检查 carrier 是否被写入任务元数据，而不是只停留在某个运行时内存里。
+
 ## 事实、判断和推演边界
 
 事实和来源：

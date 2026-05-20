@@ -106,6 +106,7 @@
 - [OpenTelemetry 生产化加固样例](examples/trace-observability/otel-production-hardening.md)
 - [Trace Backend 选型与查询策略](examples/trace-observability/trace-backend-selection.md)
 - [跨 Agent Trace Context 传播样例](examples/trace-observability/trace-context-propagation.md)
+- [多语言 Trace Context 传播样例](examples/trace-observability/trace-context-multilang.md)
 - [章节复盘题与小测](docs/chapter-review-questions.md)
 - [章节练习与验收映射表](docs/chapter-validation-map.md)
 - [AI 学习与使用速查讲义](docs/quick-reference.md)
@@ -162,4 +163,4 @@
 
 ## 当前状态
 
-初版书稿已扩展到 0.7 草案。案例已按角色拆分，教学版本材料包、团队 AI 落地完整路线图、AI 安全与模型选型工作坊、行业化工作坊案例集、30 天团队试点跟踪表、课堂练习工作纸、教学示范作业集、试读与试跑反馈包、章节练习与验收映射表、学习进度清单、案例索引表、主题索引、术语回链索引、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、Agent Trace 生产事故复盘长案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库（含客户反馈、教学资料库、代码库三组质量层级对照）、Style Engineering 与 AI Native 创作、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model 与 Projection、Transactional Outbox 与幂等消费、Saga：补偿事务与流程编排、Durable Execution：持久化执行与 agent 长任务、Observability / Tracing：智能体可观测性、Agent Trace 可观测性样例、OpenTelemetry 最小接入样例、OpenTelemetry 生产化加固样例、Trace Backend 选型与查询策略、跨 Agent Trace Context 传播样例、AI 发展历史与社区生态、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw/Node.js/超级大脑架构、前沿资料季度复核执行手册、前沿资料季度复核记录表及示例、常见误区纠偏材料、Prompt 调试指南、任务选择指南、安全案例更新指南、安全事故复盘案例集、中外模型特色概览、模型选型实战案例集、前沿与过时技术案例库、自动化维护与扩写方案、团队 AI 落地手册、团队落地案例集和 1.0 发布前总检查清单已补齐。在线阅读版已统一为 MkDocs Material，已启用全书左侧导航树、站内搜索、章节导读、章节收尾、章节上一章/下一章导航、代码复制和页面编辑入口；Markdown lint、术语一致性、MkDocs Pages、外部链接定期检查和内容健康报告已纳入自动化。
+初版书稿已扩展到 0.7 草案。案例已按角色拆分，教学版本材料包、团队 AI 落地完整路线图、AI 安全与模型选型工作坊、行业化工作坊案例集、30 天团队试点跟踪表、课堂练习工作纸、教学示范作业集、试读与试跑反馈包、章节练习与验收映射表、学习进度清单、案例索引表、主题索引、术语回链索引、RAG/skill/agent/memory 连续案例、教学资料库连续案例、代码库问答连续案例、Agent Trace 生产事故复盘长案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例课堂投影短版、连续案例团队试点版、连续案例样例库（含客户反馈、教学资料库、代码库三组质量层级对照）、Style Engineering 与 AI Native 创作、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model 与 Projection、Transactional Outbox 与幂等消费、Saga：补偿事务与流程编排、Durable Execution：持久化执行与 agent 长任务、Observability / Tracing：智能体可观测性、Agent Trace 可观测性样例、OpenTelemetry 最小接入样例、OpenTelemetry 生产化加固样例、Trace Backend 选型与查询策略、跨 Agent Trace Context 传播样例、多语言 Trace Context 传播样例、AI 发展历史与社区生态、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw/Node.js/超级大脑架构、前沿资料季度复核执行手册、前沿资料季度复核记录表及示例、常见误区纠偏材料、Prompt 调试指南、任务选择指南、安全案例更新指南、安全事故复盘案例集、中外模型特色概览、模型选型实战案例集、前沿与过时技术案例库、自动化维护与扩写方案、团队 AI 落地手册、团队落地案例集和 1.0 发布前总检查清单已补齐。在线阅读版已统一为 MkDocs Material，已启用全书左侧导航树、站内搜索、章节导读、章节收尾、章节上一章/下一章导航、代码复制和页面编辑入口；Markdown lint、术语一致性、MkDocs Pages、外部链接定期检查和内容健康报告已纳入自动化。

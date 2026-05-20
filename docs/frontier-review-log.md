@@ -162,7 +162,7 @@ docs/model-landscape-china-global.md
 ## 2026-05-20 OpenTelemetry 复核记录
 
 ```text
-资料名称：OpenTelemetry Traces / Context propagation / Sampling / Collector Processors / Python Exporters / GenAI semantic conventions
+资料名称：OpenTelemetry Traces / Context propagation / Sampling / Collector Processors / Python Exporters / JavaScript Propagation / GenAI semantic conventions
 链接：
 https://opentelemetry.io/docs/concepts/signals/traces/
 https://opentelemetry.io/docs/concepts/context-propagation/
@@ -170,6 +170,7 @@ https://opentelemetry.io/docs/concepts/sampling/
 https://opentelemetry.io/docs/collector/components/processor/
 https://opentelemetry.io/docs/languages/python/exporters/
 https://opentelemetry.io/docs/languages/python/propagation/
+https://opentelemetry.io/docs/languages/js/propagation/
 https://opentelemetry.io/docs/security/config-best-practices/
 https://opentelemetry.io/docs/security/handling-sensitive-data/
 https://opentelemetry.io/docs/specs/semconv/gen-ai/
@@ -186,11 +187,12 @@ examples/trace-observability/index.md
 examples/trace-observability/otel-minimal-instrumentation.md
 examples/trace-observability/otel-production-hardening.md
 examples/trace-observability/trace-context-propagation.md
+examples/trace-observability/trace-context-multilang.md
 docs/cases/agent-trace-incident-retrospective.md
 docs/appendix-resources.md
 
 发现变化：
-本次不是发现破坏性变化，而是补充核验 OpenTelemetry traces、context propagation、sampling、Collector processors、Python exporter、Python propagation、OTLP/Collector 调试路径、Collector 安全配置、敏感数据处理、W3C Trace Context 和 GenAI semantic conventions 的当前官方入口。
+本次不是发现破坏性变化，而是补充核验 OpenTelemetry traces、context propagation、sampling、Collector processors、Python exporter、Python propagation、JavaScript propagation、OTLP/Collector 调试路径、Collector 安全配置、敏感数据处理、W3C Trace Context 和 GenAI semantic conventions 的当前官方入口。
 
 影响判断：
 □ 不影响正文
@@ -216,12 +218,14 @@ examples/trace-observability/otel-production-hardening.md
 examples/trace-observability/otel-collector-agent-traces.yaml
 examples/trace-observability/otel_agent_trace_minimal.py
 examples/trace-observability/trace-context-propagation.md
+examples/trace-observability/trace-context-multilang.md
 examples/trace-observability/trace_context_bridge.py
+examples/trace-observability/trace_context_bridge_node.js
 docs/cases/agent-trace-incident-retrospective.md
 docs/appendix-resources.md
 
 证据摘录：
-OpenTelemetry 文档把 trace、span、context propagation、exporter、sampling、processors 和 Collector 安全配置作为可观测性链路中的核心概念；W3C Trace Context 定义跨系统传播格式；GenAI semantic conventions 正在演进，正文需提醒读者以当前官方字段为准。
+OpenTelemetry 文档把 trace、span、context propagation、exporter、sampling、processors 和 Collector 安全配置作为可观测性链路中的核心概念；Python 和 JavaScript propagation 文档分别给出对应语言的传播入口；W3C Trace Context 定义跨系统传播格式；GenAI semantic conventions 正在演进，正文需提醒读者以当前官方字段为准。
 
 备注：
 正文采用“官方字段方向 + 自定义 agent.* 字段”的双层写法，并把采样、脱敏、Collector 管道和事故复盘写成可调整模板，避免把仍在演进的 GenAI 字段和 Collector 组件配置写成永远不变的业务事实。
