@@ -1,0 +1,112 @@
+# OpenTelemetry Collector Contrib template for agent trace hardening.
+# Use this as a learning template. Review component versions before production.
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 127.0.0.1:4317
+      http:
+        endpoint: 127.0.0.1:4318
+
+processors:
+  memory_limiter:
+    check_interval: 1s
+    limit_mib: 512
+    spike_limit_mib: 128
+
+  redaction/agent_safe:
+    allow_all_keys: false
+    allowed_keys:
+      - agent.actor
+      - agent.checks
+      - agent.context.excluded_sources
+      - agent.context.included_sources
+      - agent.context.permission_scope
+      - agent.evidence.refs
+      - agent.event_json
+      - agent.review.decision
+      - agent.review.scope
+      - agent.risk_level
+      - agent.step
+      - agent.task.id
+      - agent.warning
+      - agent.workflow.name
+      - gen_ai.operation.name
+      - gen_ai.provider.name
+      - gen_ai.request.model
+      - gen_ai.response.finish_reasons
+      - gen_ai.response.model
+      - gen_ai.usage.input_tokens
+      - gen_ai.usage.output_tokens
+    blocked_key_patterns:
+      - "(?i).*api[_-]?key.*"
+      - "(?i).*authorization.*"
+      - "(?i).*cookie.*"
+      - "(?i).*password.*"
+      - "(?i).*secret.*"
+      - "(?i).*token.*"
+    blocked_values:
+      - "(?i)bearer\\s+[a-z0-9._~+/-]+=*"
+      - "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+      - "(?:\\+?\\d[\\d\\s().-]{7,}\\d)"
+      - "sk-[A-Za-z0-9_-]{20,}"
+    summary: info
+
+  tail_sampling/agent:
+    decision_wait: 10s
+    num_traces: 50000
+    expected_new_traces_per_sec: 100
+    policies:
+      - name: keep-errors
+        type: status_code
+        status_code:
+          status_codes: [ERROR]
+      - name: keep-risky-agent-tasks
+        type: string_attribute
+        string_attribute:
+          key: agent.risk_level
+          values: [high, critical]
+      - name: keep-slow-traces
+        type: latency
+        latency:
+          threshold_ms: 30000
+      - name: sample-normal-traces
+        type: probabilistic
+        probabilistic:
+          sampling_percentage: 10
+
+  batch:
+    timeout: 5s
+    send_batch_size: 512
+    send_batch_max_size: 1024
+
+exporters:
+  debug:
+    verbosity: normal
+  # Replace debug with your backend exporter after verifying auth, TLS,
+  # retries, queues, and data retention in your environment.
+  # otlphttp/trace_backend:
+  #   endpoint: ${env:TRACE_BACKEND_OTLP_HTTP}
+  #   headers:
+  #     Authorization: "Bearer ${env:TRACE_BACKEND_TOKEN}"
+  #   compression: gzip
+  #   sending_queue:
+  #     enabled: true
+  #     queue_size: 800
+  #   retry_on_failure:
+  #     enabled: true
+  #     initial_interval: 1s
+  #     max_interval: 30s
+  #     max_elapsed_time: 300s
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors:
+        - memory_limiter
+        - redaction/agent_safe
+        - tail_sampling/agent
+        - batch
+      exporters: [debug]

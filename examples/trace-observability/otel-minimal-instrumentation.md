@@ -174,6 +174,8 @@ artifact store = 受控证据
 human approval = 责任边界
 ```
 
+下一步可以继续看 [OpenTelemetry 生产化加固样例](otel-production-hardening.md)。它会补采样、脱敏、Collector 管道和事故复盘模板，避免最小接入样例被误用成生产方案。
+
 ## 事实、判断和推演边界
 
 事实和来源：

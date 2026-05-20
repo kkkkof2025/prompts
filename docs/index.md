@@ -21,6 +21,7 @@
 [可观测性](observability-tracing-agent-workflows.md)
 [Trace 样例](../examples/trace-observability/index.md)
 [OTel 样例](../examples/trace-observability/otel-minimal-instrumentation.md)
+[OTel 加固](../examples/trace-observability/otel-production-hardening.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -198,6 +199,12 @@
 **[OpenTelemetry 最小接入样例](../examples/trace-observability/otel-minimal-instrumentation.md)**
 
 把本地 trace 思路接到 OpenTelemetry SDK、Collector 和跨 agent 排障流程。
+</div>
+
+<div class="resource-card" markdown="1">
+**[OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)**
+
+把 agent trace 的采样、脱敏、Collector 管道和事故复盘整理成可落地模板。
 </div>
 
 <div class="resource-card" markdown="1">

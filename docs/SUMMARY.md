@@ -95,3 +95,4 @@
 - [任务事件日志样例](../examples/event-log/index.md)
 - [Agent Trace 可观测性样例](../examples/trace-observability/index.md)
 - [OpenTelemetry 最小接入样例](../examples/trace-observability/otel-minimal-instrumentation.md)
+- [OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)

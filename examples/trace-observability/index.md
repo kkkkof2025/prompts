@@ -17,6 +17,8 @@ Agent trace = 一次运行怎样发生
 - `replay-agent-traces.ps1`：把 trace span 回放成 JSON 看板快照。
 - `otel-minimal-instrumentation.md`：把同样的思路接到 OpenTelemetry 的最小实践页。
 - `otel_agent_trace_minimal.py`：OpenTelemetry Python 最小 span 示例。
+- `otel-production-hardening.md`：OpenTelemetry 生产化加固页，覆盖采样、脱敏、Collector 管道和事故复盘。
+- `otel-collector-agent-traces.yaml`：用于 agent trace 的 Collector Contrib 配置模板。
 
 ## 回放
 
@@ -77,6 +79,7 @@ ORDER BY started_at ASC;
 - 如何从 span 聚合出 trace summary、actor cost、failure queue 和 longest spans。
 - 如何把相同的数据落到 SQLite，再把 SQLite 视图当成可查询看板。
 - 如何继续过渡到 [OpenTelemetry 最小接入样例](otel-minimal-instrumentation.md)。
+- 如何继续过渡到 [OpenTelemetry 生产化加固样例](otel-production-hardening.md)。
 - 为什么 trace 适合排障，不能替代 Event Sourcing 里的业务事实事件。
 
 ## 看板字段
@@ -98,3 +101,5 @@ ORDER BY started_at ASC;
 ## 下一步：接入 OpenTelemetry
 
 如果你已经理解 JSONL 和 SQLite 的关系，可以继续看 [OpenTelemetry 最小接入样例](otel-minimal-instrumentation.md)。那一页会把 `task_id`、`workflow`、`actor`、模型调用、token、人工审批和证据链接映射到 OpenTelemetry span，并给出一个可运行的 Python 示例。
+
+如果你准备把 trace 放进团队系统，再继续看 [OpenTelemetry 生产化加固样例](otel-production-hardening.md)，重点检查采样、脱敏、Collector 安全和事故复盘。

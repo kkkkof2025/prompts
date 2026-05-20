@@ -348,6 +348,8 @@ trace-spans.jsonl
 
 配套的最小实践页在 [OpenTelemetry 最小接入样例](../examples/trace-observability/otel-minimal-instrumentation.md)。那一页演示怎样用 Python SDK 产生 span，怎样把 `task_id`、`actor`、模型名、token 和证据链接映射到 trace 字段，也说明哪些内容不能直接写进 trace。
 
+如果要进入团队或生产场景，还要继续看 [OpenTelemetry 生产化加固样例](../examples/trace-observability/otel-production-hardening.md)。那里补充了采样、脱敏、Collector 管道顺序、redaction、tail sampling 和事故复盘模板。
+
 ## 一个排障清单
 
 当多 agent 任务失败时，不要先问“是不是模型不行”。先按 trace 追：
