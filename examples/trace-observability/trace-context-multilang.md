@@ -14,6 +14,7 @@ OpenClaw、Codex CLI、Claude CLI、飞书机器人、Telegram bot 和 GitHub Ac
 
 - `trace_context_bridge.py`：Python 版无依赖 `traceparent` 传播演示。
 - `trace_context_bridge_node.js`：Node.js 版无依赖 `traceparent` 传播演示。
+- `trace_runtime_log_bridge.py`：把 Python 和 Node.js 输出合并成 runtime log 的演示。
 - `trace-context-propagation.md`：解释 `traceparent` 字段、carrier 和常见失败。
 - `trace-backend-selection.md`：解释后端接入和查询策略。
 
@@ -71,6 +72,8 @@ True
 ```
 
 日志里保留的是 ID、运行时、actor、span、状态和 artifact 引用。不要把完整 prompt、模型输出、密钥、cookie、客户资料或私有笔记写进运行日志。
+
+如果你想直接生成这类合并后的运行日志，继续看 [多语言运行日志回放样例](trace-runtime-log-replay.md)。
 
 ## 在 OpenClaw 里的落点
 

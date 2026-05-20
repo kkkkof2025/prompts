@@ -27,6 +27,7 @@
 [Backend 选型](examples/trace-observability/trace-backend-selection.md)
 [Trace Context](examples/trace-observability/trace-context-propagation.md)
 [多语言 Trace](examples/trace-observability/trace-context-multilang.md)
+[运行日志回放](examples/trace-observability/trace-runtime-log-replay.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -134,6 +135,12 @@
 **[多语言 Trace Context 传播样例](examples/trace-observability/trace-context-multilang.md)**
 
 用 Python 和 Node.js 验证跨运行时 handoff 仍然属于同一条 trace。
+</div>
+
+<div class="route-card" markdown="1">
+**[多语言运行日志回放样例](examples/trace-observability/trace-runtime-log-replay.md)**
+
+把 Python 与 Node.js 的 span、handoff 和校验结果合并成一条可读运行日志，适合教学、排障和复盘截图。
 </div>
 
 <div class="route-card" markdown="1">

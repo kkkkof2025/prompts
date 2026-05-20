@@ -1,6 +1,6 @@
 # 附录 A：资源与引用
 
-最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing / OpenTelemetry Python exporter / JavaScript propagation / Collector 采样与脱敏 / Trace Context 传播 / Trace Backend 选型补充资料 2026-05-20
+最后核验：核心资料 2026-05-07；Context Engineering 补充资料 2026-05-18；Blackboard Architecture / Event Sourcing / CQRS / Read Model / Projection / Outbox / Saga 补充资料 2026-05-19；Durable Execution / Observability / Tracing / OpenTelemetry Logs / OpenTelemetry Python exporter / JavaScript propagation / Collector 采样与脱敏 / Trace Context 传播 / Trace Backend 选型 / Runtime Log 回放补充资料 2026-05-20
 
 本附录记录本书初版写作时核验过的关键资料。AI 领域变化很快，模型名称、接口、价格、许可证、可用地区、工具安全状况都可能变化。发布前和后续维护时，请优先复核官方文档、论文和标准组织资料。
 
@@ -62,6 +62,7 @@
 - [DBOS Docs](https://docs.dbos.dev/)：用于核验 DBOS 的 durable workflow / durable execution 工具路线。
 - [OpenTelemetry Docs](https://opentelemetry.io/docs/)：用于核验 traces、metrics、logs 等可观测性信号和工具链总入口。
 - [OpenTelemetry Traces](https://opentelemetry.io/docs/concepts/signals/traces/)：用于核验 trace、span 和分布式追踪的基本概念。
+- [OpenTelemetry Logs](https://opentelemetry.io/docs/concepts/signals/logs/)：用于核验 logs 作为可观测性信号的官方说明。
 - [OpenTelemetry Context propagation](https://opentelemetry.io/docs/concepts/context-propagation/)：用于核验上下文传播在跨服务追踪中的定位。
 - [OpenTelemetry Sampling](https://opentelemetry.io/docs/concepts/sampling/)：用于核验 head sampling、tail sampling 和采样位置。
 - [OpenTelemetry Collector Processors](https://opentelemetry.io/docs/collector/components/processor/)：用于核验 Collector processors 在 receivers 和 exporters 之间处理遥测数据的定位。
@@ -81,7 +82,7 @@
 - [Grafana Tempo Architecture](https://grafana.com/docs/tempo/latest/operations/architecture/)：用于核验 Tempo 组件、存储和查询链路。
 - [Grafana Tempo TraceQL](https://grafana.com/docs/tempo/latest/traceql/)：用于核验 Tempo 的 trace 查询语言方向。
 
-维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Saga、Process Manager、Compensation、Durable Execution、Observability、Tracing、OpenTelemetry、Trace Backend、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
+维护建议：涉及 OpenAI、Claude、Gemini、DeepSeek、Kimi 等具体产品能力时，不要只依赖书稿内容，应该重新打开官方文档核验。涉及 Style Engineering、Context Engineering、Blackboard Architecture、Event Sourcing、CQRS、Read Model、Projection、Transactional Outbox、Idempotent Consumer、Saga、Process Manager、Compensation、Durable Execution、Observability、Tracing、Runtime Log、OpenTelemetry、Trace Backend、Personality Engineering、Cognitive Interface Design 等概念时，要明确区分“已有产品能力”“研究来源”“社区用法”“历史架构”“软件架构模式”和“本书推演”。
 
 ## AI 历史与基础论文
 

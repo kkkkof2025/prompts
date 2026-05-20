@@ -100,3 +100,4 @@
 - [Trace Backend 选型与查询策略](../examples/trace-observability/trace-backend-selection.md)
 - [跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md)
 - [多语言 Trace Context 传播样例](../examples/trace-observability/trace-context-multilang.md)
+- [多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)

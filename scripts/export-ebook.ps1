@@ -55,6 +55,7 @@ $files = @(
     "examples/trace-observability/trace-backend-selection.md",
     "examples/trace-observability/trace-context-propagation.md",
     "examples/trace-observability/trace-context-multilang.md",
+    "examples/trace-observability/trace-runtime-log-replay.md",
     "docs/ai-history-community-ecosystem.md",
     "docs/seven-layer-ai-civilization.md",
     "docs/openclaw-multi-agent-linkage.md",

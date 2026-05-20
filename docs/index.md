@@ -25,6 +25,7 @@
 [Backend 选型](../examples/trace-observability/trace-backend-selection.md)
 [Trace Context](../examples/trace-observability/trace-context-propagation.md)
 [多语言 Trace](../examples/trace-observability/trace-context-multilang.md)
+[运行日志回放](../examples/trace-observability/trace-runtime-log-replay.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -226,6 +227,12 @@
 **[多语言 Trace Context 传播样例](../examples/trace-observability/trace-context-multilang.md)**
 
 用 Python 和 Node.js 验证跨运行时 handoff 仍然属于同一条 trace。
+</div>
+
+<div class="resource-card" markdown="1">
+**[多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)**
+
+把跨语言 handoff 生成一条人能读、能保存、能截图复盘的 runtime log。
 </div>
 
 <div class="resource-card" markdown="1">

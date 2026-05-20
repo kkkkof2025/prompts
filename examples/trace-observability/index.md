@@ -24,6 +24,8 @@ Agent trace = 一次运行怎样发生
 - `trace_context_bridge.py`：无外部依赖的 `traceparent` 传播演示脚本。
 - `trace-context-multilang.md`：Python + Node.js 多语言 trace context 传播实践页。
 - `trace_context_bridge_node.js`：无外部依赖的 Node.js `traceparent` 传播演示脚本。
+- `trace_runtime_log_bridge.py`：把 Python 和 Node.js bridge 输出合并成一条运行日志的演示脚本。
+- `trace-runtime-log-replay.md`：讲解怎样阅读和过滤 runtime log 的实践页。
 
 ## 回放
 
@@ -88,6 +90,7 @@ ORDER BY started_at ASC;
 - 如何用 [Trace Backend 选型与查询策略](trace-backend-selection.md) 判断 JSONL、SQLite、Jaeger、Tempo 或托管平台的边界。
 - 如何用 [跨 Agent Trace Context 传播样例](trace-context-propagation.md) 避免多 agent 运行链路断裂。
 - 如何用 [多语言 Trace Context 传播样例](trace-context-multilang.md) 验证 Python agent 与 Node.js adapter 仍在同一条 trace 上。
+- 如何用 [多语言运行日志回放样例](trace-runtime-log-replay.md) 把跨语言输出合并成一条更容易阅读的运行日志。
 - 为什么 trace 适合排障，不能替代 Event Sourcing 里的业务事实事件。
 
 ## 看板字段

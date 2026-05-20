@@ -154,6 +154,31 @@ Span 可以更细：
 
 这也是为什么只保存聊天记录不够。聊天记录能说明“说了什么”，trace 才能说明“系统做了什么”。
 
+## 运行日志层
+
+Trace 已经足够诊断，但课堂、试点和复盘时，读者往往还需要一层更容易扫读的文本化视图。这就是 runtime log。
+
+它介于 trace 和 event log 之间：
+
+- 比 trace 更像人能直接扫读的叙事。
+- 比 event log 更强调一次运行过程，而不是业务事实重建。
+- 比原始 stdout / stderr 更安全，因为它应该保留摘要、状态和 artifact 引用，而不是整段输出。
+
+一个 runtime log 适合包含这些字段：
+
+- `timestamp`
+- `runtime`
+- `actor`
+- `event_type`
+- `task_id`
+- `trace_id`
+- `span_id`
+- `parent_span_id`
+- `status`
+- `artifact_ref`
+
+如果你想看一个把 Python + Node.js bridge 合并成运行日志的例子，继续看 [多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)。
+
 ## OpenClaw 任务 Trace 示例
 
 假设 OpenClaw 执行“扩充七层 AI 文明架构并发布”的任务，一个可观测版本应该像这样：
@@ -204,6 +229,7 @@ Event Sourcing 和 Tracing 很容易混淆。
 ```text
 Event Log = 事实历史
 Trace = 运行路径
+Runtime log = 人类可读的运行投影
 Logs = 细节证据
 Metrics = 趋势和告警
 Read Model = 当前看板
@@ -352,6 +378,8 @@ trace-spans.jsonl
 
 如果你已经能发出 span，但还不知道 Collector 后面接 JSONL、SQLite、Jaeger、Grafana Tempo 还是托管平台，继续看 [Trace Backend 选型与查询策略](../examples/trace-observability/trace-backend-selection.md)。那一页把后端选择、查询字段、留存和隐私边界拆开讲。
 
+如果你已经能串起 trace，但还想要一层更容易截图、讲课和快速复盘的文本视图，继续看 [多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)。那一页会把 Python 和 Node.js bridge 的输出合并成一条 runtime log。
+
 如果你的问题是“多个 agent 各自执行后 trace 断了”，继续看 [跨 Agent Trace Context 传播样例](../examples/trace-observability/trace-context-propagation.md)、[多语言 Trace Context 传播样例](../examples/trace-observability/trace-context-multilang.md) 和 [Agent Trace 生产事故复盘长案例](cases/agent-trace-incident-retrospective.md)。前者讲 `traceparent` 怎样传，多语言样例讲 Python 到 Node.js / CLI adapter 怎样不断链，事故案例讲一次 trace 断裂如何拖慢复盘。
 
 ## 一个排障清单
@@ -378,6 +406,7 @@ trace-spans.jsonl
 事实和来源：
 
 - OpenTelemetry 是业界常用的可观测性框架，围绕 traces、metrics、logs 等信号提供规范和工具链。
+- OpenTelemetry Logs 文档说明 logs 也是可观测性信号之一，适合与 traces、metrics 一起使用，但本页的 runtime log 仍然是本书的工程化投影视图，不等同于完整日志平台。
 - W3C Trace Context 定义了跨系统传播 trace 上下文的标准方向。
 - OpenAI Agents SDK 文档提供 tracing 相关能力入口，用于观察 agent workflow。
 - OpenTelemetry 的 GenAI semantic conventions 正在为生成式 AI、模型调用和 agent 相关遥测字段提供统一命名方向，具体字段和稳定等级需要以当前官方文档为准。
@@ -387,11 +416,13 @@ trace-spans.jsonl
 - 多 agent 系统如果只做任务状态，不做 trace，很难排查成本、质量、权限和人工审批问题。
 - 对个人和小团队来说，先统一 `task_id`、`trace_id`、`span_id` 和证据链接，比一开始采购复杂平台更重要。
 - Trace 不是事实源，不能替代 Event Sourcing；它更适合排障、成本分析和质量追踪。
+- Runtime log 不是事实源，也不能替代 trace 或 event log；它更适合课堂、试跑和复盘时的人类阅读。
 
 推演：
 
 - 未来 agent 平台很可能把 prompt、上下文包、模型调用、工具调用、人工审批、记忆写入和安全拦截都纳入统一 trace。
 - 更强的“超级大脑”系统会把 trace 用作自我优化输入：统计哪些任务失败、哪些上下文包有效、哪些 agent 成本高、哪些 skill 需要重构。但这类自我优化必须经过权限和人工闸门，不能让系统无审查地修改自己的规则。
+- 运行日志会成为 trace 之外的一层“人类可读投影”，让不同角色都能快速确认一次运行的关键证据。
 
 ## 练习
 
@@ -415,6 +446,7 @@ trace_id 规则：
 ## 参考与复核说明
 
 - [OpenTelemetry Docs](https://opentelemetry.io/docs/)：用于核验 traces、metrics、logs 等可观测性信号和工具链总入口。
+- [OpenTelemetry Logs](https://opentelemetry.io/docs/concepts/signals/logs/)：用于核验 logs 作为可观测性信号的官方说明。
 - [OpenTelemetry Traces](https://opentelemetry.io/docs/concepts/signals/traces/)：用于核验 trace、span 和分布式追踪的基本概念。
 - [OpenTelemetry Semantic Conventions for Generative AI Systems](https://opentelemetry.io/docs/specs/semconv/gen-ai/)：用于核验生成式 AI 遥测字段的官方语义约定方向；字段稳定性以后续官方文档为准。
 - [OpenAI Agents SDK Tracing](https://openai.github.io/openai-agents-python/tracing/)：用于核验 OpenAI Agents SDK 中 tracing 作为 agent workflow 观察能力的官方说明。
