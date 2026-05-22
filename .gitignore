@@ -31,5 +31,7 @@ vendor/bundle/
 tmp/*
 !tmp/.gitkeep
 temp/
+workspace-artifacts/
+TODO.md
 *.tmp
 content-health-report.md

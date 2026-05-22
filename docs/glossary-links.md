@@ -21,6 +21,7 @@
 | Context Engineering | [Context Engineering](appendix-glossary.md#context-engineering) | [Context Engineering：上下文工程](context-engineering.md)、[第 6 章](chapters/06-tools-rag.md)、[第 9 章](chapters/09-memory.md) | [RAG、Skill、Agent 与 Memory 连续案例](cases/rag-skill-agent-memory.md)、[前沿资料季度复核执行手册](frontier-review-playbook.md) | 把上下文工程当成“把所有资料塞进去”，忽略选择、排序、压缩、隔离和来源追踪 |
 | CloudEvents | [CloudEvents](appendix-glossary.md#cloudevents) | [任务事件日志样例](../examples/event-log/index.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md) | [资源与引用](appendix-resources.md) | 把样例事件格式误以为完整标准，或忽略元数据和业务载荷分离 |
 | Content Health Governance | [Content Health Governance](appendix-glossary.md#content-health-governance) | [书籍结构审计与内容健康治理](book-structure-audit.md)、[项目维护指南](maintenance-guide.md) | [自动化维护与扩写方案](automation-content-workflow.md)、[1.0 发布前总检查清单](release-checklist-1.0.md) | 只看字数，不看可达性、重复分工、动态事实和导出清单 |
+| Content Coverage Check | [Content Coverage Check](appendix-glossary.md#content-coverage-check) | [书籍结构审计与内容健康治理](book-structure-audit.md)、[项目维护指南](maintenance-guide.md) | [自动化维护与扩写方案](automation-content-workflow.md) | 只更新正文，不检查导航、完整目录和电子书导出 |
 | CQRS | [CQRS](appendix-glossary.md#cqrs) | [CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md) | [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md) | 把 CQRS 当成所有系统默认架构，忽略它带来的复杂度和最终一致问题 |
 | Read Model / Projection | [Read Model](appendix-glossary.md#read-model)、[Projection](appendix-glossary.md#projection) | [Read Model 与 Projection：读模型与投影](read-model-projections.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md) | [Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md) | 把读模型当成事实源，或忘记投影失败、延迟和重建机制 |
 | Materialized View | [Materialized View](appendix-glossary.md#materialized-view) | [Read Model 与 Projection：读模型与投影](read-model-projections.md) | [CQRS：读写分离与多 agent 查询视图](cqrs.md) | 误以为所有数据库都原生支持同名机制，或把物化视图当成事实源 |
@@ -68,7 +69,7 @@
 想排查 agent 为什么慢、贵、失败或误判 -> Observability / Tracing -> Durable Execution -> Event Sourcing
 想把跨语言运行过程整理给人看 -> Runtime Log -> 多语言运行日志回放样例
 想把运行日志做成失败队列 -> Runtime Log Projection -> 多语言运行日志投影与失败回放样例
-想检查书稿是否遗漏或重复 -> Content Health Governance -> 书籍结构审计与内容健康治理
+想检查书稿是否遗漏或重复 -> Content Health Governance -> Content Coverage Check -> 书籍结构审计与内容健康治理
 想做团队知识库 -> RAG -> Vector Database -> 团队 AI 落地手册
 担心数据和权限 -> Guardrail -> Prompt Injection -> 第 13 章
 想理解前沿术语 -> MCP / A2A / OpenClaw / Hermes / HiMeS -> 前沿资料复核

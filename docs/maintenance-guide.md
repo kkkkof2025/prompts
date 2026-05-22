@@ -101,10 +101,11 @@ AI 领域变化很快。这本书要长期有用，关键不是一次写完，�
 ```text
 1. 新增页面是否加入 docs/SUMMARY.md。
 2. 重要入口是否加入 README.md 或 docs/index.md。
-3. 本地 Markdown 链接是否可解析。
-4. 是否需要更新 MEMORY.md。
-5. 是否需要更新 CHANGELOG.md。
-6. 若接近 1.0 发布，是否同步检查 [1.0 发布前总检查清单](release-checklist-1.0.md)。
+3. 新增页面是否进入 mkdocs.yml 导航和 scripts/export-ebook.ps1。
+4. 本地 Markdown 链接是否可解析。
+5. 是否需要更新 MEMORY.md。
+6. 是否需要更新 CHANGELOG.md。
+7. 若接近 1.0 发布，是否同步检查 [1.0 发布前总检查清单](release-checklist-1.0.md)。
 ```
 
 可使用本地脚本检查：
@@ -112,9 +113,10 @@ AI 领域变化很快。这本书要长期有用，关键不是一次写完，�
 ```powershell
 ./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders
 ./scripts/check-terminology.ps1 -Root .
+./scripts/check-content-coverage.ps1 -Root .
 ```
 
-GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链接检查、术语一致性检查和 Pages 构建检查。外部链接检查默认每月运行一次，也可以手动触发。
+GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链接检查、术语一致性检查、内容覆盖检查和 Pages 构建检查。外部链接检查默认每月运行一次，也可以手动触发。
 
 内容健康报告可用下面的脚本生成：
 
@@ -125,6 +127,8 @@ GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链�
 对应的 `Content Health Report` workflow 每周运行一次，也支持手动触发。它只生成报告 artifact，不直接修改正文；报告中的短页面、长页面、章节结构和动态事实复核候选需要人工判断后再处理。
 
 健康报告只扫描书稿、实践模板和维护材料，不应把 `.github/`、`.workbuddy/`、构建输出和临时目录当作正文。中文内容按 CJK 字符 + 英文/数字词估算内容量，避免被空白分词低估；封面、版权和许可证会被列入“刻意保持简短的系统页面”，不要仅因为内容量低就扩写它们。结构层面的人工判断记录在 [书籍结构审计与内容健康治理](book-structure-audit.md)。
+
+本地检查脚本在 Git 仓库内默认以已跟踪的 Markdown 文件为准，避免未提交的私人草稿、临时待办稿或本地笔记干扰发布质量判断。新增 Markdown 页面在提交前应先 `git add`，再运行链接、术语、内容覆盖和健康报告检查。
 
 如果修改涉及事实：
 
@@ -199,6 +203,8 @@ GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链�
 - `docs/term-style-guide.md`：术语写法规范。
 - `docs/ebook-guide.md`：电子书和离线阅读说明。
 - `scripts/`：本地检查、内容健康报告、外部链接检查和电子书导出脚本。
+
+内容覆盖检查脚本 `scripts/check-content-coverage.ps1` 会比较书稿文件、MkDocs 导航、`docs/SUMMARY.md` 和电子书导出清单。它解决的是“页面已经写了，但线上导航、完整目录或离线版漏掉”的问题。`docs/SUMMARY.md` 不自链接本身属于刻意例外。
 
 ## 维护者 prompt
 

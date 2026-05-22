@@ -105,8 +105,8 @@ AI 最容易在哪些任务上出错？
 
 - 本章练习：从 30 天计划中选出本周最适合开始的 3 天任务，并记录实际产出、失败点和下一次改进。
 - 相关案例：如果是个人学习，使用 [试读与试跑反馈包](../feedback-validation-kit.md)；如果是团队试点，使用 [30 天团队试点跟踪表](../pilot-tracking-30days.md)。
-- 下一步：回到 [完整目录](../SUMMARY.md)，选择一个案例库或专题材料继续深入。
+- 下一步：进入 [第 15 章](15-career-development.md)，了解 AI 职业发展全景和求职准备。或回到 [完整目录](../SUMMARY.md)，选择一个案例库或专题材料继续深入。
 
 ## 章节导航
 
-[上一章：第 13 章：安全、伦理与治理](13-safety-governance.md) | [返回完整目录](../SUMMARY.md)
+[上一章：第 13 章：安全、伦理与治理](13-safety-governance.md) | [返回完整目录](../SUMMARY.md) | [下一章：第 15 章：AI 职业发展全景](15-career-development.md)

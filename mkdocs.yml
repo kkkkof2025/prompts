@@ -18,6 +18,8 @@ exclude_docs: |
   .git/
   .github/
   .workbuddy/
+  workspace-artifacts/
+  TODO.md
   README.md
   scripts/
   mkdocs.yml
@@ -88,6 +90,9 @@ nav:
       - 第 12 章：AI 前沿发展全景: docs/chapters/12-frontier-landscape.md
       - 第 13 章：安全、伦理与治理: docs/chapters/13-safety-governance.md
       - 第 14 章：30 天实践计划: docs/chapters/14-practice-plan.md
+      - 第 15 章：AI 职业发展全景: docs/chapters/15-career-development.md
+  - 实战项目:
+      - 端到端实战项目指南: docs/capstone-projects.md
   - 案例:
       - 主题索引: docs/topic-index.md
       - 真实应用案例: docs/case-studies.md
@@ -107,6 +112,7 @@ nav:
       - 产品案例: docs/cases/product.md
       - 工程案例: docs/cases/engineering.md
       - 管理者案例: docs/cases/management.md
+      - 职业发展案例: docs/cases/career-development.md
       - 团队 AI 落地案例集: docs/team-adoption-cases.md
       - 前沿与过时技术案例库: docs/technology-evolution-cases.md
   - 学习与教学:
@@ -119,6 +125,7 @@ nav:
       - 试读与试跑反馈包: docs/feedback-validation-kit.md
       - 章节复盘题与小测: docs/chapter-review-questions.md
       - 章节练习与验收映射表: docs/chapter-validation-map.md
+      - 社区参与与持续学习: docs/community-continuous-learning.md
   - 团队落地:
       - 团队 AI 落地完整路线图: docs/team-ai-adoption-roadmap.md
       - AI 安全与模型选型工作坊: docs/workshop-safety-model-selection.md
@@ -135,6 +142,7 @@ nav:
       - AI 工作流配方库: docs/workflow-recipes.md
       - 中外 AI 模型特色概览: docs/model-landscape-china-global.md
       - AI 模型选型实战案例集: docs/model-selection-cases.md
+      - AI 模型成本计算与选型实战: docs/model-cost-calculator.md
   - 前沿架构与生态:
       - Style Engineering 与 AI Native 创作: docs/style-engineering-ai-native.md
       - Context Engineering：上下文工程: docs/context-engineering.md
@@ -153,6 +161,7 @@ nav:
   - 安全与复核:
       - AI 安全案例更新指南: docs/safety-case-updates.md
       - AI 安全事故复盘案例集: docs/safety-incident-retrospectives.md
+      - Prompt Injection 防护实战: docs/prompt-injection-defense.md
       - 前沿资料季度复核执行手册: docs/frontier-review-playbook.md
       - 前沿资料季度复核记录表: docs/frontier-review-log.md
   - 附录:
@@ -163,6 +172,7 @@ nav:
       - 术语回链索引: docs/glossary-links.md
       - 附录 C：练习参考答案: docs/appendix-exercise-answers.md
       - 附录 D：常用检查清单: docs/appendix-checklists.md
+      - 附录 E：AI 求职资源大全: docs/appendix-career-resources.md
       - 术语写法规范: docs/term-style-guide.md
       - 电子书与离线阅读指南: docs/ebook-guide.md
   - 实践模板:

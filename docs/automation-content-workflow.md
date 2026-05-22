@@ -191,6 +191,8 @@ GitHub 官方文档建议对工作流权限做最小授权，并把定时触发�
 
 结构层面的人工判断会记录到 [书籍结构审计与内容健康治理](book-structure-audit.md)。如果后续要把扫描结果自动转 issue，建议先读取这页，避免把封面、版权、许可证或故意短的入口页误判成必须扩写的正文缺口。
 
+内容覆盖检查已经固化为 `scripts/check-content-coverage.ps1`，并接入 `Markdown Check` workflow。它不判断正文质量，只判断新增 Markdown 是否进入 MkDocs 导航、完整目录和电子书导出清单。这个检查适合每次提交都跑，因为它确定、快速、不会调用模型。
+
 ## 参考
 
 - [GitHub Actions permissions documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-the-github_token-in-a-workflow#about-the-github_token)

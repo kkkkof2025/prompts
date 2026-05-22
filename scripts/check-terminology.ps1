@@ -8,6 +8,33 @@ $ErrorActionPreference = "Stop"
 $rootPath = (Resolve-Path -LiteralPath $Root).Path
 $findings = New-Object System.Collections.Generic.List[string]
 
+function Get-MarkdownFileItems {
+    param([string]$BasePath)
+
+    if (Get-Command git -ErrorAction SilentlyContinue) {
+        $inside = & git -C $BasePath rev-parse --is-inside-work-tree 2>$null
+        if ($LASTEXITCODE -eq 0 -and $inside -eq "true") {
+            $tracked = @(& git -C $BasePath ls-files "*.md")
+            if ($LASTEXITCODE -eq 0 -and $tracked.Count -gt 0) {
+                return @(
+                    $tracked |
+                        ForEach-Object { Get-Item -LiteralPath (Join-Path $BasePath $_) }
+                )
+            }
+        }
+    }
+
+    return @(
+        Get-ChildItem -LiteralPath $BasePath -Recurse -File -Filter "*.md" |
+            Where-Object {
+                $_.FullName -notmatch "\\_site\\" -and
+                $_.FullName -notmatch "\\node_modules\\" -and
+                $_.FullName -notmatch "\\vendor\\bundle\\" -and
+                $_.FullName -notmatch "\\dist\\"
+            }
+    )
+}
+
 function Get-RelativePathCompat {
     param(
         [string]$BasePath,
@@ -65,13 +92,7 @@ $rules = @(
     }
 )
 
-$markdownFiles = Get-ChildItem -LiteralPath $rootPath -Recurse -File -Filter "*.md" |
-    Where-Object {
-        $_.FullName -notmatch "\\_site\\" -and
-        $_.FullName -notmatch "\\node_modules\\" -and
-        $_.FullName -notmatch "\\vendor\\bundle\\" -and
-        $_.FullName -notmatch "\\dist\\"
-    }
+$markdownFiles = Get-MarkdownFileItems -BasePath $rootPath
 
 foreach ($file in $markdownFiles) {
     $relativeFile = Get-RelativePathCompat -BasePath $rootPath -TargetPath $file.FullName

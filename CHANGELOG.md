@@ -4,7 +4,23 @@
 
 ## Unreleased
 
-- 增加 `docs/teaching-kit.md` 教学版本材料包，包含周课件大纲、讲师提示词、课堂练习、作业和结业项目模板。
+- 新增 **第 15 章：AI 职业发展全景** (`docs/chapters/15-career-development.md`)，覆盖热门职位地图、技能对照表、薪资参考、作品集指南、面试准备和职业转型路径。
+- 新增 **端到端实战项目指南** (`docs/capstone-projects.md`)，包含个人学习助手、自动化工作报告生成器、智能客服Bot三个完整项目。
+- 增强 **第 1 章**：新增"手把手实战演练"节，展示完整的"失败→分析→修正→验收"循环。
+- 新增 **AI 模型成本计算与选型实战** (`docs/model-cost-calculator.md`)，包含价格对比、成本计算工具、分层路由策略和硬件成本参考。
+- 新增 **社区参与与持续学习** (`docs/community-continuous-learning.md`)，包含信息获取系统、开源贡献路径、个人品牌建设和月度/季度学习节奏。
+- 新增 **附录 E：AI 求职资源大全** (`docs/appendix-career-resources.md`)，包含招聘渠道、简历优化、推荐项目、关注列表和常见问题。
+- 新增 **Prompt Injection 防护实战** (`docs/prompt-injection-defense.md`)，包含5种攻击类型、6层防护体系、测试集和企业级安全清单。
+- 新增 **职业发展案例** (`docs/cases/career-development.md`)，覆盖产品、运营、开发者和 Freelancer 四类转型路径。
+- 所有新页面已接入 `mkdocs.yml` 导航、`docs/SUMMARY.md` 完整目录和 `scripts/export-ebook.ps1` 电子书导出清单。
+- 更新 `README.md` 读者路线，覆盖新增章节。
+
+---
+
+## 0.7 教学版本材料包
+
+包含周课件大纲、讲师提示词、课堂练习、作业和结业项目模板。
+
 - 增加 `docs/classroom-worksheets.md` 课堂练习工作纸，提供 10 张可发给学员填写的表单。
 - 增加 `docs/teaching-examples.md` 教学示范作业集，覆盖匿名化 prompt、工作流、skill、agent、安全规范和结业项目样例。
 - 增加 `docs/feedback-validation-kit.md` 试读与试跑反馈包，覆盖个人试读、课堂试跑、团队试点、观察记录、评分量表和匿名化反馈记录。
@@ -38,6 +54,10 @@
 - 扩充 `examples/event-log/index.md`，补充任务事件 schema、事件类型、读模型、失败样例、业务事件与 trace/runtime log 的区别，以及 CloudEvents 参考边界。
 - 更新 `scripts/content-health-report.ps1`，改用 CJK 字符 + 英文/数字词估算内容量，排除 `.github/`、`.workbuddy/`、构建输出和临时目录，并把封面、版权、许可证、贡献指南和 agent 协作记录列为刻意短页。
 - 更新 `scripts/export-ebook.ps1`，补齐完整目录、发布/维护指南、结构审计页、基础实践模板、项目维护根文档和 agent 协作记录，减少离线版遗漏。
+- 增加 `scripts/check-content-coverage.ps1` 内容覆盖检查脚本，并接入 `Markdown Check` workflow，用于比较 MkDocs 导航、完整目录和电子书导出清单是否遗漏书稿页面。
+- 扩充 `docs/cases/engineering.md` 和 `docs/cases/product.md`，新增工程发布风险审查案例和 AI 功能最小实验案例。
+- 扩充 `docs/cases/operations.md` 和 `docs/cases/management.md`，新增跨渠道活动执行检查案例和 AI 试点责任矩阵案例。
+- 更新本地链接、术语和内容健康脚本，使其在 Git 仓库内默认检查已跟踪 Markdown，避免本地未跟踪草稿干扰发布检查。
 - 增加 `docs/cases/agent-trace-incident-retrospective.md` Agent Trace 生产事故复盘长案例，把 trace 断裂、安全复核失败、事件日志、补偿动作和人工审批串成复盘流程。
 - 将 GitHub Pages 在线阅读版统一为 MkDocs Material，增加 `mkdocs.yml`、阅读样式、依赖文件和 `mkdocs-pages.yml` 发布 workflow。
 - 将章节页补齐上一章/下一章导航，并把 `agents/README.md` 改为 `agents/index.md`，避免与站点首页冲突。

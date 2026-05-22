@@ -31,3 +31,7 @@ jobs:
       - name: Check terminology
         shell: pwsh
         run: ./scripts/check-terminology.ps1 -Root .
+
+      - name: Check content coverage
+        shell: pwsh
+        run: ./scripts/check-content-coverage.ps1 -Root .

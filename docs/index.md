@@ -59,6 +59,12 @@
 
 重点读 [第 11 章](chapters/11-hermes-himes-open-models.md)、[第 12 章](chapters/12-frontier-landscape.md)、[Style Engineering 与 AI Native 创作](style-engineering-ai-native.md)、[Context Engineering：上下文工程](context-engineering.md)、[Blackboard Architecture：黑板架构与多 agent 协作](blackboard-architecture-multi-agent.md)、[Event Sourcing：事件溯源与任务回放](event-sourcing.md)、[CQRS：读写分离与多 agent 查询视图](cqrs.md)、[Read Model 与 Projection：读模型与投影](read-model-projections.md)、[Transactional Outbox 与幂等消费](transactional-outbox-idempotency.md)、[Saga：补偿事务与流程编排](saga-process-manager.md)、[Durable Execution：持久化执行与 agent 长任务](durable-execution-agent-workflows.md)、[Observability / Tracing：智能体可观测性](observability-tracing-agent-workflows.md) 和 [技术演进案例库](technology-evolution-cases.md)。
 </div>
+
+<div class="route-card" markdown="1">
+**想做作品集或转型**
+
+读 [第 15 章](chapters/15-career-development.md)、[职业发展案例](cases/career-development.md)、[端到端实战项目指南](capstone-projects.md) 和 [AI 求职资源大全](appendix-career-resources.md)。
+</div>
 </div>
 
 ## 章节与案例

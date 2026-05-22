@@ -46,6 +46,7 @@
 | Runtime Log Projection | 运行日志投影；把运行日志转换成 summary、搜索索引、失败队列或看板字段 |
 | OpenTelemetry | 可观测性框架和规范生态，正文首次出现可写作 OpenTelemetry |
 | Content Health Governance | 内容健康治理；本书用于描述书稿结构、入口、重复、引用和导出清单的长期维护 |
+| Content Coverage Check | 内容覆盖检查；本书用于描述导航、完整目录和电子书导出清单的自动一致性检查 |
 | AI Native | 原生围绕 AI 能力、上下文、工具和反馈回路设计的产品或创作方式 |
 
 ## 书内概念

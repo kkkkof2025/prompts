@@ -167,11 +167,16 @@
 - 2026-05-22 更新 `scripts/content-health-report.ps1`，改用 CJK 字符 + 英文/数字词估算内容量，排除 `.github/`、`.workbuddy/`、构建输出和临时目录，并把系统短页从正文扩写候选中分离。
 - 2026-05-22 更新 `docs/SUMMARY.md`、`mkdocs.yml`、首页、README、路线图、变更记录和 `scripts/export-ebook.ps1`，补齐结构审计页、基础实践模板、维护根文档和 agent 协作记录的入口。
 - 2026-05-22 复核 CloudEvents 官方规范入口；正文已标注本书事件日志样例不实现完整 CloudEvents，只借鉴事件元数据和业务数据分离的设计思想。
+- 2026-05-22 新增 `scripts/check-content-coverage.ps1` 内容覆盖检查脚本，并接入 `.github/workflows/markdown-check.yml`，用于自动比较 MkDocs 导航、`docs/SUMMARY.md` 和 `scripts/export-ebook.ps1` 是否遗漏书稿页面。
+- 2026-05-22 扩充 `docs/cases/engineering.md` 和 `docs/cases/product.md`，新增工程发布风险审查案例和 AI 功能最小实验案例，并同步更新案例索引。
+- 2026-05-22 扩充 `docs/cases/operations.md` 和 `docs/cases/management.md`，新增跨渠道活动执行检查案例和 AI 试点责任矩阵案例，并同步更新案例入口、案例索引和主题索引。
+- 2026-05-22 新增维护概念 Content Coverage Check：它不评价正文质量，只检查页面是否能从线上导航、完整目录和离线导出三类入口到达。
+- 2026-05-22 更新 `scripts/check-markdown-links.ps1`、`scripts/check-terminology.ps1` 和 `scripts/content-health-report.ps1`，在 Git 仓库内默认检查已跟踪 Markdown，避免未跟踪本地草稿影响发布检查。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
-- 最新检查命令：`./scripts/content-health-report.ps1 -Root . -OutputPath X:\tmp\content-health-report.md -Top 30`、导航/SUMMARY/电子书导出清单一致性检查、`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`git diff --check`、`python -m mkdocs build --strict --config-file mkdocs.yml`。
-- 最新检查结果：内容健康报告成功生成；MkDocs 导航没有遗漏；电子书导出清单没有遗漏；`docs/SUMMARY.md` 只是不自链接 `docs/SUMMARY.md` 本身；本地链接、占位标记、术语一致性、Markdown lint（120 个 Markdown 文件）、`git diff --check` 和 MkDocs strict build 均通过（2026-05-22 复查）。MkDocs strict build 仅输出 Material for MkDocs 关于未来 MkDocs 2.0 的官方提示，不影响本次构建；本轮未启动本地预览。
-- 当前内容健康扫描覆盖 113 个书稿相关 Markdown 文件，约 31164 行、275000 个内容单位；本轮没有正文短页候选，仅 `docs/cases/continuous-case-samples.md` 超过 10000 内容单位，属于可保留的长样例库。
+- 最新检查命令：`./scripts/content-health-report.ps1 -Root . -OutputPath X:\tmp\content-health-report.md -Top 40`、`./scripts/check-content-coverage.ps1 -Root .`、`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`git diff --check`、`python -m mkdocs build --strict --config-file mkdocs.yml`。
+- 最新检查结果：内容健康报告成功生成；内容覆盖检查通过，MkDocs 导航、完整目录和电子书导出清单均无遗漏；本地链接、占位标记、术语一致性、Markdown lint（120 个 Markdown 文件）、`git diff --check` 和 MkDocs strict build 均通过（2026-05-22 复查）。MkDocs strict build 仅输出 Material for MkDocs 关于未来 MkDocs 2.0 的官方提示，不影响本次构建；本轮未启动本地预览。
+- 当前内容健康扫描覆盖 113 个书稿相关 Markdown 文件，约 31500 行、280000 个内容单位；本轮没有正文短页候选，仅 `docs/cases/continuous-case-samples.md` 超过 10000 内容单位，属于可保留的长样例库。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
   - OpenAI Agents SDK 文档
@@ -223,6 +228,7 @@
 - 2026-05-16 将新增待办写入 `ROADMAP.md`：连续案例课堂投影短版 30/60/90/120 分钟讲法、行业化匿名试点复盘、OpenClaw 多 agent 联动教程、统一 skill 安装与共享任务同步、七层 AI 文明架构专题。
 - 2026-05-16 为 GitHub 推送授权改用本仓库专用 SSH host alias：`github.com-kkkkof2025-prompts`，生成本地 key `~/.ssh/id_ed25519_github_kkkkof2025_prompts`，remote 已切换为 `git@github.com-kkkkof2025-prompts:kkkkof2025/prompts.git`。用户添加 public key 后已验证通过：`ssh -T github.com-kkkkof2025-prompts` 返回成功认证，`git push --dry-run origin HEAD` 显示可将 `master` 从 `23c5f94` 推到 `84d7ae6`；2026-05-17 已执行真实 `git push origin master`，远端 `HEAD` 更新到 `84d7ae6`。
 - 后续每次完成后默认执行：本地静态检查、提交 commit、真实 `git push origin master`，除非用户明确要求不要提交或不要推送。
+- 2026-05-22 本轮继续完善书稿：把职业发展、端到端项目、模型成本、社区持续学习、Prompt Injection 防护等草稿纳入 MkDocs 导航、SUMMARY 和电子书导出；新增 `docs/cases/career-development.md`，用产品、运营、开发者和 Freelancer 四条路线把第 15 章落到作品集、面试和接单案例；成本、社区和安全页应保留动态事实复核提示，不把价格、资源清单或安全框架写成永久结论。
 
 ## 并行 agent 使用
 

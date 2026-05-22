@@ -28,10 +28,11 @@
 - [连续案例课堂投影短版](cases/continuous-case-slide-brief.md)
 - [学生：学习计划、论文阅读](cases/student.md)
 - [教师：备课、作业反馈](cases/teacher.md)
-- [运营：会议纪要、内容排期](cases/operations.md)
+- [运营：会议纪要、内容排期、跨渠道活动执行](cases/operations.md)
 - [产品：竞品分析、需求评审](cases/product.md)
 - [工程：修 Bug、补测试](cases/engineering.md)
-- [管理者：AI 使用规范、项目复盘](cases/management.md)
+- [管理者：AI 使用规范、项目复盘、试点责任矩阵](cases/management.md)
+- [职业发展：作品集、面试、接单与转型](cases/career-development.md)
 - [团队 AI 落地案例集](team-adoption-cases.md)
 - [前沿与过时技术案例库](technology-evolution-cases.md)
 

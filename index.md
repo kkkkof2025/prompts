@@ -215,6 +215,12 @@
 
 从 [团队路线图](docs/team-ai-adoption-roadmap.md)、[团队落地手册](docs/team-adoption-playbook.md) 和 [30 天试点跟踪表](docs/pilot-tracking-30days.md) 开始。
 </div>
+
+<div class="route-card" markdown="1">
+**想找工作或接单**
+
+从 [第 15 章](docs/chapters/15-career-development.md)、[职业发展案例](docs/cases/career-development.md)、[端到端实战项目指南](docs/capstone-projects.md) 和 [AI 求职资源大全](docs/appendix-career-resources.md) 开始。
+</div>
 </div>
 
 ## 重点材料

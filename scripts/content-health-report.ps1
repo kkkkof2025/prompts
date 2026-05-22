@@ -40,6 +40,27 @@ function Escape-MarkdownCell {
     return $Value.Replace("|", "\|").Replace("`r", " ").Replace("`n", " ")
 }
 
+function Get-MarkdownFileItems {
+    param([string]$BasePath)
+
+    if (Get-Command git -ErrorAction SilentlyContinue) {
+        $inside = & git -C $BasePath rev-parse --is-inside-work-tree 2>$null
+        if ($LASTEXITCODE -eq 0 -and $inside -eq "true") {
+            $tracked = @(& git -C $BasePath ls-files "*.md")
+            if ($LASTEXITCODE -eq 0 -and $tracked.Count -gt 0) {
+                return @(
+                    $tracked |
+                        ForEach-Object { Get-Item -LiteralPath (Join-Path $BasePath $_) }
+                )
+            }
+        }
+    }
+
+    return @(
+        Get-ChildItem -LiteralPath $BasePath -Recurse -File -Filter "*.md"
+    )
+}
+
 function Measure-ContentUnits {
     param([string]$Text)
 
@@ -49,7 +70,7 @@ function Measure-ContentUnits {
     return $latinWords + $cjkChars
 }
 
-$markdownFiles = Get-ChildItem -LiteralPath $rootPath -Recurse -File -Filter "*.md" |
+$markdownFiles = Get-MarkdownFileItems -BasePath $rootPath |
     Where-Object {
         $_.FullName -notmatch "\\_site\\" -and
         $_.FullName -notmatch "\\node_modules\\" -and
@@ -166,6 +187,21 @@ $dynamicReviewPages = $dynamicReviewPages |
     Sort-Object -Property @{ Expression = "Hits"; Descending = $true }, Path |
     Select-Object -First $Top
 
+$chapterNumbers = @(
+    $pages | ForEach-Object {
+        if ($_.Path -match "^docs/chapters/(\d{2})-.+\.md$") {
+            [int]$Matches[1]
+        }
+    }
+) | Sort-Object -Unique
+
+if ($chapterNumbers.Count -gt 0) {
+    $chapterRangeText = "第 $($chapterNumbers[0])-$($chapterNumbers[-1]) 章"
+}
+else {
+    $chapterRangeText = "主体章节"
+}
+
 $totalWords = ($pages | Measure-Object -Property Words -Sum).Sum
 $totalLines = ($pages | Measure-Object -Property Lines -Sum).Sum
 $generatedAt = Get-Date -Format "yyyy-MM-dd HH:mm:ss zzz"
@@ -248,7 +284,7 @@ $report.Add("")
 $report.Add("## 章节结构检查")
 $report.Add("")
 if ($chapterIssues.Count -eq 0) {
-    $report.Add("第 0-14 章均包含本章导读、本章收尾和章节导航。")
+    $report.Add("${chapterRangeText}均包含本章导读、本章收尾和章节导航。")
 }
 else {
     $report.Add("| 文件 | 缺少内容 |")
