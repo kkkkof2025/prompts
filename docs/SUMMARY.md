@@ -102,3 +102,4 @@
 - [多语言 Trace Context 传播样例](../examples/trace-observability/trace-context-multilang.md)
 - [多语言运行日志回放样例](../examples/trace-observability/trace-runtime-log-replay.md)
 - [多语言运行日志投影与失败回放样例](../examples/trace-observability/trace-runtime-log-projection.md)
+- [多语言 OpenTelemetry SDK 接入路线](../examples/trace-observability/trace-otel-sdk-multilang.md)

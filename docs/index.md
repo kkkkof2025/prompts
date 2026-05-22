@@ -27,6 +27,7 @@
 [多语言 Trace](../examples/trace-observability/trace-context-multilang.md)
 [运行日志回放](../examples/trace-observability/trace-runtime-log-replay.md)
 [日志投影](../examples/trace-observability/trace-runtime-log-projection.md)
+[SDK 接入](../examples/trace-observability/trace-otel-sdk-multilang.md)
 [维护与发布](release-checklist-1.0.md)
 </div>
 </div>
@@ -240,6 +241,12 @@
 **[多语言运行日志投影与失败回放样例](../examples/trace-observability/trace-runtime-log-projection.md)**
 
 把 runtime log 变成可搜索索引和失败队列，帮助日志平台、看板和人工复盘使用。
+</div>
+
+<div class="resource-card" markdown="1">
+**[多语言 OpenTelemetry SDK 接入路线](../examples/trace-observability/trace-otel-sdk-multilang.md)**
+
+从教学用手写 `traceparent` 过渡到 Python / Node.js SDK 的 `inject` / `extract`。
 </div>
 
 <div class="resource-card" markdown="1">
