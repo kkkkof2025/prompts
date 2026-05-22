@@ -30,7 +30,7 @@
 | `安全` / `治理` / `风险` | [第 13 章](chapters/13-safety-governance.md) | 第 13 章 | [AI 安全事故复盘案例集](safety-incident-retrospectives.md)、[团队 AI 落地手册](team-adoption-playbook.md) | 高风险任务必须保留人工责任 |
 | `教学` / `学习` / `课堂` | [第 0 章](chapters/00-learning-map.md)、[教学版本材料包](teaching-kit.md) | 第 0、1、3、6-9、14 章 | [教学资料库连续案例](cases/teaching-rag-skill-agent-memory.md)、[连续案例课堂试跑版](cases/continuous-case-classroom-run.md)、[连续案例课堂投影短版](cases/continuous-case-slide-brief.md)、[连续案例样例库](cases/continuous-case-samples.md)、[分角色学习路径](learning-paths.md)、[课堂练习工作纸](classroom-worksheets.md)、[教学示范作业集](teaching-examples.md) | 学员任务要可执行，不能只讲概念 |
 | `团队落地` / `试点` / `工作坊` | [团队 AI 落地完整路线图](team-ai-adoption-roadmap.md)、[30 天团队试点跟踪表](pilot-tracking-30days.md) | 第 12-14 章 | [团队 AI 落地案例集](team-adoption-cases.md)、[连续案例团队试点版](cases/continuous-case-team-pilot.md)、[连续案例样例库](cases/continuous-case-samples.md)、[AI 安全与模型选型工作坊](workshop-safety-model-selection.md)、[行业化工作坊案例集](workshop-industry-cases.md) | 先做低风险试点，再扩展 |
-| `维护` / `发布` / `自动化` | [项目维护指南](maintenance-guide.md)、[GitHub 发布指南](publishing-guide.md) | 第 0 章、附录和维护页 | [自动化维护与扩写方案](automation-content-workflow.md)、[1.0 发布前总检查清单](release-checklist-1.0.md) | 自动化适合检查和候选稿，不适合无审查改正文 |
+| `维护` / `发布` / `自动化` / `结构审计` | [项目维护指南](maintenance-guide.md)、[GitHub 发布指南](publishing-guide.md) | 第 0 章、附录和维护页 | [自动化维护与扩写方案](automation-content-workflow.md)、[书籍结构审计与内容健康治理](book-structure-audit.md)、[1.0 发布前总检查清单](release-checklist-1.0.md) | 自动化适合检查和候选稿，不适合无审查改正文；结构问题要同时看导航、目录和导出清单 |
 | `案例` / `复盘` / `历史` | [案例索引表](cases/index.md)、[真实应用案例](case-studies.md) | 第 1-14 章 | [前沿与过时技术案例库](technology-evolution-cases.md) | 长案例可以保留，但要能复盘 |
 
 ## 按问题找
@@ -76,7 +76,7 @@
 我想带团队试点 -> 先看 团队路线图、30 天试点跟踪表、团队案例集
 我想检查安全边界 -> 先看 第 13 章、安全案例更新指南、事故复盘案例集
 我想找案例 -> 先看 案例索引表、真实应用案例、前沿与过时技术案例库
-我想做发布维护 -> 先看 维护指南、发布指南、自动化维护与扩写方案
+我想做发布维护 -> 先看 维护指南、发布指南、自动化维护与扩写方案、书籍结构审计与内容健康治理
 ```
 
 ## 使用建议

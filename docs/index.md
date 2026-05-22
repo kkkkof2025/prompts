@@ -29,6 +29,7 @@
 [日志投影](../examples/trace-observability/trace-runtime-log-projection.md)
 [SDK 接入](../examples/trace-observability/trace-otel-sdk-multilang.md)
 [维护与发布](release-checklist-1.0.md)
+[结构审计](book-structure-audit.md)
 </div>
 </div>
 
@@ -352,10 +353,16 @@
 
 解释 GitHub Actions 能做什么、不能做什么，以及怎样和人工审稿配合。
 </div>
+
+<div class="route-card" markdown="1">
+**[书籍结构审计与内容健康治理](book-structure-audit.md)**
+
+检查导航、目录、导出清单、短页、重复主题和下一轮扩写优先级。
+</div>
 </div>
 
 ## 维护与发布
 
 <div class="note-box" markdown="1">
-维护建议、前沿资料复核、发布检查和电子书说明都放在 `docs/` 内。若要快速定位，请先看 [完整目录](SUMMARY.md)，再看 [项目维护指南](maintenance-guide.md) 和 [1.0 发布前总检查清单](release-checklist-1.0.md)。
+维护建议、前沿资料复核、结构审计、发布检查和电子书说明都放在 `docs/` 内。若要快速定位，请先看 [完整目录](SUMMARY.md)，再看 [项目维护指南](maintenance-guide.md)、[书籍结构审计与内容健康治理](book-structure-audit.md) 和 [1.0 发布前总检查清单](release-checklist-1.0.md)。
 </div>

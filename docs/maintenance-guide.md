@@ -124,6 +124,8 @@ GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链�
 
 对应的 `Content Health Report` workflow 每周运行一次，也支持手动触发。它只生成报告 artifact，不直接修改正文；报告中的短页面、长页面、章节结构和动态事实复核候选需要人工判断后再处理。
 
+健康报告只扫描书稿、实践模板和维护材料，不应把 `.github/`、`.workbuddy/`、构建输出和临时目录当作正文。中文内容按 CJK 字符 + 英文/数字词估算内容量，避免被空白分词低估；封面、版权和许可证会被列入“刻意保持简短的系统页面”，不要仅因为内容量低就扩写它们。结构层面的人工判断记录在 [书籍结构审计与内容健康治理](book-structure-audit.md)。
+
 如果修改涉及事实：
 
 ```text
@@ -189,6 +191,7 @@ GitHub Actions 会在 push 和 pull request 时运行 Markdown lint、本地链�
 - `docs/frontier-review-playbook.md`：前沿资料季度复核的执行流程、影响判断和收尾检查。
 - `docs/frontier-review-log.md`：前沿模型、协议、工具和安全资料的季度复核记录。
 - `docs/automation-content-workflow.md`：GitHub Actions 自动化维护、候选扩写和人工审查流程建议。
+- `docs/book-structure-audit.md`：结构审计、遗漏检查、重复判断、内容健康治理和下一轮扩写优先级。
 - `MEMORY.md`：当前状态和维护记忆。
 - `CHANGELOG.md`：面向公开发布的变更记录。
 - `ROADMAP.md`：后续方向和版本规划。

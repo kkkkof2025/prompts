@@ -30,6 +30,7 @@
 [运行日志回放](examples/trace-observability/trace-runtime-log-replay.md)
 [日志投影](examples/trace-observability/trace-runtime-log-projection.md)
 [SDK 接入](examples/trace-observability/trace-otel-sdk-multilang.md)
+[结构审计](docs/book-structure-audit.md)
 [速查讲义](docs/quick-reference.md)
 </div>
 </div>
@@ -180,6 +181,12 @@
 
 了解怎样用 GitHub Actions 做内容检查、候选稿和人工审查。
 </div>
+
+<div class="route-card" markdown="1">
+**[书籍结构审计与内容健康治理](docs/book-structure-audit.md)**
+
+看本书怎样检查遗漏、重复、导出清单、短页和下一轮扩写优先级。
+</div>
 </div>
 
 ## 按目标阅读
@@ -305,5 +312,5 @@
 ## 维护入口
 
 <div class="note-box" markdown="1">
-项目进度见 [MEMORY.md](MEMORY.md)，后续方向见 [ROADMAP.md](ROADMAP.md)，发布前验收见 [1.0 发布前总检查清单](docs/release-checklist-1.0.md)。如果页面入口太多，优先从 [完整目录](docs/SUMMARY.md) 查找。
+项目进度见 [MEMORY.md](MEMORY.md)，后续方向见 [ROADMAP.md](ROADMAP.md)，结构健康见 [书籍结构审计与内容健康治理](docs/book-structure-audit.md)，发布前验收见 [1.0 发布前总检查清单](docs/release-checklist-1.0.md)。如果页面入口太多，优先从 [完整目录](docs/SUMMARY.md) 查找。
 </div>

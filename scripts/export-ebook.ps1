@@ -23,6 +23,7 @@ $files = @(
     "docs/ebook-cover.md",
     "docs/copyright.md",
     "docs/index.md",
+    "docs/SUMMARY.md",
     "docs/topic-index.md",
     "docs/learning-progress.md",
     "docs/chapters/00-learning-map.md",
@@ -48,6 +49,9 @@ $files = @(
     "docs/saga-process-manager.md",
     "docs/durable-execution-agent-workflows.md",
     "docs/observability-tracing-agent-workflows.md",
+    "examples/prompt-patterns.md",
+    "examples/skill-card-template.md",
+    "examples/agent-workflow-checklist.md",
     "examples/event-log/index.md",
     "examples/trace-observability/index.md",
     "examples/trace-observability/otel-minimal-instrumentation.md",
@@ -115,9 +119,18 @@ $files = @(
     "docs/frontier-review-playbook.md",
     "docs/frontier-review-log.md",
     "docs/term-style-guide.md",
+    "docs/publishing-guide.md",
+    "docs/maintenance-guide.md",
     "docs/automation-content-workflow.md",
+    "docs/book-structure-audit.md",
     "docs/ebook-guide.md",
-    "docs/release-checklist-1.0.md"
+    "docs/release-checklist-1.0.md",
+    "CONTRIBUTING.md",
+    "ROADMAP.md",
+    "CHANGELOG.md",
+    "MEMORY.md",
+    "agents/index.md",
+    "LICENSE.md"
 )
 
 $missing = $files | Where-Object { -not (Test-Path -LiteralPath $_) }

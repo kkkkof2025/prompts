@@ -183,6 +183,7 @@ nav:
       - GitHub 发布指南: docs/publishing-guide.md
       - 项目维护指南: docs/maintenance-guide.md
       - 自动化维护与扩写方案: docs/automation-content-workflow.md
+      - 书籍结构审计与内容健康治理: docs/book-structure-audit.md
       - 1.0 发布前总检查清单: docs/release-checklist-1.0.md
       - 贡献指南: CONTRIBUTING.md
       - 项目路线图: ROADMAP.md

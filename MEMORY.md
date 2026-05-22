@@ -1,6 +1,6 @@
 # MEMORY
 
-最后更新：2026-05-20
+最后更新：2026-05-22
 
 ## 当前目标
 
@@ -162,11 +162,16 @@
 - 2026-05-20 新增 `examples/trace-observability/trace-runtime-log-replay.md` 和 `examples/trace-observability/trace_runtime_log_bridge.py` 后，把 Python + Node.js handoff 的 span、handoff 和校验结果合并成 runtime log，作为 trace 和 event log 之间的人类可读投影视图；参考来源增加 OpenTelemetry Logs。
 - 2026-05-20 新增 `examples/trace-observability/trace-runtime-log-projection.md` 和 `examples/trace-observability/trace_runtime_log_projection.py` 后，把 runtime log 投影成 summary、可搜索索引和失败队列，并用 `--simulate-broken-handoff` 演示断链进入 failure queue 的完整路径。
 - 2026-05-22 新增 `examples/trace-observability/trace-otel-sdk-multilang.md` 后，把手写 `traceparent` 到 OpenTelemetry Python / JavaScript SDK `inject` / `extract` 的迁移路线纳入可观测性实践；参考来源增加 OpenTelemetry Propagators API，并复核 Python / JavaScript propagation 官方文档。
+- 2026-05-22 新增 `docs/book-structure-audit.md` 书籍结构审计与内容健康治理页，把导航、完整目录、电子书导出清单、内容健康扫描、重复主题判断和下一轮扩写优先级固定成维护入口。
+- 2026-05-22 扩充 `examples/event-log/index.md`，新增任务事件 schema、事件类型表、读模型说明、失败样例、业务事件与 trace/runtime log 的区别，并把 CloudEvents 作为事件元数据设计参考。
+- 2026-05-22 更新 `scripts/content-health-report.ps1`，改用 CJK 字符 + 英文/数字词估算内容量，排除 `.github/`、`.workbuddy/`、构建输出和临时目录，并把系统短页从正文扩写候选中分离。
+- 2026-05-22 更新 `docs/SUMMARY.md`、`mkdocs.yml`、首页、README、路线图、变更记录和 `scripts/export-ebook.ps1`，补齐结构审计页、基础实践模板、维护根文档和 agent 协作记录的入口。
+- 2026-05-22 复核 CloudEvents 官方规范入口；正文已标注本书事件日志样例不实现完整 CloudEvents，只借鉴事件元数据和业务数据分离的设计思想。
 - 本地执行 `python -m mkdocs build --config-file mkdocs.yml` 和 `python -m mkdocs build --strict --config-file mkdocs.yml` 成功；MkDocs 已覆盖 `docs/`、`examples/` 和根目录维护文件，输出目录在项目外部，避免生成站点被重复纳入内容目录。
 - 完成本地只读检查：所有本地 Markdown 链接均可解析。
-- 最新检查命令：`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`python -m mkdocs build --strict --config-file mkdocs.yml`、`python -B -c "... compile(...) ..."`、`node --check examples/trace-observability/trace_context_bridge_node.js`、`python examples/trace-observability/trace_runtime_log_bridge.py`、`python examples/trace-observability/trace_runtime_log_bridge.py --simulate-broken-handoff`、`python examples/trace-observability/trace_runtime_log_bridge.py --output tmp/trace-runtime-log.json`、`python examples/trace-observability/trace_runtime_log_bridge.py --simulate-broken-handoff --output tmp/trace-runtime-log-broken.json`、`python examples/trace-observability/trace_runtime_log_projection.py --input tmp/trace-runtime-log.json --output tmp/trace-runtime-log-projected.json`、`python examples/trace-observability/trace_runtime_log_projection.py --input tmp/trace-runtime-log-broken.json --output tmp/trace-runtime-log-broken-projected.json`、`python examples/trace-observability/trace_runtime_log_projection.py --input tmp/trace-runtime-log-broken.json --fail-only`、`./scripts/replay-task-events.ps1 -InputPath examples/event-log/task-events.jsonl`、`./scripts/replay-agent-traces.ps1 -InputPath examples/trace-observability/trace-spans.jsonl`、`python scripts/load-agent-traces-sqlite.py --input examples/trace-observability/trace-spans.jsonl --database tmp/trace-dashboard.sqlite --reset`、`python examples/trace-observability/trace_context_bridge.py`、`node examples/trace-observability/trace_context_bridge_node.js --input-traceparent ...`、`Python -> Node.js trace handoff check`、`git diff --check`。
-- 最新检查结果：本地链接、占位标记、术语一致性、Markdown lint、Python 示例语法检查、Node.js 示例语法检查、运行日志桥接脚本控制台输出和 `--output` 写文件、broken handoff 断链演示、runtime log projection 正常投影、runtime log projection 失败队列、事件回放脚本控制台输出、Agent trace 回放脚本控制台输出、SQLite trace 导入、Python trace context 桥接、Node.js trace context 桥接、Python -> Node.js 同 trace 和父子 span 校验、`git diff --check` 和 MkDocs strict build 均通过（2026-05-20 复查，118 个 Markdown 文件）。MkDocs strict build 仅输出 Material for MkDocs 关于未来 MkDocs 2.0 的官方提示，不影响本次构建；本轮未启动本地预览，也未启动本地 Collector。
-- 当前 Markdown 规模约 31132 行、68176 个词、604457 个字符（含团队 AI 落地完整路线图、行业化工作坊案例集、30 天试点跟踪表、试读与试跑反馈包、反馈到改稿闭环、前沿与过时技术案例库、自动化维护与扩写方案、阅读站功能池、章节导读、章节收尾、章节练习与验收映射表、案例索引表、主题索引、术语回链索引、学习进度清单、内容健康报告、图解增强、客户反馈连续案例、教学资料库连续案例、代码库问答连续案例、连续案例练习与复盘评分表、连续案例课堂试跑版、连续案例团队试点版、连续案例样例库（含三条主线质量层级对照）、七层 AI 文明架构、OpenClaw 多 agent 联动教程、OpenClaw/Node.js/超级大脑架构、Read Model / Projection、Transactional Outbox、Saga、Durable Execution、Observability / Tracing、Agent Trace 可观测性样例、OpenTelemetry 最小接入样例、OpenTelemetry 生产化加固样例、Trace Backend 选型与查询策略、跨 Agent Trace Context 传播样例、多语言 Trace Context 传播样例、多语言运行日志回放样例、多语言运行日志投影与失败回放样例、多语言 OpenTelemetry SDK 接入路线、Agent Trace 生产事故复盘长案例、前沿资料季度复核执行手册、前沿资料季度复核示例记录和 1.0 发布前总检查清单）。
+- 最新检查命令：`./scripts/content-health-report.ps1 -Root . -OutputPath X:\tmp\content-health-report.md -Top 30`、导航/SUMMARY/电子书导出清单一致性检查、`./scripts/check-markdown-links.ps1 -Root . -CheckPlaceholders`、`./scripts/check-terminology.ps1 -Root .`、`npx --yes markdownlint-cli2 "**/*.md" "#_site" "#node_modules" "#vendor" "#dist" "#site"`、`git diff --check`、`python -m mkdocs build --strict --config-file mkdocs.yml`。
+- 最新检查结果：内容健康报告成功生成；MkDocs 导航没有遗漏；电子书导出清单没有遗漏；`docs/SUMMARY.md` 只是不自链接 `docs/SUMMARY.md` 本身；本地链接、占位标记、术语一致性、Markdown lint（120 个 Markdown 文件）、`git diff --check` 和 MkDocs strict build 均通过（2026-05-22 复查）。MkDocs strict build 仅输出 Material for MkDocs 关于未来 MkDocs 2.0 的官方提示，不影响本次构建；本轮未启动本地预览。
+- 当前内容健康扫描覆盖 113 个书稿相关 Markdown 文件，约 31164 行、275000 个内容单位；本轮没有正文短页候选，仅 `docs/cases/continuous-case-samples.md` 超过 10000 内容单位，属于可保留的长样例库。
 - 联网核验关键动态来源，核验日期为 2026-05-07：
   - Stanford HAI 2026 AI Index
   - OpenAI Agents SDK 文档

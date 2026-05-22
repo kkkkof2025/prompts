@@ -2,7 +2,7 @@ param(
     [string]$Root = ".",
     [string]$OutputPath = "content-health-report.md",
     [int]$ShortPageWords = 300,
-    [int]$LongPageWords = 4000,
+    [int]$LongPageWords = 10000,
     [int]$Top = 20
 )
 
@@ -40,6 +40,15 @@ function Escape-MarkdownCell {
     return $Value.Replace("|", "\|").Replace("`r", " ").Replace("`n", " ")
 }
 
+function Measure-ContentUnits {
+    param([string]$Text)
+
+    $latinWords = [regex]::Matches($Text, "[A-Za-z0-9]+(?:[-_./][A-Za-z0-9]+)*").Count
+    $cjkChars = [regex]::Matches($Text, "[\u3400-\u9FFF]").Count
+
+    return $latinWords + $cjkChars
+}
+
 $markdownFiles = Get-ChildItem -LiteralPath $rootPath -Recurse -File -Filter "*.md" |
     Where-Object {
         $_.FullName -notmatch "\\_site\\" -and
@@ -47,9 +56,34 @@ $markdownFiles = Get-ChildItem -LiteralPath $rootPath -Recurse -File -Filter "*.
         $_.FullName -notmatch "\\vendor\\" -and
         $_.FullName -notmatch "\\dist\\" -and
         $_.FullName -notmatch "\\site\\" -and
+        $_.FullName -notmatch "\\build\\" -and
+        $_.FullName -notmatch "\\tmp\\" -and
+        $_.FullName -notmatch "\\temp\\" -and
         $_.FullName -notmatch "\\.git\\" -and
+        $_.FullName -notmatch "\\.github\\" -and
+        $_.FullName -notmatch "\\.workbuddy\\" -and
         $_.Name -ne "content-health-report.md"
     }
+
+$intentionalShortPagePatterns = @(
+    "^docs/ebook-cover\.md$",
+    "^docs/copyright\.md$",
+    "^LICENSE\.md$",
+    "^CONTRIBUTING\.md$",
+    "^agents/index\.md$"
+)
+
+function Test-IntentionalShortPage {
+    param([string]$Path)
+
+    foreach ($pattern in $intentionalShortPagePatterns) {
+        if ($Path -match $pattern) {
+            return $true
+        }
+    }
+
+    return $false
+}
 
 $pages = New-Object System.Collections.Generic.List[object]
 $chapterIssues = New-Object System.Collections.Generic.List[object]
@@ -59,7 +93,7 @@ foreach ($file in $markdownFiles) {
     $relative = Get-RelativePathCompat -BasePath $rootPath -TargetPath $file.FullName
     $text = Get-Content -Raw -Encoding UTF8 -LiteralPath $file.FullName
     $lines = @($text -split "`r?`n")
-    $words = [regex]::Matches($text, "\S+").Count
+    $words = Measure-ContentUnits -Text $text
     $headings = [regex]::Matches($text, "(?m)^#{1,6}\s+\S+").Count
     $links = [regex]::Matches($text, "\[[^\]]+\]\([^)]+\)").Count
     $checkboxes = [regex]::Matches($text, "(?m)^\s*-\s+\[[ xX]\]").Count
@@ -109,7 +143,12 @@ foreach ($file in $markdownFiles) {
 }
 
 $shortPages = $pages |
-    Where-Object { $_.Words -lt $ShortPageWords -and $_.Path -notmatch "^\.github/" } |
+    Where-Object { $_.Words -lt $ShortPageWords -and (-not (Test-IntentionalShortPage -Path $_.Path)) } |
+    Sort-Object Words, Path |
+    Select-Object -First $Top
+
+$intentionalShortPages = $pages |
+    Where-Object { $_.Words -lt $ShortPageWords -and (Test-IntentionalShortPage -Path $_.Path) } |
     Sort-Object Words, Path |
     Select-Object -First $Top
 
@@ -142,9 +181,11 @@ $report.Add("| 指标 | 数值 |")
 $report.Add("| --- | --- |")
 $report.Add("| Markdown 文件 | $($pages.Count) |")
 $report.Add("| 总行数 | $totalLines |")
-$report.Add("| 总词数 | $totalWords |")
-$report.Add("| 过短页面阈值 | $ShortPageWords 词 |")
-$report.Add("| 过长页面阈值 | $LongPageWords 词 |")
+$report.Add("| 总内容量 | $totalWords |")
+$report.Add("| 过短页面阈值 | $ShortPageWords 内容单位 |")
+$report.Add("| 过长页面阈值 | $LongPageWords 内容单位 |")
+$report.Add("")
+$report.Add("内容单位按 CJK 字符 + 英文/数字词估算，用于避免中文页面被空白分词严重低估。")
 $report.Add("")
 $report.Add("## 可能需要扩写的短页面")
 $report.Add("")
@@ -152,9 +193,25 @@ if ($shortPages.Count -eq 0) {
     $report.Add("未发现低于阈值的短页面。")
 }
 else {
-    $report.Add("| 文件 | 词数 | 行数 |")
+    $report.Add("| 文件 | 内容量 | 行数 |")
     $report.Add("| --- | ---: | ---: |")
     foreach ($page in $shortPages) {
+        $report.Add("| $(Escape-MarkdownCell $page.Path) | $($page.Words) | $($page.Lines) |")
+    }
+}
+
+$report.Add("")
+$report.Add("## 刻意保持简短的系统页面")
+$report.Add("")
+if ($intentionalShortPages.Count -eq 0) {
+    $report.Add("未发现命中刻意短页规则的页面。")
+}
+else {
+    $report.Add("这些页面通常是封面、版权或许可证，不作为正文扩写候选。")
+    $report.Add("")
+    $report.Add("| 文件 | 内容量 | 行数 |")
+    $report.Add("| --- | ---: | ---: |")
+    foreach ($page in $intentionalShortPages) {
         $report.Add("| $(Escape-MarkdownCell $page.Path) | $($page.Words) | $($page.Lines) |")
     }
 }
@@ -166,7 +223,7 @@ if ($longPages.Count -eq 0) {
     $report.Add("未发现超过阈值的长页面。")
 }
 else {
-    $report.Add("| 文件 | 词数 | 标题数 | 链接数 |")
+    $report.Add("| 文件 | 内容量 | 标题数 | 链接数 |")
     $report.Add("| --- | ---: | ---: | ---: |")
     foreach ($page in $longPages) {
         $report.Add("| $(Escape-MarkdownCell $page.Path) | $($page.Words) | $($page.Headings) | $($page.Links) |")
@@ -180,7 +237,7 @@ if ($missingH1.Count -eq 0) {
     $report.Add("未发现缺少一级标题的页面。")
 }
 else {
-    $report.Add("| 文件 | 词数 | 标题数 |")
+    $report.Add("| 文件 | 内容量 | 标题数 |")
     $report.Add("| --- | ---: | ---: |")
     foreach ($page in $missingH1) {
         $report.Add("| $(Escape-MarkdownCell $page.Path) | $($page.Words) | $($page.Headings) |")
@@ -210,7 +267,7 @@ if ($dynamicReviewPages.Count -eq 0) {
 else {
     $report.Add("这些页面包含前沿技术、协议、模型或复核相关关键词。报告只提示候选，不代表内容一定过时。")
     $report.Add("")
-    $report.Add("| 文件 | 命中次数 | 词数 |")
+    $report.Add("| 文件 | 命中次数 | 内容量 |")
     $report.Add("| --- | ---: | ---: |")
     foreach ($page in $dynamicReviewPages) {
         $report.Add("| $(Escape-MarkdownCell $page.Path) | $($page.Hits) | $($page.Words) |")

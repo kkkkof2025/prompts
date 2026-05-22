@@ -189,6 +189,8 @@ GitHub 官方文档建议对工作流权限做最小授权，并把定时触发�
 
 当前仓库已经完成第 1-2 步，并用 artifact 保存扫描报告。后续如果要继续推进，可以增加一个人工触发 workflow，把报告中的某一条候选项转换成 issue；再往后才考虑接入模型生成 draft PR。
 
+结构层面的人工判断会记录到 [书籍结构审计与内容健康治理](book-structure-audit.md)。如果后续要把扫描结果自动转 issue，建议先读取这页，避免把封面、版权、许可证或故意短的入口页误判成必须扩写的正文缺口。
+
 ## 参考
 
 - [GitHub Actions permissions documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-the-github_token-in-a-workflow#about-the-github_token)

@@ -34,6 +34,10 @@
 - 增加 `examples/trace-observability/trace-runtime-log-replay.md` 和 `trace_runtime_log_bridge.py`，把 Python 与 Node.js bridge 输出合并成可读 runtime log，用于教学、排障和复盘。
 - 增加 `examples/trace-observability/trace-runtime-log-projection.md` 和 `trace_runtime_log_projection.py`，把 runtime log 投影成 summary、可搜索索引和失败队列，并补充 broken handoff 失败回放。
 - 增加 `examples/trace-observability/trace-otel-sdk-multilang.md`，补充从手写 `traceparent` 迁移到 OpenTelemetry Python / JavaScript SDK `inject` / `extract` 的多语言路线。
+- 增加 `docs/book-structure-audit.md` 书籍结构审计与内容健康治理页，记录导航、目录、导出清单、短页、重复主题和下一轮扩写优先级。
+- 扩充 `examples/event-log/index.md`，补充任务事件 schema、事件类型、读模型、失败样例、业务事件与 trace/runtime log 的区别，以及 CloudEvents 参考边界。
+- 更新 `scripts/content-health-report.ps1`，改用 CJK 字符 + 英文/数字词估算内容量，排除 `.github/`、`.workbuddy/`、构建输出和临时目录，并把封面、版权、许可证、贡献指南和 agent 协作记录列为刻意短页。
+- 更新 `scripts/export-ebook.ps1`，补齐完整目录、发布/维护指南、结构审计页、基础实践模板、项目维护根文档和 agent 协作记录，减少离线版遗漏。
 - 增加 `docs/cases/agent-trace-incident-retrospective.md` Agent Trace 生产事故复盘长案例，把 trace 断裂、安全复核失败、事件日志、补偿动作和人工审批串成复盘流程。
 - 将 GitHub Pages 在线阅读版统一为 MkDocs Material，增加 `mkdocs.yml`、阅读样式、依赖文件和 `mkdocs-pages.yml` 发布 workflow。
 - 将章节页补齐上一章/下一章导航，并把 `agents/README.md` 改为 `agents/index.md`，避免与站点首页冲突。
