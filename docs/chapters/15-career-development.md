@@ -481,7 +481,7 @@ your-name-ai-portfolio/
 ## 本章收尾
 
 - 本章练习：完成基础练习的 3 个任务——职位定位、能力盘点、作品集规划。
-- 相关案例：结合 [分角色学习路径](../learning-paths.md) 和 [职业发展案例](../cases/career-development.md) 选择最适合你的学习路线。
+- 相关案例：结合 [分角色学习路径](../learning-paths.md) 和 [职业转型案例](../cases/career-transition-cases.md) 选择最适合你的学习路线。
 - 下一步：如果你刚完成本书，回到 [第 14 章](14-practice-plan.md) 开始 30 天实践；如果你已有基础，直接投入作品集项目。
 
 ## 章节导航

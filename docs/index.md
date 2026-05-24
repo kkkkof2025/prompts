@@ -6,28 +6,18 @@
 这本书不是“咒语大全”，而是一套可长期维护的中文 AI 学习和使用方法：从对话、prompt、工作流、skills、RAG、agent、记忆、协议、模型选型，到安全治理、教学材料和团队落地。
 
 <div class="quick-actions" markdown="1">
+[从零开始](first-day-with-ai.md)
+[选你的角色](role-based-quickstart.md)
 [开始阅读](chapters/00-learning-map.md)
+[职业发展](chapters/15-career-development.md)
+[实战项目](capstone-projects.md)
 [完整目录](SUMMARY.md)
 [真实案例](case-studies.md)
+[模型选型](model-cost-calculator.md)
+[安全防护](prompt-injection-defense.md)
+[社区成长](community-continuous-learning.md)
 [前沿概念](style-engineering-ai-native.md)
 [上下文工程](context-engineering.md)
-[黑板架构](blackboard-architecture-multi-agent.md)
-[事件溯源](event-sourcing.md)
-[CQRS](cqrs.md)
-[读模型](read-model-projections.md)
-[Outbox](transactional-outbox-idempotency.md)
-[Saga](saga-process-manager.md)
-[持久化执行](durable-execution-agent-workflows.md)
-[可观测性](observability-tracing-agent-workflows.md)
-[Trace 样例](../examples/trace-observability/index.md)
-[OTel 样例](../examples/trace-observability/otel-minimal-instrumentation.md)
-[OTel 加固](../examples/trace-observability/otel-production-hardening.md)
-[Backend 选型](../examples/trace-observability/trace-backend-selection.md)
-[Trace Context](../examples/trace-observability/trace-context-propagation.md)
-[多语言 Trace](../examples/trace-observability/trace-context-multilang.md)
-[运行日志回放](../examples/trace-observability/trace-runtime-log-replay.md)
-[日志投影](../examples/trace-observability/trace-runtime-log-projection.md)
-[SDK 接入](../examples/trace-observability/trace-otel-sdk-multilang.md)
 [维护与发布](release-checklist-1.0.md)
 [结构审计](book-structure-audit.md)
 </div>
@@ -36,6 +26,12 @@
 ## 怎么读
 
 <div class="route-grid" markdown="1">
+<div class="route-card" markdown="1">
+**零基础立即上手**
+
+先花 5 分钟读 [AI 第一天](first-day-with-ai.md)，然后选一个免费 AI 工具开始对话。之后从 [第 0 章](chapters/00-learning-map.md) 系统学习。不确定走哪条路线？用 [分角色快速上手指南](role-based-quickstart.md) 选择。
+</div>
+
 <div class="route-card" markdown="1">
 **第一次系统学习**
 
@@ -63,7 +59,7 @@
 <div class="route-card" markdown="1">
 **想做作品集或转型**
 
-读 [第 15 章](chapters/15-career-development.md)、[职业发展案例](cases/career-development.md)、[端到端实战项目指南](capstone-projects.md) 和 [AI 求职资源大全](appendix-career-resources.md)。
+读 [第 15 章](chapters/15-career-development.md)、[职业转型案例](cases/career-transition-cases.md)、[端到端实战项目指南](capstone-projects.md)、[求职资源大全](appendix-career-resources.md) 和 [社区成长](community-continuous-learning.md)。
 </div>
 </div>
 

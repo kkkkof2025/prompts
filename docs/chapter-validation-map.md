@@ -47,7 +47,7 @@
 | [第 12 章：AI 前沿发展全景](chapters/12-frontier-landscape.md) | 用任务系统视角理解多模态、agent 和协议化趋势 | 写下所在行业未来一年 3 个 AI 场景 | 能区分聊天、工作流、RAG、工具调用和 agent | [AI 任务选择决策指南](task-decision-guide.md)、[行业化工作坊案例集](workshop-industry-cases.md) |
 | [第 13 章：安全、伦理与治理](chapters/13-safety-governance.md) | 建立个人和团队 AI 使用底线 | 写 5 条禁止事项和 3 个必须人工确认点 | 能说明数据、版权、偏见和 agent 权限风险 | [团队 AI 落地手册](team-adoption-playbook.md)、[安全案例更新指南](safety-case-updates.md)、[安全事故复盘案例集](safety-incident-retrospectives.md) |
 | [第 14 章：30 天实践计划](chapters/14-practice-plan.md) | 把全书方法转成持续实践系统 | 从 30 天计划中选择本周 3 天任务并执行 | 有 prompt、工作流、评测集、skill、记忆文件或安全规范产出 | [30 天团队试点跟踪表](pilot-tracking-30days.md)、[试读与试跑反馈包](feedback-validation-kit.md) |
-| [第 15 章：AI 职业发展全景](chapters/15-career-development.md) | 把学习成果转成作品集、面试表达或接单方案 | 选择一个职业方向，写出 3 个月作品集计划 | 有项目证据、失败样例、评测记录和公开展示入口 | [职业发展案例](cases/career-development.md)、[端到端实战项目指南](capstone-projects.md)、[附录 E：AI 求职资源大全](appendix-career-resources.md) |
+| [第 15 章：AI 职业发展全景](chapters/15-career-development.md) | 把学习成果转成作品集、面试表达或接单方案 | 选择一个职业方向，写出 3 个月作品集计划 | 有项目证据、失败样例、评测记录和公开展示入口 | [职业转型案例](cases/career-transition-cases.md)、[端到端实战项目指南](capstone-projects.md)、[附录 E：AI 求职资源大全](appendix-career-resources.md) |
 
 ## 角色化验收路径
 

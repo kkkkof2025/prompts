@@ -32,7 +32,7 @@
 - [产品：竞品分析、需求评审](cases/product.md)
 - [工程：修 Bug、补测试](cases/engineering.md)
 - [管理者：AI 使用规范、项目复盘、试点责任矩阵](cases/management.md)
-- [职业发展：作品集、面试、接单与转型](cases/career-development.md)
+- [职业转型：四种AI转型路径](cases/career-transition-cases.md)
 - [团队 AI 落地案例集](team-adoption-cases.md)
 - [前沿与过时技术案例库](technology-evolution-cases.md)
 

@@ -32,7 +32,7 @@
 
 - 将临时的“三方一致性检查”固化为 `scripts/check-content-coverage.ps1`，并接入 `Markdown Check` workflow。以后新增页面时，CI 会检查它是否同时进入 MkDocs 导航、`docs/SUMMARY.md` 和电子书导出清单。
 - 将职业发展、端到端实战项目、模型成本、社区持续学习、Prompt Injection 防护和求职资源纳入正式导航、目录和导出清单，不再只停留在草稿或局部链接中。
-- 新增 [职业发展案例](cases/career-development.md)，把第 15 章的方法论落到产品、运营、开发者和 Freelancer 四类可复盘路径。
+- 新增 [职业转型案例](cases/career-transition-cases.md)，把第 15 章的方法论落到产品、运营、开发者和 Freelancer 四类可复盘路径。
 - 扩写 [工程案例](cases/engineering.md) 和 [产品案例](cases/product.md)：工程侧新增发布前风险审查，产品侧新增 AI 功能最小实验设计。它们补的是团队落地中常见但容易被忽略的“上线闸门”和“实验验证”。
 - 继续扩写 [运营案例](cases/operations.md) 和 [管理者案例](cases/management.md)：运营侧新增跨渠道活动执行检查，管理侧新增 AI 试点责任矩阵。它们补的是“执行复盘”和“责任治理”。
 

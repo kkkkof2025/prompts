@@ -223,3 +223,126 @@ flowchart LR
 ```
 
 这本书的目标不是让你读完所有概念，而是让你建立一个会持续改进的个人 AI 使用系统。
+
+## 全书章节关系图
+
+```mermaid
+graph TB
+    subgraph 基础["📘 基础阶段（第1周）"]
+        Ch00["第0章 学习路线图"]
+        Ch01["第1章 基本对话"]
+        Ch02["第2章 AI基本概念"]
+        Ch03["第3章 Prompt入门"]
+        Ch04["第4章 工作流"]
+        Ch00 --> Ch01
+        Ch01 --> Ch02
+        Ch02 --> Ch03
+        Ch03 --> Ch04
+    end
+
+    subgraph 进阶["📗 进阶阶段（第2周）"]
+        Ch05["第5章 模型评估"]
+        Ch06["第6章 工具与RAG"]
+        Ch07["第7章 Skills"]
+        Ch08["第8章 Agent"]
+        Ch09["第9章 记忆系统"]
+        Ch04 --> Ch05
+        Ch05 --> Ch06
+        Ch06 --> Ch07
+        Ch07 --> Ch08
+        Ch08 --> Ch09
+    end
+
+    subgraph 实战["📙 实战阶段（第3-4周）"]
+        Ch10["第10章 OpenClaw"]
+        Ch11["第11章 开源模型"]
+        Ch12["第12章 前沿发展"]
+        Ch13["第13章 安全治理"]
+        Ch14["第14章 30天计划"]
+        Ch15["第15章 职业发展"]
+        Ch09 --> Ch10
+        Ch10 --> Ch11
+        Ch11 --> Ch12
+        Ch08 --> Ch13
+        Ch13 --> Ch14
+        Ch14 --> Ch15
+    end
+
+    subgraph 工具["🔧 工具与辅助材料"]
+        Tools1["速查讲义"]
+        Tools2["模板库"]
+        Tools3["常见误区"]
+        Tools4["调试指南"]
+        Tools5["成本计算器"]
+        Tools6["API集成"]
+        Tools7["数据准备"]
+        Tools8["AI边界指南"]
+    end
+
+    subgraph 案例["📚 案例与实践"]
+        Cases1["角色案例"]
+        Cases2["安全事故复盘"]
+        Cases3["连续案例"]
+        Cases4["行业工作坊"]
+        Cases5["转型案例"]
+    end
+
+    Ch03 -.-> Tools2
+    Ch04 -.-> Tools1
+    Ch05 -.-> Tools5
+    Ch06 -.-> Tools6
+    Ch06 -.-> Tools7
+    Ch13 -.-> Cases2
+    Ch15 -.-> Cases5
+    Ch08 -.-> Cases3
+
+    style 基础 fill:#e8f5e9,stroke:#2e7d32
+    style 进阶 fill:#e3f2fd,stroke:#1565c0
+    style 实战 fill:#fff3e0,stroke:#e65100
+    style 工具 fill:#f3e5f5,stroke:#7b1fa2
+    style 案例 fill:#fce4ec,stroke:#c62828
+```
+
+**阅读路线**：
+- 🟢 **纯新手**：Ch00 → Ch01 → Ch02 → Ch03 → Ch04 → 跳到Ch14实践
+- 🔵 **有基础**：跳Ch02，从Ch03开始 → Ch05 → Ch06 → Ch07 → Ch08 → Ch13
+- 🟠 **进阶探索**：Ch09 → Ch10 → Ch11 → Ch12 → Ch15
+- 🟣 **遇到瓶颈**：查"工具"区的对症指南
+- 🔴 **需要灵感**：看"案例"区的真实场景
+
+## 辅助材料导航图
+
+```mermaid
+graph LR
+    subgraph 遇到问题["我遇到问题了"]
+        direction TB
+        Q1["Prompt效果差"] --> A1["调试指南"]
+        Q1 --> A2["模板库"]
+        Q2["不知道选哪个模型"] --> A3["模型选型"]
+        Q2 --> A4["成本计算"]
+        Q3["不知道怎么落地"] --> A5["30天计划"]
+        Q3 --> A6["端到端项目"]
+        Q4["安全/合规问题"] --> A7["安全规范"]
+        Q4 --> A8["事故复盘"]
+    end
+
+    subgraph 快速查["需要快速查"]
+        direction TB
+        R1["速查讲义"]
+        R2["术语表"]
+        R3["检查清单"]
+        R4["AI边界指南"]
+    end
+
+    subgraph 深入学习["想深入学习"]
+        direction TB
+        D1["角色案例"]
+        D2["行业工作坊"]
+        D3["连续案例"]
+        D4["前沿专题"]
+    end
+
+    style 遇到问题 fill:#ffebee,stroke:#c62828
+    style 快速查 fill:#e8f5e9,stroke:#2e7d32
+    style 深入学习 fill:#e3f2fd,stroke:#1565c0
+```

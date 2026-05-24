@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+- 新增 **AI 短剧制作全流程实战**（`docs/cases/ai-short-drama-production.md`）：从创意提案→剧本分镜→资产生产→视频生成→后期发布的完整单人工作室流水线，含五大环节工具链、时间成本演进和 AI 思维模型映射。
+- 新增 **原生多角色模拟**（`docs/native-multi-role-simulation.md`）：不依赖任何平台的纯 Prompt 多 Agent 协作方法，三层递进（单次多角色→对话模拟→带工具分工），含防串台技巧和质量控制。
 - 新增 **第 15 章：AI 职业发展全景** (`docs/chapters/15-career-development.md`)，覆盖热门职位地图、技能对照表、薪资参考、作品集指南、面试准备和职业转型路径。
 - 新增 **端到端实战项目指南** (`docs/capstone-projects.md`)，包含个人学习助手、自动化工作报告生成器、智能客服Bot三个完整项目。
 - 增强 **第 1 章**：新增"手把手实战演练"节，展示完整的"失败→分析→修正→验收"循环。
@@ -11,7 +13,34 @@
 - 新增 **社区参与与持续学习** (`docs/community-continuous-learning.md`)，包含信息获取系统、开源贡献路径、个人品牌建设和月度/季度学习节奏。
 - 新增 **附录 E：AI 求职资源大全** (`docs/appendix-career-resources.md`)，包含招聘渠道、简历优化、推荐项目、关注列表和常见问题。
 - 新增 **Prompt Injection 防护实战** (`docs/prompt-injection-defense.md`)，包含5种攻击类型、6层防护体系、测试集和企业级安全清单。
-- 新增 **职业发展案例** (`docs/cases/career-development.md`)，覆盖产品、运营、开发者和 Freelancer 四类转型路径。
+- 新增 **职业转型案例：四种 AI 转型路径** (`docs/cases/career-transition-cases.md`)，包含运营→AI产品、电工→AI培训师、开发→AI工程师、全职妈妈→Freelancer四种真实转型路径。
+- 新增 **章节分级练习（0-15章）** (`docs/chapter-graded-exercises.md`)，覆盖全书16章，每章⭐/⭐⭐/⭐⭐⭐三级难度，自学和教学两用。
+- 新增 **分角色快速上手指南** (`docs/role-based-quickstart.md`)，为学生、职场、开发者、PM、安全、Freelancer、管理者提供定制化学习路线。
+- 新增 **Prompt 优化与成本节约** (`docs/prompt-optimization-savings.md`)，包含瘦身技巧、System Prompt管理、对话历史管理、缓存策略和路由省钱方案。
+- 新增 **AI 第一天：零基础上手指南** (`docs/first-day-with-ai.md`)，5分钟读完即可开始跟AI对话的打印级上手指南。
+- 新增 **Prompt 模板库** (`examples/prompt-templates.md`)，包含工作、写作、学习、代码、分析5大类可直接复制使用的模板。
+- 新增 **AI API 集成模式实战** (`docs/api-integration-patterns.md`)，覆盖同步/异步/流式调用、Token预算控制、结果验证、Fallback链、缓存层和安全过滤。
+- 新增 **AI 数据准备实战指南** (`docs/data-preparation-guide.md`)，覆盖格式清洗、结构化输入、RAG文档准备、常见失败模式和AI互助清洗。
+- 新增 **何时不用 AI** (`docs/when-not-to-use-ai.md`)，覆盖AI边界、决策树、隐性成本和替代方案对照表。
+- 新增 **30 天 AI 实践跟踪表** (`docs/30day-tracking-sheet.md`)，可打印的每日记录和周复盘模板。
+- 增强 **第 13 章**：新增Agent权限分级(L0-L3)、企业三阶段落地、安全事故响应流程和季度安全审计自检。
+- 增强 **第 5 章**：新增评测集建立五步实战、双模型横向对比评分表、评测集维护节奏。
+- 增强 **第 14 章**：新增每日期望产出表（30天×用时）、分角色跳过建议、卡住对策表。
+- 增强 **第 2 章**：新增模型通俗类比（"读过几十亿页书的人"）、中英文Token对比表、幻觉具体案例。
+- 增强 **第 3 章**：新增同一Prompt结构跨角色对比表（产品/开发/运营/管理者）。
+- 增强 **第 6 章**：新增RAG前后对比实例、从零建RAG五步实战。
+- 增强 **第 8 章**：新增Agent完整执行Trace（成功+失败对比）、Agent权限分级(L0-L3)。
+- 增强 **第 4 章**：新增周报工作流三阶段演变（混乱→固定→完整）、跨角色工作流对比表。
+- 增强 **第 7 章**：新增Skill测试四步法、填空式Skill模板。
+- 增强 **第 9 章**：新增"记忆腐烂"实例、记忆维护节奏表。
+- 增强 **第 10 章**：新增"AI助手的一天"时序实战、搭建助手四步决策。
+- 增强 **第 11 章**：新增5分钟本地部署指南(Ollama)、开源vs云端决策矩阵。
+- 增强 **第 12 章**：新增九大趋势行动映射表、2026年AI炒作vs实质评估表。
+- 新增 **本书阅读指南**（`docs/how-to-read-this-book.md`）：按开发者/产品经理/写作者/管理者/学生五种角色提供阅读路径、三种阅读策略（极速/系统/深度）。
+- 更新 **ROADMAP.md**：版本号从 0.7 → 0.9 内测，标注 1.0 收尾阶段。
+- 新增 **AI Prompt 即用库**（`docs/prompt-templates-library.md`）：30个即抄即用的prompt模板，覆盖写作/编程/分析/学习/工作/创作6大类。
+- 增强 **速查讲义**（`docs/quick-reference.md`）：新增模型选型速查+常见AI失败修复。
+- 增强 **附录D 检查清单**（`docs/appendix-checklists.md`）：新增模型选型检查清单+AI项目启动检查清单。
 - 所有新页面已接入 `mkdocs.yml` 导航、`docs/SUMMARY.md` 完整目录和 `scripts/export-ebook.ps1` 电子书导出清单。
 - 更新 `README.md` 读者路线，覆盖新增章节。
 

@@ -75,6 +75,7 @@ nav:
   - 书稿首页: docs/index.md
   - 完整目录: docs/SUMMARY.md
   - 主体章节:
+      - 本书阅读指南: docs/how-to-read-this-book.md
       - 第 0 章：学习路线图: docs/chapters/00-learning-map.md
       - 第 1 章：从最基本的对话开始: docs/chapters/01-dialogue-basics.md
       - 第 2 章：AI 的基本概念: docs/chapters/02-ai-basics.md
@@ -104,6 +105,7 @@ nav:
       - 连续案例练习与复盘评分表: docs/cases/continuous-case-exercises.md
       - 连续案例课堂试跑版: docs/cases/continuous-case-classroom-run.md
       - 连续案例团队试点版: docs/cases/continuous-case-team-pilot.md
+      - 职业转型案例：四种 AI 转型路径: docs/cases/career-transition-cases.md
       - 连续案例样例库: docs/cases/continuous-case-samples.md
       - 连续案例课堂投影短版: docs/cases/continuous-case-slide-brief.md
       - 学生案例: docs/cases/student.md
@@ -113,9 +115,13 @@ nav:
       - 工程案例: docs/cases/engineering.md
       - 管理者案例: docs/cases/management.md
       - 职业发展案例: docs/cases/career-development.md
+      - AI 短剧制作全流程实战: docs/cases/ai-short-drama-production.md
       - 团队 AI 落地案例集: docs/team-adoption-cases.md
       - 前沿与过时技术案例库: docs/technology-evolution-cases.md
   - 学习与教学:
+      - AI 第一天：零基础上手指南: docs/first-day-with-ai.md
+      - 30 天 AI 实践跟踪表: docs/30day-tracking-sheet.md
+      - 分角色快速上手指南: docs/role-based-quickstart.md
       - 分角色学习路径: docs/learning-paths.md
       - 学习进度清单: docs/learning-progress.md
       - 读书会与教学方案: docs/facilitation-guide.md
@@ -125,6 +131,7 @@ nav:
       - 试读与试跑反馈包: docs/feedback-validation-kit.md
       - 章节复盘题与小测: docs/chapter-review-questions.md
       - 章节练习与验收映射表: docs/chapter-validation-map.md
+      - 章节分级练习（0-15章）: docs/chapter-graded-exercises.md
       - 社区参与与持续学习: docs/community-continuous-learning.md
   - 团队落地:
       - 团队 AI 落地完整路线图: docs/team-ai-adoption-roadmap.md
@@ -137,12 +144,17 @@ nav:
       - 图解：AI 工作系统: docs/diagrams.md
       - AI 学习与使用速查讲义: docs/quick-reference.md
       - 常见误区与纠偏指南: docs/common-pitfalls.md
+      - AI Prompt 即用库: docs/prompt-templates-library.md
       - Prompt 调试指南: docs/prompt-debugging-guide.md
+      - Prompt 优化与成本节约: docs/prompt-optimization-savings.md
       - AI 任务选择决策指南: docs/task-decision-guide.md
+      - 何时不用 AI：AI 的边界: docs/when-not-to-use-ai.md
       - AI 工作流配方库: docs/workflow-recipes.md
       - 中外 AI 模型特色概览: docs/model-landscape-china-global.md
       - AI 模型选型实战案例集: docs/model-selection-cases.md
       - AI 模型成本计算与选型实战: docs/model-cost-calculator.md
+      - AI API 集成模式实战: docs/api-integration-patterns.md
+      - AI 数据准备实战指南: docs/data-preparation-guide.md
   - 前沿架构与生态:
       - Style Engineering 与 AI Native 创作: docs/style-engineering-ai-native.md
       - Context Engineering：上下文工程: docs/context-engineering.md
@@ -156,6 +168,7 @@ nav:
       - Observability / Tracing：智能体可观测性: docs/observability-tracing-agent-workflows.md
       - AI 发展历史与社区生态: docs/ai-history-community-ecosystem.md
       - 七层 AI 文明架构: docs/seven-layer-ai-civilization.md
+      - 原生多角色模拟（无平台的多Agent协作）: docs/native-multi-role-simulation.md
       - OpenClaw 多 agent 联动教程: docs/openclaw-multi-agent-linkage.md
       - OpenClaw、Node.js 与超级大脑架构: docs/openclaw-superbrain-architecture.md
   - 安全与复核:
@@ -176,6 +189,7 @@ nav:
       - 术语写法规范: docs/term-style-guide.md
       - 电子书与离线阅读指南: docs/ebook-guide.md
   - 实践模板:
+      - Prompt 模板库: examples/prompt-templates.md
       - Prompt 模式实践模板: examples/prompt-patterns.md
       - AI Skill/Card 可复用模板: examples/skill-card-template.md
       - Agent 工作流安全检查清单: examples/agent-workflow-checklist.md

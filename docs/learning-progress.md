@@ -29,7 +29,7 @@
 | 前沿 | [第 12 章：AI 前沿发展全景](chapters/12-frontier-landscape.md) | 哪些事实需要定期复核 | 记录 1 条前沿资料复核证据 | [前沿资料季度复核记录表](frontier-review-log.md) |
 | 治理 | [第 13 章：安全、伦理与治理](chapters/13-safety-governance.md) | 数据、权限、评估和审计边界 | 写 1 张团队 AI 使用边界卡 | [AI 安全与模型选型工作坊](workshop-safety-model-selection.md) |
 | 实践 | [第 14 章：30 天实践计划](chapters/14-practice-plan.md) | 如何把学习变成连续试点 | 完成 1 份 30 天计划 | [30 天团队试点跟踪表](pilot-tracking-30days.md) |
-| 职业 | [第 15 章：AI 职业发展全景](chapters/15-career-development.md) | 如何把学习成果转成作品集、面试表达或接单方案 | 写 1 份 3 个月作品集计划 | [职业发展案例](cases/career-development.md) |
+| 职业 | [第 15 章：AI 职业发展全景](chapters/15-career-development.md) | 如何把学习成果转成作品集、面试表达或接单方案 | 写 1 份 3 个月作品集计划 | [职业转型案例](cases/career-transition-cases.md) |
 
 ## 30 天推进节奏
 

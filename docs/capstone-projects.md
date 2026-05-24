@@ -440,6 +440,6 @@ kb/
 ## 相关资源
 
 - [第 15 章：AI 职业发展全景](chapters/15-career-development.md)
-- [职业发展案例](cases/career-development.md)
+- [职业转型案例](cases/career-transition-cases.md)
 - [AI 模型成本计算与选型实战](model-cost-calculator.md)
 - [Prompt Injection 防护实战](prompt-injection-defense.md)
