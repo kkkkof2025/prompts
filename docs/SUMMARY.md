@@ -27,7 +27,7 @@
 - [Observability / Tracing：智能体可观测性](observability-tracing-agent-workflows.md)
 - [AI 发展历史与社区生态](ai-history-community-ecosystem.md)
 - [七层 AI 文明架构](seven-layer-ai-civilization.md)
-- [原生多角色模拟](native-multi-role-simulation.md)
+- [原生角色联动](native-multi-role-simulation.md)
 - [OpenClaw 多 agent 联动教程](openclaw-multi-agent-linkage.md)
 - [OpenClaw、Node.js 与超级大脑架构](openclaw-superbrain-architecture.md)
 - [第 13 章：安全、伦理与治理](chapters/13-safety-governance.md)
