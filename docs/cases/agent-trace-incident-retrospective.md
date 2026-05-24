@@ -178,6 +178,7 @@ handoff 没有传播 traceparent，导致运行路径断裂。
 ## 修复方案
 
 ### 1. 传播 trace context
+{: #1-传播tracecontext }
 
 任务卡增加：
 
@@ -205,6 +206,7 @@ trace-book-risk-041
 ```
 
 ### 2. 高风险任务强制上下文包
+{: #2-高风险任务强制上下文包 }
 
 `risk_level=high` 时，`context-agent` 必须加入：
 
@@ -214,6 +216,7 @@ trace-book-risk-041
 - 输出边界：可以讲风险、治理、识别和合法替代流程，不能写绕过步骤。
 
 ### 3. 采样策略联动风险等级
+{: #3-采样策略联动风险等级 }
 
 Collector tail sampling 增加规则：
 
@@ -227,6 +230,7 @@ normal task -> probabilistic sample
 这样高风险任务不依赖随机采样，不会因为“普通比例采样”而丢掉关键 trace。
 
 ### 4. 脱敏和引用策略
+{: #4-脱敏和引用策略 }
 
 Trace 中只保存：
 
@@ -242,6 +246,7 @@ Trace 中不保存：
 - 任何可以被误用的绕过步骤。
 
 ### 5. 补偿动作
+{: #5-补偿动作 }
 
 `review_failed` 后，Saga 不直接重跑写作，而是进入补偿：
 

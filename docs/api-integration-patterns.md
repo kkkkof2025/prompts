@@ -30,6 +30,7 @@
 ## 二、基础集成模式
 
 ### 2.1 同步调用（最简单，适合脚本和批处理）
+{: #2-1同步调用最简单适合脚本和批处理 }
 
 ```python
 import os
@@ -54,6 +55,7 @@ def simple_call(prompt: str, model: str = "gpt-4o-mini") -> str:
 **不适用场景**：Web服务（会阻塞请求）
 
 ### 2.2 带超时和错误处理
+{: #2-2带超时和错误处理 }
 
 ```python
 import time
@@ -87,6 +89,7 @@ def call_with_timeout(
 ```
 
 ### 2.3 流式输出（适合聊天和实时反馈）
+{: #2-3流式输出适合聊天和实时反馈 }
 
 ```python
 def stream_call(prompt: str, model: str = "gpt-4o-mini"):
@@ -112,6 +115,7 @@ def stream_call(prompt: str, model: str = "gpt-4o-mini"):
 ## 三、生产级集成模式
 
 ### 3.1 Token 预算控制
+{: #3-1Token预算控制 }
 
 ```python
 import tiktoken
@@ -138,6 +142,7 @@ class TokenBudget:
 ```
 
 ### 3.2 结果验证层
+{: #3-2结果验证层 }
 
 ```python
 import json
@@ -175,6 +180,7 @@ def validated_call(
 ```
 
 ### 3.3 异步并发调用
+{: #3-3异步并发调用 }
 
 ```python
 import asyncio
@@ -205,6 +211,7 @@ async def batch_call(prompts: list[str], concurrency: int = 5) -> list[str]:
 ## 四、成本追踪
 
 ### 4.1 每次调用的成本记录
+{: #4-1每次调用的成本记录 }
 
 ```python
 from dataclasses import dataclass
@@ -269,6 +276,7 @@ class CostTracker:
 ## 五、架构模式
 
 ### 5.1 Fallback 链（最实用）
+{: #5-1Fallback链最实用 }
 
 ```text
 主模型(GPT-4o) → 失败/超时 →
@@ -299,6 +307,7 @@ def call_with_fallback(prompt: str) -> str:
 ```
 
 ### 5.2 缓存层
+{: #5-2缓存层 }
 
 ```python
 import hashlib
@@ -335,6 +344,7 @@ class AICache:
 ## 六、安全检查
 
 ### 6.1 输入清洗
+{: #6-1输入清洗 }
 
 ```python
 import re
@@ -363,6 +373,7 @@ def sanitize_input(text: str) -> str:
 ```
 
 ### 6.2 输出过滤
+{: #6-2输出过滤 }
 
 ```python
 import re
